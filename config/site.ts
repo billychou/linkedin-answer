@@ -12,10 +12,10 @@ const GITHUB_URL = 'https://github.com/weijunext'
 const DISCORD_URL = process.env.NEXT_PUBLIC_DISCORD_INVITE_URL
 
 export const siteConfig: SiteConfig = {
-  name: "Next.js Starter",
-  tagLine: 'Multilingual Next.js 16 Starter',
+  name: "Daily Logic Puzzles",
+  tagLine: 'Daily Logic Puzzles',
   description:
-    "A multilingual Next.js 16 starter with built-in i18n support. Launch your global-ready web application with a clean, efficient, and SEO-friendly foundation.",
+    "Find today's answers for Pinpoint, Crossclimb, ZIP, Mini Sudoku, Queens, Tango, and more. Download our app and enjoy new puzzles every day!",
   url: BASE_URL,
   authors: [
     {

@@ -14,18 +14,6 @@
       {
         "name": "サイトについて",
         "href": "/about"
-      },
-      {
-        "name": "Source Code",
-        "href": "https://github.com/weijunext/nextjs-starter",
-        "target": "_blank",
-        "rel": "noopener noreferrer nofollow"
-      },
-      {
-        "name": "Pro Version",
-        "href": "https://nexty.dev",
-        "target": "_blank",
-        "rel": "noopener noreferrer"
       }
     ]
   },
@@ -54,46 +42,6 @@
               "useA": true
             }
           ]
-        },
-        {
-          "title": "オープンソースプロジェクト",
-          "links": [
-            {
-              "href": "https://github.com/weijunext/nextjs-starter",
-              "name": "Next.js Starter",
-              "rel": "noopener noreferrer nofollow",
-              "target": "_blank"
-            },
-            {
-              "href": "https://github.com/weijunext/landing-page-boilerplate",
-              "name": "Landing Page Boilerplate",
-              "rel": "noopener noreferrer nofollow",
-              "target": "_blank"
-            },
-            {
-              "href": "https://github.com/weijunext/weekly-boilerplate",
-              "name": "Blog Boilerplate",
-              "rel": "noopener noreferrer nofollow",
-              "target": "_blank"
-            }
-          ]
-        },
-        {
-          "title": "その他の製品",
-          "links": [
-            {
-              "href": "https://nexty.dev/",
-              "name": "Nexty - SaaS Template",
-              "rel": "noopener noreferrer",
-              "target": "_blank"
-            },
-            {
-              "href": "https://myogimage.com/",
-              "name": "OG Image Generator",
-              "rel": "noopener noreferrer",
-              "target": "_blank"
-            }
-          ]
         }
       ]
     },
@@ -110,9 +58,16 @@
     }
   },
   "Home": {
-    "title": "Next.js Starter",
-    "tagLine": "Next.js 多言語スターターテンプレート",
-    "description": "多言語対応機能を搭載したNext.js 15スターターテンプレート。SEO最適化済みで、グローバル展開可能なウェブアプリを効率的に構築できます。"
+    "title": "デイリーロジックパズル",
+    "tagLine": "デイリーロジックパズル",
+    "description": "アプリをダウンロードして、毎日新しいパズルをお楽しみください！Pinpoint、Crossclimb、ZIP、Mini Sudoku、Queens、Tangoなどの今日の答えを見つけましょう。"
+  },
+  "Games": {
+    "todaysAnswer": "今日の答え",
+    "archives": "アーカイブ",
+    "howToPlay": "遊び方",
+    "play": "プレイ",
+    "home": "ホーム"
   },
   "Blog": {
     "title": "ブログ一覧",
