@@ -13,6 +13,7 @@ export type GameSlug =
 export type GameAnswer = {
   date: string; // YYYY-MM-DD format
   answer: string | string[]; // Can be a single answer or multiple answers
+  clues?: string[]; // Optional clues (e.g., Pinpoint's 5 clues)
   hints?: string[]; // Optional hints
 };
 

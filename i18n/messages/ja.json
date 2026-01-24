@@ -67,7 +67,9 @@
     "archives": "アーカイブ",
     "howToPlay": "遊び方",
     "play": "プレイ",
-    "home": "ホーム"
+    "home": "ホーム",
+    "clickToReveal": "答えを表示する",
+    "hideAnswer": "答えを隠す"
   },
   "Blog": {
     "title": "ブログ一覧",

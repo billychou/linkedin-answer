@@ -67,7 +67,9 @@
     "archives": "历史记录",
     "howToPlay": "游戏规则",
     "play": "开始游戏",
-    "home": "首页"
+    "home": "首页",
+    "clickToReveal": "点击显示答案",
+    "hideAnswer": "隐藏答案"
   },
   "Blog": {
     "title": "博客列表",

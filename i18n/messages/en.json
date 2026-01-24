@@ -67,7 +67,9 @@
     "archives": "Archives",
     "howToPlay": "How to Play",
     "play": "Play",
-    "home": "Home"
+    "home": "Home",
+    "clickToReveal": "Click to reveal the answer",
+    "hideAnswer": "Hide answer"
   },
   "Blog": {
     "title": "Blog Posts",

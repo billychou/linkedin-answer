@@ -16,6 +16,17 @@ html {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @layer base {
   /* Change global styles at: https://tweakcn.com/editor/theme */
   :root {

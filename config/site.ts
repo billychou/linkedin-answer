@@ -7,23 +7,23 @@ export const PRO_VERSION = "https://nexty.dev";
 
 const TWITTER_URL = 'https://x.com/weijunext'
 const BSKY_URL = 'https://bsky.app/profile/judewei.bsky.social'
-const EMAIL_URL = 'weijunext@gmail.com'
-const GITHUB_URL = 'https://github.com/weijunext'
+const EMAIL_URL = 'zsc1528@gmail.com'
+const GITHUB_URL = 'https://github.com/billychou'
 const DISCORD_URL = process.env.NEXT_PUBLIC_DISCORD_INVITE_URL
 
 export const siteConfig: SiteConfig = {
-  name: "Daily Logic Puzzles",
-  tagLine: 'Daily Logic Puzzles',
+  name: "LinkedIn Game Answers Today",
+  tagLine: 'Daily LinkedIn Ansers Puzzles',
   description:
-    "Find today's answers for Pinpoint, Crossclimb, ZIP, Mini Sudoku, Queens, Tango, and more. Download our app and enjoy new puzzles every day!",
+    "Find today's answers for Pinpoint, Crossclimb, ZIP, Queens, Tango, and more. Enjoy puzzles every day!",
   url: BASE_URL,
   authors: [
     {
-      name: "weijunext",
-      url: "https://weijunext.com",
+      name: "zsc1528",
+      url: "https://github.com/billychou",
     }
   ],
-  creator: '@weijunext',
+  creator: '@zsc1528',
   socialLinks: {
     discord: DISCORD_URL,
     twitter: TWITTER_URL,
