@@ -1,8 +1,10 @@
 import { siteConfig } from '@/config/site'
-import { DEFAULT_LOCALE, LOCALES } from '@/i18n/routing'
 import { getGameSlugs } from '@/lib/games'
 import { getPosts } from '@/lib/getBlogs'
 import { MetadataRoute } from 'next'
+
+export const dynamic = 'force-static'
+export const revalidate = false
 
 const siteUrl = siteConfig.url
 
@@ -10,60 +12,49 @@ type ChangeFrequency = 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'y
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Static pages
-  const staticPages = [
+  const pages = [
     '',
     '/blog',
     '/about',
     '/privacy-policy',
     '/terms-of-service',
-  ]
-
-  // Generate multilingual pages
-  const pages = LOCALES.flatMap(locale => {
-    return staticPages.map(page => ({
-      url: `${siteUrl}${locale === DEFAULT_LOCALE ? '' : `/${locale}`}${page}`,
-      lastModified: new Date(),
-      changeFrequency: 'daily' as ChangeFrequency,
-      priority: page === '' ? 1.0 : 0.8,
-    }))
-  })
+  ].map(page => ({
+    url: `${siteUrl}${page}`,
+    lastModified: new Date(),
+    changeFrequency: 'daily' as ChangeFrequency,
+    priority: page === '' ? 1.0 : 0.8,
+  }))
 
   // Generate game pages
   const gameSlugs = getGameSlugs()
-  const gamePages = LOCALES.flatMap(locale => {
-    return gameSlugs.flatMap(slug => [
-      {
-        url: `${siteUrl}${locale === DEFAULT_LOCALE ? '' : `/${locale}`}/games/${slug}`,
-        lastModified: new Date(),
-        changeFrequency: 'daily' as ChangeFrequency,
-        priority: 0.9,
-      },
-      {
-        url: `${siteUrl}${locale === DEFAULT_LOCALE ? '' : `/${locale}`}/games/${slug}/archives`,
-        lastModified: new Date(),
-        changeFrequency: 'daily' as ChangeFrequency,
-        priority: 0.8,
-      },
-      {
-        url: `${siteUrl}${locale === DEFAULT_LOCALE ? '' : `/${locale}`}/games/${slug}/how-to-play`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly' as ChangeFrequency,
-        priority: 0.7,
-      },
-    ])
-  })
+  const gamePages = gameSlugs.flatMap(slug => [
+    {
+      url: `${siteUrl}/games/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'daily' as ChangeFrequency,
+      priority: 0.9,
+    },
+    {
+      url: `${siteUrl}/games/${slug}/archives`,
+      lastModified: new Date(),
+      changeFrequency: 'daily' as ChangeFrequency,
+      priority: 0.8,
+    },
+    {
+      url: `${siteUrl}/games/${slug}/how-to-play`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as ChangeFrequency,
+      priority: 0.7,
+    },
+  ])
 
-  const blogPosts = await Promise.all(
-    LOCALES.map(async (locale) => {
-      const { posts } = await getPosts(locale)
-      return posts.map(post => ({
-        url: `${siteUrl}${locale === DEFAULT_LOCALE ? '' : `/${locale}`}/blog${post.slug}`,
-        lastModified: post.metadata.updatedAt || post.date,
-        changeFrequency: 'daily' as const,
-        priority: 0.7,
-      }))
-    })
-  ).then(results => results.flat())
+  const { posts } = await getPosts('en')
+  const blogPosts = posts.map(post => ({
+    url: `${siteUrl}/blog${post.slug}`,
+    lastModified: post.metadata.updatedAt || post.date,
+    changeFrequency: 'daily' as const,
+    priority: 0.7,
+  }))
 
   return [
     ...pages,

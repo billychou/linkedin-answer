@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { normalizeEmail, validateEmail } from "@/lib/email";
 import { Send } from "lucide-react";
-import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 export function Newsletter() {
@@ -12,8 +11,6 @@ export function Newsletter() {
     "idle" | "loading" | "success" | "error"
   >("idle");
   const [errorMessage, setErrorMessage] = useState("");
-
-  const t = useTranslations("Footer.Newsletter");
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,7 +21,7 @@ export function Newsletter() {
 
     if (!isValid) {
       setSubscribeStatus("error");
-      setErrorMessage(error || t("defaultErrorMessage"));
+      setErrorMessage(error || "Please enter a valid email address");
       setTimeout(() => setSubscribeStatus("idle"), 5000);
       return;
     }
@@ -41,7 +38,7 @@ export function Newsletter() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || t("errorMessage"));
+        throw new Error(data.error || "Subscription failed");
       }
 
       setSubscribeStatus("success");
@@ -51,15 +48,15 @@ export function Newsletter() {
     } catch (error) {
       setSubscribeStatus("error");
       setErrorMessage(
-        error instanceof Error ? error.message : t("errorMessage2")
+        error instanceof Error ? error.message : "Subscription failed. Please try again later."
       );
       setTimeout(() => setSubscribeStatus("idle"), 5000);
     }
   };
   return (
     <div className="">
-      <h4 className="mb-3 font-semibold">{t("title")}</h4>
-      <p className="text-sm mb-3">{t("description")}</p>
+      <h4 className="mb-3 font-semibold">Subscribe to our newsletter</h4>
+      <p className="text-sm mb-3">Get the latest news and updates from Next.js Starter</p>
       <form onSubmit={handleSubscribe} className="flex flex-col gap-2 max-w-64">
         <div className="relative">
           <input
@@ -74,15 +71,15 @@ export function Newsletter() {
         </div>
         <Button type="submit" disabled={subscribeStatus === "loading"}>
           {subscribeStatus === "loading" ? (
-            t("subscribing")
+            "Subscribing..."
           ) : (
             <>
-              {t("subscribe")} <Send className="w-3.5 h-3.5" />
+              Subscribe <Send className="w-3.5 h-3.5" />
             </>
           )}
         </Button>
         {subscribeStatus === "success" && (
-          <p className="text-xs text-green-600 mt-1">{t("subscribed")}</p>
+          <p className="text-xs text-green-600 mt-1">Subscription successful! Thank you for your attention.</p>
         )}
         {subscribeStatus === "error" && (
           <p className="text-xs text-red-600 mt-1">{errorMessage}</p>

@@ -2,7 +2,6 @@
 
 import { Copy, Check } from "lucide-react";
 import { useState } from "react";
-import { useTranslations } from "next-intl";
 import { useToast } from "@/hooks/use-toast";
 
 interface AnswerRevealProps {
@@ -15,7 +14,6 @@ interface AnswerRevealProps {
 export default function AnswerReveal({ answer, gameName, sequence, formattedDate }: AnswerRevealProps) {
   const [copied, setCopied] = useState(false);
   const { toast } = useToast();
-  const t = useTranslations("Games");
   const isArray = Array.isArray(answer);
 
   const handleCopy = async () => {
@@ -25,14 +23,14 @@ export default function AnswerReveal({ answer, gameName, sequence, formattedDate
       await navigator.clipboard.writeText(textToCopy);
       setCopied(true);
       toast({
-        title: t("copied") || "Copied!",
-        description: t("copiedDescription") || "Answer copied to clipboard",
+        title: "Copied!",
+        description: "Answer copied to clipboard",
       });
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       toast({
-        title: t("copyFailed") || "Failed to copy",
-        description: t("copyFailedDescription") || "Please try again",
+        title: "Failed to copy",
+        description: "Please try again",
         variant: "destructive",
       });
     }
@@ -67,8 +65,8 @@ export default function AnswerReveal({ answer, gameName, sequence, formattedDate
             <button
               onClick={handleCopy}
               className="absolute top-4 right-4 p-2.5 rounded-lg bg-blue-100 dark:bg-blue-900/30 hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-all duration-200 group hover:scale-110 active:scale-95 shadow-sm hover:shadow-md"
-              title={t("copyAnswer") || "Copy answer"}
-              aria-label={t("copyAnswer") || "Copy answer"}
+              title="Copy answer"
+              aria-label="Copy answer"
             >
               {copied ? (
                 <Check className="w-5 h-5 text-green-600 dark:text-green-400" />

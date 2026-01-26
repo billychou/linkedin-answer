@@ -1,6 +1,7 @@
+"use client";
+
 import { Game } from "@/types/game";
-import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { ExternalLink, Archive, BookOpen, Home } from "lucide-react";
 
 interface GameNavigationProps {
@@ -12,8 +13,6 @@ export default function GameNavigation({
   game,
   currentPage = "answer",
 }: GameNavigationProps) {
-  const t = useTranslations("Games");
-
   return (
     <nav className="flex flex-wrap items-center gap-2 sm:gap-4 mb-6 sm:mb-8 pb-4 border-b border-slate-200 dark:border-slate-700 text-sm sm:text-base">
       <Link
@@ -21,7 +20,7 @@ export default function GameNavigation({
         className="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-gray-100 transition-colors"
       >
         <Home className="w-4 h-4" />
-        <span>{t("home")}</span>
+        <span>Home</span>
       </Link>
 
       <span className="text-slate-300 dark:text-slate-600">/</span>
@@ -34,7 +33,7 @@ export default function GameNavigation({
             : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-gray-100"
         }`}
       >
-        {t("todaysAnswer")}
+        Today's Answer
       </Link>
 
       <span className="text-slate-300 dark:text-slate-600">/</span>
@@ -48,7 +47,7 @@ export default function GameNavigation({
         }`}
       >
         <Archive className="w-4 h-4" />
-        <span>{t("archives")}</span>
+        <span>Archives</span>
       </Link>
 
       <span className="text-slate-300 dark:text-slate-600">/</span>
@@ -62,7 +61,7 @@ export default function GameNavigation({
         }`}
       >
         <BookOpen className="w-4 h-4" />
-        <span>{t("howToPlay")}</span>
+        <span>How to Play</span>
       </Link>
 
       {game.playUrl && (
@@ -75,7 +74,7 @@ export default function GameNavigation({
             className="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-gray-100 transition-colors"
           >
             <ExternalLink className="w-4 h-4" />
-            <span>{t("play")}</span>
+            <span>Play</span>
           </a>
         </>
       )}

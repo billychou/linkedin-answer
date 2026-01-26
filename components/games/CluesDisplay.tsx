@@ -1,7 +1,6 @@
 "use client";
 
 import { Info } from "lucide-react";
-import { useTranslations } from "next-intl";
 
 interface CluesDisplayProps {
   clues: string[];
@@ -11,14 +10,12 @@ interface CluesDisplayProps {
 }
 
 export default function CluesDisplay({ clues, gameName, number, clueHint }: CluesDisplayProps) {
-  const t = useTranslations("Games");
-
   if (!clues || clues.length === 0) {
     return null;
   }
 
-  // 优先使用传入的 clueHint，如果没有则使用翻译
-  const displayHint = clueHint || t("clueHint") || "Hover (desktop) or tap (mobile) each clue to see how it connects to the answer";
+  // 优先使用传入的 clueHint，如果没有则使用默认英文
+  const displayHint = clueHint || "Hover (desktop) or tap (mobile) each clue to see how it connects to the answer";
   
   // 检查是否包含 HTML 标签
   const containsHTML = /<[^>]+>/.test(displayHint);

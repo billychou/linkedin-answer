@@ -1,6 +1,7 @@
+"use client";
+
 import { Game } from "@/types/game";
-import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { ExternalLink, Play } from "lucide-react";
 
 interface GameCardProps {
@@ -34,7 +35,6 @@ const textColorClasses: Record<string, string> = {
 };
 
 export default function GameCard({ game }: GameCardProps) {
-  const t = useTranslations("Games");
   const colorClass = colorClasses[game.color || "blue"];
   const textColorClass = textColorClasses[game.color || "blue"];
 
@@ -57,7 +57,7 @@ export default function GameCard({ game }: GameCardProps) {
           className={`inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors bg-white dark:bg-slate-800 ${textColorClass} border-2 border-current hover:bg-opacity-10 dark:hover:bg-opacity-20`}
         >
           <Play className="w-4 h-4" />
-          {t("todaysAnswer")}
+          Today's Answer
         </Link>
 
         <div className="flex flex-wrap gap-2 text-sm">
@@ -68,7 +68,7 @@ export default function GameCard({ game }: GameCardProps) {
               rel="noopener noreferrer"
               className={`inline-flex items-center gap-1 ${textColorClass} hover:underline`}
             >
-              {t("play")}
+              Play
               <ExternalLink className="w-3 h-3" />
             </a>
           )}
@@ -76,13 +76,13 @@ export default function GameCard({ game }: GameCardProps) {
             href={`/games/${game.slug}/archives`}
             className={`${textColorClass} hover:underline`}
           >
-            {t("archives")}
+            Archives
           </Link>
           <Link
             href={`/games/${game.slug}/how-to-play`}
             className={`${textColorClass} hover:underline`}
           >
-            {t("howToPlay")}
+            How to Play
           </Link>
         </div>
       </div>

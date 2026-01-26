@@ -1,17 +1,22 @@
 import { notFound } from "next/navigation";
-import { getGame } from "@/lib/games";
+import { getGame, getGameSlugs } from "@/lib/games";
 import { constructMetadata } from "@/lib/metadata";
-import { getTranslations } from "next-intl/server";
-import { Locale } from "@/i18n/routing";
 
 type Props = {
-  params: Promise<{ locale: string; gameSlug: string }>;
+  params: Promise<{ gameSlug: string }>;
 };
+
+export async function generateStaticParams() {
+  const gameSlugs = getGameSlugs();
+  return gameSlugs.map((slug) => ({
+    gameSlug: slug,
+  }));
+}
 
 export async function generateMetadata({
   params,
 }: Props): Promise<ReturnType<typeof constructMetadata>> {
-  const { locale, gameSlug } = await params;
+  const { gameSlug } = await params;
   const game = getGame(gameSlug);
 
   if (!game) {
@@ -19,25 +24,21 @@ export async function generateMetadata({
       page: "Game",
       title: "Game Not Found",
       description: "The requested game could not be found.",
-      locale: locale as Locale,
       path: `/games/${gameSlug}/how-to-play`,
     });
   }
 
-  const t = await getTranslations({ locale, namespace: "Games" });
-
   return constructMetadata({
     page: "Game",
-    title: `${game.name} - ${t("howToPlay")}`,
+    title: `${game.name} - How to Play`,
     description: `How to play ${game.name}`,
-    locale: locale as Locale,
     path: `/games/${gameSlug}/how-to-play`,
     canonicalUrl: `/games/${gameSlug}/how-to-play`,
   });
 }
 
 export default async function HowToPlayPage({ params }: Props) {
-  const { locale, gameSlug } = await params;
+  const { gameSlug } = await params;
   const game = getGame(gameSlug);
 
   if (!game) {

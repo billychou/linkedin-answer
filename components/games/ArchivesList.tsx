@@ -1,5 +1,5 @@
 import { GameAnswer } from "@/types/game";
-import { Link } from "@/i18n/routing";
+import Link from "next/link";
 import { Calendar } from "lucide-react";
 
 interface ArchivesListProps {
@@ -32,7 +32,7 @@ export default function ArchivesList({ answers, gameSlug }: ArchivesListProps) {
         return (
           <Link
             key={answer.date}
-            href={`/games/${gameSlug}?date=${answer.date}`}
+            href={`/games/${gameSlug}/${answer.date}`}
             className="block rounded-lg border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-3 sm:p-4 hover:border-blue-400 dark:hover:border-blue-600 transition-colors"
           >
             <div className="flex items-start justify-between gap-4">

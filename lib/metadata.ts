@@ -1,7 +1,5 @@
 import { siteConfig } from '@/config/site'
-import { DEFAULT_LOCALE, LOCALE_NAMES, Locale } from '@/i18n/routing'
 import { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
 
 type MetadataProps = {
   page?: string
@@ -9,81 +7,61 @@ type MetadataProps = {
   description?: string
   images?: string[]
   noIndex?: boolean
-  locale: Locale
   path?: string
   canonicalUrl?: string
 }
 
-export async function constructMetadata({
+export function constructMetadata({
   page = 'Home',
-  title,
-  description,
+  title = 'LinkedIn Answer Today',
+  description = "Download our app and enjoy new puzzles every day! Find today's answers for Pinpoint, Crossclimb, ZIP, Mini Sudoku, Queens, Tango, and more.",
   images = [],
   noIndex = false,
-  locale,
   path,
   canonicalUrl,
-}: MetadataProps): Promise<Metadata> {
-  // get translations
-  const t = await getTranslations({ locale, namespace: 'Home' })
-
-  // get page specific metadata translations
-  const pageTitle = title || t(`title`)
-  const pageDescription = description || t(`description`)
-
+}: MetadataProps): Metadata {
   // build full title
   const finalTitle = page === 'Home'
-    ? `${pageTitle} - ${t('tagLine')}`
-    : `${pageTitle} | ${t('title')}`
+    ? `${title} - ${title}`
+    : `${title} | LinkedIn Answer Today`
 
   // build image URLs
   const imageUrls = images.length > 0
     ? images.map(img => ({
       url: img.startsWith('http') ? img : `${siteConfig.url}/${img}`,
-      alt: pageTitle,
+      alt: title,
     }))
     : [{
       url: `${siteConfig.url}/og.png`,
-      alt: pageTitle,
+      alt: title,
     }]
 
   // Open Graph Site
-  const pageURL = `${locale === DEFAULT_LOCALE ? '' : `/${locale}`}${path}` || siteConfig.url
-
-  // build alternate language links
-  const alternateLanguages = Object.keys(LOCALE_NAMES).reduce((acc, lang) => {
-    const path = canonicalUrl
-      ? `${lang === DEFAULT_LOCALE ? '' : `/${lang}`}${canonicalUrl === '/' ? '' : canonicalUrl}`
-      : `${lang === DEFAULT_LOCALE ? '' : `/${lang}`}`
-    acc[lang] = `${siteConfig.url}${path}`
-
-    return acc
-  }, {} as Record<string, string>)
+  const pageURL = path ? `${siteConfig.url}${path}` : siteConfig.url
 
   return {
     title: finalTitle,
-    description: pageDescription,
+    description: description,
     keywords: [],
     authors: siteConfig.authors,
     creator: siteConfig.creator,
     metadataBase: new URL(siteConfig.url),
     alternates: {
-      canonical: canonicalUrl ? `${siteConfig.url}${locale === DEFAULT_LOCALE ? '' : `/${locale}`}${canonicalUrl === '/' ? '' : canonicalUrl}` : undefined,
-      languages: alternateLanguages,
+      canonical: canonicalUrl ? `${siteConfig.url}${canonicalUrl === '/' ? '' : canonicalUrl}` : undefined,
     },
     openGraph: {
       type: 'website',
       title: finalTitle,
-      description: pageDescription,
+      description: description,
       url: pageURL,
-      siteName: t('title'),
-      locale: locale,
+      siteName: 'LinkedIn Answer Today',
+      locale: 'en',
       images: imageUrls,
     },
     twitter: {
       card: 'summary_large_image',
       title: finalTitle,
-      description: pageDescription,
+      description: description,
       site: `${siteConfig.url}${pageURL === '/' ? '' : pageURL}`,
       images: imageUrls,
       creator: siteConfig.creator,

@@ -1,21 +1,26 @@
 "use client";
 
-import { Link as I18nLink, usePathname } from "@/i18n/routing";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { HeaderLink } from "@/types/common";
 import { ExternalLink } from "lucide-react";
-import { useTranslations } from "next-intl";
 
 const HeaderLinks = () => {
-  const tHeader = useTranslations("Header");
   const pathname = usePathname();
 
-  const headerLinks: HeaderLink[] = tHeader.raw("links");
+  // Hardcoded header links in English
+  const headerLinks: HeaderLink[] = [
+    {
+      name: "Pinpoint",
+      href: "/games/pinpoint"
+    }
+  ];
 
   return (
     <div className="hidden md:flex flex-row items-center gap-x-2 text-sm font-medium text-muted-500">
       {headerLinks.map((link) => (
-        <I18nLink
+        <Link
           key={link.name}
           href={link.href}
           title={link.name}
@@ -33,7 +38,7 @@ const HeaderLinks = () => {
               <ExternalLink className="w-4 h-4" />
             </span>
           )}
-        </I18nLink>
+        </Link>
       ))}
     </div>
   );

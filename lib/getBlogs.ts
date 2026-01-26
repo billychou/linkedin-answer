@@ -1,4 +1,3 @@
-import { DEFAULT_LOCALE } from '@/i18n/routing';
 import { BlogPost } from '@/types/blog';
 import fs from 'fs';
 import matter from 'gray-matter';
@@ -6,7 +5,7 @@ import path from 'path';
 
 const POSTS_BATCH_SIZE = 10;
 
-export async function getPosts(locale: string = DEFAULT_LOCALE): Promise<{ posts: BlogPost[] }> {
+export async function getPosts(locale: string = 'en'): Promise<{ posts: BlogPost[] }> {
   const postsDirectory = path.join(process.cwd(), 'blogs', locale);
 
   // is directory exist

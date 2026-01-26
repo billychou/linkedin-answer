@@ -204,7 +204,10 @@ function resolveCdnInvalidation(value = "dummy") {
 }
 
 // open-next.config.ts
-var open_next_config_default = defineCloudflareConfig();
+var open_next_config_default = defineCloudflareConfig({
+  // 确保 middleware 使用 Edge Runtime
+  // OpenNext 会自动检测并处理 Edge Middleware
+});
 export {
   open_next_config_default as default
 };
