@@ -1,0 +1,6 @@
+[build]
+command = "pnpm build"
+output_directory = "out"
+
+[build.environment_variables]
+NODE_VERSION = "20"
