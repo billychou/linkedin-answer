@@ -1,6 +1,12 @@
+# Cloudflare Pages 配置
+# 注意：此文件仅作为参考，实际配置请在 Cloudflare Pages 控制台中设置
+
 [build]
 command = "pnpm build"
 output_directory = "out"
 
 [build.environment_variables]
 NODE_VERSION = "20"
+
+# 注意：静态导出不需要部署命令
+# 请在 Cloudflare Pages 控制台中将"部署命令"留空
