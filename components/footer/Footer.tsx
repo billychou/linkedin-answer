@@ -1,4 +1,4 @@
-import { Newsletter } from "@/components/footer/Newsletter";
+import Badges from "@/components/footer/Badges";
 import { siteConfig } from "@/config/site";
 import { Link as I18nLink } from "@/i18n/routing";
 import { FooterLink } from "@/types/common";
@@ -89,13 +89,7 @@ export default async function Footer() {
                 </ul>
               </div>
             ))}
-
-            {messages.Footer.Newsletter && (
-              <div className="w-full flex-1">
-                <Newsletter />
-              </div>
-            )}
-          </div>
+           </div>
 
           <div className="border-t border-gray-800 py-6 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
@@ -125,7 +119,7 @@ export default async function Footer() {
           </div>
         </div>
 
-        {/* <Badges /> */}
+        <Badges />
       </footer>
     </div>
   );

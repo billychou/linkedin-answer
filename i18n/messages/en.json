@@ -8,12 +8,8 @@
   "Header": {
     "links": [
       {
-        "name": "Blog",
-        "href": "/blog"
-      },
-      {
-        "name": "About",
-        "href": "/about"
+        "name": "Pinpoint",
+        "href": "/games/pinpoint"
       }
     ]
   },
@@ -58,8 +54,8 @@
     }
   },
   "Home": {
-    "title": "Daily Logic Puzzles",
-    "tagLine": "Daily Logic Puzzles",
+    "title": "LinkedIn Answer Today",
+    "tagLine": "LinkedIn Answer Today",
     "description": "Download our app and enjoy new puzzles every day! Find today's answers for Pinpoint, Crossclimb, ZIP, Mini Sudoku, Queens, Tango, and more."
   },
   "Games": {

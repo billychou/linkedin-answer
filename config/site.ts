@@ -12,8 +12,8 @@ const GITHUB_URL = 'https://github.com/billychou'
 const DISCORD_URL = process.env.NEXT_PUBLIC_DISCORD_INVITE_URL
 
 export const siteConfig: SiteConfig = {
-  name: "LinkedIn Game Answers Today",
-  tagLine: 'Daily LinkedIn Ansers Puzzles',
+  name: "LinkedIn Answer Today",
+  tagLine: 'LinkedIn Answer Today',
   description:
     "Find today's answers for Pinpoint, Crossclimb, ZIP, Queens, Tango, and more. Enjoy puzzles every day!",
   url: BASE_URL,

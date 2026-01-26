@@ -8,12 +8,8 @@
   "Header": {
     "links": [
       {
-        "name": "ブログ",
-        "href": "/blog"
-      },
-      {
-        "name": "サイトについて",
-        "href": "/about"
+        "name": "Pinpoint",
+        "href": "/games/pinpoint"
       }
     ]
   },
@@ -58,8 +54,8 @@
     }
   },
   "Home": {
-    "title": "デイリーロジックパズル",
-    "tagLine": "デイリーロジックパズル",
+    "title": "LinkedIn Answer Today",
+    "tagLine": "LinkedIn Answer Today",
     "description": "アプリをダウンロードして、毎日新しいパズルをお楽しみください！Pinpoint、Crossclimb、ZIP、Mini Sudoku、Queens、Tangoなどの今日の答えを見つけましょう。"
   },
   "Games": {

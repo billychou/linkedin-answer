@@ -1,7 +1,7 @@
 import { siteConfig } from '@/config/site'
 import { DEFAULT_LOCALE, LOCALES } from '@/i18n/routing'
+import { getGameSlugs } from '@/lib/games'
 import { getPosts } from '@/lib/getBlogs'
-import { getAllGames, getGameSlugs } from '@/lib/games'
 import { MetadataRoute } from 'next'
 
 const siteUrl = siteConfig.url

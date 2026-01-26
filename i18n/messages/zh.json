@@ -8,12 +8,8 @@
   "Header": {
     "links": [
       {
-        "name": "博客",
-        "href": "/blog"
-      },
-      {
-        "name": "关于",
-        "href": "/about"
+        "name": "Pinpoint",
+        "href": "/games/pinpoint"
       }
     ]
   },
@@ -58,8 +54,8 @@
     }
   },
   "Home": {
-    "title": "每日逻辑谜题",
-    "tagLine": "每日逻辑谜题",
+    "title": "LinkedIn Answer Today",
+    "tagLine": "LinkedIn Answer Today",
     "description": "下载我们的应用，每天享受新的谜题！查找 Pinpoint、Crossclimb、ZIP、Mini Sudoku、Queens、Tango 等游戏的今日答案。"
   },
   "Games": {
