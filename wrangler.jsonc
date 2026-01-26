@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
-  "name": "my-app",
+  "name": "linkedin-answer",
   "compatibility_date": "2026-01-26",
   "compatibility_flags": [
     "nodejs_compat"

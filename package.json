@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:cf": "next build && opennextjs-cloudflare build",
     "start": "next start",
     "lint": "next lint",
     "fix": "pnpm i fix-react2shell-next@latest && npx fix-react2shell-next",
