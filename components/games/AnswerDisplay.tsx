@@ -1,7 +1,6 @@
+import AnswerReveal from "@/components/games/AnswerReveal";
 import { GameAnswer } from "@/types/game";
 import CluesDisplay from "./CluesDisplay";
-import AnswerReveal from "./AnswerReveal";
-import { Calendar } from "lucide-react";
 
 interface AnswerDisplayProps {
   answer: GameAnswer;
@@ -20,17 +19,6 @@ export default function AnswerDisplay({ answer, gameName }: AnswerDisplayProps) 
 
   return (
     <div className="space-y-6">
-      {/* Date Display */}
-      <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
-        <Calendar className="w-4 h-4" />
-        <span>{formatDate(answer.date)}</span>
-      </div>
-
-      {/* Clues Display */}
-      {answer.clues && answer.clues.length > 0 && (
-        <CluesDisplay clues={answer.clues} gameName={gameName} />
-      )}
-
       {/* Answer Reveal */}
       <AnswerReveal answer={answer.answer} gameName={gameName} />
 
@@ -46,6 +34,9 @@ export default function AnswerDisplay({ answer, gameName }: AnswerDisplayProps) 
             ))}
           </ul>
         </div>
+      )}
+      {answer.clues && answer.clues.length > 0 && (
+        <CluesDisplay clues={answer.clues} gameName={gameName} clueHint={answer.clueHint} />
       )}
     </div>
   );

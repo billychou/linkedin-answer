@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { getGame } from "@/lib/games";
-import GameNavigation from "@/components/games/GameNavigation";
 import { constructMetadata } from "@/lib/metadata";
 import { getTranslations } from "next-intl/server";
 import { Locale } from "@/i18n/routing";
@@ -47,8 +46,6 @@ export default async function HowToPlayPage({ params }: Props) {
 
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-8">
-      <GameNavigation game={game} currentPage="how-to-play" />
-
       <div className="mb-6 sm:mb-8">
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-gray-100 mb-2">
           {game.name} - How to Play

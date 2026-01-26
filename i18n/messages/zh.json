@@ -69,7 +69,14 @@
     "play": "开始游戏",
     "home": "首页",
     "clickToReveal": "点击显示答案",
-    "hideAnswer": "隐藏答案"
+    "hideAnswer": "隐藏答案",
+    "historicalAnswers": "历史答案",
+    "clueHint": "悬停（桌面）或点击（移动端）每个线索以查看它如何连接到答案",
+    "copyAnswer": "复制答案",
+    "copied": "已复制！",
+    "copiedDescription": "答案已复制到剪贴板",
+    "copyFailed": "复制失败",
+    "copyFailedDescription": "请重试"
   },
   "Blog": {
     "title": "博客列表",

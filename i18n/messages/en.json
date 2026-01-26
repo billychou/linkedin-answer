@@ -69,7 +69,14 @@
     "play": "Play",
     "home": "Home",
     "clickToReveal": "Click to reveal the answer",
-    "hideAnswer": "Hide answer"
+    "hideAnswer": "Hide answer",
+    "historicalAnswers": "Historical Answers",
+    "clueHint": "Hover (desktop) or tap (mobile) each clue to see how it connects to the answer",
+    "copyAnswer": "Copy answer",
+    "copied": "Copied!",
+    "copiedDescription": "Answer copied to clipboard",
+    "copyFailed": "Failed to copy",
+    "copyFailedDescription": "Please try again"
   },
   "Blog": {
     "title": "Blog Posts",

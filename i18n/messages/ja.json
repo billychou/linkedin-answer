@@ -69,7 +69,14 @@
     "play": "プレイ",
     "home": "ホーム",
     "clickToReveal": "答えを表示する",
-    "hideAnswer": "答えを隠す"
+    "hideAnswer": "答えを隠す",
+    "historicalAnswers": "過去の答え",
+    "clueHint": "各手がかりにマウスをホバー（デスクトップ）またはタップ（モバイル）して、答えとの関連を確認してください",
+    "copyAnswer": "答えをコピー",
+    "copied": "コピーしました！",
+    "copiedDescription": "答えをクリップボードにコピーしました",
+    "copyFailed": "コピーに失敗しました",
+    "copyFailedDescription": "もう一度お試しください"
   },
   "Blog": {
     "title": "ブログ一覧",

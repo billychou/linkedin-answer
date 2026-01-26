@@ -6,6 +6,7 @@ import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import { LanguageDetectionAlert } from "@/components/LanguageDetectionAlert";
 import { TailwindIndicator } from "@/components/TailwindIndicator";
+import { Toaster } from "@/components/ui/toaster";
 import { siteConfig } from "@/config/site";
 import { DEFAULT_LOCALE, Locale, routing } from "@/i18n/routing";
 import { constructMetadata } from "@/lib/metadata";
@@ -91,6 +92,7 @@ export default async function LocaleLayout({
             {messages.Footer && <Footer />}
           </ThemeProvider>
         </NextIntlClientProvider>
+        <Toaster />
         <TailwindIndicator />
         {process.env.NODE_ENV === "development" ? (
           <></>

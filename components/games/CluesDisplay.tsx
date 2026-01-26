@@ -1,42 +1,75 @@
 "use client";
 
-import { Lightbulb } from "lucide-react";
+import { Info } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface CluesDisplayProps {
   clues: string[];
   gameName: string;
+  number?: number; // Pinpoint 编号，如 635
+  clueHint?: string; // 可配置的提示文字
 }
 
-export default function CluesDisplay({ clues, gameName }: CluesDisplayProps) {
+export default function CluesDisplay({ clues, gameName, number, clueHint }: CluesDisplayProps) {
+  const t = useTranslations("Games");
+
   if (!clues || clues.length === 0) {
     return null;
   }
 
+  // 优先使用传入的 clueHint，如果没有则使用翻译
+  const displayHint = clueHint || t("clueHint") || "Hover (desktop) or tap (mobile) each clue to see how it connects to the answer";
+  
+  // 检查是否包含 HTML 标签
+  const containsHTML = /<[^>]+>/.test(displayHint);
+  
+  // 处理 HTML：将 <string> 替换为 <strong>，并清理多余的包装标签
+  const processedHint = containsHTML
+    ? displayHint
+        .replace(/<string>/g, "<strong>")
+        .replace(/<\/string>/g, "</strong>")
+        .replace(/^<div><p>/, "")
+        .replace(/<\/p><\/div>$/, "")
+    : displayHint;
+
   return (
-    <div className="mb-8">
-      <div className="flex items-center gap-2 mb-4">
-        <Lightbulb className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-        <h2 className="text-xl font-semibold text-slate-900 dark:text-gray-100">
-          {gameName} Clues:
-        </h2>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+    <div className="mb-6">
+      {/* 标题 */}
+      <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-gray-100 mb-3">
+        {gameName} {number ? `#${number} ` : ""}Clues:
+      </h2>
+      {/* 线索框 - 水平排列 */}
+      <div className="flex flex-wrap gap-2 sm:gap-3">
         {clues.map((clue, index) => (
           <div
             key={index}
-            className="relative rounded-lg border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 hover:border-blue-400 dark:hover:border-blue-600 transition-all duration-300 hover:shadow-md transform hover:scale-[1.02]"
+            className="relative rounded-lg bg-gradient-to-br from-blue-400 to-blue-500 dark:from-blue-500 dark:to-blue-600 p-3 sm:p-4 min-w-[100px] max-w-[200px] flex-1 sm:flex-initial hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-default"
             style={{ 
               animation: `fadeIn 0.5s ease-in-out ${index * 0.1}s both`
             }}
           >
-            <div className="absolute -top-2 -left-2 w-8 h-8 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 text-white flex items-center justify-center text-sm font-bold shadow-md">
+            {/* 编号 */}
+            <div className="text-white/90 text-xs font-semibold mb-1.5">
               #{index + 1}
             </div>
-            <p className="text-base sm:text-lg font-medium text-slate-900 dark:text-gray-100 pt-2">
+            {/* 线索文字 */}
+            <p className="text-white text-sm sm:text-base font-semibold leading-tight break-words">
               {clue}
             </p>
           </div>
         ))}
+      </div>
+      {/* 提示文字 */}
+      <div className="flex items-start gap-2 mt-4 text-xs sm:text-sm text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-800/50 rounded-lg p-2.5">
+        <Info className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-blue-500 dark:text-blue-400" />
+        {containsHTML ? (
+          <div 
+            className="leading-relaxed prose prose-sm dark:prose-invert max-w-none [&_strong]:font-semibold [&_strong]:text-slate-700 dark:[&_strong]:text-slate-200"
+            dangerouslySetInnerHTML={{ __html: processedHint }}
+          />
+        ) : (
+          <span className="leading-relaxed">{displayHint}</span>
+        )}
       </div>
     </div>
   );

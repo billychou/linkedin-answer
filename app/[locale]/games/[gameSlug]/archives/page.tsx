@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import { getGame } from "@/lib/games";
 import { getAllAnswers } from "@/lib/answers";
 import ArchivesList from "@/components/games/ArchivesList";
-import GameNavigation from "@/components/games/GameNavigation";
 import { constructMetadata } from "@/lib/metadata";
 import { getTranslations } from "next-intl/server";
 import { Locale } from "@/i18n/routing";
@@ -51,8 +50,6 @@ export default async function ArchivesPage({ params }: Props) {
 
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-8">
-      <GameNavigation game={game} currentPage="archives" />
-
       <div className="mb-6 sm:mb-8">
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-gray-100 mb-2">
           {game.name} - Archives
