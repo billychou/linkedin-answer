@@ -155,8 +155,8 @@ export async function GET() {
           if (answer) {
             const clues = cluesText
               .split(",")
-              .map((c) => c.trim())
-              .filter((c) => c.length > 0);
+              .map((c: string) => c.trim())
+              .filter((c: string) => c.length > 0);
 
             results.push({
               date: archiveDate,

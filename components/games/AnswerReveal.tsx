@@ -8,9 +8,11 @@ import { useToast } from "@/hooks/use-toast";
 interface AnswerRevealProps {
   answer: string | string[];
   gameName: string;
+  sequence?: string;
+  formattedDate?: string;
 }
 
-export default function AnswerReveal({ answer, gameName }: AnswerRevealProps) {
+export default function AnswerReveal({ answer, gameName, sequence, formattedDate }: AnswerRevealProps) {
   const [copied, setCopied] = useState(false);
   const { toast } = useToast();
   const t = useTranslations("Games");
@@ -40,7 +42,7 @@ export default function AnswerReveal({ answer, gameName }: AnswerRevealProps) {
     <div className="rounded-xl border-4 border-blue-500 dark:border-blue-400 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950/50 dark:to-blue-900/50 p-6 sm:p-8 shadow-xl">
       <div className="mb-4">
         <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-gray-100 mb-2">
-          {gameName} Answer:
+          {gameName}{sequence ? ` ${sequence}` : ""} Answer{formattedDate ? ` (${formattedDate})` : ""}:
         </h3>
       </div>
 

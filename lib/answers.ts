@@ -1,26 +1,8 @@
-import { GameAnswer, GameSlug } from "@/types/game";
 import { pinpointAnswers } from "@/data/answers/pinpoint";
-import { crossclimbAnswers } from "@/data/answers/crossclimb";
-import { zipAnswers } from "@/data/answers/zip";
-import { miniSudokuAnswers } from "@/data/answers/mini-sudoku";
-import { queensAnswers } from "@/data/answers/queens";
-import { tangoAnswers } from "@/data/answers/tango";
-import { wordsaladAnswers } from "@/data/answers/wordsalad";
-import { chessPuzzlesAnswers } from "@/data/answers/chess-puzzles";
-import { nytimesSudokuAnswers } from "@/data/answers/nytimes-sudoku";
-import { wordleAnswers } from "@/data/answers/wordle";
+import { GameAnswer, GameSlug } from "@/types/game";
 
 const answersMap: Record<GameSlug, GameAnswer[]> = {
   pinpoint: pinpointAnswers,
-  crossclimb: crossclimbAnswers,
-  zip: zipAnswers,
-  "mini-sudoku": miniSudokuAnswers,
-  queens: queensAnswers,
-  tango: tangoAnswers,
-  wordsalad: wordsaladAnswers,
-  "chess-puzzles": chessPuzzlesAnswers,
-  "nytimes-sudoku": nytimesSudokuAnswers,
-  wordle: wordleAnswers,
 };
 
 export function getAnswersByGameSlug(slug: GameSlug): GameAnswer[] {

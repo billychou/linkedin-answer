@@ -6,12 +6,12 @@ export const pinpointAnswers: GameAnswer[] = [
     date: "2025-01-26",
     answer: "Ways to cut food with a knife to prepare for cooking",
     clues: ["Dice", "Quarter", "Mince", "Chop", "Slice"],
-    clueHint: `Here is how each clue relates to that word:<br>
-<strong>Dice:</strong> A die is a cube with faces numbered 1 through 6.<br>
-<strong>Quarter:</strong> A quarter is a coin worth 25 cents.<br>
-<strong>Mince:</strong> Mince is a small piece of meat or vegetables.<br>
-<strong>Chop:</strong> Chop is to cut into small pieces.<br>
-<strong>Slice:</strong> Slice is to cut into thin pieces.</p>`,
+    clueHint: `Here is how each term relates to culinary knife techniques:<br>
+<strong>Dice:</strong> To cut food into small, uniform cubes.<br>
+<strong>Quarter:</strong> To divide an item into four equal pieces.<br>
+<strong>Mince:</strong> To cut into very small, fine pieces—smaller than chopping.<br>
+<strong>Chop:</strong> To cut into bite-sized pieces where shape uniformity is less important.<br>
+<strong>Slice:</strong> To cut across the food into thin, flat pieces.`
   },
   {
     sequence: "#634",

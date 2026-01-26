@@ -20,7 +20,12 @@ export default function AnswerDisplay({ answer, gameName }: AnswerDisplayProps) 
   return (
     <div className="space-y-6">
       {/* Answer Reveal */}
-      <AnswerReveal answer={answer.answer} gameName={gameName} />
+      <AnswerReveal 
+        answer={answer.answer} 
+        gameName={gameName}
+        sequence={answer.sequence}
+        formattedDate={formatDate(answer.date)}
+      />
 
       {/* Hints Display (if available) */}
       {answer.hints && answer.hints.length > 0 && (

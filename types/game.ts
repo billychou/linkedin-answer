@@ -1,16 +1,8 @@
 export type GameSlug =
-  | "pinpoint"
-  | "crossclimb"
-  | "zip"
-  | "mini-sudoku"
-  | "queens"
-  | "tango"
-  | "wordsalad"
-  | "chess-puzzles"
-  | "nytimes-sudoku"
-  | "wordle";
-
+  | "pinpoint";
+ 
 export type GameAnswer = {
+  sequence: string;
   date: string; // YYYY-MM-DD format
   answer: string | string[]; // Can be a single answer or multiple answers
   clues?: string[]; // Optional clues (e.g., Pinpoint's 5 clues)

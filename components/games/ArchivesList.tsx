@@ -43,7 +43,7 @@ export default function ArchivesList({ answers, gameSlug }: ArchivesListProps) {
                 </div>
                 {isArray ? (
                   <div className="flex flex-wrap gap-2">
-                    {answer.answer.map((item, index) => (
+                    {(answer.answer as string[]).map((item: string, index: number) => (
                       <span
                         key={index}
                         className="inline-block px-2 sm:px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded font-medium text-xs sm:text-sm"
@@ -54,7 +54,7 @@ export default function ArchivesList({ answers, gameSlug }: ArchivesListProps) {
                   </div>
                 ) : (
                   <p className="text-base sm:text-lg font-semibold text-slate-900 dark:text-gray-100 break-words">
-                    {answer.answer}
+                    {typeof answer.answer === "string" ? answer.answer : ""}
                   </p>
                 )}
               </div>
