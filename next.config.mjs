@@ -6,7 +6,7 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   // ⚠️ 重要提示：启用静态导出后，API Routes (app/api/*) 将无法工作
   // 如果需要 API Routes，请移除 output: "export" 并使用 Cloudflare Pages Functions
-  output: "export", // 启用静态导出，输出到 out 目录
+  // output: "export", // 启用静态导出，输出到 out 目录
   images: {
     unoptimized: true, // 静态导出需要禁用图片优化
     remotePatterns: [
