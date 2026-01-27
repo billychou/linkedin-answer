@@ -4,7 +4,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#636",
     date: "2025-01-27",
-    answer: "Wall",
+    answer: "Things you hang from a wall",
     clues: ["Paintings", "Calendars", "Mirrors", "Pennants", "Televisions(if not on stands)"],
     clueHint: `Here is how each clue relates to that word:<br>
 <strong>Paintings:</strong> A painting is a work of art on a wall.<br>
