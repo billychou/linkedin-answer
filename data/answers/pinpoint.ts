@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#636",
+    date: "2025-01-27",
+    answer: "Wall",
+    clues: ["Paintings", "Calendars", "Mirrors", "Pennants", "Televisions(if not on stands)"],
+    clueHint: `Here is how each clue relates to that word:<br>
+<strong>Paintings:</strong> A painting is a work of art on a wall.<br>
+<strong>Calendars:</strong> A calendar is a wall calendar.<br>
+<strong>Mirrors:</strong> A mirror is a wall mirror.<br>
+<strong>Pennants:</strong> A pennant is a wall pennant.<br>
+<strong>Televisions(if not on stands):</strong> A television is a wall television.`
+  },
+  {
     sequence: "#635",
     date: "2025-01-26",
     answer: "Ways to cut food with a knife to prepare for cooking",
