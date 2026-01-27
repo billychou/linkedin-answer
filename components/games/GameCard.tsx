@@ -1,7 +1,6 @@
 "use client";
 
 import { Game } from "@/types/game";
-import Link from "next/link";
 import { ExternalLink, Play } from "lucide-react";
 
 interface GameCardProps {
@@ -52,13 +51,13 @@ export default function GameCard({ game }: GameCardProps) {
       </div>
 
       <div className="flex flex-col gap-2">
-        <Link
+        <a
           href={`/games/${game.slug}`}
           className={`inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors bg-white dark:bg-slate-800 ${textColorClass} border-2 border-current hover:bg-opacity-10 dark:hover:bg-opacity-20`}
         >
           <Play className="w-4 h-4" />
           Today's Answer
-        </Link>
+        </a>
 
         <div className="flex flex-wrap gap-2 text-sm">
           {game.playUrl && (
@@ -72,18 +71,18 @@ export default function GameCard({ game }: GameCardProps) {
               <ExternalLink className="w-3 h-3" />
             </a>
           )}
-          <Link
+          <a
             href={`/games/${game.slug}/archives`}
             className={`${textColorClass} hover:underline`}
           >
             Archives
-          </Link>
-          <Link
+          </a>
+          <a
             href={`/games/${game.slug}/how-to-play`}
             className={`${textColorClass} hover:underline`}
           >
             How to Play
-          </Link>
+          </a>
         </div>
       </div>
     </div>

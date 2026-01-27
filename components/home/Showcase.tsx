@@ -1,5 +1,4 @@
 import { ArrowUpRightIcon } from "lucide-react";
-import Link from "next/link";
 
 interface ShowcaseItem {
   name: string;
@@ -76,7 +75,7 @@ export default function Showcase() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {showcaseItems.map((item) => (
-          <Link
+          <a
             key={item.url}
             href={item.url}
             target="_blank"
@@ -95,7 +94,7 @@ export default function Showcase() {
             <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
               <ArrowUpRightIcon className="w-5 h-5 text-blue-500" />
             </div>
-          </Link>
+          </a>
         ))}
       </div>
     </section>

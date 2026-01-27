@@ -10,7 +10,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import Link from "next/link";
 import { HeaderLink } from "@/types/common";
 import { Menu } from "lucide-react";
 import Image from "next/image";
@@ -33,10 +32,9 @@ export default function MobileMenu() {
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-64">
           <DropdownMenuLabel>
-            <Link
+            <a
               href="/"
               title="LinkedIn Answer Today"
-              prefetch={true}
               className="flex items-center space-x-1 font-bold"
             >
               <Image
@@ -47,23 +45,20 @@ export default function MobileMenu() {
                 height={32}
               />
               <span className="highlight-text">LinkedIn Answer Today</span>
-            </Link>
+            </a>
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
             {headerLinks.map((link) => (
               <DropdownMenuItem key={link.name}>
-                <Link
+                <a
                   href={link.href}
                   title={link.name}
-                  prefetch={
-                    link.target && link.target === "_blank" ? false : true
-                  }
                   target={link.target || "_self"}
                   rel={link.rel || undefined}
                 >
                   {link.name}
-                </Link>
+                </a>
               </DropdownMenuItem>
             ))}
           </DropdownMenuGroup>

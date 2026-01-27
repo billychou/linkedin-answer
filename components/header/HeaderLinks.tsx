@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { HeaderLink } from "@/types/common";
@@ -20,11 +19,10 @@ const HeaderLinks = () => {
   return (
     <div className="hidden md:flex flex-row items-center gap-x-2 text-sm font-medium text-muted-500">
       {headerLinks.map((link) => (
-        <Link
+        <a
           key={link.name}
           href={link.href}
           title={link.name}
-          prefetch={link.target && link.target === "_blank" ? false : true}
           target={link.target || "_self"}
           rel={link.rel || undefined}
           className={cn(
@@ -38,7 +36,7 @@ const HeaderLinks = () => {
               <ExternalLink className="w-4 h-4" />
             </span>
           )}
-        </Link>
+        </a>
       ))}
     </div>
   );

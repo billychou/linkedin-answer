@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { cn } from "@/lib/utils";
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -29,13 +27,12 @@ export function MdxCard({
         </div>
       </div>
       {href && (
-        <Link
+        <a
           href={disabled ? "#" : href}
           className="absolute inset-0"
-          prefetch={false}
         >
           <span className="sr-only">View</span>
-        </Link>
+        </a>
       )}
     </div>
   );

@@ -1,7 +1,6 @@
 import Badges from "@/components/footer/Badges";
 import { siteConfig } from "@/config/site";
 import { MailIcon } from "lucide-react";
-import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -21,9 +20,8 @@ export default function Footer() {
 
                 <div className="flex items-center gap-2">
                   {siteConfig.socialLinks?.email && (
-                    <Link
+                    <a
                       href={`mailto:${siteConfig.socialLinks.email}`}
-                      prefetch={false}
                       target="_blank"
                       rel="noreferrer nofollow noopener"
                       aria-label="Email"
@@ -31,7 +29,7 @@ export default function Footer() {
                       className="inline-flex h-8 w-8 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
                     >
                       <MailIcon className="w-4 h-4" />
-                    </Link>
+                    </a>
                   )}
                 </div>
               </div>
@@ -43,22 +41,20 @@ export default function Footer() {
               Copyright © {new Date().getFullYear()} {siteConfig.name} All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link
+              <a
                 href="/privacy-policy"
                 title="Privacy Policy"
-                prefetch={false}
                 className="text-gray-400 hover:text-white text-sm"
               >
                 Privacy Policy
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/terms-of-service"
                 title="Terms of Service"
-                prefetch={false}
                 className="text-gray-400 hover:text-white text-sm"
               >
                 Terms of Service
-              </Link>
+              </a>
             </div>
           </div>
         </div>

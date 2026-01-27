@@ -1,16 +1,14 @@
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 // NEXTY.DEV Affiliate Link: https://affiliates.nexty.dev/
 // sign up and use your affiliate link on BuiltWithButton to earn money
 
 export default function BuiltWithButton() {
   return (
-    <Link
+    <a
       href="https://nexty.dev"
       title="Built with NEXTY.DEV"
-      prefetch={false}
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
@@ -25,7 +23,7 @@ export default function BuiltWithButton() {
       <span className="font-bold text-base-content flex gap-0.5 items-center tracking-tight">
         NEXTY.DEV
       </span>
-    </Link>
+    </a>
   );
 }
 

@@ -1,5 +1,4 @@
 import { GameAnswer } from "@/types/game";
-import Link from "next/link";
 import { Calendar } from "lucide-react";
 
 interface ArchivesListProps {
@@ -30,7 +29,7 @@ export default function ArchivesList({ answers, gameSlug }: ArchivesListProps) {
       {answers.map((answer) => {
         const isArray = Array.isArray(answer.answer);
         return (
-          <Link
+          <a
             key={answer.date}
             href={`/games/${gameSlug}/${answer.date}`}
             className="block rounded-lg border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-3 sm:p-4 hover:border-blue-400 dark:hover:border-blue-600 transition-colors"
@@ -59,7 +58,7 @@ export default function ArchivesList({ answers, gameSlug }: ArchivesListProps) {
                 )}
               </div>
             </div>
-          </Link>
+          </a>
         );
       })}
     </div>
