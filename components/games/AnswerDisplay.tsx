@@ -1,6 +1,7 @@
 import AnswerReveal from "@/components/games/AnswerReveal";
 import { GameAnswer } from "@/types/game";
 import CluesDisplay from "./CluesDisplay";
+import Image from "next/image";
 
 interface AnswerDisplayProps {
   answer: GameAnswer;
@@ -19,6 +20,21 @@ export default function AnswerDisplay({ answer, gameName }: AnswerDisplayProps) 
 
   return (
     <div className="space-y-6">
+      {/* Image Display (if available) */}
+      {answer.image && (
+        <div className="rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 sm:p-6 overflow-hidden">
+          <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+            <Image
+              src={answer.image}
+              alt={`${gameName} answer for ${formatDate(answer.date)}`}
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+            />
+          </div>
+        </div>
+      )}
+
       {/* Answer Reveal */}
       <AnswerReveal 
         answer={answer.answer} 

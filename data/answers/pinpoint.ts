@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#637",
+    date: "2025-01-28",
+    answer: 'Words that come before "address"!',
+    clues: ["Business", "Keynote", "Forwarding", "IP", "Email"],
+    clueHint: `Here is how each clue relates to that word:<br>
+<strong>Business:</strong> A business is a company that provides a service.<br>
+<strong>Keynote:</strong> A keynote is a speech that is given at a conference.<br>
+<strong>Forwarding:</strong> Forwarding is the process of forwarding a message to another address.<br>
+<strong>IP:</strong> IP is the Internet Protocol.<br>
+<strong>Email:</strong> Email is a message that is sent to another address.`,
+  },
+  {
     sequence: "#636",
     date: "2025-01-27",
     answer: "Wall",
@@ -11,7 +23,8 @@ export const pinpointAnswers: GameAnswer[] = [
 <strong>Calendars:</strong> A calendar is a wall calendar.<br>
 <strong>Mirrors:</strong> A mirror is a wall mirror.<br>
 <strong>Pennants:</strong> A pennant is a wall pennant.<br>
-<strong>Televisions(if not on stands):</strong> A television is a wall television.`
+<strong>Televisions(if not on stands):</strong> A television is a wall television.`,
+    // image: "https://example.com/images/wall-answer.jpg" // 示例：图片地址字段
   },
   {
     sequence: "#635",

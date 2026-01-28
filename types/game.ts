@@ -8,6 +8,7 @@ export type GameAnswer = {
   clues?: string[]; // Optional clues (e.g., Pinpoint's 5 clues)
   clueHint?: string; // Optional hint text for clues (e.g., "Hover (desktop) or tap (mobile) each clue...")
   hints?: string[]; // Optional hints
+  image?: string; // Optional image URL for the answer
 };
 
 export type Game = {
