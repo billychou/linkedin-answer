@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#638",
+    date: "2025-01-29",
+    answer: 'Places with "City" in their names!',
+    clues: ["Mexico", "Panama", "Ho Chi Minh", "Vatican", "Gotham"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Mexico:</strong> Mexico is a city in Mexico.<br>
+<strong>Panama:</strong> Panama is a city in Panama.<br>
+<strong>Ho Chi Minh:</strong> Ho Chi Minh is a city in Vietnam.<br>
+<strong>Vatican:</strong> Vatican is a city in Italy.<br>
+<strong>Gotham:</strong> Gotham is a city in the United States.</p>`,
+  },
+  {
     sequence: "#637",
     date: "2025-01-28",
     answer: 'Words that come before "address"!',
@@ -24,7 +36,6 @@ export const pinpointAnswers: GameAnswer[] = [
 <strong>Mirrors:</strong> A mirror is a wall mirror.<br>
 <strong>Pennants:</strong> A pennant is a wall pennant.<br>
 <strong>Televisions(if not on stands):</strong> A television is a wall television.`,
-    // image: "https://example.com/images/wall-answer.jpg" // 示例：图片地址字段
   },
   {
     sequence: "#635",
