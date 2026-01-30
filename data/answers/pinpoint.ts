@@ -2,7 +2,7 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
-    sequence: "#638",
+    sequence: "#639",
     date: "2025-01-29",
     answer: 'Places with "City" in their names!',
     clues: ["Mexico", "Panama", "Ho Chi Minh", "Vatican", "Gotham"],
@@ -14,7 +14,7 @@ export const pinpointAnswers: GameAnswer[] = [
 <strong>Gotham:</strong> Gotham is a city in the United States.</p>`,
   },
   {
-    sequence: "#637",
+    sequence: "#638",
     date: "2025-01-28",
     answer: 'Words that come before "address"!',
     clues: ["Business", "Keynote", "Forwarding", "IP", "Email"],
@@ -26,7 +26,7 @@ export const pinpointAnswers: GameAnswer[] = [
 <strong>Email:</strong> Email is a message that is sent to another address.`,
   },
   {
-    sequence: "#636",
+    sequence: "#637",
     date: "2025-01-27",
     answer: "Things you hang from a wall",
     clues: ["Paintings", "Calendars", "Mirrors", "Pennants", "Televisions(if not on stands)"],
@@ -38,7 +38,7 @@ export const pinpointAnswers: GameAnswer[] = [
 <strong>Televisions(if not on stands):</strong> A television is a wall television.`,
   },
   {
-    sequence: "#635",
+    sequence: "#636",
     date: "2025-01-26",
     answer: "Ways to cut food with a knife to prepare for cooking",
     clues: ["Dice", "Quarter", "Mince", "Chop", "Slice"],
@@ -50,7 +50,7 @@ export const pinpointAnswers: GameAnswer[] = [
 <strong>Slice:</strong> To cut across the food into thin, flat pieces.`
   },
   {
-    sequence: "#634",
+    sequence: "#635",
     date: "2025-01-25",
     answer: "flights",
     clues: ["Stairs", "Fancy", "Shots of whiskey", "Group of swallows", "Airline passengers"],
@@ -61,7 +61,7 @@ export const pinpointAnswers: GameAnswer[] = [
 <strong>Group of swallows:</strong> The collective noun for a group of swallows is a flight of swallows.</p>`,
   },
   {
-    sequence: "#633",
+    sequence: "#634",
     date: "2025-01-20",
     answer: "Fruits",
     clues: ["Apple", "Banana", "Orange", "Grape", "Strawberry"],
@@ -73,7 +73,7 @@ export const pinpointAnswers: GameAnswer[] = [
 <strong>Strawberry:</strong> A strawberry is a fruit.</p>`,
   },
   {
-    sequence: "#632",
+    sequence: "#633",
     date: "2025-01-19",
     answer: "Countries",
     clues: ["France", "Japan", "Brazil", "India", "Canada"],
@@ -83,41 +83,5 @@ export const pinpointAnswers: GameAnswer[] = [
 <strong>Brazil:</strong> Brazil is a country in South America.<br>
 <strong>India:</strong> India is a country in Asia.<br>
 <strong>Canada:</strong> Canada is a country in North America.</p>`,
-  },
-  {
-    sequence: "#631",
-    date: "2025-01-18",
-    answer: "Colors",
-    clues: ["Red", "Blue", "Green", "Yellow", "Purple"],
-    clueHint: `Here is how each clue relates to that word:<br>
-<strong>Red:</strong> Red is a color.<br>
-<strong>Blue:</strong> Blue is a color.<br>
-<strong>Green:</strong> Green is a color.<br>
-<strong>Yellow:</strong> Yellow is a color.<br>
-<strong>Purple:</strong> Purple is a color.</p>`,
-  },
-  {
-    sequence: "#630",
-    date: "2025-01-17",
-    answer: "Animals",
-    clues: ["Dog", "Cat", "Bird", "Fish", "Rabbit"],
-    clueHint: `Here is how each clue relates to that word:<br>
-<strong>Dog:</strong> A dog is a mammal.<br>
-<strong>Cat:</strong> A cat is a mammal.<br>
-<strong>Bird:</strong> A bird is a bird.<br>
-<strong>Fish:</strong> A fish is a fish.<br>
-<strong>Rabbit:</strong> A rabbit is a mammal.</p>`,
-  },
-  {
-    sequence: "#629",
-    date: "2025-01-16",
-    answer: "Sports",
-    clues: ["Football", "Basketball", "Tennis", "Swimming", "Running"],
-    clueHint: `Here is how each clue relates to that word:<br>
-<strong>Football:</strong> A football is a sport.<br>
-<strong>Basketball:</strong> A basketball is a sport.<br>
-<strong>Tennis:</strong> A tennis is a sport.<br>
-<strong>Swimming:</strong> A swimming is a sport.<br>
-<strong>Running:</strong> A running is a sport.</p>`,
-  },
+  }
 ];
