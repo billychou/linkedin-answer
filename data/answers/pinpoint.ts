@@ -2,9 +2,21 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#640",
+    date: "2026-01-30",
+    answer: "Different meanings of \"set\"!",
+    clues: ["Rigid", "Prearranged", "Backdrop", "Establish (a record)", "{Collection of objects}"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Rigid:</strong> Rigid is a set of objects.<br>
+<strong>Prearranged:</strong> Prearranged is a set of objects.<br>
+<strong>Backdrop:</strong> Backdrop is a set of objects.<br>
+<strong>Establish (a record):</strong> Establish (a record) is a set of objects.<br>
+<strong>{Collection of objects}:</strong> {Collection of objects} is a set of objects.</p>`,
+  },
+  {
     sequence: "#639",
     date: "2025-01-29",
-    answer: 'Places with "City" in their names!',
+    answer: "Places with \"City\" in their names!",
     clues: ["Mexico", "Panama", "Ho Chi Minh", "Vatican", "Gotham"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Mexico:</strong> Mexico is a city in Mexico.<br>
@@ -16,7 +28,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#638",
     date: "2025-01-28",
-    answer: 'Words that come before "address"!',
+    answer: "Words that come before \"address\"!",
     clues: ["Business", "Keynote", "Forwarding", "IP", "Email"],
     clueHint: `Here is how each clue relates to that word:<br>
 <strong>Business:</strong> A business is a company that provides a service.<br>
@@ -47,7 +59,7 @@ export const pinpointAnswers: GameAnswer[] = [
 <strong>Quarter:</strong> To divide an item into four equal pieces.<br>
 <strong>Mince:</strong> To cut into very small, fine pieces—smaller than chopping.<br>
 <strong>Chop:</strong> To cut into bite-sized pieces where shape uniformity is less important.<br>
-<strong>Slice:</strong> To cut across the food into thin, flat pieces.`
+<strong>Slice:</strong> To cut across the food into thin, flat pieces.`,
   },
   {
     sequence: "#635",

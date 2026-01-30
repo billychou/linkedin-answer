@@ -1,5 +1,6 @@
 export type GameSlug =
-  | "pinpoint";
+  | "pinpoint"
+  | "queens";
  
 export type GameAnswer = {
   sequence: string;

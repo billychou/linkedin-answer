@@ -1,8 +1,10 @@
 import { pinpointAnswers } from "@/data/answers/pinpoint";
+import { queensAnswers } from "@/data/answers/queens";
 import { GameAnswer, GameSlug } from "@/types/game";
 
 const answersMap: Record<GameSlug, GameAnswer[]> = {
   pinpoint: pinpointAnswers,
+  queens: queensAnswers,
 };
 
 export function getAnswersByGameSlug(slug: GameSlug): GameAnswer[] {

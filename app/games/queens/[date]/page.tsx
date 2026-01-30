@@ -1,64 +1,39 @@
 import AnswerDisplay from "@/components/games/AnswerDisplay";
 import StructuredData from "@/components/games/StructuredData";
 import GameNavigation from "@/components/games/GameNavigation";
-import { getAnswerByDate } from "@/lib/answers";
-import { getGame, getGameSlugs } from "@/lib/games";
-import { getAllAnswers } from "@/lib/answers";
+import { getAnswerByDate, getAllAnswers } from "@/lib/answers";
+import { getGame } from "@/lib/games";
 import { constructMetadata } from "@/lib/metadata";
 import { Calendar } from "lucide-react";
 import { notFound } from "next/navigation";
 
 type Props = {
-  params: Promise<{ gameSlug: string; date: string }>;
+  params: Promise<{ date: string }>;
 };
 
 export async function generateStaticParams() {
-  const gameSlugs = getGameSlugs();
-  const params: { gameSlug: string; date: string }[] = [];
-
-  // Generate params for all games and their dates
-  for (const slug of gameSlugs) {
-    const answers = getAllAnswers(slug as any);
-    for (const answer of answers) {
-      params.push({
-        gameSlug: slug,
-        date: answer.date,
-      });
-    }
-  }
-
-  return params;
+  const answers = getAllAnswers("queens");
+  return answers.map((answer) => ({ date: answer.date }));
 }
 
 export async function generateMetadata({
   params,
 }: Props): Promise<ReturnType<typeof constructMetadata>> {
-  const { gameSlug, date } = await params;
-  const game = getGame(gameSlug);
+  const { date } = await params;
+  const game = getGame("queens");
+  const answer = getAnswerByDate("queens", date);
 
-  if (!game) {
-    return constructMetadata({
-      page: "Game",
-      title: "Game Not Found",
-      description: "The requested game could not be found.",
-      path: `/games/${gameSlug}/${date}`,
-    });
-  }
-
-  const answer = getAnswerByDate(gameSlug as any, date);
-
-  if (!answer) {
+  if (!game || !answer) {
     return constructMetadata({
       page: "Game",
       title: "Answer Not Found",
       description: "The requested answer could not be found.",
-      path: `/games/${gameSlug}/${date}`,
+      path: `/games/queens/${date}`,
     });
   }
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-US", {
+    return new Date(dateString).toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
@@ -69,28 +44,22 @@ export async function generateMetadata({
     page: "Game",
     title: `${game.name} - ${formatDate(date)}`,
     description: `Answer for ${game.name} on ${formatDate(date)}`,
-    path: `/games/${gameSlug}/${date}`,
-    canonicalUrl: `/games/${gameSlug}/${date}`,
+    path: `/games/queens/${date}`,
+    canonicalUrl: `/games/queens/${date}`,
   });
 }
 
-export default async function DatePage({ params }: Props) {
-  const { gameSlug, date } = await params;
-  const game = getGame(gameSlug);
+export default async function QueensDatePage({ params }: Props) {
+  const { date } = await params;
+  const game = getGame("queens");
+  const answer = getAnswerByDate("queens", date);
 
-  if (!game) {
-    notFound();
-  }
-
-  const answer = getAnswerByDate(gameSlug as any, date);
-
-  if (!answer) {
+  if (!game || !answer) {
     notFound();
   }
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-US", {
+    return new Date(dateString).toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
@@ -101,10 +70,8 @@ export default async function DatePage({ params }: Props) {
     <>
       <StructuredData game={game} answer={answer} />
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8">
-        {/* Navigation */}
         <GameNavigation game={game} currentPage="answer" />
 
-        {/* Page Header */}
         <div className="mb-8 sm:mb-10">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-gray-100 mb-3">
             {game.name}
@@ -115,7 +82,6 @@ export default async function DatePage({ params }: Props) {
           </div>
         </div>
 
-        {/* Answer Content */}
         <AnswerDisplay answer={answer} gameName={game.name} />
       </div>
     </>
