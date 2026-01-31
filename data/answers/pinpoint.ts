@@ -109,8 +109,5 @@ All of these common phrases start with the word "master".
 <strong>Brazil:</strong> Brazil is a country in South America.<br>
 <strong>India:</strong> India is a country in Asia.<br>
 <strong>Canada:</strong> Canada is a country in North America.</p>`,
-  },
-]y in Asia.<br>
-<strong>Canada:</strong> Canada is a country in North America.</p>`,
   }
 ];
