@@ -2,6 +2,20 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#641",
+    date: "2026-01-31",
+    answer: "Words that follow \"master\"",
+    clues: ["Class", "Mind", "Stroke", "Piece", "Of ceremonies"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Class:</strong> "Master class" is a special class taught by an expert.<br>
+<strong>Mind:</strong> "Mastermind" means to be the person who plans and directs a project or event.<br>
+<strong>Stroke:</strong> "Masterstroke" refers to an extremely skillful act or move.<br>
+<strong>Piece:</strong> "Masterpiece" is a work of outstanding artistry, skill, or workmanship.<br>
+<strong>Of ceremonies:</strong> "Master of ceremonies" is the official host of an event or performance.<br>
+All of these common phrases start with the word "master".
+</p>`,
+  },
+  {
     sequence: "#640",
     date: "2026-01-30",
     answer: "Different meanings of \"set\"!",
@@ -94,6 +108,9 @@ export const pinpointAnswers: GameAnswer[] = [
 <strong>Japan:</strong> Japan is a country in Asia.<br>
 <strong>Brazil:</strong> Brazil is a country in South America.<br>
 <strong>India:</strong> India is a country in Asia.<br>
+<strong>Canada:</strong> Canada is a country in North America.</p>`,
+  },
+]y in Asia.<br>
 <strong>Canada:</strong> Canada is a country in North America.</p>`,
   }
 ];
