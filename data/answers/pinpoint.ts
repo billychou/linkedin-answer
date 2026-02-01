@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#642",
+    date: "2026-02-01",
+    answer: "Traditional anniversary gifts (by year) !",
+    clues: ["Bronze (8)", "China (20)", "Wood (5)", "Silver (25)", "Gold (50)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Bronze (8):</strong> is the traditional gift associated with the 8th wedding anniversary. <br>
+<strong>China (20):</strong> meaning porcelain, marks the traditional 20th anniversary gift.<br>
+<strong>Wood (5):</strong> is the traditional gift associated with the 5th wedding anniversary. <br>
+<strong>Silver (25):</strong> is the classic gift for the 25th anniversary, a major milestone.<br>
+<strong>Gold (50):</strong> marks the 50th anniversary, the most celebrated traditional milestone.</p>`,
+  },
+  {
     sequence: "#641",
     date: "2026-01-31",
     answer: "Words that follow \"master\"",
