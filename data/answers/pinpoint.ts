@@ -2,6 +2,45 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#644",
+    date: "2026-02-03",
+    answer: "Golf Scores",
+    clues: ["Albatross", "Eagle", "Birdie", "Par", "Bogey (or worse)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+    <strong>Albatross:</strong> A bird with a long neck and a long beak.<br>
+    <strong>Eagle:</strong> A bird with a long neck and a sharp beak.<br>
+    <strong>Birdie:</strong> A bird with a short neck and a long beak.<br>
+    <strong>Par:</strong> A bird with a short neck and a medium beak.<br>
+    <strong>Bogey (or worse):</strong> A bird with a short neck and a short beak.</p>
+    `
+  },
+  {
+    sequence: "#642",
+    date: "2026-02-01",
+    answer: "Traditional anniversary gifts (by year) !",
+    clues: ["Bronze (8)", "China (20)", "Wood (5)", "Silver (25)", "Gold (50)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Bronze (8):</strong> is the traditional gift associated with the 8th wedding anniversary. <br>
+<strong>China (20):</strong> meaning porcelain, marks the traditional 20th anniversary gift.<br>
+<strong>Wood (5):</strong> is the traditional gift associated with the 5th wedding anniversary. <br>
+<strong>Silver (25):</strong> is the classic gift for the 25th anniversary, a major milestone.<br>
+<strong>Gold (50):</strong> marks the 50th anniversary, the most celebrated traditional milestone.</p>`,
+  },
+  {
+    sequence: "#641",
+    date: "2026-01-31",
+    answer: "Words that follow \"master\"",
+    clues: ["Class", "Mind", "Stroke", "Piece", "Of ceremonies"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Class:</strong> "Master class" is a special class taught by an expert.<br>
+<strong>Mind:</strong> "Mastermind" means to be the person who plans and directs a project or event.<br>
+<strong>Stroke:</strong> "Masterstroke" refers to an extremely skillful act or move.<br>
+<strong>Piece:</strong> "Masterpiece" is a work of outstanding artistry, skill, or workmanship.<br>
+<strong>Of ceremonies:</strong> "Master of ceremonies" is the official host of an event or performance.<br>
+All of these common phrases start with the word "master".
+</p>`,
+  },
+  {
     sequence: "#640",
     date: "2026-01-30",
     answer: "Different meanings of \"set\"!",
@@ -95,5 +134,5 @@ export const pinpointAnswers: GameAnswer[] = [
 <strong>Brazil:</strong> Brazil is a country in South America.<br>
 <strong>India:</strong> India is a country in Asia.<br>
 <strong>Canada:</strong> Canada is a country in North America.</p>`,
-  }
+  },
 ];
