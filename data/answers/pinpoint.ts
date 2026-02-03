@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#644",
+    date: "2026-02-03",
+    answer: "Golf Scores",
+    clues: ["Albatross", "Eagle", "Birdie", "Par", "Bogey (or worse)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+    <strong>Albatross:</strong> A bird with a long neck and a long beak.<br>
+    <strong>Eagle:</strong> A bird with a long neck and a sharp beak.<br>
+    <strong>Birdie:</strong> A bird with a short neck and a long beak.<br>
+    <strong>Par:</strong> A bird with a short neck and a medium beak.<br>
+    <strong>Bogey (or worse):</strong> A bird with a short neck and a short beak.</p>
+    `
+  },
+  {
     sequence: "#642",
     date: "2026-02-01",
     answer: "Traditional anniversary gifts (by year) !",
@@ -121,5 +134,5 @@ All of these common phrases start with the word "master".
 <strong>Brazil:</strong> Brazil is a country in South America.<br>
 <strong>India:</strong> India is a country in Asia.<br>
 <strong>Canada:</strong> Canada is a country in North America.</p>`,
-  }
+  },
 ];
