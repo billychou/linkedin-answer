@@ -133,3 +133,4 @@ dist
 */robots.txt
 .cursor/
 _bmad/
+.venv/

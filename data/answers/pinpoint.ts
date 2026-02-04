@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#645",
+    date: "2026-02-04",
+    answer: "Terms that come after \"cat\"!",
+    clues: ["Nap", "Carrier", "Burglar", "Litter", "Got your tongue?"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+    <strong>Nap:</strong> A nap is a short sleep.<br>
+    <strong>Carrier:</strong> A carrier is a person who carries something.<br>
+    <strong>Burglar:</strong> A burglar is a person who breaks into a house.<br>
+    <strong>Litter:</strong> Litter is a person who litters.<br>
+    <strong>Got your tongue?:</strong> Got your tongue? is a person who is tongue-tied.</p>`,
+  },
+  {
     sequence: "#644",
     date: "2026-02-03",
     answer: "Golf Scores",
@@ -12,7 +24,7 @@ export const pinpointAnswers: GameAnswer[] = [
     <strong>Birdie:</strong> A bird with a short neck and a long beak.<br>
     <strong>Par:</strong> A bird with a short neck and a medium beak.<br>
     <strong>Bogey (or worse):</strong> A bird with a short neck and a short beak.</p>
-    `
+    `,
   },
   {
     sequence: "#642",
@@ -134,5 +146,5 @@ All of these common phrases start with the word "master".
 <strong>Brazil:</strong> Brazil is a country in South America.<br>
 <strong>India:</strong> India is a country in Asia.<br>
 <strong>Canada:</strong> Canada is a country in North America.</p>`,
-  },
+  }
 ];
