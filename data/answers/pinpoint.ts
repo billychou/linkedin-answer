@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#646",
+    date: "2026-02-05",
+    answer: "Two-wheeled vehicles",
+    clues: ["Segway", "Hand truck", "Hoverboard", "Motorcycle", "Bicycle (but not a tricycle)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+    <strong>Segway:</strong> A segway is a two-wheeled vehicle that you can ride by balancing on.<br>
+    <strong>Hand truck:</strong> A hand truck is a two-wheeled vehicle that you can pull.<br>
+    <strong>Hoverboard:</strong> A hoverboard is a two-wheeled vehicle that you can ride by balancing on.<br>
+    <strong>Motorcycle:</strong> A motorcycle is a two-wheeled vehicle that you can ride.<br>
+    <strong>Bicycle (but not a tricycle):</strong> A bicycle is a two-wheeled vehicle that you can ride.</p>`,
+  },
+  {
     sequence: "#645",
     date: "2026-02-04",
     answer: "Terms that come after \"cat\"!",
