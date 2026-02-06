@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#647",
+    date: "2026-02-06",
+    answer: "Famous statues",
+    clues: ["David", "Christ the Redeemer", "The Thinker", "Moai (on Easter Island)", "Venus de Milo (at the Louvre)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+    <strong>David:</strong> David is a famous statue of a man.<br>
+    <strong>Christ the Redeemer:</strong> Christ the Redeemer is a famous statue of Jesus Christ.<br>
+    <strong>The Thinker:</strong> The Thinker is a famous statue of a man thinking.<br>
+    <strong>Moai (on Easter Island):</strong> Moai are famous statues on Easter Island.<br>
+    <strong>Venus de Milo (at the Louvre):</strong> Venus de Milo is a famous statue at the Louvre.</p>
+    `
+  },
+  {
     sequence: "#646",
     date: "2026-02-05",
     answer: "Two-wheeled vehicles",
@@ -158,5 +171,5 @@ All of these common phrases start with the word "master".
 <strong>Brazil:</strong> Brazil is a country in South America.<br>
 <strong>India:</strong> India is a country in Asia.<br>
 <strong>Canada:</strong> Canada is a country in North America.</p>`,
-  }
+  },
 ];
