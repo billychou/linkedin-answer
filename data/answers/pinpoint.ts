@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#651",
+    date: "2026-02-10",
+    answer: "Names of volcanoes",
+    clues: ["Eyjafjallajökull", "Mauna Loa", "Fuji", "Krakatoa", "Vesuvius"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+    <strong>Eyjafjallajökull:</strong> Eyjafjallajökull is a volcano in Iceland.<br>
+    <strong>Mauna Loa:</strong> Mauna Loa is a volcano in Hawaii.<br>
+    <strong>Fuji:</strong> Fuji is a volcano in Japan.<br>
+    <strong>Krakatoa:</strong> Krakatoa is a volcano in Indonesia.<br>
+    <strong>Vesuvius:</strong> Vesuvius is a volcano in Italy.</p>`,
+  },
+  {
     sequence: "#647",
     date: "2026-02-06",
     answer: "Famous statues",
@@ -12,7 +24,7 @@ export const pinpointAnswers: GameAnswer[] = [
     <strong>The Thinker:</strong> The Thinker is a famous statue of a man thinking.<br>
     <strong>Moai (on Easter Island):</strong> Moai are famous statues on Easter Island.<br>
     <strong>Venus de Milo (at the Louvre):</strong> Venus de Milo is a famous statue at the Louvre.</p>
-    `
+    `,
   },
   {
     sequence: "#646",
