@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#652",
+    date: "2026-02-11",
+    answer: "Words that come after \"butter\"",
+    clues: ["Flies", "Fingers", "Milk", "Chicken", "Churn (used to make it)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+    <strong>Flies:</strong> Flies is a type of insect that butterflies belong to.<br>
+    <strong>Fingers:</strong> Fingers are the part of the hand that butterflies have.<br>
+    <strong>Milk:</strong> Milk is a type of food that butterflies drink.<br>
+    <strong>Chicken:</strong> Chicken is a type of meat that butterflies eat.<br>
+    <strong>Churn (used to make it):</strong> Churn is a type of machine that butterflies use to make milk.</p>`,
+  },
+  {
     sequence: "#651",
     date: "2026-02-10",
     answer: "Names of volcanoes",
