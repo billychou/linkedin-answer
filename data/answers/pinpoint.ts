@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#653",
+    date: "2026-02-12",
+    answer: "Terms in figure skating",
+    clues: ["Spiral", "Toe loop", "Triple Axel", "Deductions (after falls)", "Kiss and cry (rink area)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+    <strong>Spiral:</strong> A spiral is a term in figure skating.<br>
+    <strong>Toe loop:</strong> A toe loop is a term in figure skating.<br>
+    <strong>Triple Axel:</strong> A triple axel is a term in figure skating.<br>
+    <strong>Deductions (after falls):</strong> Deductions are given after falls in figure skating.<br>
+    <strong>Kiss and cry (rink area):</strong> A kiss and cry is a rink area for figure skaters after performances.</p>`,
+  },
+  {
     sequence: "#652",
     date: "2026-02-11",
     answer: "Words that come after \"butter\"",
