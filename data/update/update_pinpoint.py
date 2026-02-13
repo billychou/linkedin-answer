@@ -86,22 +86,16 @@ def _parse_answer(html: str) -> str | None:
     """从详情页 HTML 解析 Answer 文本。"""
     soup = BeautifulSoup(html, "html.parser")
     text = soup.get_text(separator=" ", strip=True)
-    # 匹配 "Category: Pinpoint XXX" 下一行即答案，或 "—XXX—" 形式的揭示句
+    
+    # 匹配 "Category: Pinpoint XXX" 后的答案文本
+    # 支持多种结束标记：📘 (Words & How They Fit), Word Phrase, Meaning, Usage, 🧠 或字符串结束
     cat_match = re.search(
-        r"Category:\s*Pinpoint\s*\d+\s*(.+?)(?=[\n\r\s]*[🗂️ ]*Words\s*&?\s*How|[\n\r\s]*Word\s*Phrase|[\n\r\s]*Meaning|[\n\r\s]*Usage|[\n\r\s]*🧠|$)",
+        r"Category:\s*Pinpoint\s*\d+\s*(.+?)(?=\s*📘|\s*Words\s*&|\s*Word\s*Phrase|\s*Meaning|\s*Usage|\s*🧠|$)",
         text,
         re.DOTALL | re.I,
     )
     if cat_match:
-        answer_full = cat_match.group(1).strip()
-        # 进一步提取引号或“Places with ...”这一部分
-        answer_match = re.search(
-            r'(?i)(places\s+with\s+["“][^"”]+["”][^.\n]*)', answer_full
-        )
-        if answer_match:
-            answer = answer_match.group(1).strip()
-        else:
-            answer = answer_full
+        answer = cat_match.group(1).strip()
         return answer
 
     # 备选：Full reveal came in—XXX—

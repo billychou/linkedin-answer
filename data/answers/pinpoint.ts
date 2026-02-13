@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#654",
+    date: "2026-02-13",
+    answer: "Types of belt",
+    clues: ["Black", "Asteroid", "Seat", "Conveyor", "Orion's"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+    <strong>Black:</strong> Black belts are a type of belt.<br>
+    <strong>Asteroid:</strong> Asteroid belts are a type of belt in space.<br>
+    <strong>Seat:</strong> Seat belts are a type of belt used in vehicles.<br>
+    <strong>Conveyor:</strong> Conveyor belts are a type of belt used in factories.<br>
+    <strong>Orion's:</strong> Orion's Belt is a constellation in the sky.</p>`,
+  },
+  {
     sequence: "#653",
     date: "2026-02-12",
     answer: "Terms in figure skating",
