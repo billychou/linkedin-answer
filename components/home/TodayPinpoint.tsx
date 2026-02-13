@@ -182,7 +182,7 @@ export default function TodayPinpoint({ game, answer }: TodayPinpointProps) {
       </div>
 
       {/* Quick Links */}
-      <div className="flex flex-wrap items-center justify-center gap-4 mt-6 text-sm">
+      {/* <div className="flex flex-wrap items-center justify-center gap-4 mt-6 text-sm">
         <Link
           href={`/games/${game.slug}/archives`}
           className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors underline underline-offset-2"
@@ -209,7 +209,7 @@ export default function TodayPinpoint({ game, answer }: TodayPinpointProps) {
             </a>
           </>
         )}
-      </div>
+      </div> */}
     </div>
   );
 }

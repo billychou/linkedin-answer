@@ -1,4 +1,3 @@
-import GameGrid from "@/components/games/GameGrid";
 import { getTodayAnswer } from "@/lib/answers";
 import { getGame } from "@/lib/games";
 import Hero from "./Hero";
@@ -29,7 +28,7 @@ export default function HomeComponent() {
             Explore more LinkedIn games and their answers
           </p>
         </div>
-        <GameGrid />
+        {/* <GameGrid /> */}
       </section>
     </div>
   );
