@@ -19,7 +19,7 @@ export default function HomeComponent() {
       )}
       
       {/* Game Cards Section */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16">
+      {/* <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16">
         <div className="mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-gray-100 mb-2">
             All Games
@@ -28,8 +28,8 @@ export default function HomeComponent() {
             Explore more LinkedIn games and their answers
           </p>
         </div>
-        {/* <GameGrid /> */}
-      </section>
+        <GameGrid />
+      </section> */}
     </div>
   );
 }
