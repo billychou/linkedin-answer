@@ -1,7 +1,5 @@
-import BaiDuAnalytics from "@/app/BaiDuAnalytics";
 import GoogleAdsense from "@/app/GoogleAdsense";
 import GoogleAnalytics from "@/app/GoogleAnalytics";
-import PlausibleAnalytics from "@/app/PlausibleAnalytics";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import { TailwindIndicator } from "@/components/TailwindIndicator";
@@ -65,10 +63,8 @@ export default function RootLayout({
         ) : (
           <>
             <Analytics />
-            <BaiDuAnalytics />
             <GoogleAnalytics />
             <GoogleAdsense />
-            <PlausibleAnalytics />
           </>
         )}
       </body>
