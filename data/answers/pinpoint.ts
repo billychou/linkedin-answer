@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#655",
+    date: "2026-02-14",
+    answer: "Words that come after \"sweet\"",
+    clues: ["Tooth", "Talk", "Potato", "Nothings", "Heart (💖 Happy Valentine's 💖)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+    <strong>Tooth:</strong> Tooth is a type of bone that comes after sweet.<br>
+    <strong>Talk:</strong> Talk is a type of communication that comes after sweet.<br>
+    <strong>Potato:</strong> Potato is a type of vegetable that comes after sweet.<br>
+    <strong>Nothings:</strong> Nothings is a type of nothing that comes after sweet.<br>
+    <strong>Heart (💖 Happy Valentine's 💖):</strong> Heart (💖 Happy Valentine's 💖) is a type of shape that comes after sweet.</p>
+    `
+  },
+  {
     sequence: "#654",
     date: "2026-02-13",
     answer: "Types of belt",
