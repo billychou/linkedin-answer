@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#656",
+    date: "2026-02-15",
+    answer: "Parts of a blimp",
+    clues: ["Tailfin", "Gondola", "Propeller", "Ballonets (inflatable bags)", "Helium gas envelope"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+    <strong>Tailfin:</strong> Tailfin is a type of fin that comes after sweet.<br>
+    <strong>Gondola:</strong> Gondola is a type of car that comes after sweet.<br>
+    <strong>Propeller:</strong> Propeller is a type of machine that comes after sweet.<br>
+    <strong>Ballonets (inflatable bags):</strong> Ballonets (inflatable bags) are types of bags that come after sweet.<br>
+    <strong>Helium gas envelope:</strong> Helium gas envelope is a type of envelope that comes after sweet.</p>
+`,
+  },
+  {
     sequence: "#655",
     date: "2026-02-14",
     answer: "Words that come after \"sweet\"",
@@ -11,8 +24,8 @@ export const pinpointAnswers: GameAnswer[] = [
     <strong>Talk:</strong> Talk is a type of communication that comes after sweet.<br>
     <strong>Potato:</strong> Potato is a type of vegetable that comes after sweet.<br>
     <strong>Nothings:</strong> Nothings is a type of nothing that comes after sweet.<br>
-    <strong>Heart (💖 Happy Valentine's 💖):</strong> Heart (💖 Happy Valentine's 💖) is a type of shape that comes after sweet.</p>
-    `
+    <strong>Heart ( Happy Valentine's ):</strong> Heart ( Happy Valentine's ) is a type of shape that comes after sweet.</p>
+    `,
   },
   {
     sequence: "#654",
