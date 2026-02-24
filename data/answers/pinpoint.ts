@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#664",
+    date: "2026-02-23",
+    answer: "Types of pastry",
+    clues: ["Turnover", "Samosa", "Strudel", "Croissant", "Doughnut"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+    <strong>Turnover:</strong> Turnover is a type of pastry.<br>
+    <strong>Samosa:</strong> Samosa is a type of pastry.<br>
+    <strong>Strudel:</strong> Strudel is a type of pastry.<br>
+    <strong>Croissant:</strong> Croissant is a type of pastry.<br>
+    <strong>Doughnut:</strong> Doughnut is a type of pastry.</p>
+    `
+  },
+  {
     sequence: "#656",
     date: "2026-02-15",
     answer: "Parts of a blimp",
