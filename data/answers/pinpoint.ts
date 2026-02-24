@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#665",
+    date: "2026-02-24",
+    answer: "Things associated with Japan",
+    clues: ["Sake", "Samurai", "Sumo wrestling", "Origami", "Sushi"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+    <strong>Sake:</strong> Sake is a type of Japanese drink.<br>
+    <strong>Samurai:</strong> Samurai is a type of Japanese warrior.<br>
+    <strong>Sumo wrestling:</strong> Sumo wrestling is a type of Japanese sport.<br>
+    <strong>Origami:</strong> Origami is a type of Japanese paper craft.<br>
+    <strong>Sushi:</strong> Sushi is a type of Japanese food.</p>
+    `
+  },
+  {
     sequence: "#664",
     date: "2026-02-23",
     answer: "Types of pastry",
@@ -12,7 +25,7 @@ export const pinpointAnswers: GameAnswer[] = [
     <strong>Strudel:</strong> Strudel is a type of pastry.<br>
     <strong>Croissant:</strong> Croissant is a type of pastry.<br>
     <strong>Doughnut:</strong> Doughnut is a type of pastry.</p>
-    `
+    `,
   },
   {
     sequence: "#656",
