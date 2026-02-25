@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#666",
+    date: "2026-02-25",
+    answer: "Terms that come before \"play\"",
+    clues: ["Foul", "Horse", "One-act", "Child's", "Plug and"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> "Foul" connects to "play" in the common sports phrase "foul play," which refers to an unfair or illegal action, especially in a game or metaphorically in a crime.<br>
+<strong>Clue 2:</strong> "Horse" connects to the phrase "horseplay," meaning rough, boisterous, or rowdy physical activity, often among children.<br>
+<strong>Clue 3:</strong> "One-act" connects to "play" as a specific type of theatrical performance, a "one-act play," which is a complete drama presented in a single act.<br>
+<strong>Clue 4:</strong> "Child's" connects to the common phrase "child's play," an idiom used to describe something that is very easy to do.<br>
+<strong>Clue 5:</strong> "Plug and" connects to the modern computing term "plug and play," which describes a device that is ready to use immediately after being connected, without complex setup.<br>
+</p>`,
+  },
+  {
     sequence: "#665",
     date: "2026-02-24",
     answer: "Things associated with Japan",
@@ -12,7 +25,7 @@ export const pinpointAnswers: GameAnswer[] = [
     <strong>Sumo wrestling:</strong> Sumo wrestling is a type of Japanese sport.<br>
     <strong>Origami:</strong> Origami is a type of Japanese paper craft.<br>
     <strong>Sushi:</strong> Sushi is a type of Japanese food.</p>
-    `
+    `,
   },
   {
     sequence: "#664",
