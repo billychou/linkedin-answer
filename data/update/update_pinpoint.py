@@ -87,10 +87,10 @@ def _parse_answer(html: str) -> str | None:
     soup = BeautifulSoup(html, "html.parser")
     text = soup.get_text(separator=" ", strip=True)
     
-    # 匹配 "Category: Pinpoint XXX" 后的答案文本
-    # 支持多种结束标记：📘 (Words & How They Fit), Word Phrase, Meaning, Usage, 🧠 或字符串结束
+    # 匹配 "Category: Pinpoint #XXX" 后的答案文本
+    # 支持多种结束标记：📘 📊 (Words & How They Fit), Word Phrase, Meaning, Usage, 🧠 或字符串结束
     cat_match = re.search(
-        r"Category:\s*Pinpoint\s*\d+\s*(.+?)(?=\s*📘|\s*Words\s*&|\s*Word\s*Phrase|\s*Meaning|\s*Usage|\s*🧠|$)",
+        r"Category:\s*Pinpoint\s*#?\d+\s*(.+?)(?=\s*📘|\s*📊|\s*Words\s*&|\s*Word\s*Phrase|\s*Meaning|\s*Usage|\s*🧠|$)",
         text,
         re.DOTALL | re.I,
     )
@@ -261,6 +261,9 @@ export const pinpointAnswers: GameAnswer[] = """
     # 使用相对于整个文件的结束位置，而不是相对于 remaining_content 的位置
 
     new_content = prefix + array_js + postfix
+
+    # 清理 surrogate 字符，避免编码错误
+    new_content = new_content.encode("utf-8", "ignore").decode("utf-8")
 
     with open(ts_file_path, "w", encoding="utf-8") as f:
         f.write(new_content)
