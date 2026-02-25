@@ -1,7 +1,29 @@
 """
 从 https://pinpointanswer.today/#todays-answer 抓取当日 Pinpoint Clues 与 Answer。
+
+使用方法:
+    1. 安装依赖:
+       pip3 install --break-system-packages requests beautifulsoup4 icecream json5
+    
+    2. (可选) 配置 AI API 以生成智能提示:
+       export DEEPSEEK_API_KEY="your-key"  # 推荐，更便宜
+       或
+       export OPENAI_API_KEY="your-key"
+    
+    3. 运行脚本:
+       python3 data/update/update_pinpoint.py
+    
+    注意: 如果不设置 API key，脚本会使用简单的 fallback 模式生成提示。
+
+特性:
+    - 自动抓取最新的 Pinpoint 答案和线索
+    - 使用 AI 生成有意义的 clueHint（解释每个线索与答案的关系）
+    - 支持 DeepSeek 和 OpenAI API
+    - 自动 fallback 到简单模式（无需 API key 也能工作）
+    - 自动更新 data/answers/pinpoint.ts 文件
 """
 
+import os
 import re
 from dataclasses import dataclass
 from urllib.parse import urljoin
@@ -12,6 +34,95 @@ from icecream import ic
 
 BASE_URL = "https://pinpointanswer.today"
 TODAY_PAGE_URL = f"{BASE_URL}/#todays-answer"
+
+
+def _generate_clue_hint_with_ai(clues: list[str], answer: str) -> str:
+    """
+    使用 AI 生成更有意义的 clueHint。
+    
+    需要设置环境变量 OPENAI_API_KEY 或 DEEPSEEK_API_KEY。
+    如果未设置，将回退到默认的简单 hint。
+    """
+    # 优先使用 DeepSeek API（更便宜）
+    api_key = os.getenv("DEEPSEEK_API_KEY") or os.getenv("OPENAI_API_KEY")
+    
+    if not api_key:
+        ic("Warning: No AI API key found, using fallback hint generation")
+        return _generate_fallback_hint(clues)
+    
+    # 判断使用哪个 API
+    if os.getenv("DEEPSEEK_API_KEY"):
+        api_base = "https://api.deepseek.com/v1"
+        model = "deepseek-chat"
+    else:
+        api_base = "https://api.openai.com/v1"
+        model = "gpt-4o-mini"
+    
+    # 构建 prompt
+    clues_text = "\n".join([f"{i+1}. {clue}" for i, clue in enumerate(clues)])
+    prompt = f"""Given the following LinkedIn Pinpoint puzzle:
+
+Answer: {answer}
+
+Clues:
+{clues_text}
+
+Please explain how each clue relates to the answer. For each clue, provide a concise and insightful explanation (1-2 sentences) showing the connection.
+
+Format your response as HTML with this structure:
+<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Explanation for clue 1.<br>
+<strong>Clue 2:</strong> Explanation for clue 2.<br>
+...
+</p>
+
+Keep explanations clear, educational, and engaging. Focus on the specific connection between each clue and the answer."""
+
+    try:
+        response = requests.post(
+            f"{api_base}/chat/completions",
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+            },
+            json={
+                "model": model,
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": "You are a helpful assistant that explains word puzzle connections clearly and concisely."
+                    },
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ],
+                "temperature": 0.7,
+                "max_tokens": 1000,
+            },
+            timeout=30,
+        )
+        response.raise_for_status()
+        result = response.json()
+        hint = result["choices"][0]["message"]["content"].strip()
+        ic(f"Generated hint with AI: {hint[:100]}...")
+        return hint
+    except Exception as e:
+        ic(f"Error generating hint with AI: {e}")
+        return _generate_fallback_hint(clues)
+
+
+def _generate_fallback_hint(clues: list[str]) -> str:
+    """生成默认的简单 hint（当 AI 不可用时使用）"""
+    clue_hint_lines = [
+        f"<strong>{c}:</strong> {c} is one of the clues." for c in clues
+    ]
+    return (
+        "<p>Here is how each clue relates to that word:<br>\n"
+        + "<br>\n".join(clue_hint_lines)
+        + "</p>"
+    )
+
 
 
 @dataclass
@@ -216,15 +327,9 @@ export const pinpointAnswers: GameAnswer[] = """
     if any(entry.get("sequence") == pinpoint_seq for entry in answers):
         return False  # 已存在，不更新
 
-    # Step 5. 生成clueHint
-    clue_hint_lines = [
-        f"<strong>{c}:</strong> {c} is one of the clues." for c in pinpoint.clues
-    ]
-    clue_hint = (
-        "<p>Here is how each clue relates to that word:<br>\n"
-        + "<br>\n".join(clue_hint_lines)
-        + "</p>"
-    )
+    # Step 5. 使用 AI 生成 clueHint
+    ic("Generating clue hint with AI...")
+    clue_hint = _generate_clue_hint_with_ai(pinpoint.clues, pinpoint.answer)
 
     today_str = date.today().strftime("%Y-%m-%d")
 

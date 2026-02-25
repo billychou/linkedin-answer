@@ -6,7 +6,36 @@
 
 ## 使用方法
 
-### 方法 1: 通过 API 路由（推荐）
+### 方法 1: 使用 Python 脚本直接更新（推荐）
+
+1. 安装 Python 依赖：
+   ```bash
+   pip3 install --break-system-packages requests beautifulsoup4 icecream json5
+   ```
+
+2. （可选）配置 AI API 以生成更智能的提示：
+   ```bash
+   # 方式 1: 使用 DeepSeek API（推荐，更便宜）
+   export DEEPSEEK_API_KEY="your-deepseek-api-key"
+   
+   # 方式 2: 使用 OpenAI API
+   export OPENAI_API_KEY="your-openai-api-key"
+   ```
+   
+   **注意**：如果不配置 API key，脚本会使用简单的 fallback 生成提示（功能正常但提示较简单）。
+
+3. 运行 Python 脚本：
+   ```bash
+   python3 data/update/update_pinpoint.py
+   ```
+
+4. 脚本会自动：
+   - 抓取今日 Pinpoint 答案和线索
+   - 使用 AI 生成有意义的提示文本（如果配置了 API）
+   - 更新 `data/answers/pinpoint.ts` 文件
+   - 显示更新结果
+
+### 方法 2: 通过 API 路由
 
 1. 启动开发服务器：
    ```bash
@@ -22,7 +51,7 @@
    - 当天答案（包括线索和答案）
    - 历史答案列表（最多10个）
 
-### 方法 2: 使用更新脚本
+### 方法 3: 使用更新脚本
 
 1. 确保开发服务器正在运行
 
@@ -40,6 +69,50 @@
    - 调用 API 获取数据
    - 更新 `data/answers/pinpoint.ts` 文件
    - 显示更新结果
+
+## AI 提示生成配置
+
+脚本支持使用 AI 自动生成更有意义的 clueHint，解释每个线索与答案的关系。
+
+### 支持的 AI 服务
+
+1. **DeepSeek API**（推荐，成本更低）
+   - 获取 API Key: https://platform.deepseek.com/
+   - 设置环境变量: `export DEEPSEEK_API_KEY="your-key"`
+   - 使用模型: `deepseek-chat`
+
+2. **OpenAI API**
+   - 获取 API Key: https://platform.openai.com/
+   - 设置环境变量: `export OPENAI_API_KEY="your-key"`
+   - 使用模型: `gpt-4o-mini`
+
+### Fallback 模式
+
+如果没有配置 API key，脚本会自动使用 fallback 模式，生成简单的提示文本。功能完全正常，只是提示内容会比较基础。
+
+## 示例输出
+
+### 使用 AI 生成的 clueHint 示例：
+
+```html
+<p>Here is how each clue relates to that word:<br>
+<strong>Tailfin:</strong> The tailfin is the rear stabilizing fin that controls direction and keeps the airship steady during flight.<br>
+<strong>Gondola:</strong> The gondola is the passenger compartment suspended beneath the blimp's envelope, where crew and passengers ride.<br>
+<strong>Propeller:</strong> Propellers provide forward thrust and directional control, allowing the blimp to navigate through the air.<br>
+<strong>Ballonets (inflatable bags):</strong> Ballonets are internal air-filled bags that help maintain the blimp's shape and control altitude by adjusting internal pressure.<br>
+<strong>Helium gas envelope:</strong> The helium gas envelope is the massive outer shell containing lighter-than-air gas that provides lift to the entire structure.</p>
+```
+
+### Fallback 模式生成的简单 clueHint：
+
+```html
+<p>Here is how each clue relates to that word:<br>
+<strong>Tailfin:</strong> Tailfin is one of the clues.<br>
+<strong>Gondola:</strong> Gondola is one of the clues.<br>
+<strong>Propeller:</strong> Propeller is one of the clues.<br>
+<strong>Ballonets (inflatable bags):</strong> Ballonets (inflatable bags) is one of the clues.<br>
+<strong>Helium gas envelope:</strong> Helium gas envelope is one of the clues.</p>
+```
 
 ## 数据结构
 
