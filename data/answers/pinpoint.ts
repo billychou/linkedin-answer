@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#667",
+    date: "2026-02-26",
+    answer: "Types of bottle",
+    clues: ["Baby", "Squeeze", "Coke", "Spray", "Hot water"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> A "baby bottle" is a specific type of bottle designed for feeding infants.<br>
+<strong>Clue 2:</strong> A "squeeze bottle" is a flexible container designed to dispense its contents by being compressed.<br>
+<strong>Clue 3:</strong> A "Coke bottle" refers to the iconic glass or plastic bottle used to package Coca-Cola.<br>
+<strong>Clue 4:</strong> A "spray bottle" is a type of bottle with a nozzle that dispenses liquid as a fine mist.<br>
+<strong>Clue 5:</strong> A "hot water bottle" is a container, often made of rubber, filled with hot water and used for warmth.<br>
+</p>`,
+  },
+  {
     sequence: "#666",
     date: "2026-02-25",
     answer: "Terms that come before \"play\"",
