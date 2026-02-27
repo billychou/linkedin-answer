@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#668",
+    date: "2026-02-27",
+    answer: "Things in a stairwell",
+    clues: ["Landing", "Flight", "Risers", "Handrail", "Floor number (in tall building)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1: Landing</strong> A landing is a flat platform between flights of stairs, a fundamental part of a stairwell's structure.<br>
+<strong>Clue 2: Flight</strong> A flight is a continuous series of steps between landings, which together form the ascending or descending path within a stairwell.<br>
+<strong>Clue 3: Risers</strong> Risers are the vertical components between stair treads, a key architectural element that defines the steps in a stairwell.<br>
+<strong>Clue 4: Handrail</strong> A handrail is a safety fixture mounted along the side of a stairwell to provide support and stability for users.<br>
+<strong>Clue 5: Floor number (in tall building)</strong> In a multi-story building, signs indicating the floor number are commonly posted on the wall within a stairwell for orientation.
+</p>`,
+  },
+  {
     sequence: "#667",
     date: "2026-02-26",
     answer: "Types of bottle",
