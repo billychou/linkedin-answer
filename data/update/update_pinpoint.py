@@ -200,6 +200,7 @@ def _parse_answer(html: str) -> str | None:
     
     # 匹配 "Category: Pinpoint #XXX" 后的答案文本
     # 支持多种结束标记：📘 📊 (Words & How They Fit), Word Phrase, Meaning, Usage, 🧠 或字符串结束
+    # 使用更宽松的正则，允许 Category: 和 Pinpoint 之间有任意空白
     cat_match = re.search(
         r"Category:\s*Pinpoint\s*#?\d+\s*(.+?)(?=\s*📘|\s*📊|\s*Words\s*&|\s*Word\s*Phrase|\s*Meaning|\s*Usage|\s*🧠|$)",
         text,
@@ -207,12 +208,36 @@ def _parse_answer(html: str) -> str | None:
     )
     if cat_match:
         answer = cat_match.group(1).strip()
-        return answer
+        # 清理答案文本中可能的额外空格
+        answer = re.sub(r'\s+', ' ', answer).strip()
+        if answer:
+            return answer
 
-    # 备选：Full reveal came in—XXX—
+    # 备选1：尝试匹配 "Category: Pinpoint" 后面直到特殊字符或标点
+    cat_match2 = re.search(
+        r"Category:\s*Pinpoint\s*#?\d+\s*([^📘📊🧠]+?)(?=\s*(?:📘|📊|🧠|Words\s*&|Word\s*Phrase|Meaning|Usage|$))",
+        text,
+        re.DOTALL | re.I,
+    )
+    if cat_match2:
+        answer = cat_match2.group(1).strip()
+        answer = re.sub(r'\s+', ' ', answer).strip()
+        if answer:
+            return answer
+
+    # 备选2：Full reveal came in—XXX—
     reveal_match = re.search(r"reveal\s+came\s+in[—\-]\s*(.+?)[—\-]", text, re.I)
     if reveal_match:
         return reveal_match.group(1).strip()
+
+    # 备选3：尝试从页面标题或 meta 中提取
+    title_tag = soup.find("title")
+    if title_tag:
+        title = title_tag.get_text()
+        # 尝试匹配 "Pinpoint XXX Answer: YYY" 或类似格式
+        title_match = re.search(r"Pinpoint\s*#?\d+.*?(?:Answer|is)[:\-]?\s*(.+?)(?:\||\-|$)", title, re.I)
+        if title_match:
+            return title_match.group(1).strip()
 
     return None
 
@@ -233,9 +258,18 @@ def get_today_pinpoint() -> TodayPinpoint:
     if not detail_url:
         raise ValueError("未在首页解析到当日详情页链接")
 
+    ic(f"Fetching detail page: {detail_url}")
     detail_html = _fetch_html(detail_url)
     answer = _parse_answer(detail_html)
     if not answer:
+        # 调试：打印部分 HTML 内容帮助诊断
+        soup = BeautifulSoup(detail_html, "html.parser")
+        text = soup.get_text(separator=" ", strip=True)
+        ic(f"Page text sample (first 1000 chars): {text[:1000]}")
+        # 查找 Category 位置
+        cat_idx = text.find("Category")
+        if cat_idx != -1:
+            ic(f"Category context: {text[cat_idx:cat_idx+200]}")
         raise ValueError("未在详情页解析到 Answer 文本")
 
     return TodayPinpoint(

@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#669",
+    date: "2026-02-28",
+    answer: "Words that come before \"lion\"",
+    clues: ["Sea", "Mountain", "African", "Cowardly", "March comes in like a"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1: Sea</strong> "Sea lion" is a common name for certain marine mammals, combining the clue's element with the answer's word.<br>
+<strong>Clue 2: Mountain</strong> "Mountain lion" is a widely used name for a cougar or puma, linking a geographic habitat to the animal.<br>
+<strong>Clue 3: African</strong> "African lion" specifies the most iconic and well-known subspecies of lion, native to Africa.<br>
+<strong>Clue 4: Cowardly</strong> "Cowardly lion" is the famous character from *The Wizard of Oz*, describing a personality trait placed before the animal.<br>
+<strong>Clue 5: March comes in like a</strong> This completes the proverb "March comes in like a lion," referring to stormy weather at the start of the month.<br>
+</p>`,
+  },
+  {
     sequence: "#668",
     date: "2026-02-27",
     answer: "Things in a stairwell",
