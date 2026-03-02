@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#670",
+    date: "2026-03-01",
+    answer: "Things with tabs",
+    clues: ["File folder", "Guitar music", "Drink can", "Spreadsheet", "Web browser (too many open?)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> A file folder often has a physical tab protruding from it, allowing you to label and quickly find it in a filing cabinet.<br>
+<strong>Clue 2:</strong> Guitar music is commonly written in "tablature" or "tabs," a simplified notation system that shows where to place your fingers on the fretboard.<br>
+<strong>Clue 3:</strong> A drink can ha a pull-tab (or stay-tab) opener, which is a small metal lever used to open the container.<br>
+<strong>Clue 4:</strong> A spreadsheet uses tabs (or sheets) at the bottom of the window to organize and navigate between different worksheets within one file.<br>
+<strong>Clue 5:</strong> A web browser allows you to open multiple web pages in separate tabs within a single window, a common feature of modern browsing.
+</p>`,
+  },
+  {
     sequence: "#669",
     date: "2026-02-28",
     answer: "Words that come before \"lion\"",
