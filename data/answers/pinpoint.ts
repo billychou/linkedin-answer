@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#671",
+    date: "2026-03-03",
+    answer: "Music genres",
+    clues: ["Rock", "Pop", "Classical", "Jazz", "EDM"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Rock is a foundational genre of popular music characterized by amplified instruments and a strong backbeat.<br>
+<strong>Clue 2:</strong> Pop, short for popular music, is a broad genre designed for mass appeal, often featuring catchy melodies and simple structures.<br>
+<strong>Clue 3:</strong> Classical refers to the formal, traditional genre of Western art music, typically composed for orchestras and ensembles.<br>
+<strong>Clue 4:</strong> Jazz is an influential genre known for its complex harmonies, improvisation, and syncopated rhythms.<br>
+<strong>Clue 5:</strong> EDM (Electronic Dance Music) is a modern, beat-driven genre created primarily with electronic instruments and software.<br>
+</p>`,
+  },
+  {
     sequence: "#670",
     date: "2026-03-01",
     answer: "Things with tabs",
