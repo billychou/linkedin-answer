@@ -40,7 +40,7 @@ export default function CluesDisplay({ clues, gameName, number, clueHint }: Clue
         {clues.map((clue, index) => (
           <div
             key={index}
-            className="relative rounded-lg bg-gradient-to-br from-blue-400 to-blue-500 dark:from-blue-500 dark:to-blue-600 p-3 sm:p-4 min-w-[100px] max-w-[200px] flex-1 sm:flex-initial hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-default"
+            className="relative rounded-lg bg-gradient-to-br from-blue-400 to-blue-500 dark:from-blue-500 dark:to-blue-600 p-3 sm:p-4 flex-1 hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-default"
             style={{ 
               animation: `fadeIn 0.5s ease-in-out ${index * 0.1}s both`
             }}
