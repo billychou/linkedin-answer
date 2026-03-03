@@ -4,14 +4,15 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#672",
     date: "2026-03-03",
-    answer: "Today Today's Answer Pro Tips Archive Toggle theme Toggle theme",
+    answer: "Words that come after \"life\"",
     clues: ["Boat", "Insurance", "Expectancy", "Preserver", "Sciences (biology studies it)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Boat:</strong> Boat is one of the clues.<br>
-<strong>Insurance:</strong> Insurance is one of the clues.<br>
-<strong>Expectancy:</strong> Expectancy is one of the clues.<br>
-<strong>Preserver:</strong> Preserver is one of the clues.<br>
-<strong>Sciences (biology studies it):</strong> Sciences (biology studies it) is one of the clues.</p>`,
+<strong>Clue 1: Boat</strong> A "lifeboat" is a small, sturdy boat carried on a ship for use in an emergency, directly combining "life" with "boat".<br>
+<strong>Clue 2: Insurance</strong> "Life insurance" is a contract that provides a monetary benefit to a named beneficiary upon the death of the insured person.<br>
+<strong>Clue 3: Expectancy</strong> "Life expectancy" is a statistical measure of the average time an organism is expected to live, based on factors like birth year and current age.<br>
+<strong>Clue 4: Preserver</strong> A "life preserver" is a flotation device, such as a ring buoy or jacket, designed to keep a person afloat in water.<br>
+<strong>Clue 5: Sciences (biology studies it)</strong> The "life sciences" are the branches of science, such as biology and ecology, that study living organisms and life processes.
+</p>`,
   },
   {
     sequence: "#671",

@@ -48,7 +48,7 @@ def _generate_clue_hint_with_ai(clues: list[str], answer: str) -> str:
     
     if not api_key:
         ic("Warning: No AI API key found, using fallback hint generation")
-        return _generate_fallback_hint(clues)
+        return _generate_fallback_hint(clues, answer)
     
     # 判断使用哪个 API
     if os.getenv("DEEPSEEK_API_KEY"):
@@ -58,7 +58,7 @@ def _generate_clue_hint_with_ai(clues: list[str], answer: str) -> str:
         api_base = "https://api.openai.com/v1"
         model = "gpt-4o-mini"
     
-    # 构建 prompt
+    # 构建 prompt - 使用线索的实际内容而不是 Clue 1, Clue 2
     clues_text = "\n".join([f"{i+1}. {clue}" for i, clue in enumerate(clues)])
     prompt = f"""Given the following LinkedIn Pinpoint puzzle:
 
@@ -79,6 +79,7 @@ Format your response as HTML with this structure:
 Keep explanations clear, educational, and engaging. Focus on the specific connection between each clue and the answer."""
 
     try:
+        ic(f"Calling AI API ({model}) to generate clue hint...")
         response = requests.post(
             f"{api_base}/chat/completions",
             headers={
@@ -109,14 +110,20 @@ Keep explanations clear, educational, and engaging. Focus on the specific connec
         return hint
     except Exception as e:
         ic(f"Error generating hint with AI: {e}")
-        return _generate_fallback_hint(clues)
+        return _generate_fallback_hint(clues, answer)
 
 
-def _generate_fallback_hint(clues: list[str]) -> str:
+def _generate_fallback_hint(clues: list[str], answer: str = "") -> str:
     """生成默认的简单 hint（当 AI 不可用时使用）"""
-    clue_hint_lines = [
-        f"<strong>{c}:</strong> {c} is one of the clues." for c in clues
-    ]
+    # 尝试生成稍微有意义的提示
+    clue_hint_lines = []
+    for c in clues:
+        # 如果答案已知，尝试生成更有意义的提示
+        if answer and len(answer) > 2:
+            clue_hint_lines.append(f"<strong>{c}:</strong> {c} relates to the answer \"{answer}\".")
+        else:
+            clue_hint_lines.append(f"<strong>{c}:</strong> {c} is one of the clues.")
+    
     return (
         "<p>Here is how each clue relates to that word:<br>\n"
         + "<br>\n".join(clue_hint_lines)
@@ -198,10 +205,10 @@ def _parse_answer(html: str) -> str | None:
     soup = BeautifulSoup(html, "html.parser")
     text = soup.get_text(separator=" ", strip=True)
     
-    # 方案1：匹配 "Category: Pinpoint #XXX" 后的答案文本（旧格式）
-    # 支持多种结束标记：📘 📊 (Words & How They Fit), Word Phrase, Meaning, Usage, 🧠 或字符串结束
+    # 方案1：匹配 "✅ Category: Pinpoint #XXX" 后的答案文本（新格式）
+    # 新格式示例: "✅ Category: Pinpoint 672 Words that come after \"life\""
     cat_match = re.search(
-        r"Category:\s*Pinpoint\s*#?\d+\s*(.+?)(?=\s*📘|\s*📊|\s*Words\s*&|\s*Word\s*Phrase|\s*Meaning|\s*Usage|\s*🧠|$)",
+        r"(?:✅\s*)?Category:\s*Pinpoint\s*#?\d+\s*(.+?)(?=\s*📘|\s*📊|\s*Words\s*&|\s*Word\s*Phrase|\s*Meaning|\s*Usage|\s*🧠|$)",
         text,
         re.DOTALL | re.I,
     )
@@ -209,34 +216,33 @@ def _parse_answer(html: str) -> str | None:
         answer = cat_match.group(1).strip()
         # 清理答案文本中可能的额外空格
         answer = re.sub(r'\s+', ' ', answer).strip()
-        if answer:
+        # 过滤掉导航文本
+        if answer and not re.search(r'linkedin|toggle|theme|archive|pro\s*tips', answer, re.I):
             return answer
 
-    # 方案2：匹配新格式 "Pinpoint #XXX Answer:" 后的答案
-    # 新格式示例: "Pinpoint 672 Answer: 👉 Click to reveal" 或展开后的答案
-    new_format_match = re.search(
-        r"Pinpoint\s*#?\d+\s+Answer:\s*(.+?)(?=\s*(?:LinkedIn|Pinpoint|Clues|👉|$))",
+    # 方案2：从 strong 标签中提取（通常在 Category 区块内）
+    # 查找包含 "Category" 的 h2 标签后的 strong 标签
+    category_heading = soup.find(['h2', 'h3'], string=re.compile(r'Category.*Pinpoint', re.I))
+    if category_heading:
+        # 查找紧随其后的 strong 标签或 p 标签
+        next_elem = category_heading.find_next(['p', 'strong'])
+        if next_elem:
+            answer_text = next_elem.get_text(strip=True)
+            if answer_text and len(answer_text) > 3 and len(answer_text) < 200:
+                # 过滤掉导航文本
+                if not re.search(r'linkedin|toggle|theme|archive|pro\s*tips|answer', answer_text, re.I):
+                    return answer_text
+
+    # 方案3：匹配旧格式 "Category: Pinpoint #XXX"（无✅前缀）
+    old_cat_match = re.search(
+        r"Category:\s*Pinpoint\s*#?\d+\s*(.+?)(?=\s*📘|\s*📊|\s*Words\s*&|\s*Word\s*Phrase|\s*Meaning|\s*Usage|\s*🧠|$)",
         text,
         re.DOTALL | re.I,
     )
-    if new_format_match:
-        answer = new_format_match.group(1).strip()
+    if old_cat_match:
+        answer = old_cat_match.group(1).strip()
         answer = re.sub(r'\s+', ' ', answer).strip()
-        # 过滤掉 "Click to reveal" 等占位符
-        if answer and not re.search(r'click\s+to\s+reveal', answer, re.I):
-            return answer
-
-    # 方案3：从页面中的答案区块提取（通常在点击展开后）
-    # 查找包含 "Answer" 标题的后续内容
-    answer_section_match = re.search(
-        r"(?:Answer|the\s+answer\s+is)[:\-]?\s*(.+?)(?=\s*(?:LinkedIn|Pinpoint|Clues|👉|#\s*\d|$))",
-        text,
-        re.DOTALL | re.I,
-    )
-    if answer_section_match:
-        answer = answer_section_match.group(1).strip()
-        answer = re.sub(r'\s+', ' ', answer).strip()
-        if answer and len(answer) > 2 and not re.search(r'click\s+to\s+reveal', answer, re.I):
+        if answer and not re.search(r'linkedin|toggle|theme|archive|pro\s*tips', answer, re.I):
             return answer
 
     # 方案4：Full reveal came in—XXX—
@@ -248,8 +254,8 @@ def _parse_answer(html: str) -> str | None:
     title_tag = soup.find("title")
     if title_tag:
         title = title_tag.get_text()
-        # 尝试匹配 "Pinpoint XXX Answer: YYY" 或 "Pinpoint XXX : YYY" 格式
-        title_match = re.search(r"Pinpoint\s*#?\d+\s*[:\-]?\s*(.+?)(?:\s*Answer|\s*\||\s*\-|$)", title, re.I)
+        # 尝试匹配 "Pinpoint XXX : YYY" 格式（注意冒号后的空格）
+        title_match = re.search(r"Pinpoint\s*#?\d+\s*:\s*(.+?)(?:\s*Answer|\s*\||\s*\-|$)", title, re.I)
         if title_match:
             answer = title_match.group(1).strip()
             # 过滤掉常见的非答案文本
