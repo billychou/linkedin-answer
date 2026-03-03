@@ -198,9 +198,8 @@ def _parse_answer(html: str) -> str | None:
     soup = BeautifulSoup(html, "html.parser")
     text = soup.get_text(separator=" ", strip=True)
     
-    # 匹配 "Category: Pinpoint #XXX" 后的答案文本
+    # 方案1：匹配 "Category: Pinpoint #XXX" 后的答案文本（旧格式）
     # 支持多种结束标记：📘 📊 (Words & How They Fit), Word Phrase, Meaning, Usage, 🧠 或字符串结束
-    # 使用更宽松的正则，允许 Category: 和 Pinpoint 之间有任意空白
     cat_match = re.search(
         r"Category:\s*Pinpoint\s*#?\d+\s*(.+?)(?=\s*📘|\s*📊|\s*Words\s*&|\s*Word\s*Phrase|\s*Meaning|\s*Usage|\s*🧠|$)",
         text,
@@ -213,31 +212,59 @@ def _parse_answer(html: str) -> str | None:
         if answer:
             return answer
 
-    # 备选1：尝试匹配 "Category: Pinpoint" 后面直到特殊字符或标点
-    cat_match2 = re.search(
-        r"Category:\s*Pinpoint\s*#?\d+\s*([^📘📊🧠]+?)(?=\s*(?:📘|📊|🧠|Words\s*&|Word\s*Phrase|Meaning|Usage|$))",
+    # 方案2：匹配新格式 "Pinpoint #XXX Answer:" 后的答案
+    # 新格式示例: "Pinpoint 672 Answer: 👉 Click to reveal" 或展开后的答案
+    new_format_match = re.search(
+        r"Pinpoint\s*#?\d+\s+Answer:\s*(.+?)(?=\s*(?:LinkedIn|Pinpoint|Clues|👉|$))",
         text,
         re.DOTALL | re.I,
     )
-    if cat_match2:
-        answer = cat_match2.group(1).strip()
+    if new_format_match:
+        answer = new_format_match.group(1).strip()
         answer = re.sub(r'\s+', ' ', answer).strip()
-        if answer:
+        # 过滤掉 "Click to reveal" 等占位符
+        if answer and not re.search(r'click\s+to\s+reveal', answer, re.I):
             return answer
 
-    # 备选2：Full reveal came in—XXX—
+    # 方案3：从页面中的答案区块提取（通常在点击展开后）
+    # 查找包含 "Answer" 标题的后续内容
+    answer_section_match = re.search(
+        r"(?:Answer|the\s+answer\s+is)[:\-]?\s*(.+?)(?=\s*(?:LinkedIn|Pinpoint|Clues|👉|#\s*\d|$))",
+        text,
+        re.DOTALL | re.I,
+    )
+    if answer_section_match:
+        answer = answer_section_match.group(1).strip()
+        answer = re.sub(r'\s+', ' ', answer).strip()
+        if answer and len(answer) > 2 and not re.search(r'click\s+to\s+reveal', answer, re.I):
+            return answer
+
+    # 方案4：Full reveal came in—XXX—
     reveal_match = re.search(r"reveal\s+came\s+in[—\-]\s*(.+?)[—\-]", text, re.I)
     if reveal_match:
         return reveal_match.group(1).strip()
 
-    # 备选3：尝试从页面标题或 meta 中提取
+    # 方案5：从页面标题中提取
     title_tag = soup.find("title")
     if title_tag:
         title = title_tag.get_text()
-        # 尝试匹配 "Pinpoint XXX Answer: YYY" 或类似格式
-        title_match = re.search(r"Pinpoint\s*#?\d+.*?(?:Answer|is)[:\-]?\s*(.+?)(?:\||\-|$)", title, re.I)
+        # 尝试匹配 "Pinpoint XXX Answer: YYY" 或 "Pinpoint XXX : YYY" 格式
+        title_match = re.search(r"Pinpoint\s*#?\d+\s*[:\-]?\s*(.+?)(?:\s*Answer|\s*\||\s*\-|$)", title, re.I)
         if title_match:
-            return title_match.group(1).strip()
+            answer = title_match.group(1).strip()
+            # 过滤掉常见的非答案文本
+            if answer and not re.search(r'linkedin|pinpoint|answer|today', answer, re.I):
+                return answer
+
+    # 方案6：尝试从 meta description 中提取
+    meta_desc = soup.find("meta", attrs={"name": "description"})
+    if meta_desc:
+        desc = meta_desc.get("content", "")
+        desc_match = re.search(r"(?:answer|is)[:\-]?\s*(.+?)(?:\.|\!|$)", desc, re.I)
+        if desc_match:
+            answer = desc_match.group(1).strip()
+            if answer and len(answer) > 2:
+                return answer
 
     return None
 
@@ -265,11 +292,18 @@ def get_today_pinpoint() -> TodayPinpoint:
         # 调试：打印部分 HTML 内容帮助诊断
         soup = BeautifulSoup(detail_html, "html.parser")
         text = soup.get_text(separator=" ", strip=True)
-        ic(f"Page text sample (first 1000 chars): {text[:1000]}")
-        # 查找 Category 位置
+        ic(f"Page text sample (first 1500 chars): {text[:1500]}")
+        # 查找关键位置
         cat_idx = text.find("Category")
+        answer_idx = text.find("Answer:")
         if cat_idx != -1:
             ic(f"Category context: {text[cat_idx:cat_idx+200]}")
+        if answer_idx != -1:
+            ic(f"Answer context: {text[answer_idx:answer_idx+200]}")
+        # 打印标题
+        title_tag = soup.find("title")
+        if title_tag:
+            ic(f"Page title: {title_tag.get_text()}")
         raise ValueError("未在详情页解析到 Answer 文本")
 
     return TodayPinpoint(

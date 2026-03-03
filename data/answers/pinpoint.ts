@@ -2,8 +2,20 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
-    sequence: "#671",
+    sequence: "#672",
     date: "2026-03-03",
+    answer: "Today Today's Answer Pro Tips Archive Toggle theme Toggle theme",
+    clues: ["Boat", "Insurance", "Expectancy", "Preserver", "Sciences (biology studies it)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Boat:</strong> Boat is one of the clues.<br>
+<strong>Insurance:</strong> Insurance is one of the clues.<br>
+<strong>Expectancy:</strong> Expectancy is one of the clues.<br>
+<strong>Preserver:</strong> Preserver is one of the clues.<br>
+<strong>Sciences (biology studies it):</strong> Sciences (biology studies it) is one of the clues.</p>`,
+  },
+  {
+    sequence: "#671",
+    date: "2026-03-02",
     answer: "Music genres",
     clues: ["Rock", "Pop", "Classical", "Jazz", "EDM"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
