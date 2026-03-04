@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#673",
+    date: "2026-03-04",
+    answer: "Words that come after \"prime\" \ud83d\udccb",
+    clues: ["Time", "Suspect", "Minister", "Number", "Meridian (0° Longitude)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1: Time</strong> "Prime time" is the peak viewing period on television, making this a common and well-known phrase.<br>
+<strong>Clue 2: Suspect</strong> A "prime suspect" is the person considered the most likely perpetrator of a crime in an investigation.<br>
+<strong>Clue 3: Minister</strong> A "prime minister" is the head of government in many countries, forming one of the most recognizable titles.<br>
+<strong>Clue 4: Number</strong> A "prime number" is a fundamental concept in mathematics, defined as a natural number greater than 1 with no positive divisors other than 1 and itself.<br>
+<strong>Clue 5: Meridian (0° Longitude)</strong> The "prime meridian" is the line of 0° longitude, the starting point for measuring distance east and west around the Earth.<br>
+</p>`,
+  },
+  {
     sequence: "#672",
     date: "2026-03-03",
     answer: "Words that come after \"life\"",
