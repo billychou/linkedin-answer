@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#674",
+    date: "2026-03-05",
+    answer: "Places with benches \ud83e\ude91",
+    clues: ["Parks", "Courtrooms", "Piano lounges", "Bus stops", "Stadiums (for team substitutes)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1: Parks</strong> Public parks commonly have benches for visitors to sit, relax, and enjoy the scenery.<br>
+<strong>Clue 2: Courtrooms</strong> Courtrooms feature benches, often called "the bar," for observers and members of the public to sit during proceedings.<br>
+<strong>Clue 3: Piano lounges</strong> A piano lounge or bar typically has bench-style seating, especially at the piano itself, for patrons to sit and enjoy the music.<br>
+<strong>Clue 4: Bus stops</strong> Bus stops are standard locations for benches, providing a place for people to wait for public transportation.<br>
+<strong>Clue 5: Stadiums (for team substitutes)</strong> In sports stadiums, the area where substitute players sit is literally called "the bench."<br>
+</p>`,
+  },
+  {
     sequence: "#673",
     date: "2026-03-04",
     answer: "Words that come after \"prime\" \ud83d\udccb",
