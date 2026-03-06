@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#675",
+    date: "2026-03-06",
+    answer: "Types of sign \ud83d\udccb",
+    clues: ["Peace", "Equal", "Percent", "Stop", "For Sale"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1: Peace</strong> A "peace sign" is a common hand gesture (forming a V) or symbol representing the concept.<br>
+<strong>Clue 2: Equal</strong> The mathematical "equals sign" (=) is a fundamental symbol denoting equivalence.<br>
+<strong>Clue 3: Percent</strong> The "percent sign" (%) is the symbol used to represent a proportion out of one hundred.<br>
+<strong>Clue 4: Stop</strong> A "stop sign" is a universal traffic sign with a distinct octagonal shape and the word "STOP".<br>
+<strong>Clue 5: For Sale</strong> A "for sale sign" is a placard posted on property or an item to indicate it is available for purchase.<br>
+</p>`,
+  },
+  {
     sequence: "#674",
     date: "2026-03-05",
     answer: "Places with benches \ud83e\ude91",
