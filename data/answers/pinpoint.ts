@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#678",
+    date: "2026-03-09",
+    answer: "Words that come before \"phone\"",
+    clues: ["Camera", "Smart", "Pay", "Touch-tone", "Cellular"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Camera:</strong> Camera relates to the answer "Words that come before "phone"".<br>
+<strong>Smart:</strong> Smart relates to the answer "Words that come before "phone"".<br>
+<strong>Pay:</strong> Pay relates to the answer "Words that come before "phone"".<br>
+<strong>Touch-tone:</strong> Touch-tone relates to the answer "Words that come before "phone"".<br>
+<strong>Cellular:</strong> Cellular relates to the answer "Words that come before "phone"".</p>`,
+  },
+  {
     sequence: "#676",
     date: "2026-03-08",
     answer: "Types of dresses \ud83d\udccb",
