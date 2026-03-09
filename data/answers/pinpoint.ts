@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#676",
+    date: "2026-03-08",
+    answer: "Types of dresses \ud83d\udccb",
+    clues: ["Sun", "Wrap", "Cocktail", "Wedding", "Little black"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1: Sun</strong> A "sun dress" is a casual, often sleeveless dress designed for warm weather.<br>
+<strong>Clue 2: Wrap</strong> A "wrap dress" is a dress with a front closure formed by wrapping one side across the other and tying it.<br>
+<strong>Clue 3: Cocktail</strong> A "cocktail dress" is a semi-formal dress typically worn to afternoon or evening social events.<br>
+<strong>Clue 4: Wedding</strong> A "wedding dress" is the formal gown traditionally worn by a bride during the marriage ceremony.<br>
+<strong>Clue 5: Little black</strong> The "little black dress" (LBD) is a classic, versatile black dress considered an essential part of a wardrobe.<br>
+</p>`,
+  },
+  {
     sequence: "#675",
     date: "2026-03-06",
     answer: "Types of sign \ud83d\udccb",
