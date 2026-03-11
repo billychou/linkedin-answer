@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#680",
+    date: "2026-03-11",
+    answer: "Shades of blue",
+    clues: ["Cobalt", "Powder", "Baby", "Navy", "Sky"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Cobalt:</strong> Cobalt relates to the answer "Shades of blue".<br>
+<strong>Powder:</strong> Powder relates to the answer "Shades of blue".<br>
+<strong>Baby:</strong> Baby relates to the answer "Shades of blue".<br>
+<strong>Navy:</strong> Navy relates to the answer "Shades of blue".<br>
+<strong>Sky:</strong> Sky relates to the answer "Shades of blue".</p>`,
+  },
+  {
     sequence: "#679",
     date: "2026-03-10",
     answer: "Characters in the Super Mario video game series \ud83e\udde9",
     clues: ["Toad", "Piranha Plant", "Bowser", "Luigi", "Princess Peach"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Toad:</strong> Toad relates to the answer "Characters in the Super Mario video game series 🧩".<br>
-<strong>Piranha Plant:</strong> Piranha Plant relates to the answer "Characters in the Super Mario video game series 🧩".<br>
-<strong>Bowser:</strong> Bowser relates to the answer "Characters in the Super Mario video game series 🧩".<br>
-<strong>Luigi:</strong> Luigi relates to the answer "Characters in the Super Mario video game series 🧩".<br>
-<strong>Princess Peach:</strong> Princess Peach relates to the answer "Characters in the Super Mario video game series 🧩".</p>`,
+<strong>Toad:</strong> Toad relates to the answer "Characters in the Super Mario video game series ".<br>
+<strong>Piranha Plant:</strong> Piranha Plant relates to the answer "Characters in the Super Mario video game series ".<br>
+<strong>Bowser:</strong> Bowser relates to the answer "Characters in the Super Mario video game series ".<br>
+<strong>Luigi:</strong> Luigi relates to the answer "Characters in the Super Mario video game series ".<br>
+<strong>Princess Peach:</strong> Princess Peach relates to the answer "Characters in the Super Mario video game series ".</p>`,
   },
   {
     sequence: "#678",
