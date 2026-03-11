@@ -7,11 +7,11 @@ export const pinpointAnswers: GameAnswer[] = [
     answer: "Shades of blue",
     clues: ["Cobalt", "Powder", "Baby", "Navy", "Sky"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Cobalt:</strong> Cobalt relates to the answer "Shades of blue".<br>
-<strong>Powder:</strong> Powder relates to the answer "Shades of blue".<br>
-<strong>Baby:</strong> Baby relates to the answer "Shades of blue".<br>
-<strong>Navy:</strong> Navy relates to the answer "Shades of blue".<br>
-<strong>Sky:</strong> Sky relates to the answer "Shades of blue".</p>`,
+<strong>Clue 1: Cobalt</strong> - Cobalt blue is a deep, rich shade of blue, often used in paints and dyes, making it a specific "shade of blue."<br>
+<strong>Clue 2: Powder</strong> - Powder blue is a light, soft, and pale shade of blue, often associated with baby clothing and decor.<br>
+<strong>Clue 3: Baby</strong> - Baby blue is a very light, pastel shade of blue, traditionally used for items like baby clothes and nursery decorations.<br>
+<strong>Clue 4: Navy</strong> - Navy blue is a dark, almost black shade of blue, commonly used in uniforms and formal attire, representing a deeper "shade of blue."<br>
+<strong>Clue 5: Sky</strong> - Sky blue is a bright, clear shade of blue, reminiscent of the color of the sky on a clear day, fitting well into the theme of "shades of blue."</p>`,
   },
   {
     sequence: "#679",

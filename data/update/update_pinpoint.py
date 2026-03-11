@@ -6,9 +6,7 @@
        pip3 install --break-system-packages requests beautifulsoup4 icecream json5
     
     2. (可选) 配置 AI API 以生成智能提示:
-       export DEEPSEEK_API_KEY="your-key"  # 推荐，更便宜
-       或
-       export OPENAI_API_KEY="your-key"
+       export DASHSCOPE_API_KEY="your-key"  # 阿里云 DashScope API Key
     
     3. 运行脚本:
        python3 data/update/update_pinpoint.py
@@ -18,7 +16,7 @@
 特性:
     - 自动抓取最新的 Pinpoint 答案和线索
     - 使用 AI 生成有意义的 clueHint（解释每个线索与答案的关系）
-    - 支持 DeepSeek 和 OpenAI API
+    - 支持阿里云 DashScope API（通义千问模型）
     - 自动 fallback 到简单模式（无需 API key 也能工作）
     - 自动更新 data/answers/pinpoint.ts 文件
 """
@@ -40,23 +38,18 @@ def _generate_clue_hint_with_ai(clues: list[str], answer: str) -> str:
     """
     使用 AI 生成更有意义的 clueHint。
     
-    需要设置环境变量 OPENAI_API_KEY 或 DEEPSEEK_API_KEY。
+    需要设置环境变量 DASHSCOPE_API_KEY。
     如果未设置，将回退到默认的简单 hint。
     """
-    # 优先使用 DeepSeek API（更便宜）
-    api_key = os.getenv("DEEPSEEK_API_KEY") or os.getenv("OPENAI_API_KEY")
+    api_key = os.getenv("DASHSCOPE_API_KEY")
     
     if not api_key:
-        ic("Warning: No AI API key found, using fallback hint generation")
+        ic("Warning: No DASHSCOPE_API_KEY found, using fallback hint generation")
         return _generate_fallback_hint(clues, answer)
     
-    # 判断使用哪个 API
-    if os.getenv("DEEPSEEK_API_KEY"):
-        api_base = "https://api.deepseek.com/v1"
-        model = "deepseek-chat"
-    else:
-        api_base = "https://api.openai.com/v1"
-        model = "gpt-4o-mini"
+    # DashScope API 配置
+    api_base = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    model = "qwen-max"  # 或其他模型如 qwen-plus, qwen-turbo
     
     # 构建 prompt - 使用线索的实际内容而不是 Clue 1, Clue 2
     clues_text = "\n".join([f"{i+1}. {clue}" for i, clue in enumerate(clues)])
@@ -79,7 +72,7 @@ Format your response as HTML with this structure:
 Keep explanations clear, educational, and engaging. Focus on the specific connection between each clue and the answer."""
 
     try:
-        ic(f"Calling AI API ({model}) to generate clue hint...")
+        ic(f"Calling DashScope API ({model}) to generate clue hint...")
         response = requests.post(
             f"{api_base}/chat/completions",
             headers={
