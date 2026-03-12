@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#681",
+    date: "2026-03-12",
+    answer: "Words that come before \"mouse\"",
+    clues: ["House", "Field", "Optical", "Mickey", "Cat and 🐭"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> "House" mouse, a common term for a small rodent often found in homes.<br>
+<strong>Clue 2:</strong> "Field" mouse, another type of mouse, typically found in grassy or open areas.<br>
+<strong>Clue 3:</strong> "Optical" mouse, a type of computer mouse that uses light to detect movement.<br>
+<strong>Clue 4:</strong> "Mickey" Mouse, the famous cartoon character created by Disney, often simply referred to as Mickey.<br>
+<strong>Clue 5:</strong> "Cat and 🐭" (mouse), a classic pairing in cartoons and stories, where the cat is often depicted chasing the mouse.
+</p>`,
+  },
+  {
     sequence: "#680",
     date: "2026-03-11",
     answer: "Shades of blue",
