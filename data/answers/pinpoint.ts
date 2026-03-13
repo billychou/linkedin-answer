@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#682",
+    date: "2026-03-13",
+    answer: "Types of doll \ud83d\udcda",
+    clues: ["Ball-jointed", "Bobblehead", "Voodoo", "Russian nesting (Matryoshka)", "Barbie"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Ball-jointed:</strong> Ball-jointed relates to the answer "Types of doll 📚".<br>
+<strong>Bobblehead:</strong> Bobblehead relates to the answer "Types of doll 📚".<br>
+<strong>Voodoo:</strong> Voodoo relates to the answer "Types of doll 📚".<br>
+<strong>Russian nesting (Matryoshka):</strong> Russian nesting (Matryoshka) relates to the answer "Types of doll 📚".<br>
+<strong>Barbie:</strong> Barbie relates to the answer "Types of doll 📚".</p>`,
+  },
+  {
     sequence: "#681",
     date: "2026-03-12",
     answer: "Words that come before \"mouse\"",
@@ -11,7 +23,7 @@ export const pinpointAnswers: GameAnswer[] = [
 <strong>Clue 2:</strong> "Field" mouse, another type of mouse, typically found in grassy or open areas.<br>
 <strong>Clue 3:</strong> "Optical" mouse, a type of computer mouse that uses light to detect movement.<br>
 <strong>Clue 4:</strong> "Mickey" Mouse, the famous cartoon character created by Disney, often simply referred to as Mickey.<br>
-<strong>Clue 5:</strong> "Cat and 🐭" (mouse), a classic pairing in cartoons and stories, where the cat is often depicted chasing the mouse.
+<strong>Clue 5:</strong> "Cat and " (mouse), a classic pairing in cartoons and stories, where the cat is often depicted chasing the mouse.
 </p>`,
   },
   {
