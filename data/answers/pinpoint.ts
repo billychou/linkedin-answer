@@ -2,16 +2,29 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#683",
+    date: "2026-03-14",
+    answer: "Words that come after \"false\"",
+    clues: ["Start", "Positive", "Alarm", "Tooth", "Advertising (don't believe it!)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> "Start" is connected to "false" as in "false start," a term used in sports when a competitor moves before the starting signal.<br>
+<strong>Clue 2:</strong> "Positive" links to "false" in the context of a "false positive," where a test or indicator incorrectly suggests the presence of something, like a medical condition.<br>
+<strong>Clue 3:</strong> "Alarm" can be related to "false" as in a "false alarm," which occurs when an alarm is triggered without an actual emergency.<br>
+<strong>Clue 4:</strong> "Tooth" connects to "false" through "false teeth," which are artificial teeth used to replace missing natural teeth.<br>
+<strong>Clue 5:</strong> "Advertising (don't believe it!)" hints at "false advertising," where advertisements make misleading claims about a product or service.
+</p>`,
+  },
+  {
     sequence: "#682",
     date: "2026-03-13",
     answer: "Types of doll \ud83d\udcda",
     clues: ["Ball-jointed", "Bobblehead", "Voodoo", "Russian nesting (Matryoshka)", "Barbie"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Ball-jointed:</strong> Ball-jointed relates to the answer "Types of doll 📚".<br>
-<strong>Bobblehead:</strong> Bobblehead relates to the answer "Types of doll 📚".<br>
-<strong>Voodoo:</strong> Voodoo relates to the answer "Types of doll 📚".<br>
-<strong>Russian nesting (Matryoshka):</strong> Russian nesting (Matryoshka) relates to the answer "Types of doll 📚".<br>
-<strong>Barbie:</strong> Barbie relates to the answer "Types of doll 📚".</p>`,
+<strong>Ball-jointed:</strong> Ball-jointed relates to the answer "Types of doll ".<br>
+<strong>Bobblehead:</strong> Bobblehead relates to the answer "Types of doll ".<br>
+<strong>Voodoo:</strong> Voodoo relates to the answer "Types of doll ".<br>
+<strong>Russian nesting (Matryoshka):</strong> Russian nesting (Matryoshka) relates to the answer "Types of doll ".<br>
+<strong>Barbie:</strong> Barbie relates to the answer "Types of doll ".</p>`,
   },
   {
     sequence: "#681",
