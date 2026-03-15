@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#684",
+    date: "2026-03-15",
+    answer: "Words that come before \"roses\" \ud83c\udf3c",
+    clues: ["English", "Dog", "Damask", "(Hybrid) Tea", "Stop and smell the (🌹🌹🌹)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> "English" refers to the phrase "Every rose has its thorn," but more specifically, it points to the common saying "Roses are red, violets are blue," which starts with "roses."<br>
+<strong>Clue 2:</strong> "Dog" is a play on the phrase "dog roses," which is a type of wild rose, and it hints at the word "roses" that follows.<br>
+<strong>Clue 3:</strong> "Damask" is a type of rose, and this clue directly leads to the word "roses" as it is a specific variety of the flower.<br>
+<strong>Clue 4:</strong> "(Hybrid) Tea" is another type of rose, and like "Damask," it points to the word "roses" as it is a specific cultivar of the flower.<br>
+<strong>Clue 5:</strong> "Stop and smell the (🌹🌹🌹)" is a well-known phrase, and the roses emoji (🌹) directly represents the word "roses." This clue encourages you to pause and appreciate the beauty of roses.
+</p>`,
+  },
+  {
     sequence: "#683",
     date: "2026-03-14",
     answer: "Words that come after \"false\"",
