@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#685",
+    date: "2026-03-16",
+    answer: "Magazines (with global readership / versions) \ud83d\udcd6",
+    clues: ["Time", "The Economist", "Cosmopolitan", "National Geographic", "Reader's Digest"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1: Time</strong> - This is a well-known magazine that has been published since 1923, known for its global coverage and readership, fitting the theme of magazines with international appeal.<br>
+<strong>Clue 2: The Economist</strong> - A respected weekly newspaper offering in-depth analysis and commentary on global affairs, economics, and politics, widely read across the world.<br>
+<strong>Clue 3: Cosmopolitan</strong> - This women's magazine, often referred to as "Cosmo," is popular internationally, with multiple editions catering to different countries and cultures, making it a prime example of a globally distributed magazine.<br>
+<strong>Clue 4: National Geographic</strong> - Renowned for its stunning photography and in-depth articles on geography, history, and world culture, this magazine has a vast international following and publishes in numerous languages.<br>
+<strong>Clue 5: Reader's Digest</strong> - Known for its condensed articles from various publications, health tips, and human-interest stories, Reader's Digest has a wide global reach, with versions in many countries and languages, embodying the concept of a magazine with global readership.
+</p>`,
+  },
+  {
     sequence: "#684",
     date: "2026-03-15",
     answer: "Words that come before \"roses\" \ud83c\udf3c",
@@ -11,7 +24,7 @@ export const pinpointAnswers: GameAnswer[] = [
 <strong>Clue 2:</strong> "Dog" is a play on the phrase "dog roses," which is a type of wild rose, and it hints at the word "roses" that follows.<br>
 <strong>Clue 3:</strong> "Damask" is a type of rose, and this clue directly leads to the word "roses" as it is a specific variety of the flower.<br>
 <strong>Clue 4:</strong> "(Hybrid) Tea" is another type of rose, and like "Damask," it points to the word "roses" as it is a specific cultivar of the flower.<br>
-<strong>Clue 5:</strong> "Stop and smell the (🌹🌹🌹)" is a well-known phrase, and the roses emoji (🌹) directly represents the word "roses." This clue encourages you to pause and appreciate the beauty of roses.
+<strong>Clue 5:</strong> "Stop and smell the ()" is a well-known phrase, and the roses emoji () directly represents the word "roses." This clue encourages you to pause and appreciate the beauty of roses.
 </p>`,
   },
   {
