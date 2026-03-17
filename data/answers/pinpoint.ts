@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#686",
+    date: "2026-03-17",
+    answer: "Types of bicycle \ud83d\udeb4",
+    clues: ["Mountain", "Electric", "Recumbent", "Tandem", "Ten-Speed"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Mountain:</strong> Mountain relates to the answer "Types of bicycle 🚴".<br>
+<strong>Electric:</strong> Electric relates to the answer "Types of bicycle 🚴".<br>
+<strong>Recumbent:</strong> Recumbent relates to the answer "Types of bicycle 🚴".<br>
+<strong>Tandem:</strong> Tandem relates to the answer "Types of bicycle 🚴".<br>
+<strong>Ten-Speed:</strong> Ten-Speed relates to the answer "Types of bicycle 🚴".</p>`,
+  },
+  {
     sequence: "#685",
     date: "2026-03-16",
     answer: "Magazines (with global readership / versions) \ud83d\udcd6",
