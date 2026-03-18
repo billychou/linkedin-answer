@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#687",
+    date: "2026-03-18",
+    answer: "Things associated with San Francisco",
+    clues: ["Fog", "Cable cars", "Ghirardelli Square", "Alcatraz Island", "Golden Gate Bridge"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> San Francisco is famously shrouded in thick marine fog, often affectionately called "Karl," due to its unique coastal geography.<br>
+<strong>Clue 2:</strong> These historic vehicles are the only remaining manually powered cable car system in the world and a symbol of the city's hilly terrain.<br>
+<strong>Clue 3:</strong> Once a working chocolate factory, this waterfront destination is now a premier spot for tourism and sweets in North Beach.<br>
+<strong>Clue 4:</strong> This island prison in the bay was once home to notorious criminals and is now a fascinating museum about American penal history.<br>
+<strong>Clue 5:</strong> Spanning the strait between the bay and the ocean, this iconic orange bridge is the definitive visual symbol of the city.</p>`,
+  },
+  {
     sequence: "#686",
     date: "2026-03-17",
     answer: "Types of bicycle \ud83d\udeb4",
     clues: ["Mountain", "Electric", "Recumbent", "Tandem", "Ten-Speed"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Mountain:</strong> Mountain relates to the answer "Types of bicycle 🚴".<br>
-<strong>Electric:</strong> Electric relates to the answer "Types of bicycle 🚴".<br>
-<strong>Recumbent:</strong> Recumbent relates to the answer "Types of bicycle 🚴".<br>
-<strong>Tandem:</strong> Tandem relates to the answer "Types of bicycle 🚴".<br>
-<strong>Ten-Speed:</strong> Ten-Speed relates to the answer "Types of bicycle 🚴".</p>`,
+<strong>Mountain:</strong> Mountain relates to the answer "Types of bicycle ".<br>
+<strong>Electric:</strong> Electric relates to the answer "Types of bicycle ".<br>
+<strong>Recumbent:</strong> Recumbent relates to the answer "Types of bicycle ".<br>
+<strong>Tandem:</strong> Tandem relates to the answer "Types of bicycle ".<br>
+<strong>Ten-Speed:</strong> Ten-Speed relates to the answer "Types of bicycle ".</p>`,
   },
   {
     sequence: "#685",

@@ -49,7 +49,7 @@ def _generate_clue_hint_with_ai(clues: list[str], answer: str) -> str:
     
     # DashScope API 配置
     api_base = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-    model = "qwen-max"  # 或其他模型如 qwen-plus, qwen-turbo
+    model = "qwen3.5-122b-a10b"  # 或其他模型如 qwen-plus, qwen-turbo
     
     # 构建 prompt - 使用线索的实际内容而不是 Clue 1, Clue 2
     clues_text = "\n".join([f"{i+1}. {clue}" for i, clue in enumerate(clues)])
