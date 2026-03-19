@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#688",
+    date: "2026-03-19",
+    answer: "Words that come before \u201cray\u201d",
+    clues: ["X", "Sting", "Cosmic", "Manta", "Gamma (high energy radiation)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> The letter X serves as the prefix for the medical imaging term "X-ray," allowing us to see inside the human body.<br>
+<strong>Clue 2:</strong> Sting acts as the first part of "stingray," identifying the marine animal famous for its sharp, venomous tail barb.<br>
+<strong>Clue 3:</strong> Cosmic functions as the descriptor for "cosmic ray," referring to high-energy particles originating from outer space.<br>
+<strong>Clue 4:</strong> Manta completes the name "manta ray," distinguishing this large, gentle shark relative found in tropical waters.<br>
+<strong>Clue 5:</strong> Gamma stands as the initial term for "gamma ray," representing the highest energy form of electromagnetic radiation.<br>
+</p>`,
+  },
+  {
     sequence: "#687",
     date: "2026-03-18",
     answer: "Things associated with San Francisco",
