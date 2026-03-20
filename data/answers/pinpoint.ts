@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#689",
+    date: "2026-03-20",
+    answer: "Types of candle \ud83e\udde9",
+    clues: ["Aromatherapy", "Unscented", "Votive", "Citronella", "Birthday (make a wish!)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Aromatherapy:</strong> Aromatherapy relates to the answer "Types of candle 🧩".<br>
+<strong>Unscented:</strong> Unscented relates to the answer "Types of candle 🧩".<br>
+<strong>Votive:</strong> Votive relates to the answer "Types of candle 🧩".<br>
+<strong>Citronella:</strong> Citronella relates to the answer "Types of candle 🧩".<br>
+<strong>Birthday (make a wish!):</strong> Birthday (make a wish!) relates to the answer "Types of candle 🧩".</p>`,
+  },
+  {
     sequence: "#688",
     date: "2026-03-19",
     answer: "Words that come before \u201cray\u201d",
