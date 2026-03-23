@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#692",
+    date: "2026-03-23",
+    answer: "Places to get drinking water",
+    clues: ["Spring", "Tap", "Oasis", "Well", "Fountain"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> A spring is a natural formation where groundwater flows to the surface, offering a pristine source for hydration straight from the earth.<br>
+<strong>Clue 2:</strong> This common fixture controls the release of clean, treated water from plumbing systems, making it the most accessible source for daily use.<br>
+<strong>Clue 3:</strong> Serving as a vital lifeline in deserts, an oasis provides a fertile spot where travelers can find essential water amidst dry surroundings.<br>
+<strong>Clue 4:</strong> A well is an artificial excavation dug deep into the ground to reach underground aquifers, allowing people to draw up fresh water manually.<br>
+<strong>Clue 5:</strong> Often found in public spaces, a fountain is a structure specifically designed to dispense water for passersby to quench their thirst.</p>`,
+  },
+  {
     sequence: "#689",
     date: "2026-03-20",
     answer: "Types of candle \ud83e\udde9",
     clues: ["Aromatherapy", "Unscented", "Votive", "Citronella", "Birthday (make a wish!)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Aromatherapy:</strong> Aromatherapy relates to the answer "Types of candle 🧩".<br>
-<strong>Unscented:</strong> Unscented relates to the answer "Types of candle 🧩".<br>
-<strong>Votive:</strong> Votive relates to the answer "Types of candle 🧩".<br>
-<strong>Citronella:</strong> Citronella relates to the answer "Types of candle 🧩".<br>
-<strong>Birthday (make a wish!):</strong> Birthday (make a wish!) relates to the answer "Types of candle 🧩".</p>`,
+<strong>Aromatherapy:</strong> Aromatherapy relates to the answer "Types of candle ".<br>
+<strong>Unscented:</strong> Unscented relates to the answer "Types of candle ".<br>
+<strong>Votive:</strong> Votive relates to the answer "Types of candle ".<br>
+<strong>Citronella:</strong> Citronella relates to the answer "Types of candle ".<br>
+<strong>Birthday (make a wish!):</strong> Birthday (make a wish!) relates to the answer "Types of candle ".</p>`,
   },
   {
     sequence: "#688",
