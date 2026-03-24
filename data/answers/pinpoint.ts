@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#693",
+    date: "2026-03-24",
+    answer: "\"Thank you\" in different languages \ud83c\udf0d",
+    clues: ["Mahalo", "Danke", "Arigato", "Merci", "Gracias"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Mahalo:</strong> Mahalo relates to the answer ""Thank you" in different languages 🌍".<br>
+<strong>Danke:</strong> Danke relates to the answer ""Thank you" in different languages 🌍".<br>
+<strong>Arigato:</strong> Arigato relates to the answer ""Thank you" in different languages 🌍".<br>
+<strong>Merci:</strong> Merci relates to the answer ""Thank you" in different languages 🌍".<br>
+<strong>Gracias:</strong> Gracias relates to the answer ""Thank you" in different languages 🌍".</p>`,
+  },
+  {
     sequence: "#692",
     date: "2026-03-23",
     answer: "Places to get drinking water",
