@@ -10,6 +10,14 @@ interface CluesDisplayProps {
 }
 
 export default function CluesDisplay({ clues, gameName, number, clueHint }: CluesDisplayProps) {
+  const clueGradients = [
+    'from-blue-500 to-blue-600',
+    'from-blue-400 to-blue-500', 
+    'from-indigo-500 to-blue-500',
+    'from-blue-500 to-indigo-500',
+    'from-indigo-400 to-blue-400',
+  ];
+
   if (!clues || clues.length === 0) {
     return null;
   }
@@ -35,15 +43,13 @@ export default function CluesDisplay({ clues, gameName, number, clueHint }: Clue
       <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-gray-100 mb-3">
         {gameName} {number ? `#${number} ` : ""}Clues:
       </h2>
-      {/* 线索框 - 水平排列 */}
-      <div className="flex flex-wrap gap-2 sm:gap-3">
+      {/* 线索框 - 5列布局 */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3">
         {clues.map((clue, index) => (
           <div
             key={index}
-            className="relative rounded-lg bg-gradient-to-br from-blue-400 to-blue-500 dark:from-blue-500 dark:to-blue-600 p-3 sm:p-4 flex-1 hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-default"
-            style={{ 
-              animation: `fadeIn 0.5s ease-in-out ${index * 0.1}s both`
-            }}
+            className={`relative rounded-lg bg-gradient-to-br ${clueGradients[index % clueGradients.length]} p-3 sm:p-4 hover:shadow-lg transition-all duration-300 transform hover:scale-105 cursor-default animate-stagger-fade-in`}
+            style={{ animationDelay: `${index * 0.1}s` }}
           >
             {/* 编号 */}
             <div className="text-white/90 text-xs font-semibold mb-1.5">

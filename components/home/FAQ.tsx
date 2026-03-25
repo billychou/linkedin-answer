@@ -49,7 +49,7 @@ const faqData: FAQItem[] = [
 ];
 
 export default function FAQ() {
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [openItems, setOpenItems] = useState<number[]>([1]);
 
   const toggleItem = (id: number) => {
     setOpenItems((prev) =>
@@ -71,44 +71,59 @@ export default function FAQ() {
 
       {/* FAQ List */}
       <div className="rounded-2xl border-2 border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50/80 to-white dark:from-blue-950/30 dark:to-slate-900/50 overflow-hidden shadow-xl shadow-blue-900/5">
-        {faqData.map((item, index) => (
-          <div
-            key={item.id}
-            className={`${
-              index !== faqData.length - 1
-                ? "border-b border-blue-200 dark:border-blue-800/50"
-                : ""
-            }`}
-          >
-            <button
-              onClick={() => toggleItem(item.id)}
-              className="w-full flex items-center justify-between p-5 sm:p-6 text-left hover:bg-blue-100/50 dark:hover:bg-blue-900/20 transition-colors duration-200"
-              aria-expanded={openItems.includes(item.id)}
-            >
-              <span className="text-base sm:text-lg font-semibold text-slate-900 dark:text-gray-100 pr-4">
-                {item.question}
-              </span>
-              <ChevronDown
-                className={`w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 transition-transform duration-300 ${
-                  openItems.includes(item.id) ? "rotate-180" : ""
-                }`}
-              />
-            </button>
+        {faqData.map((item, index) => {
+          const isOpen = openItems.includes(item.id);
+          return (
             <div
-              className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                openItems.includes(item.id)
-                  ? "max-h-96 opacity-100"
-                  : "max-h-0 opacity-0"
+              key={item.id}
+              className={`${
+                index !== faqData.length - 1
+                  ? "border-b border-blue-200 dark:border-blue-800/50"
+                  : ""
               }`}
             >
-              <div className="px-5 sm:px-6 pb-5 sm:pb-6">
-                <p className="text-slate-600 dark:text-slate-300 leading-relaxed bg-white/50 dark:bg-slate-800/50 rounded-xl p-4">
-                  {item.answer}
-                </p>
+              <button
+                onClick={() => toggleItem(item.id)}
+                className={`group w-full flex items-center justify-between p-5 sm:p-6 text-left transition-all duration-200 ${
+                  isOpen
+                    ? "bg-blue-100/60 dark:bg-blue-900/30 border-l-2 border-l-blue-500"
+                    : "hover:bg-blue-500/10 hover:border-l-2 hover:border-l-blue-500 hover:pl-[calc(1.25rem+2px)] sm:hover:pl-[calc(1.5rem+2px)]"
+                }`}
+                aria-expanded={isOpen}
+              >
+                <span
+                  className={`text-base sm:text-lg pr-4 transition-colors duration-200 ${
+                    isOpen
+                      ? "font-bold text-blue-600 dark:text-blue-400"
+                      : "font-semibold text-slate-900 dark:text-gray-100"
+                  }`}
+                >
+                  {item.question}
+                </span>
+                <ChevronDown
+                  className={`w-5 h-5 flex-shrink-0 transition-all duration-300 ${
+                    isOpen
+                      ? "rotate-180 text-blue-600 dark:text-blue-400"
+                      : "text-blue-600 dark:text-blue-400 group-hover:text-blue-400 dark:group-hover:text-blue-300"
+                  }`}
+                />
+              </button>
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
+                <div className="px-5 sm:px-6 pb-5 sm:pb-6">
+                  <div className="border-l-2 border-l-blue-500 pl-4">
+                    <p className="text-slate-600 dark:text-slate-300 leading-relaxed bg-white/50 dark:bg-slate-800/50 rounded-xl p-4">
+                      {item.answer}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

@@ -2,8 +2,8 @@
 
 import { useToast } from "@/hooks/use-toast";
 import { Game, GameAnswer } from "@/types/game";
-import { ArrowRight, Calendar, Check, Copy, Sparkles } from "lucide-react";
-import Link from "next/link";
+import { ArrowRight, Calendar, Check, Copy, Linkedin, Link as LinkIcon, Share2, Sparkles } from "lucide-react";
+import NextLink from "next/link";
 import { useState } from "react";
 
 interface TodayPinpointProps {
@@ -13,6 +13,45 @@ interface TodayPinpointProps {
 
 export default function TodayPinpoint({ game, answer }: TodayPinpointProps) {
   const [copied, setCopied] = useState(false);
+    const [linkCopied, setLinkCopied] = useState(false);
+  
+    const clueGradients = [
+      'from-blue-500 to-blue-600',
+      'from-blue-400 to-blue-500', 
+      'from-indigo-500 to-blue-500',
+      'from-blue-500 to-indigo-500',
+      'from-indigo-400 to-blue-400',
+    ];
+  
+    const answerText = Array.isArray(answer.answer) ? answer.answer.join(", ") : answer.answer;
+  
+    const handleShareTwitter = () => {
+      const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent('Today\'s LinkedIn Pinpoint answer: ' + answerText)}&url=${encodeURIComponent('https://linkedinanswer.today')}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
+    };
+  
+    const handleShareLinkedIn = () => {
+      const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent('https://linkedinanswer.today')}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
+    };
+  
+    const handleCopyLink = async () => {
+      try {
+        await navigator.clipboard.writeText('https://linkedinanswer.today');
+        setLinkCopied(true);
+        toast({
+          title: "Link Copied!",
+          description: "Page link copied to clipboard",
+        });
+        setTimeout(() => setLinkCopied(false), 2000);
+      } catch (err) {
+        toast({
+          title: "Failed to copy",
+          description: "Please copy the URL manually",
+          variant: "destructive",
+        });
+      }
+    };
   const { toast } = useToast();
 
   const handleCopy = async () => {
@@ -103,23 +142,23 @@ export default function TodayPinpoint({ game, answer }: TodayPinpointProps) {
             </div>
           </div>
         </div>
-        <Link
+        <NextLink
           href={`/games/${game.slug}`}
           className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-all duration-200 hover:shadow-lg hover:shadow-blue-600/20 group"
         >
           View Details
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-        </Link>
+        </NextLink>
       </div>
 
       {/* Answer Card */}
-      <div className="rounded-2xl border-2 border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50/80 to-white dark:from-blue-950/30 dark:to-slate-900/50 p-6 sm:p-8 shadow-xl shadow-blue-900/5">
+      <div className="rounded-2xl border-2 border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50/80 to-white dark:from-blue-950/30 dark:to-slate-900/50 p-6 sm:p-8 shadow-xl shadow-blue-900/5 animate-glow animate-stagger-fade-in">
         {/* Answer Display */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-3">
-            <p className="text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+            <span className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
               Answer
-            </p>
+            </span>
             <button
               onClick={handleCopy}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 hover:bg-blue-100 dark:hover:bg-blue-900/50 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95"
@@ -140,8 +179,8 @@ export default function TodayPinpoint({ game, answer }: TodayPinpointProps) {
             </button>
           </div>
           <div className="bg-white dark:bg-slate-800 rounded-xl p-6 sm:p-8 border-2 border-blue-300 dark:border-blue-700 shadow-inner">
-            <p className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-blue-600 dark:text-blue-400 break-words text-center">
-              {Array.isArray(answer.answer) ? answer.answer.join(", ") : answer.answer}
+            <p className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gradient-blue break-words text-center">
+              {answerText}
             </p>
           </div>
         </div>
@@ -152,11 +191,12 @@ export default function TodayPinpoint({ game, answer }: TodayPinpointProps) {
             <p className="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4 uppercase tracking-wider">
               Clues
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
               {answer.clues.map((clue, index) => (
                 <div
                   key={index}
-                  className="relative rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-600 dark:to-blue-700 p-4 text-center hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1"
+                  className={`relative rounded-xl bg-gradient-to-br ${clueGradients[index % clueGradients.length]} p-4 text-center hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:-translate-y-1 animate-stagger-fade-in`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <span className="absolute top-2 left-2 text-white/40 text-xs font-bold">
                     #{index + 1}
@@ -181,21 +221,49 @@ export default function TodayPinpoint({ game, answer }: TodayPinpointProps) {
         )}
       </div>
 
+      {/* Social Share Buttons */}
+      <div className="flex items-center justify-center gap-2 mt-6">
+        <button
+          onClick={handleShareTwitter}
+          className="hover:bg-white/10 rounded-full p-2 transition-colors text-slate-600 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400"
+          title="Share on Twitter/X"
+          aria-label="Share on Twitter"
+        >
+          <Share2 className="w-5 h-5" />
+        </button>
+        <button
+          onClick={handleShareLinkedIn}
+          className="hover:bg-white/10 rounded-full p-2 transition-colors text-slate-600 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400"
+          title="Share on LinkedIn"
+          aria-label="Share on LinkedIn"
+        >
+          <Linkedin className="w-5 h-5" />
+        </button>
+        <button
+          onClick={handleCopyLink}
+          className="hover:bg-white/10 rounded-full p-2 transition-colors text-slate-600 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400"
+          title="Copy link"
+          aria-label="Copy link"
+        >
+          {linkCopied ? <Check className="w-5 h-5 text-green-500" /> : <LinkIcon className="w-5 h-5" />}
+        </button>
+      </div>
+
       {/* Quick Links */}
-      {/* <div className="flex flex-wrap items-center justify-center gap-4 mt-6 text-sm">
-        <Link
+      <div className="flex flex-wrap items-center justify-center gap-4 mt-4 text-sm">
+        <NextLink
           href={`/games/${game.slug}/archives`}
           className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors underline underline-offset-2"
         >
           View Archives
-        </Link>
+        </NextLink>
         <span className="text-slate-300 dark:text-slate-600">·</span>
-        <Link
+        <NextLink
           href={`/games/${game.slug}/how-to-play`}
           className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors underline underline-offset-2"
         >
           How to Play
-        </Link>
+        </NextLink>
         {game.playUrl && (
           <>
             <span className="text-slate-300 dark:text-slate-600">·</span>
@@ -209,7 +277,7 @@ export default function TodayPinpoint({ game, answer }: TodayPinpointProps) {
             </a>
           </>
         )}
-      </div> */}
+      </div>
     </div>
   );
 }

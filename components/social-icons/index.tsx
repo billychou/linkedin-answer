@@ -1,16 +1,17 @@
 import {
-  Facebook,
-  Github,
-  Instagram,
-  JueJin,
-  Linkedin,
-  Mail,
-  Mastodon,
-  Threads,
-  Twitter,
-  TwitterX,
-  WeChat,
-  Youtube
+    Bluesky,
+    Facebook,
+    Github,
+    Instagram,
+    JueJin,
+    Linkedin,
+    Mail,
+    Mastodon,
+    Threads,
+    Twitter,
+    TwitterX,
+    WeChat,
+    Youtube
 } from './icons'
 
 const components = {
@@ -25,7 +26,8 @@ const components = {
   jueJin: JueJin,
   mastodon: Mastodon,
   threads: Threads,
-  instagram: Instagram
+  instagram: Instagram,
+  bluesky: Bluesky
 }
 
 type SocialIconProps = {
