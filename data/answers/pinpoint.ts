@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#694",
+    date: "2026-03-25",
+    answer: "Types of Rock Building Materials \ud83e\uddf1",
+    clues: ["Marble", "Obsidian", "Slate", "Granite", "Sandstone"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Marble:</strong> Marble relates to the answer "Types of Rock Building Materials 🧱".<br>
+<strong>Obsidian:</strong> Obsidian relates to the answer "Types of Rock Building Materials 🧱".<br>
+<strong>Slate:</strong> Slate relates to the answer "Types of Rock Building Materials 🧱".<br>
+<strong>Granite:</strong> Granite relates to the answer "Types of Rock Building Materials 🧱".<br>
+<strong>Sandstone:</strong> Sandstone relates to the answer "Types of Rock Building Materials 🧱".</p>`,
+  },
+  {
     sequence: "#693",
     date: "2026-03-24",
     answer: "\"Thank you\" in different languages \ud83c\udf0d",
     clues: ["Mahalo", "Danke", "Arigato", "Merci", "Gracias"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Mahalo:</strong> Mahalo relates to the answer ""Thank you" in different languages 🌍".<br>
-<strong>Danke:</strong> Danke relates to the answer ""Thank you" in different languages 🌍".<br>
-<strong>Arigato:</strong> Arigato relates to the answer ""Thank you" in different languages 🌍".<br>
-<strong>Merci:</strong> Merci relates to the answer ""Thank you" in different languages 🌍".<br>
-<strong>Gracias:</strong> Gracias relates to the answer ""Thank you" in different languages 🌍".</p>`,
+<strong>Mahalo:</strong> Mahalo relates to the answer ""Thank you" in different languages ".<br>
+<strong>Danke:</strong> Danke relates to the answer ""Thank you" in different languages ".<br>
+<strong>Arigato:</strong> Arigato relates to the answer ""Thank you" in different languages ".<br>
+<strong>Merci:</strong> Merci relates to the answer ""Thank you" in different languages ".<br>
+<strong>Gracias:</strong> Gracias relates to the answer ""Thank you" in different languages ".</p>`,
   },
   {
     sequence: "#692",
