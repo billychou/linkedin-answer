@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#695",
+    date: "2026-03-26",
+    answer: "Words that come after \"paper\"",
+    clues: ["Tiger", "Plane", "Towel", "Weight", "Clip"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Tiger:</strong> Tiger relates to the answer "Words that come after "paper"".<br>
+<strong>Plane:</strong> Plane relates to the answer "Words that come after "paper"".<br>
+<strong>Towel:</strong> Towel relates to the answer "Words that come after "paper"".<br>
+<strong>Weight:</strong> Weight relates to the answer "Words that come after "paper"".<br>
+<strong>Clip:</strong> Clip relates to the answer "Words that come after "paper"".</p>`,
+  },
+  {
     sequence: "#694",
     date: "2026-03-25",
     answer: "Types of Rock Building Materials \ud83e\uddf1",
     clues: ["Marble", "Obsidian", "Slate", "Granite", "Sandstone"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Marble:</strong> Marble relates to the answer "Types of Rock Building Materials 🧱".<br>
-<strong>Obsidian:</strong> Obsidian relates to the answer "Types of Rock Building Materials 🧱".<br>
-<strong>Slate:</strong> Slate relates to the answer "Types of Rock Building Materials 🧱".<br>
-<strong>Granite:</strong> Granite relates to the answer "Types of Rock Building Materials 🧱".<br>
-<strong>Sandstone:</strong> Sandstone relates to the answer "Types of Rock Building Materials 🧱".</p>`,
+<strong>Marble:</strong> Marble relates to the answer "Types of Rock Building Materials ".<br>
+<strong>Obsidian:</strong> Obsidian relates to the answer "Types of Rock Building Materials ".<br>
+<strong>Slate:</strong> Slate relates to the answer "Types of Rock Building Materials ".<br>
+<strong>Granite:</strong> Granite relates to the answer "Types of Rock Building Materials ".<br>
+<strong>Sandstone:</strong> Sandstone relates to the answer "Types of Rock Building Materials ".</p>`,
   },
   {
     sequence: "#693",

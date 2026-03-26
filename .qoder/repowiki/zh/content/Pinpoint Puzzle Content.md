@@ -16,6 +16,12 @@
 - [types/game.ts](file://types/game.ts)
 </cite>
 
+## 更新摘要
+**所做更改**
+- 更新了答案数据结构和内容，反映新增的答案条目 #694 和 #693 的格式改进
+- 增强了 HTML 段落标签处理机制的说明
+- 更新了数据模型和组件交互的详细分析
+
 ## 目录
 1. [简介](#简介)
 2. [项目结构](#项目结构)
@@ -32,6 +38,8 @@
 Pinpoint Puzzle 是一个基于 LinkedIn 的每日词汇关联游戏，用户需要根据给定的五个线索词推断出它们共同的主题或类别。该项目采用 Next.js 构建，提供了完整的静态生成、SEO 优化和响应式设计。
 
 游戏的核心玩法是通过五个看似不相关的词汇，找出它们之间的共同联系。每个答案都包含详细的解释和线索提示，帮助用户理解词汇间的关联性。
+
+**更新** 最新更新包括新增答案条目 #694（地质学主题：岩石建筑材料类型）和对现有答案条目 #693 的格式改进，增强了 HTML 段落标签的处理能力。
 
 ## 项目结构
 
@@ -71,12 +79,12 @@ N --> I
 
 **图表来源**
 - [app/games/pinpoint/[date]/page.tsx](file://app/games/pinpoint/[date]/page.tsx#L1-L90)
-- [data/answers/pinpoint.ts:1-591](file://data/answers/pinpoint.ts#L1-L591)
+- [data/answers/pinpoint.ts:1-603](file://data/answers/pinpoint.ts#L1-L603)
 - [lib/answers.ts:1-42](file://lib/answers.ts#L1-L42)
 
 **章节来源**
 - [app/games/pinpoint/[date]/page.tsx](file://app/games/pinpoint/[date]/page.tsx#L1-L90)
-- [data/answers/pinpoint.ts:1-591](file://data/answers/pinpoint.ts#L1-L591)
+- [data/answers/pinpoint.ts:1-603](file://data/answers/pinpoint.ts#L1-L603)
 - [lib/answers.ts:1-42](file://lib/answers.ts#L1-L42)
 
 ## 核心组件
@@ -119,17 +127,19 @@ GameAnswer --> GameWithAnswers : "包含"
 
 Pinpoint 游戏的答案数据采用数组形式存储，每个答案包含以下关键信息：
 
-- **sequence**: 答案序列号（如 #693）
+- **sequence**: 答案序列号（如 #694）
 - **date**: 答案日期（YYYY-MM-DD 格式）
 - **answer**: 答案内容（可以是单个字符串或字符串数组）
 - **clues**: 五个线索词数组
-- **clueHint**: 线索解释说明
+- **clueHint**: 线索解释说明（支持 HTML 格式）
 - **hints**: 可选的额外提示
 - **image**: 可选的答案图片 URL
 
+**更新** 最新的答案数据包含了改进的 HTML 段落标签处理，确保线索提示的格式更加规范和一致。
+
 **章节来源**
 - [types/game.ts:5-13](file://types/game.ts#L5-L13)
-- [data/answers/pinpoint.ts:3-591](file://data/answers/pinpoint.ts#L3-L591)
+- [data/answers/pinpoint.ts:3-603](file://data/answers/pinpoint.ts#L3-L603)
 
 ## 架构概览
 
@@ -238,6 +248,8 @@ class HintProcessor {
 }
 CluesDisplay --> HintProcessor : "使用"
 ```
+
+**更新** 线索展示组件现在具备更强大的 HTML 处理能力，能够正确解析和格式化包含段落标签的线索提示文本。
 
 **图表来源**
 - [components/games/CluesDisplay.tsx:12-73](file://components/games/CluesDisplay.tsx#L12-L73)
@@ -404,6 +416,11 @@ C --> R[外部链接]
 - 验证网站配置信息
 - 确认路径参数是否正确传递
 
+**更新** 对于 HTML 段落标签相关的问题：
+- 确认 clueHint 中的 `<p>` 标签正确闭合
+- 验证 `<strong>` 标签的嵌套层次
+- 检查 HTML 实体编码是否正确
+
 **章节来源**
 - [app/games/pinpoint/[date]/page.tsx](file://app/games/pinpoint/[date]/page.tsx#L57-L59)
 - [components/games/AnswerReveal.tsx:20-36](file://components/games/AnswerReveal.tsx#L20-L36)
@@ -420,5 +437,11 @@ Pinpoint Puzzle 项目展现了现代 React 应用的最佳实践，通过清晰
 3. **性能优化**: 静态生成和缓存策略
 4. **用户体验**: 响应式设计和交互式功能
 5. **SEO 友好**: 完善的元数据和结构化内容
+
+**更新** 最新的更新进一步增强了系统的健壮性和用户体验：
+
+- 新增的答案条目 #694 提供了丰富的地质学主题内容
+- 改进的 HTML 段落标签处理机制确保了线索提示的格式一致性
+- 增强的错误处理和验证机制提高了系统的稳定性
 
 该架构为未来的功能扩展奠定了坚实基础，可以轻松添加新的游戏类型、改进用户界面或增强数据分析功能。
