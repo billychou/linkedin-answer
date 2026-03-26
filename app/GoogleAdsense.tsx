@@ -1,15 +1,16 @@
 "use client";
 
 import Script from "next/script";
+let NEXT_PUBLIC_GOOGLE_ADSENSE_ID="3410962713385660"
 
 const GoogleAdsense = () => {
   return (
     <>
-      {process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID ? (
+      {NEXT_PUBLIC_GOOGLE_ADSENSE_ID ? (
         <>
           <Script
             async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID}`}
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-${NEXT_PUBLIC_GOOGLE_ADSENSE_ID}`}
             crossOrigin="anonymous"
             strategy="afterInteractive"
           />
