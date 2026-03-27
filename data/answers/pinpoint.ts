@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#696",
+    date: "2026-03-27",
+    answer: "Objects that come in left-handed and right-handed forms (i.e., are mirrored or chiral)!",
+    clues: ["Scissors", "Golf clubs", "Guitars", "Helices (DNA is usually right)", "Gloves (🫲 + 🫱)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Scissors are engineered with blades angled specifically for either left or right-handed use to ensure proper cutting leverage.<br>
+<strong>Clue 2:</strong> Golf clubs feature face angles tailored for a player's dominant hand, making left-handed models incompatible with right-handed swings.<br>
+<strong>Clue 3:</strong> Guitars require opposite stringing orders for left versus right-handed players, creating two distinct physical versions of the instrument.<br>
+<strong>Clue 4:</strong> Spiral structures like DNA possess inherent directionality, twisting in a specific pattern known scientifically as chirality or handedness.<br>
+<strong>Clue 5:</strong> Gloves are molded to fit the unique anatomy of either a left or right hand exclusively, unlike unisex items like socks.<br>
+</p>`,
+  },
+  {
     sequence: "#695",
     date: "2026-03-26",
     answer: "Words that come after \"paper\"",
