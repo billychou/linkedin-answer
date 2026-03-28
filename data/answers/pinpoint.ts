@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#697",
+    date: "2026-03-28",
+    answer: "\u2014 Geographical capes \ud83d\udcda",
+    clues: ["Horn", "Cod", "Verde", "Canaveral", "Of Good Hope"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> This refers to Cape Horn, the southernmost headland of South America known for treacherous sailing conditions.<br>
+<strong>Clue 2:</strong> This hints at Cape Cod, a famous peninsula in Massachusetts named after the abundant fish found in its waters.<br>
+<strong>Clue 3:</strong> This points to Cape Verde, a prominent headland on the west coast of Africa that shares its name with an island nation.<br>
+<strong>Clue 4:</strong> This indicates Cape Canaveral, a well-known launch site in Florida associated with NASA and space exploration.<br>
+<strong>Clue 5:</strong> This completes the famous title Cape of Good Hope, a significant landmark on the Atlantic coast of South Africa.<br>
+</p>`,
+  },
+  {
     sequence: "#696",
     date: "2026-03-27",
     answer: "Objects that come in left-handed and right-handed forms (i.e., are mirrored or chiral)!",
