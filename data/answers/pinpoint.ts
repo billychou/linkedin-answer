@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#699",
+    date: "2026-03-31",
+    answer: "Flavors of ice cream \ud83d\udcdd",
+    clues: ["Pistachio", "Coffee", "Vanilla", "Cookie dough", "Mint chocolate chip"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Pistachio is a beloved nut-based variety recognized by its signature pale green color and rich, buttery taste.<br>
+<strong>Clue 2:</strong> Coffee offers an adult-oriented option that infuses the sweetness of ice cream with the bold, roasted notes of espresso.<br>
+<strong>Clue 3:</strong> As the quintessential classic, vanilla provides a sweet, aromatic base that complements countless toppings and mix-ins.<br>
+<strong>Clue 4:</strong> This modern favorite incorporates safe-to-eat batter and chocolate chunks for a decadent, bakery-inspired experience.<br>
+<strong>Clue 5:</strong> This iconic duo blends refreshing mint ice cream with crunchy chocolate shavings for a perfect balance of cool and sweet.</p>`,
+  },
+  {
     sequence: "#697",
     date: "2026-03-28",
     answer: "\u2014 Geographical capes \ud83d\udcda",
