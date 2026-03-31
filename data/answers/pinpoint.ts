@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#700",
+    date: "2026-03-31",
+    answer: "Types of interviews in a job search",
+    clues: ["Panel", "One-on-one", "Behavioral", "Technical", "Phone screen"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Panel:</strong> Panel relates to the answer "Types of interviews in a job search".<br>
+<strong>One-on-one:</strong> One-on-one relates to the answer "Types of interviews in a job search".<br>
+<strong>Behavioral:</strong> Behavioral relates to the answer "Types of interviews in a job search".<br>
+<strong>Technical:</strong> Technical relates to the answer "Types of interviews in a job search".<br>
+<strong>Phone screen:</strong> Phone screen relates to the answer "Types of interviews in a job search".</p>`,
+  },
+  {
     sequence: "#699",
     date: "2026-03-31",
     answer: "Flavors of ice cream \ud83d\udcdd",
