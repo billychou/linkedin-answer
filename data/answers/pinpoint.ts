@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#701",
+    date: "2026-04-01",
+    answer: "Weather emojis",
+    clues: ["☀️", "🌤️", "☁️", "🌧️", "⛈️"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>☀️:</strong> ☀️ relates to the answer "Weather emojis".<br>
+<strong>🌤️:</strong> 🌤️ relates to the answer "Weather emojis".<br>
+<strong>☁️:</strong> ☁️ relates to the answer "Weather emojis".<br>
+<strong>🌧️:</strong> 🌧️ relates to the answer "Weather emojis".<br>
+<strong>⛈️:</strong> ⛈️ relates to the answer "Weather emojis".</p>`,
+  },
+  {
     sequence: "#700",
     date: "2026-03-31",
     answer: "Types of interviews in a job search",
