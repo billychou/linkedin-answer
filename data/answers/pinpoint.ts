@@ -2,15 +2,27 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#702",
+    date: "2026-04-02",
+    answer: "Words that come before \"pack\" \ud83d\udcda",
+    clues: ["Ice", "Jet", "Booster", "Six", "Back"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Ice:</strong> Ice relates to the answer "Words that come before "pack" 📚".<br>
+<strong>Jet:</strong> Jet relates to the answer "Words that come before "pack" 📚".<br>
+<strong>Booster:</strong> Booster relates to the answer "Words that come before "pack" 📚".<br>
+<strong>Six:</strong> Six relates to the answer "Words that come before "pack" 📚".<br>
+<strong>Back:</strong> Back relates to the answer "Words that come before "pack" 📚".</p>`,
+  },
+  {
     sequence: "#701",
     date: "2026-04-01",
     answer: "Weather emojis",
     clues: ["☀️", "🌤️", "☁️", "🌧️", "⛈️"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>☀️:</strong> ☀️ relates to the answer "Weather emojis".<br>
-<strong>🌤️:</strong> 🌤️ relates to the answer "Weather emojis".<br>
+<strong>️:</strong> ️ relates to the answer "Weather emojis".<br>
 <strong>☁️:</strong> ☁️ relates to the answer "Weather emojis".<br>
-<strong>🌧️:</strong> 🌧️ relates to the answer "Weather emojis".<br>
+<strong>️:</strong> ️ relates to the answer "Weather emojis".<br>
 <strong>⛈️:</strong> ⛈️ relates to the answer "Weather emojis".</p>`,
   },
   {
