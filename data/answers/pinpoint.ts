@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#703",
+    date: "2026-04-03",
+    answer: "\u2014 Types of Frog \ud83e\udde9",
+    clues: ["Goliath", "Bull", "Pacman (or S. American Horned)", "Red-eyed Tree", "Poison dart (don't croak?)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Goliath:</strong> Goliath relates to the answer "— Types of Frog 🧩".<br>
+<strong>Bull:</strong> Bull relates to the answer "— Types of Frog 🧩".<br>
+<strong>Pacman (or S. American Horned):</strong> Pacman (or S. American Horned) relates to the answer "— Types of Frog 🧩".<br>
+<strong>Red-eyed Tree:</strong> Red-eyed Tree relates to the answer "— Types of Frog 🧩".<br>
+<strong>Poison dart (don't croak?):</strong> Poison dart (don't croak?) relates to the answer "— Types of Frog 🧩".</p>`,
+  },
+  {
     sequence: "#702",
     date: "2026-04-02",
     answer: "Words that come before \"pack\" \ud83d\udcda",
     clues: ["Ice", "Jet", "Booster", "Six", "Back"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Ice:</strong> Ice relates to the answer "Words that come before "pack" 📚".<br>
-<strong>Jet:</strong> Jet relates to the answer "Words that come before "pack" 📚".<br>
-<strong>Booster:</strong> Booster relates to the answer "Words that come before "pack" 📚".<br>
-<strong>Six:</strong> Six relates to the answer "Words that come before "pack" 📚".<br>
-<strong>Back:</strong> Back relates to the answer "Words that come before "pack" 📚".</p>`,
+<strong>Ice:</strong> Ice relates to the answer "Words that come before "pack" ".<br>
+<strong>Jet:</strong> Jet relates to the answer "Words that come before "pack" ".<br>
+<strong>Booster:</strong> Booster relates to the answer "Words that come before "pack" ".<br>
+<strong>Six:</strong> Six relates to the answer "Words that come before "pack" ".<br>
+<strong>Back:</strong> Back relates to the answer "Words that come before "pack" ".</p>`,
   },
   {
     sequence: "#701",
