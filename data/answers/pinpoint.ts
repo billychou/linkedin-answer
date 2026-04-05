@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#705",
+    date: "2026-04-05",
+    answer: "Inventions that (most likely) originated in Ancient Egypt",
+    clues: ["Toothpaste", "Copper pipes", "365-day (solar) calendar", "Papyrus", "Heiroglyphs (𓂀𓋹𓅓)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Toothpaste:</strong> Toothpaste relates to the answer "Inventions that (most likely) originated in Ancient Egypt".<br>
+<strong>Copper pipes:</strong> Copper pipes relates to the answer "Inventions that (most likely) originated in Ancient Egypt".<br>
+<strong>365-day (solar) calendar:</strong> 365-day (solar) calendar relates to the answer "Inventions that (most likely) originated in Ancient Egypt".<br>
+<strong>Papyrus:</strong> Papyrus relates to the answer "Inventions that (most likely) originated in Ancient Egypt".<br>
+<strong>Heiroglyphs (𓂀𓋹𓅓):</strong> Heiroglyphs (𓂀𓋹𓅓) relates to the answer "Inventions that (most likely) originated in Ancient Egypt".</p>`,
+  },
+  {
     sequence: "#703",
     date: "2026-04-03",
     answer: "\u2014 Types of Frog \ud83e\udde9",
     clues: ["Goliath", "Bull", "Pacman (or S. American Horned)", "Red-eyed Tree", "Poison dart (don't croak?)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Goliath:</strong> Goliath relates to the answer "— Types of Frog 🧩".<br>
-<strong>Bull:</strong> Bull relates to the answer "— Types of Frog 🧩".<br>
-<strong>Pacman (or S. American Horned):</strong> Pacman (or S. American Horned) relates to the answer "— Types of Frog 🧩".<br>
-<strong>Red-eyed Tree:</strong> Red-eyed Tree relates to the answer "— Types of Frog 🧩".<br>
-<strong>Poison dart (don't croak?):</strong> Poison dart (don't croak?) relates to the answer "— Types of Frog 🧩".</p>`,
+<strong>Goliath:</strong> Goliath relates to the answer "— Types of Frog ".<br>
+<strong>Bull:</strong> Bull relates to the answer "— Types of Frog ".<br>
+<strong>Pacman (or S. American Horned):</strong> Pacman (or S. American Horned) relates to the answer "— Types of Frog ".<br>
+<strong>Red-eyed Tree:</strong> Red-eyed Tree relates to the answer "— Types of Frog ".<br>
+<strong>Poison dart (don't croak?):</strong> Poison dart (don't croak?) relates to the answer "— Types of Frog ".</p>`,
   },
   {
     sequence: "#702",
