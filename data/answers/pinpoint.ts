@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#706",
+    date: "2026-04-07",
+    answer: "Things that can be represented by the letter \"M\"",
+    clues: ["Monday", "Medium", "Length (in metric units)", "One thousandth (in metric units)", "Mass (in physics equations)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Monday:</strong> Monday relates to the answer "Things that can be represented by the letter "M"".<br>
+<strong>Medium:</strong> Medium relates to the answer "Things that can be represented by the letter "M"".<br>
+<strong>Length (in metric units):</strong> Length (in metric units) relates to the answer "Things that can be represented by the letter "M"".<br>
+<strong>One thousandth (in metric units):</strong> One thousandth (in metric units) relates to the answer "Things that can be represented by the letter "M"".<br>
+<strong>Mass (in physics equations):</strong> Mass (in physics equations) relates to the answer "Things that can be represented by the letter "M"".</p>`,
+  },
+  {
     sequence: "#705",
     date: "2026-04-05",
     answer: "Inventions that (most likely) originated in Ancient Egypt",
@@ -11,7 +23,7 @@ export const pinpointAnswers: GameAnswer[] = [
 <strong>Copper pipes:</strong> Copper pipes relates to the answer "Inventions that (most likely) originated in Ancient Egypt".<br>
 <strong>365-day (solar) calendar:</strong> 365-day (solar) calendar relates to the answer "Inventions that (most likely) originated in Ancient Egypt".<br>
 <strong>Papyrus:</strong> Papyrus relates to the answer "Inventions that (most likely) originated in Ancient Egypt".<br>
-<strong>Heiroglyphs (𓂀𓋹𓅓):</strong> Heiroglyphs (𓂀𓋹𓅓) relates to the answer "Inventions that (most likely) originated in Ancient Egypt".</p>`,
+<strong>Heiroglyphs ():</strong> Heiroglyphs () relates to the answer "Inventions that (most likely) originated in Ancient Egypt".</p>`,
   },
   {
     sequence: "#703",
