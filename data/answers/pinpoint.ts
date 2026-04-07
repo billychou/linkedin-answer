@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#707",
+    date: "2026-04-07",
+    answer: "Major cities in Brazil \ud83d\udcda",
+    clues: ["Salvador", "Manaus", "São Paulo", "Rio de Janeiro", "Brasília"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Salvador:</strong> Salvador relates to the answer "Major cities in Brazil 📚".<br>
+<strong>Manaus:</strong> Manaus relates to the answer "Major cities in Brazil 📚".<br>
+<strong>São Paulo:</strong> São Paulo relates to the answer "Major cities in Brazil 📚".<br>
+<strong>Rio de Janeiro:</strong> Rio de Janeiro relates to the answer "Major cities in Brazil 📚".<br>
+<strong>Brasília:</strong> Brasília relates to the answer "Major cities in Brazil 📚".</p>`,
+  },
+  {
     sequence: "#706",
     date: "2026-04-07",
     answer: "Things that can be represented by the letter \"M\"",
