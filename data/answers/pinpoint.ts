@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#710",
+    date: "2026-04-10",
+    answer: "Words that come before \u201cpatch\u201d",
+    clues: ["Software", "Eye", "Rough", "Vegetable", "Iron-on"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Software:</strong> Software relates to the answer "Words that come before “patch”".<br>
+<strong>Eye:</strong> Eye relates to the answer "Words that come before “patch”".<br>
+<strong>Rough:</strong> Rough relates to the answer "Words that come before “patch”".<br>
+<strong>Vegetable:</strong> Vegetable relates to the answer "Words that come before “patch”".<br>
+<strong>Iron-on:</strong> Iron-on relates to the answer "Words that come before “patch”".</p>`,
+  },
+  {
     sequence: "#709",
     date: "2026-04-09",
     answer: "Famous works by Leonardo da Vinci \ud83d\uddbc\ufe0f",
     clues: ["The Last Supper", "Lady with an Ermine", "Virgin of the Rocks", "Vitruvian Man", "Mona Lisa"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>The Last Supper:</strong> The Last Supper relates to the answer "Famous works by Leonardo da Vinci 🖼️".<br>
-<strong>Lady with an Ermine:</strong> Lady with an Ermine relates to the answer "Famous works by Leonardo da Vinci 🖼️".<br>
-<strong>Virgin of the Rocks:</strong> Virgin of the Rocks relates to the answer "Famous works by Leonardo da Vinci 🖼️".<br>
-<strong>Vitruvian Man:</strong> Vitruvian Man relates to the answer "Famous works by Leonardo da Vinci 🖼️".<br>
-<strong>Mona Lisa:</strong> Mona Lisa relates to the answer "Famous works by Leonardo da Vinci 🖼️".</p>`,
+<strong>The Last Supper:</strong> The Last Supper relates to the answer "Famous works by Leonardo da Vinci ️".<br>
+<strong>Lady with an Ermine:</strong> Lady with an Ermine relates to the answer "Famous works by Leonardo da Vinci ️".<br>
+<strong>Virgin of the Rocks:</strong> Virgin of the Rocks relates to the answer "Famous works by Leonardo da Vinci ️".<br>
+<strong>Vitruvian Man:</strong> Vitruvian Man relates to the answer "Famous works by Leonardo da Vinci ️".<br>
+<strong>Mona Lisa:</strong> Mona Lisa relates to the answer "Famous works by Leonardo da Vinci ️".</p>`,
   },
   {
     sequence: "#707",
