@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#711",
+    date: "2026-04-11",
+    answer: "Constructed Languages \ud83d\udcda",
+    clues: ["Na'vi", "Klingon", "Elvish", "Esperanto", "Interlingua"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Na'vi:</strong> Na'vi relates to the answer "Constructed Languages 📚".<br>
+<strong>Klingon:</strong> Klingon relates to the answer "Constructed Languages 📚".<br>
+<strong>Elvish:</strong> Elvish relates to the answer "Constructed Languages 📚".<br>
+<strong>Esperanto:</strong> Esperanto relates to the answer "Constructed Languages 📚".<br>
+<strong>Interlingua:</strong> Interlingua relates to the answer "Constructed Languages 📚".</p>`,
+  },
+  {
     sequence: "#710",
     date: "2026-04-10",
     answer: "Words that come before \u201cpatch\u201d",
