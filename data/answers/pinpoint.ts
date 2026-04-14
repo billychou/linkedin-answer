@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#714",
+    date: "2026-04-14",
+    answer: "National anthems",
+    clues: ["Marcha Real", "Jana Gana Mana", "La Marseillaise", "God Save the King", "O Canada"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Marcha Real:</strong> Marcha Real relates to the answer "National anthems".<br>
+<strong>Jana Gana Mana:</strong> Jana Gana Mana relates to the answer "National anthems".<br>
+<strong>La Marseillaise:</strong> La Marseillaise relates to the answer "National anthems".<br>
+<strong>God Save the King:</strong> God Save the King relates to the answer "National anthems".<br>
+<strong>O Canada:</strong> O Canada relates to the answer "National anthems".</p>`,
+  },
+  {
     sequence: "#713",
     date: "2026-04-14",
     answer: "\ud83d\udd34 Things that are red",
     clues: ["Cardinals", "Stoplights", "Blood", "Raspberries", "Rubies"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Cardinals:</strong> Cardinals relates to the answer "🔴 Things that are red".<br>
-<strong>Stoplights:</strong> Stoplights relates to the answer "🔴 Things that are red".<br>
-<strong>Blood:</strong> Blood relates to the answer "🔴 Things that are red".<br>
-<strong>Raspberries:</strong> Raspberries relates to the answer "🔴 Things that are red".<br>
-<strong>Rubies:</strong> Rubies relates to the answer "🔴 Things that are red".</p>`,
+<strong>Cardinals:</strong> Cardinals relates to the answer " Things that are red".<br>
+<strong>Stoplights:</strong> Stoplights relates to the answer " Things that are red".<br>
+<strong>Blood:</strong> Blood relates to the answer " Things that are red".<br>
+<strong>Raspberries:</strong> Raspberries relates to the answer " Things that are red".<br>
+<strong>Rubies:</strong> Rubies relates to the answer " Things that are red".</p>`,
   },
   {
     sequence: "#711",
