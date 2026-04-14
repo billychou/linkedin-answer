@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#713",
+    date: "2026-04-14",
+    answer: "\ud83d\udd34 Things that are red",
+    clues: ["Cardinals", "Stoplights", "Blood", "Raspberries", "Rubies"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Cardinals:</strong> Cardinals relates to the answer "🔴 Things that are red".<br>
+<strong>Stoplights:</strong> Stoplights relates to the answer "🔴 Things that are red".<br>
+<strong>Blood:</strong> Blood relates to the answer "🔴 Things that are red".<br>
+<strong>Raspberries:</strong> Raspberries relates to the answer "🔴 Things that are red".<br>
+<strong>Rubies:</strong> Rubies relates to the answer "🔴 Things that are red".</p>`,
+  },
+  {
     sequence: "#711",
     date: "2026-04-11",
     answer: "Constructed Languages \ud83d\udcda",
     clues: ["Na'vi", "Klingon", "Elvish", "Esperanto", "Interlingua"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Na'vi:</strong> Na'vi relates to the answer "Constructed Languages 📚".<br>
-<strong>Klingon:</strong> Klingon relates to the answer "Constructed Languages 📚".<br>
-<strong>Elvish:</strong> Elvish relates to the answer "Constructed Languages 📚".<br>
-<strong>Esperanto:</strong> Esperanto relates to the answer "Constructed Languages 📚".<br>
-<strong>Interlingua:</strong> Interlingua relates to the answer "Constructed Languages 📚".</p>`,
+<strong>Na'vi:</strong> Na'vi relates to the answer "Constructed Languages ".<br>
+<strong>Klingon:</strong> Klingon relates to the answer "Constructed Languages ".<br>
+<strong>Elvish:</strong> Elvish relates to the answer "Constructed Languages ".<br>
+<strong>Esperanto:</strong> Esperanto relates to the answer "Constructed Languages ".<br>
+<strong>Interlingua:</strong> Interlingua relates to the answer "Constructed Languages ".</p>`,
   },
   {
     sequence: "#710",
