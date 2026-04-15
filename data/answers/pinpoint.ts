@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#715",
+    date: "2026-04-15",
+    answer: "Types of paint \ud83e\udde9",
+    clues: ["Finger", "Oil", "Spray", "Latex", "Acrylic"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Finger:</strong> Finger relates to the answer "Types of paint 🧩".<br>
+<strong>Oil:</strong> Oil relates to the answer "Types of paint 🧩".<br>
+<strong>Spray:</strong> Spray relates to the answer "Types of paint 🧩".<br>
+<strong>Latex:</strong> Latex relates to the answer "Types of paint 🧩".<br>
+<strong>Acrylic:</strong> Acrylic relates to the answer "Types of paint 🧩".</p>`,
+  },
+  {
     sequence: "#714",
     date: "2026-04-14",
     answer: "National anthems",
