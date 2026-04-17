@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#717",
+    date: "2026-04-17",
+    answer: "Words that come before \"aid\" \ud83d\udcda",
+    clues: ["First", "Foreign", "Financial", "Hearing", "Band"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>First:</strong> First relates to the answer "Words that come before "aid" 📚".<br>
+<strong>Foreign:</strong> Foreign relates to the answer "Words that come before "aid" 📚".<br>
+<strong>Financial:</strong> Financial relates to the answer "Words that come before "aid" 📚".<br>
+<strong>Hearing:</strong> Hearing relates to the answer "Words that come before "aid" 📚".<br>
+<strong>Band:</strong> Band relates to the answer "Words that come before "aid" 📚".</p>`,
+  },
+  {
     sequence: "#715",
     date: "2026-04-15",
     answer: "Types of paint \ud83e\udde9",
     clues: ["Finger", "Oil", "Spray", "Latex", "Acrylic"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Finger:</strong> Finger relates to the answer "Types of paint 🧩".<br>
-<strong>Oil:</strong> Oil relates to the answer "Types of paint 🧩".<br>
-<strong>Spray:</strong> Spray relates to the answer "Types of paint 🧩".<br>
-<strong>Latex:</strong> Latex relates to the answer "Types of paint 🧩".<br>
-<strong>Acrylic:</strong> Acrylic relates to the answer "Types of paint 🧩".</p>`,
+<strong>Finger:</strong> Finger relates to the answer "Types of paint ".<br>
+<strong>Oil:</strong> Oil relates to the answer "Types of paint ".<br>
+<strong>Spray:</strong> Spray relates to the answer "Types of paint ".<br>
+<strong>Latex:</strong> Latex relates to the answer "Types of paint ".<br>
+<strong>Acrylic:</strong> Acrylic relates to the answer "Types of paint ".</p>`,
   },
   {
     sequence: "#714",
