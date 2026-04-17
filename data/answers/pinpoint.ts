@@ -14,6 +14,18 @@ export const pinpointAnswers: GameAnswer[] = [
 <strong>Band:</strong> Band relates to the answer "Words that come before "aid" 📚".</p>`,
   },
   {
+    sequence: "#716",
+    date: "2026-04-16",
+    answer: "Potato dishes \ud83e\udde9",
+    clues: ["Dum aloo", "Gnocchi", "Hash browns", "French fries", "Tater tots"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Dum aloo:</strong> Dum aloo relates to the answer "Potato dishes 🧩".<br>
+<strong>Gnocchi:</strong> Gnocchi relates to the answer "Potato dishes 🧩".<br>
+<strong>Hash browns:</strong> Hash browns relates to the answer "Potato dishes 🧩".<br>
+<strong>French fries:</strong> French fries relates to the answer "Potato dishes 🧩".<br>
+<strong>Tater tots:</strong> Tater tots relates to the answer "Potato dishes 🧩".</p>`,
+  },
+  {
     sequence: "#715",
     date: "2026-04-15",
     answer: "Types of paint \ud83e\udde9",

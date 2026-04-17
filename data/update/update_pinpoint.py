@@ -315,7 +315,7 @@ def get_today_pinpoint() -> TodayPinpoint:
 
 def update_pinpoint_ts(
     pinpoint: TodayPinpoint,
-    ts_file_path: str = "/Users/songchuan.zhou/Src/linkedin-answer/data/answers/pinpoint.ts",
+    ts_file_path: str = "./data/answers/pinpoint.ts",
 ):
     """
     根据get_today_pinpoint返回的结果，更新pinpoint.ts答案列表。
