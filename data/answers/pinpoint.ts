@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#718",
+    date: "2026-04-18",
+    answer: "Names of universities \ud83d\udcda",
+    clues: ["Brown", "Rice", "Duke", "Sorbonne", "Oxford"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Brown:</strong> Brown relates to the answer "Names of universities 📚".<br>
+<strong>Rice:</strong> Rice relates to the answer "Names of universities 📚".<br>
+<strong>Duke:</strong> Duke relates to the answer "Names of universities 📚".<br>
+<strong>Sorbonne:</strong> Sorbonne relates to the answer "Names of universities 📚".<br>
+<strong>Oxford:</strong> Oxford relates to the answer "Names of universities 📚".</p>`,
+  },
+  {
     sequence: "#717",
     date: "2026-04-17",
     answer: "Words that come before \"aid\" \ud83d\udcda",
     clues: ["First", "Foreign", "Financial", "Hearing", "Band"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>First:</strong> First relates to the answer "Words that come before "aid" 📚".<br>
-<strong>Foreign:</strong> Foreign relates to the answer "Words that come before "aid" 📚".<br>
-<strong>Financial:</strong> Financial relates to the answer "Words that come before "aid" 📚".<br>
-<strong>Hearing:</strong> Hearing relates to the answer "Words that come before "aid" 📚".<br>
-<strong>Band:</strong> Band relates to the answer "Words that come before "aid" 📚".</p>`,
+<strong>First:</strong> First relates to the answer "Words that come before "aid" ".<br>
+<strong>Foreign:</strong> Foreign relates to the answer "Words that come before "aid" ".<br>
+<strong>Financial:</strong> Financial relates to the answer "Words that come before "aid" ".<br>
+<strong>Hearing:</strong> Hearing relates to the answer "Words that come before "aid" ".<br>
+<strong>Band:</strong> Band relates to the answer "Words that come before "aid" ".</p>`,
   },
   {
     sequence: "#716",
@@ -19,11 +31,11 @@ export const pinpointAnswers: GameAnswer[] = [
     answer: "Potato dishes \ud83e\udde9",
     clues: ["Dum aloo", "Gnocchi", "Hash browns", "French fries", "Tater tots"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Dum aloo:</strong> Dum aloo relates to the answer "Potato dishes 🧩".<br>
-<strong>Gnocchi:</strong> Gnocchi relates to the answer "Potato dishes 🧩".<br>
-<strong>Hash browns:</strong> Hash browns relates to the answer "Potato dishes 🧩".<br>
-<strong>French fries:</strong> French fries relates to the answer "Potato dishes 🧩".<br>
-<strong>Tater tots:</strong> Tater tots relates to the answer "Potato dishes 🧩".</p>`,
+<strong>Dum aloo:</strong> Dum aloo relates to the answer "Potato dishes ".<br>
+<strong>Gnocchi:</strong> Gnocchi relates to the answer "Potato dishes ".<br>
+<strong>Hash browns:</strong> Hash browns relates to the answer "Potato dishes ".<br>
+<strong>French fries:</strong> French fries relates to the answer "Potato dishes ".<br>
+<strong>Tater tots:</strong> Tater tots relates to the answer "Potato dishes ".</p>`,
   },
   {
     sequence: "#715",
