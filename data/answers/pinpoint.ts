@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#719",
+    date: "2026-04-19",
+    answer: "Popular tattoos",
+    clues: ["Rose", "Anchor", "Infinity symbol", "Name and/or date", "Inspirational quote"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Rose:</strong> Rose relates to the answer "Popular tattoos".<br>
+<strong>Anchor:</strong> Anchor relates to the answer "Popular tattoos".<br>
+<strong>Infinity symbol:</strong> Infinity symbol relates to the answer "Popular tattoos".<br>
+<strong>Name and/or date:</strong> Name and/or date relates to the answer "Popular tattoos".<br>
+<strong>Inspirational quote:</strong> Inspirational quote relates to the answer "Popular tattoos".</p>`,
+  },
+  {
     sequence: "#718",
     date: "2026-04-18",
     answer: "Names of universities \ud83d\udcda",
     clues: ["Brown", "Rice", "Duke", "Sorbonne", "Oxford"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Brown:</strong> Brown relates to the answer "Names of universities 📚".<br>
-<strong>Rice:</strong> Rice relates to the answer "Names of universities 📚".<br>
-<strong>Duke:</strong> Duke relates to the answer "Names of universities 📚".<br>
-<strong>Sorbonne:</strong> Sorbonne relates to the answer "Names of universities 📚".<br>
-<strong>Oxford:</strong> Oxford relates to the answer "Names of universities 📚".</p>`,
+<strong>Brown:</strong> Brown relates to the answer "Names of universities ".<br>
+<strong>Rice:</strong> Rice relates to the answer "Names of universities ".<br>
+<strong>Duke:</strong> Duke relates to the answer "Names of universities ".<br>
+<strong>Sorbonne:</strong> Sorbonne relates to the answer "Names of universities ".<br>
+<strong>Oxford:</strong> Oxford relates to the answer "Names of universities ".</p>`,
   },
   {
     sequence: "#717",
