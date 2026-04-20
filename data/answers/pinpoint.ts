@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#720",
+    date: "2026-04-20",
+    answer: "Gardening tools \ud83c\udf3c",
+    clues: ["Spade", "Rake", "Trowel", "Hoe", "Wheelbarrow (to move soil)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Spade:</strong> Spade relates to the answer "Gardening tools 🌼".<br>
+<strong>Rake:</strong> Rake relates to the answer "Gardening tools 🌼".<br>
+<strong>Trowel:</strong> Trowel relates to the answer "Gardening tools 🌼".<br>
+<strong>Hoe:</strong> Hoe relates to the answer "Gardening tools 🌼".<br>
+<strong>Wheelbarrow (to move soil):</strong> Wheelbarrow (to move soil) relates to the answer "Gardening tools 🌼".</p>`,
+  },
+  {
     sequence: "#719",
     date: "2026-04-19",
     answer: "Popular tattoos",

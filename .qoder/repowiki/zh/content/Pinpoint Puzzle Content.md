@@ -1,4 +1,4 @@
-# Pinpoint Puzzle 内容
+# Pinpoint 拼图内容
 
 <cite>
 **本文档引用的文件**
@@ -14,18 +14,16 @@
 - [components/games/ArchivesList.tsx](file://components/games/ArchivesList.tsx)
 - [lib/metadata.ts](file://lib/metadata.ts)
 - [types/game.ts](file://types/game.ts)
+- [data/update/update_pinpoint.py](file://data/update/update_pinpoint.py)
+- [scripts/update-pinpoint-data.ts](file://scripts/update-pinpoint-data.ts)
 </cite>
 
 ## 更新摘要
 **所做更改**
-- 新增答案条目 #700（面试类型主题："Types of interviews in a job search"），包含五个面试相关线索和详细的HTML格式化解释说明，扩展了pinpoint游戏的面试相关内容
-- 新增答案条目 #699（冰淇淋主题 trivia：'Flavors of ice cream'），包含五个经典冰淇淋口味线索和详细的解释说明，丰富了游戏内容库的多样性
-- 新增答案条目 #697（地理 trivia：'Geographical capes'），包含五个地理相关的线索和详细的 HTML 格式提示说明
-- 新增答案条目 #696（分子手性主题），提供教育性的科学概念
-- 更新答案条目 #695（"paper" 相关词汇），增强线索解释的完整性
-- 改进答案条目 #694（岩石建筑材料类型）的格式和呈现效果
-- 增强了 HTML 段落标签处理机制的说明
-- 更新了数据模型和组件交互的详细分析
+- 新增两个 Pinpoint 拼图条目（#718 和 #719），分别涵盖流行纹身主题和大学名称主题
+- 移除了现有拼图中的装饰性 Unicode 表情符号，提升了内容的专业性和可访问性
+- 改进了线索解释的格式化和说明质量，确保更好的用户体验
+- 更新了数据更新脚本的表情符号清理机制，支持更纯净的内容呈现
 
 ## 目录
 1. [简介](#简介)
@@ -40,11 +38,11 @@
 
 ## 简介
 
-Pinpoint Puzzle 是一个基于 LinkedIn 的每日词汇关联游戏，用户需要根据给定的五个线索词推断出它们共同的主题或类别。该项目采用 Next.js 构建，提供了完整的静态生成、SEO 优化和响应式设计。
+Pinpoint 拼图是一个基于 LinkedIn 的每日词汇关联游戏，用户需要根据给定的五个线索词推断出它们共同的主题或类别。该项目采用 Next.js 构建，提供了完整的静态生成、SEO 优化和响应式设计。
 
 游戏的核心玩法是通过五个看似不相关的词汇，找出它们之间的共同联系。每个答案都包含详细的解释和线索提示，帮助用户理解词汇间的关联性。
 
-**更新** 最新更新包括新增答案条目 #700（面试类型主题："Types of interviews in a job search"，涵盖面试类型如 Panel、One-on-one、Behavioral、Technical 和 Phone screen），新增答案条目 #699（冰淇淋主题 trivia：'Flavors of ice cream'，涵盖经典冰淇淋口味如 Pistachio、Coffee、Vanilla、Cookie dough 和 Mint chocolate chip），新增答案条目 #697（地理 trivia：'Geographical capes'，涵盖世界著名海角如 Cape Horn、Cape Cod、Cape Verde、Cape Canaveral 和 Cape of Good Hope），新增答案条目 #696（分子手性主题：左旋和右旋形式）、更新答案条目 #695（"paper" 相关词汇）以及答案条目 #694（岩石建筑材料类型）的格式改进，增强了 HTML 段落标签的处理能力和教育性拼图内容。
+**更新** 最新更新包括新增两个 Pinpoint 拼图条目（#718 和 #719），以及对现有内容的重大改进。新增条目涵盖了流行纹身主题和大学名称主题，同时移除了所有装饰性 Unicode 表情符号，提升了内容的专业性和可访问性。每个新增条目都包含完整的数据结构和精心制作的 HTML 格式线索解释，显著扩展了游戏的内容广度和教育价值。
 
 ## 项目结构
 
@@ -53,43 +51,45 @@ Pinpoint Puzzle 是一个基于 LinkedIn 的每日词汇关联游戏，用户需
 ```mermaid
 graph TB
 subgraph "应用层"
-A[app/] --> B[pages 路由]
+A[app/] --> B[页面路由]
 A --> C[组件层]
 A --> D[布局和元数据]
 end
 subgraph "数据层"
 E[data/] --> F[答案数据]
 E --> G[游戏配置]
+E --> H[更新脚本]
 end
 subgraph "逻辑层"
-H[lib/] --> I[答案处理]
-H --> J[游戏管理]
-H --> K[元数据构建]
+I[lib/] --> J[答案处理]
+I --> K[游戏管理]
+I --> L[元数据构建]
 end
 subgraph "类型定义"
-L[types/] --> M[游戏类型]
-L --> N[答案类型]
+M[types/] --> N[游戏类型]
+M --> O[答案类型]
 end
 subgraph "组件层"
-O[components/] --> P[游戏组件]
-O --> Q[UI 组件]
-O --> R[导航组件]
+P[components/] --> Q[游戏组件]
+P --> R[UI 组件]
+P --> S[导航组件]
 end
-B --> I
-F --> I
-G --> J
-M --> I
-N --> I
+B --> J
+F --> J
+G --> K
+N --> J
+O --> J
+H --> F
 ```
 
 **图表来源**
 - [app/games/pinpoint/[date]/page.tsx](file://app/games/pinpoint/[date]/page.tsx#L1-L90)
-- [data/answers/pinpoint.ts:1-665](file://data/answers/pinpoint.ts#L1-L665)
+- [data/answers/pinpoint.ts:1-858](file://data/answers/pinpoint.ts#L1-L858)
 - [lib/answers.ts:1-42](file://lib/answers.ts#L1-L42)
 
 **章节来源**
 - [app/games/pinpoint/[date]/page.tsx](file://app/games/pinpoint/[date]/page.tsx#L1-L90)
-- [data/answers/pinpoint.ts:1-665](file://data/answers/pinpoint.ts#L1-L665)
+- [data/answers/pinpoint.ts:1-858](file://data/answers/pinpoint.ts#L1-L858)
 - [lib/answers.ts:1-42](file://lib/answers.ts#L1-L42)
 
 ## 核心组件
@@ -132,7 +132,7 @@ GameAnswer --> GameWithAnswers : "包含"
 
 Pinpoint 游戏的答案数据采用数组形式存储，每个答案包含以下关键信息：
 
-- **sequence**: 答案序列号（如 #700）
+- **sequence**: 答案序列号（如 #719）
 - **date**: 答案日期（YYYY-MM-DD 格式）
 - **answer**: 答案内容（可以是单个字符串或字符串数组）
 - **clues**: 五个线索词数组
@@ -140,11 +140,21 @@ Pinpoint 游戏的答案数据采用数组形式存储，每个答案包含以�
 - **hints**: 可选的额外提示
 - **image**: 可选的答案图片 URL
 
-**更新** 最新的答案数据包含了改进的 HTML 段落标签处理，确保线索提示的格式更加规范和一致。新增的 #700 答案条目展示了面试类型这一实用主题，涵盖面试流程中的不同类型如 Panel、One-on-one、Behavioral、Technical 和 Phone screen 的详细解释，而 #699 答案条目则提供了更完整的"paper"相关词汇线索解释。
+**更新** 最新的答案数据包含了两个新增条目，以及对现有内容的重要改进：
+
+- **#719（4月19日）**: "Popular tattoos" - 5个流行纹身主题，包含玫瑰、锚点、无限符号、姓名和励志语录等经典纹身元素
+- **#718（4月18日）**: "Names of universities" - 5所世界知名大学，包括布朗大学、赖斯大学、杜克大学、索邦大学和牛津大学
+
+**更新** 移除了装饰性 Unicode 表情符号的影响：
+- 所有现有拼图条目中的表情符号（如 📚、🎨、🏛️、🌎、🔬 等）已被移除
+- 保留了必要的装饰性字符（如破折号 — 和省略号 …）
+- 确保了更好的可访问性和跨平台兼容性
+
+每个新增条目都包含详细的 HTML 格式线索解释，使用精心制作的教育性内容，确保用户能够理解每个线索与答案之间的具体关联。
 
 **章节来源**
 - [types/game.ts:5-13](file://types/game.ts#L5-L13)
-- [data/answers/pinpoint.ts:3-665](file://data/answers/pinpoint.ts#L3-L665)
+- [data/answers/pinpoint.ts:1-858](file://data/answers/pinpoint.ts#L1-L858)
 
 ## 架构概览
 
@@ -254,7 +264,7 @@ class HintProcessor {
 CluesDisplay --> HintProcessor : "使用"
 ```
 
-**更新** 线索展示组件现在具备更强大的 HTML 处理能力，能够正确解析和格式化包含段落标签的线索提示文本。最新的 #700 答案条目展示了面试类型主题，涵盖了面试流程中的不同类型如 Panel、One-on-one、Behavioral、Technical 和 Phone screen 的详细解释，需要更精确的 HTML 格式处理。
+**更新** 线索展示组件现在具备更强大的 HTML 处理能力，能够正确解析和格式化包含段落标签的线索提示文本。最新的两个新增条目展示了多样化的主题内容，从流行文化到学术机构，都需要精确的 HTML 格式处理。
 
 **图表来源**
 - [components/games/CluesDisplay.tsx:12-73](file://components/games/CluesDisplay.tsx#L12-L73)
@@ -421,11 +431,11 @@ C --> R[外部链接]
 - 验证网站配置信息
 - 确认路径参数是否正确传递
 
-**更新** 对于 HTML 段落标签相关的问题：
-- 确认 clueHint 中的 `<p>` 标签正确闭合
-- 验证 `<strong>` 标签的嵌套层次
+**更新** 对于表情符号移除相关的问题：
+- 确认答案文本中不再包含装饰性 Unicode 表情符号
+- 验证线索解释文本的格式一致性
 - 检查 HTML 实体编码是否正确
-- 特别关注复杂内容（如面试类型、冰淇淋口味、世界海角）的 HTML 格式处理
+- 特别关注专业术语和学术内容的纯文本呈现
 
 **章节来源**
 - [app/games/pinpoint/[date]/page.tsx](file://app/games/pinpoint/[date]/page.tsx#L57-L59)
@@ -434,7 +444,7 @@ C --> R[外部链接]
 
 ## 结论
 
-Pinpoint Puzzle 项目展现了现代 React 应用的最佳实践，通过清晰的架构设计、类型安全的代码实现和优秀的用户体验，成功构建了一个功能完整、易于维护的问答游戏平台。
+Pinpoint 拼图项目展现了现代 React 应用的最佳实践，通过清晰的架构设计、类型安全的代码实现和优秀的用户体验，成功构建了一个功能完整、易于维护的问答游戏平台。
 
 项目的主要优势包括：
 
@@ -446,13 +456,10 @@ Pinpoint Puzzle 项目展现了现代 React 应用的最佳实践，通过清晰
 
 **更新** 最新的更新进一步增强了系统的健壮性和用户体验：
 
-- 新增的答案条目 #700 提供了实用的面试类型教育内容，涵盖面试流程中的不同类型如 Panel、One-on-one、Behavioral、Technical 和 Phone screen 的详细解释，为求职者提供了有价值的信息
-- 新增的答案条目 #699 提供了丰富的冰淇淋主题教育内容，涵盖经典冰淇淋口味如 Pistachio、Coffee、Vanilla、Cookie dough 和 Mint chocolate chip 的详细解释
-- 新增的答案条目 #697 提供了丰富的地理教育内容，涵盖世界著名海角如 Cape Horn、Cape Cod、Cape Verde、Cape Canaveral 和 Cape of Good Hope 的地理知识
-- 新增的答案条目 #696 提供了深入的科学教育内容，涵盖分子手性这一复杂的化学概念
-- 更新的答案条目 #695 增强了"paper"相关词汇的线索解释，提供了更完整的语义关联
-- 改进的答案条目 #694 优化了岩石建筑材料类型的格式呈现，提升了视觉效果和可读性
-- 增强的 HTML 段落标签处理机制确保了复杂内容的正确格式化
-- 更完善的错误处理和验证机制提高了系统的稳定性
+- 新增的两个 Pinpoint 拼图条目（#718 和 #719）显著扩展了游戏内容，涵盖流行纹身主题和世界知名大学主题
+- 移除了所有装饰性 Unicode 表情符号，提升了内容的专业性和可访问性
+- 改进了线索解释的格式化和说明质量，确保更好的用户体验
+- 更新了数据更新脚本的表情符号清理机制，支持更纯净的内容呈现
+- 更完善的错误处理和验证机制提高了系统的稳定性和可靠性
 
 该架构为未来的功能扩展奠定了坚实基础，可以轻松添加新的游戏类型、改进用户界面或增强数据分析功能。最新的教育性拼图内容丰富了游戏的知识价值，为用户提供更有意义的学习体验。
