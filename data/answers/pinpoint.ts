@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#721",
+    date: "2026-04-21",
+    answer: "\u2014 Things seen at a beach",
+    clues: ["Umbrellas", "Volleyballs", "Shells", "Lifeguards", "Sandcastles"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Umbrellas:</strong> Umbrellas relates to the answer "— Things seen at a beach".<br>
+<strong>Volleyballs:</strong> Volleyballs relates to the answer "— Things seen at a beach".<br>
+<strong>Shells:</strong> Shells relates to the answer "— Things seen at a beach".<br>
+<strong>Lifeguards:</strong> Lifeguards relates to the answer "— Things seen at a beach".<br>
+<strong>Sandcastles:</strong> Sandcastles relates to the answer "— Things seen at a beach".</p>`,
+  },
+  {
     sequence: "#720",
     date: "2026-04-20",
     answer: "Gardening tools \ud83c\udf3c",
     clues: ["Spade", "Rake", "Trowel", "Hoe", "Wheelbarrow (to move soil)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Spade:</strong> Spade relates to the answer "Gardening tools 🌼".<br>
-<strong>Rake:</strong> Rake relates to the answer "Gardening tools 🌼".<br>
-<strong>Trowel:</strong> Trowel relates to the answer "Gardening tools 🌼".<br>
-<strong>Hoe:</strong> Hoe relates to the answer "Gardening tools 🌼".<br>
-<strong>Wheelbarrow (to move soil):</strong> Wheelbarrow (to move soil) relates to the answer "Gardening tools 🌼".</p>`,
+<strong>Spade:</strong> Spade relates to the answer "Gardening tools ".<br>
+<strong>Rake:</strong> Rake relates to the answer "Gardening tools ".<br>
+<strong>Trowel:</strong> Trowel relates to the answer "Gardening tools ".<br>
+<strong>Hoe:</strong> Hoe relates to the answer "Gardening tools ".<br>
+<strong>Wheelbarrow (to move soil):</strong> Wheelbarrow (to move soil) relates to the answer "Gardening tools ".</p>`,
   },
   {
     sequence: "#719",
