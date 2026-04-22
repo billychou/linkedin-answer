@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#722",
+    date: "2026-04-22",
+    answer: "Types of sock \ud83e\udde6",
+    clues: ["Tube", "Dress", "Crew", "Ankle", "Knee-high"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Tube:</strong> Tube relates to the answer "Types of sock 🧦".<br>
+<strong>Dress:</strong> Dress relates to the answer "Types of sock 🧦".<br>
+<strong>Crew:</strong> Crew relates to the answer "Types of sock 🧦".<br>
+<strong>Ankle:</strong> Ankle relates to the answer "Types of sock 🧦".<br>
+<strong>Knee-high:</strong> Knee-high relates to the answer "Types of sock 🧦".</p>`,
+  },
+  {
     sequence: "#721",
     date: "2026-04-21",
     answer: "\u2014 Things seen at a beach",
