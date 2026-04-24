@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#724",
+    date: "2026-04-24",
+    answer: "Words that come after \"hand\" And just to seal it, the final clue \u2014 Kerchief \u2014 confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. \ud83d\udcda",
+    clues: ["Stand", "Shake", "Made", "Writing", "Kerchief"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Stand:</strong> Stand relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. 📚".<br>
+<strong>Shake:</strong> Shake relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. 📚".<br>
+<strong>Made:</strong> Made relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. 📚".<br>
+<strong>Writing:</strong> Writing relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. 📚".<br>
+<strong>Kerchief:</strong> Kerchief relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. 📚".</p>`,
+  },
+  {
     sequence: "#722",
     date: "2026-04-22",
     answer: "Types of sock \ud83e\udde6",
     clues: ["Tube", "Dress", "Crew", "Ankle", "Knee-high"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Tube:</strong> Tube relates to the answer "Types of sock 🧦".<br>
-<strong>Dress:</strong> Dress relates to the answer "Types of sock 🧦".<br>
-<strong>Crew:</strong> Crew relates to the answer "Types of sock 🧦".<br>
-<strong>Ankle:</strong> Ankle relates to the answer "Types of sock 🧦".<br>
-<strong>Knee-high:</strong> Knee-high relates to the answer "Types of sock 🧦".</p>`,
+<strong>Tube:</strong> Tube relates to the answer "Types of sock ".<br>
+<strong>Dress:</strong> Dress relates to the answer "Types of sock ".<br>
+<strong>Crew:</strong> Crew relates to the answer "Types of sock ".<br>
+<strong>Ankle:</strong> Ankle relates to the answer "Types of sock ".<br>
+<strong>Knee-high:</strong> Knee-high relates to the answer "Types of sock ".</p>`,
   },
   {
     sequence: "#721",
