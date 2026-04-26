@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#726",
+    date: "2026-04-26",
+    answer: "Words that come after \"ink\"",
+    clues: ["Well", "Pad", "Stain", "Jet", "Blot"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Adding "ink" creates "inkwell," a traditional container used to hold liquid writing fluid.<br>
+<strong>Clue 2:</strong> This combination forms "inkpad," a sponge tool essential for stamping images onto paper.<br>
+<strong>Clue 3:</strong> Together they spell "inkstain," describing a permanent mark left by accidental spills.<br>
+<strong>Clue 4:</strong> Joining these words makes "inkjet," a common technology for home printers.<br>
+<strong>Clue 5:</strong> This pair creates "inkblot," a smeared spot famously used in psychological Rorschach tests.</p>`,
+  },
+  {
     sequence: "#724",
     date: "2026-04-24",
     answer: "Words that come after \"hand\" And just to seal it, the final clue \u2014 Kerchief \u2014 confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. \ud83d\udcda",
     clues: ["Stand", "Shake", "Made", "Writing", "Kerchief"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Stand:</strong> Stand relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. 📚".<br>
-<strong>Shake:</strong> Shake relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. 📚".<br>
-<strong>Made:</strong> Made relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. 📚".<br>
-<strong>Writing:</strong> Writing relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. 📚".<br>
-<strong>Kerchief:</strong> Kerchief relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. 📚".</p>`,
+<strong>Stand:</strong> Stand relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".<br>
+<strong>Shake:</strong> Shake relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".<br>
+<strong>Made:</strong> Made relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".<br>
+<strong>Writing:</strong> Writing relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".<br>
+<strong>Kerchief:</strong> Kerchief relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".</p>`,
   },
   {
     sequence: "#722",
