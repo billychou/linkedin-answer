@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#727",
+    date: "2026-04-27",
+    answer: "Music festivals \ud83c\udfa4",
+    clues: ["Tomorrowland", "Lollapalooza", "Woodstock", "Rock in Rio", "Coachella"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Tomorrowland is a globally renowned event specifically dedicated to electronic dance music enthusiasts.<br>
+<strong>Clue 2:</strong> Lollapalooza started as a touring American concert series and evolved into a major annual gathering for rock and alternative fans.<br>
+<strong>Clue 3:</strong> Woodstock stands as the most historic and iconic example of a large-scale counter-culture music gathering.<br>
+<strong>Clue 4:</strong> Rock in Rio is a massive multi-genre event originating in Brazil that features top international superstars.<br>
+<strong>Clue 5:</strong> Coachella is an annual celebration famous for blending diverse musical acts with immersive art installations in the California desert.<br>
+</p>`,
+  },
+  {
     sequence: "#726",
     date: "2026-04-26",
     answer: "Words that come after \"ink\"",
