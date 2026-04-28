@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#728",
+    date: "2026-04-28",
+    answer: "Parts of a car dashboard",
+    clues: ["Radio", "Vent", "Speedometer", "Airbag", "Check engine light"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Frequently integrated into the center stack, this unit allows drivers to manage entertainment systems without leaving their seat.<br>
+<strong>Clue 2:</strong> These directional openings are molded into the dashboard surface to control airflow and regulate cabin temperature.<br>
+<strong>Clue 3:</strong> Located in the instrument panel, this gauge provides critical speed information directly in the driver's line of sight.<br>
+<strong>Clue 4:</strong> Protective cushions are concealed behind panels on the upper dashboard to deploy safely during a collision impact.<br>
+<strong>Clue 5:</strong> This indicator appears on the instrument cluster to alert the driver of specific engine malfunctions requiring attention.</p>`,
+  },
+  {
     sequence: "#727",
     date: "2026-04-27",
     answer: "Music festivals \ud83c\udfa4",
