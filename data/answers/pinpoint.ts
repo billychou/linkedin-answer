@@ -2,16 +2,29 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#727",
+    date: "2026-04-28",
+    answer: "Music festivals \ud83c\udfa4",
+    clues: ["Tomorrowland", "Lollapalooza", "Woodstock", "Rock in Rio", "Coachella"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Tomorrowland is a globally renowned event specifically dedicated to electronic dance music enthusiasts.<br>
+<strong>Clue 2:</strong> Lollapalooza started as a touring American concert series and evolved into a major annual gathering for rock and alternative fans.<br>
+<strong>Clue 3:</strong> Woodstock stands as the most historic and iconic example of a large-scale counter-culture music gathering.<br>
+<strong>Clue 4:</strong> Rock in Rio is a massive multi-genre event originating in Brazil that features top international superstars.<br>
+<strong>Clue 5:</strong> Coachella is an annual celebration famous for blending diverse musical acts with immersive art installations in the California desert.<br>
+</p>`,
+  },
+  {
     sequence: "#724",
     date: "2026-04-24",
     answer: "Words that come after \"hand\" And just to seal it, the final clue \u2014 Kerchief \u2014 confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. \ud83d\udcda",
     clues: ["Stand", "Shake", "Made", "Writing", "Kerchief"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Stand:</strong> Stand relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. 📚".<br>
-<strong>Shake:</strong> Shake relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. 📚".<br>
-<strong>Made:</strong> Made relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. 📚".<br>
-<strong>Writing:</strong> Writing relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. 📚".<br>
-<strong>Kerchief:</strong> Kerchief relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. 📚".</p>`,
+<strong>Stand:</strong> Stand relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".<br>
+<strong>Shake:</strong> Shake relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".<br>
+<strong>Made:</strong> Made relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".<br>
+<strong>Writing:</strong> Writing relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".<br>
+<strong>Kerchief:</strong> Kerchief relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".</p>`,
   },
   {
     sequence: "#722",
