@@ -3,7 +3,7 @@ import { GameAnswer } from "@/types/game";
 export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#727",
-    date: "2026-04-28",
+    date: "2026-04-27",
     answer: "Music festivals \ud83c\udfa4",
     clues: ["Tomorrowland", "Lollapalooza", "Woodstock", "Rock in Rio", "Coachella"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
@@ -13,6 +13,18 @@ export const pinpointAnswers: GameAnswer[] = [
 <strong>Clue 4:</strong> Rock in Rio is a massive multi-genre event originating in Brazil that features top international superstars.<br>
 <strong>Clue 5:</strong> Coachella is an annual celebration famous for blending diverse musical acts with immersive art installations in the California desert.<br>
 </p>`,
+  },
+  {
+    sequence: "#726",
+    date: "2026-04-26",
+    answer: "Words that come after \"ink\"",
+    clues: ["Well", "Pad", "Stain", "Jet", "Blot"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Adding "ink" creates "inkwell," a traditional container used to hold liquid writing fluid.<br>
+<strong>Clue 2:</strong> This combination forms "inkpad," a sponge tool essential for stamping images onto paper.<br>
+<strong>Clue 3:</strong> Together they spell "inkstain," describing a permanent mark left by accidental spills.<br>
+<strong>Clue 4:</strong> Joining these words makes "inkjet," a common technology for home printers.<br>
+<strong>Clue 5:</strong> This pair creates "inkblot," a smeared spot famously used in psychological Rorschach tests.</p>`,
   },
   {
     sequence: "#724",
