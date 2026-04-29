@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#729",
+    date: "2026-04-29",
+    answer: "Camera makers (past and present) \ud83d\udcf8",
+    clues: ["Olympus", "Fuji", "Canon", "Polaroid", "GoPro"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> This Japanese brand was legendary for its OM-system film cameras and durable Tough digital compacts before exiting the camera market.<br>
+<strong>Clue 2:</strong> Commonly known as Fujifilm, this company remains a powerhouse in both digital mirrorless photography and instant film cameras.<br>
+<strong>Clue 3:</strong> A dominant force in the industry, best known for manufacturing professional-grade DSLRs and versatile consumer point-and-shoots.<br>
+<strong>Clue 4:</strong> They revolutionized photography with instant film cameras that developed photos immediately after taking them.<br>
+<strong>Clue 5:</strong> This brand defined the action camera genre with rugged, mountable devices perfect for capturing sports and adventure footage.</p>`,
+  },
+  {
     sequence: "#728",
     date: "2026-04-28",
     answer: "Parts of a car dashboard",
