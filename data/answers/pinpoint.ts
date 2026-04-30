@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#730",
+    date: "2026-04-30",
+    answer: "Words that come before \"pudding\"",
+    clues: ["Bread", "Rice", "Chocolate", "Plum (or Christmas)", "The proof is in the"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Bread:</strong> Bread relates to the answer "Words that come before "pudding"".<br>
+<strong>Rice:</strong> Rice relates to the answer "Words that come before "pudding"".<br>
+<strong>Chocolate:</strong> Chocolate relates to the answer "Words that come before "pudding"".<br>
+<strong>Plum (or Christmas):</strong> Plum (or Christmas) relates to the answer "Words that come before "pudding"".<br>
+<strong>The proof is in the:</strong> The proof is in the relates to the answer "Words that come before "pudding"".</p>`,
+  },
+  {
     sequence: "#729",
     date: "2026-04-29",
     answer: "Camera makers (past and present) \ud83d\udcf8",
