@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#736",
+    date: "2026-05-06",
+    answer: "Capital cities \ud83d\udccd",
+    clues: ["Hamilton", "Sofia", "Lima", "Athens", "Mexico City"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Hamilton:</strong> Hamilton relates to the answer "Capital cities 📍".<br>
+<strong>Sofia:</strong> Sofia relates to the answer "Capital cities 📍".<br>
+<strong>Lima:</strong> Lima relates to the answer "Capital cities 📍".<br>
+<strong>Athens:</strong> Athens relates to the answer "Capital cities 📍".<br>
+<strong>Mexico City:</strong> Mexico City relates to the answer "Capital cities 📍".</p>`,
+  },
+  {
     sequence: "#735",
     date: "2026-05-05",
     answer: "Types of cord \ud83d\udcda",
     clues: ["Vocal", "Spinal", "Extension", "Rip", "Bungee"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Vocal:</strong> Vocal relates to the answer "Types of cord 📚".<br>
-<strong>Spinal:</strong> Spinal relates to the answer "Types of cord 📚".<br>
-<strong>Extension:</strong> Extension relates to the answer "Types of cord 📚".<br>
-<strong>Rip:</strong> Rip relates to the answer "Types of cord 📚".<br>
-<strong>Bungee:</strong> Bungee relates to the answer "Types of cord 📚".</p>`,
+<strong>Vocal:</strong> Vocal relates to the answer "Types of cord ".<br>
+<strong>Spinal:</strong> Spinal relates to the answer "Types of cord ".<br>
+<strong>Extension:</strong> Extension relates to the answer "Types of cord ".<br>
+<strong>Rip:</strong> Rip relates to the answer "Types of cord ".<br>
+<strong>Bungee:</strong> Bungee relates to the answer "Types of cord ".</p>`,
   },
   {
     sequence: "#730",
