@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#735",
+    date: "2026-05-05",
+    answer: "Types of cord \ud83d\udcda",
+    clues: ["Vocal", "Spinal", "Extension", "Rip", "Bungee"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Vocal:</strong> Vocal relates to the answer "Types of cord 📚".<br>
+<strong>Spinal:</strong> Spinal relates to the answer "Types of cord 📚".<br>
+<strong>Extension:</strong> Extension relates to the answer "Types of cord 📚".<br>
+<strong>Rip:</strong> Rip relates to the answer "Types of cord 📚".<br>
+<strong>Bungee:</strong> Bungee relates to the answer "Types of cord 📚".</p>`,
+  },
+  {
     sequence: "#730",
     date: "2026-04-30",
     answer: "Words that come before \"pudding\"",
