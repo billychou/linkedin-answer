@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#737",
+    date: "2026-05-07",
+    answer: "Jobs on a film set \ud83c\udfac",
+    clues: ["Grip", "Best Boy", "Costumer", "Director", "Actor"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Grip:</strong> Grip relates to the answer "Jobs on a film set 🎬".<br>
+<strong>Best Boy:</strong> Best Boy relates to the answer "Jobs on a film set 🎬".<br>
+<strong>Costumer:</strong> Costumer relates to the answer "Jobs on a film set 🎬".<br>
+<strong>Director:</strong> Director relates to the answer "Jobs on a film set 🎬".<br>
+<strong>Actor:</strong> Actor relates to the answer "Jobs on a film set 🎬".</p>`,
+  },
+  {
     sequence: "#736",
     date: "2026-05-06",
     answer: "Capital cities \ud83d\udccd",
     clues: ["Hamilton", "Sofia", "Lima", "Athens", "Mexico City"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Hamilton:</strong> Hamilton relates to the answer "Capital cities 📍".<br>
-<strong>Sofia:</strong> Sofia relates to the answer "Capital cities 📍".<br>
-<strong>Lima:</strong> Lima relates to the answer "Capital cities 📍".<br>
-<strong>Athens:</strong> Athens relates to the answer "Capital cities 📍".<br>
-<strong>Mexico City:</strong> Mexico City relates to the answer "Capital cities 📍".</p>`,
+<strong>Hamilton:</strong> Hamilton relates to the answer "Capital cities ".<br>
+<strong>Sofia:</strong> Sofia relates to the answer "Capital cities ".<br>
+<strong>Lima:</strong> Lima relates to the answer "Capital cities ".<br>
+<strong>Athens:</strong> Athens relates to the answer "Capital cities ".<br>
+<strong>Mexico City:</strong> Mexico City relates to the answer "Capital cities ".</p>`,
   },
   {
     sequence: "#735",
