@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#738",
+    date: "2026-05-08",
+    answer: "Types of license / licence",
+    clues: ["Dog", "Fishing", "Marriage", "Open-source", "Poetic"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Dog:</strong> Dog relates to the answer "Types of license / licence".<br>
+<strong>Fishing:</strong> Fishing relates to the answer "Types of license / licence".<br>
+<strong>Marriage:</strong> Marriage relates to the answer "Types of license / licence".<br>
+<strong>Open-source:</strong> Open-source relates to the answer "Types of license / licence".<br>
+<strong>Poetic:</strong> Poetic relates to the answer "Types of license / licence".</p>`,
+  },
+  {
     sequence: "#737",
     date: "2026-05-07",
     answer: "Jobs on a film set \ud83c\udfac",
     clues: ["Grip", "Best Boy", "Costumer", "Director", "Actor"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Grip:</strong> Grip relates to the answer "Jobs on a film set 🎬".<br>
-<strong>Best Boy:</strong> Best Boy relates to the answer "Jobs on a film set 🎬".<br>
-<strong>Costumer:</strong> Costumer relates to the answer "Jobs on a film set 🎬".<br>
-<strong>Director:</strong> Director relates to the answer "Jobs on a film set 🎬".<br>
-<strong>Actor:</strong> Actor relates to the answer "Jobs on a film set 🎬".</p>`,
+<strong>Grip:</strong> Grip relates to the answer "Jobs on a film set ".<br>
+<strong>Best Boy:</strong> Best Boy relates to the answer "Jobs on a film set ".<br>
+<strong>Costumer:</strong> Costumer relates to the answer "Jobs on a film set ".<br>
+<strong>Director:</strong> Director relates to the answer "Jobs on a film set ".<br>
+<strong>Actor:</strong> Actor relates to the answer "Jobs on a film set ".</p>`,
   },
   {
     sequence: "#736",
