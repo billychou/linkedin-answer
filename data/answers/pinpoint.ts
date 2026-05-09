@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#739",
+    date: "2026-05-09",
+    answer: "Words that come after \"uni\"",
+    clues: ["Corn", "Form", "Cycle", "Verse", "Lateral"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Corn:</strong> Corn relates to the answer "Words that come after "uni"".<br>
+<strong>Form:</strong> Form relates to the answer "Words that come after "uni"".<br>
+<strong>Cycle:</strong> Cycle relates to the answer "Words that come after "uni"".<br>
+<strong>Verse:</strong> Verse relates to the answer "Words that come after "uni"".<br>
+<strong>Lateral:</strong> Lateral relates to the answer "Words that come after "uni"".</p>`,
+  },
+  {
     sequence: "#738",
     date: "2026-05-08",
     answer: "Types of license / licence",
