@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#740",
+    date: "2026-05-10",
+    answer: "Parts of a pen \ud83d\udcdd",
+    clues: ["Barrel", "Spring", "Tip", "Cap", "Ink chamber"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Barrel:</strong> Barrel relates to the answer "Parts of a pen 📝".<br>
+<strong>Spring:</strong> Spring relates to the answer "Parts of a pen 📝".<br>
+<strong>Tip:</strong> Tip relates to the answer "Parts of a pen 📝".<br>
+<strong>Cap:</strong> Cap relates to the answer "Parts of a pen 📝".<br>
+<strong>Ink chamber:</strong> Ink chamber relates to the answer "Parts of a pen 📝".</p>`,
+  },
+  {
     sequence: "#739",
     date: "2026-05-09",
     answer: "Words that come after \"uni\"",
