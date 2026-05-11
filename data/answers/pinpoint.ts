@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#741",
+    date: "2026-05-11",
+    answer: "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. \ud83e\uddf8",
+    clues: ["Steiff", "Lego", "Hasbro", "Bandai Namco", "Mattel"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Steiff:</strong> Steiff relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. 🧸".<br>
+<strong>Lego:</strong> Lego relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. 🧸".<br>
+<strong>Hasbro:</strong> Hasbro relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. 🧸".<br>
+<strong>Bandai Namco:</strong> Bandai Namco relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. 🧸".<br>
+<strong>Mattel:</strong> Mattel relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. 🧸".</p>`,
+  },
+  {
     sequence: "#740",
     date: "2026-05-10",
     answer: "Parts of a pen \ud83d\udcdd",
     clues: ["Barrel", "Spring", "Tip", "Cap", "Ink chamber"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Barrel:</strong> Barrel relates to the answer "Parts of a pen 📝".<br>
-<strong>Spring:</strong> Spring relates to the answer "Parts of a pen 📝".<br>
-<strong>Tip:</strong> Tip relates to the answer "Parts of a pen 📝".<br>
-<strong>Cap:</strong> Cap relates to the answer "Parts of a pen 📝".<br>
-<strong>Ink chamber:</strong> Ink chamber relates to the answer "Parts of a pen 📝".</p>`,
+<strong>Barrel:</strong> Barrel relates to the answer "Parts of a pen ".<br>
+<strong>Spring:</strong> Spring relates to the answer "Parts of a pen ".<br>
+<strong>Tip:</strong> Tip relates to the answer "Parts of a pen ".<br>
+<strong>Cap:</strong> Cap relates to the answer "Parts of a pen ".<br>
+<strong>Ink chamber:</strong> Ink chamber relates to the answer "Parts of a pen ".</p>`,
   },
   {
     sequence: "#739",
