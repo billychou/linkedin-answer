@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#742",
+    date: "2026-05-12",
+    answer: "Things found in a chemistry laboratory \ud83e\uddfe",
+    clues: ["Scale", "Beaker", "pH meter", "Test tube", "Bunsen burner"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Scale:</strong> Scale relates to the answer "Things found in a chemistry laboratory 🧾".<br>
+<strong>Beaker:</strong> Beaker relates to the answer "Things found in a chemistry laboratory 🧾".<br>
+<strong>pH meter:</strong> pH meter relates to the answer "Things found in a chemistry laboratory 🧾".<br>
+<strong>Test tube:</strong> Test tube relates to the answer "Things found in a chemistry laboratory 🧾".<br>
+<strong>Bunsen burner:</strong> Bunsen burner relates to the answer "Things found in a chemistry laboratory 🧾".</p>`,
+  },
+  {
     sequence: "#741",
     date: "2026-05-11",
     answer: "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. \ud83e\uddf8",
     clues: ["Steiff", "Lego", "Hasbro", "Bandai Namco", "Mattel"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Steiff:</strong> Steiff relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. 🧸".<br>
-<strong>Lego:</strong> Lego relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. 🧸".<br>
-<strong>Hasbro:</strong> Hasbro relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. 🧸".<br>
-<strong>Bandai Namco:</strong> Bandai Namco relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. 🧸".<br>
-<strong>Mattel:</strong> Mattel relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. 🧸".</p>`,
+<strong>Steiff:</strong> Steiff relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. ".<br>
+<strong>Lego:</strong> Lego relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. ".<br>
+<strong>Hasbro:</strong> Hasbro relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. ".<br>
+<strong>Bandai Namco:</strong> Bandai Namco relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. ".<br>
+<strong>Mattel:</strong> Mattel relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. ".</p>`,
   },
   {
     sequence: "#740",
