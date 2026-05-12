@@ -48,8 +48,9 @@ def _generate_clue_hint_with_ai(clues: list[str], answer: str) -> str:
         return _generate_fallback_hint(clues, answer)
     
     # DashScope API 配置
-    api_base = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-    model = "qwen3.5-122b-a10b"  # 或其他模型如 qwen-plus, qwen-turbo
+    # api_base = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    api_base = "https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1"
+    model = "qwen3.6-flash"  # 或其他模型如 qwen-plus, qwen-turbo
     
     # 构建 prompt - 使用线索的实际内容而不是 Clue 1, Clue 2
     clues_text = "\n".join([f"{i+1}. {clue}" for i, clue in enumerate(clues)])
