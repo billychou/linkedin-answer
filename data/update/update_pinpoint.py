@@ -43,6 +43,24 @@ def _generate_clue_hint_with_ai(clues: list[str], answer: str) -> str:
     """
     api_key = os.getenv("DASHSCOPE_API_KEY")
     
+    # Fallback: try sourcing .bash_profile if env var is not set
+    # (needed when running from cron sessions that don't inherit shell env)
+    if not api_key:
+        try:
+            bash_profile = os.path.expanduser("~/.bash_profile")
+            with open(bash_profile, "r") as f:
+                for line in f:
+                    line = line.strip()
+                    if line.startswith("export DASHSCOPE_API_KEY=") and not line.startswith("#"):
+                        # Extract value, removing quotes if present
+                        value = line.split("=", 1)[1].strip().strip('"').strip("'")
+                        if value:
+                            api_key = value
+                            ic("Loaded DASHSCOPE_API_KEY from ~/.bash_profile")
+                            break
+        except Exception as e:
+            ic(f"Failed to read ~/.bash_profile: {e}")
+    
     if not api_key:
         ic("Warning: No DASHSCOPE_API_KEY found, using fallback hint generation")
         return _generate_fallback_hint(clues, answer)
