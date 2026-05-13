@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#743",
+    date: "2026-05-13",
+    answer: "Operas \ud83c\udfbc",
+    clues: ["The Magic Flute", "Carmen", "Porgy and Bess", "Madame Butterfly", "The Barber of Seville"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Wolfgang Amadeus Mozart’s 1791 masterpiece seamlessly blends spoken dialogue with sweeping melodies, making it a foundational staple of the operatic repertoire.<br>
+<strong>Clue 2:</strong> Georges Bizet’s 1875 drama follows the passionate life of a cigarette factory worker and stands as one of the most frequently performed works in the French operatic canon.<br>
+<strong>Clue 3:</strong> George Gershwin’s 1935 composition fuses jazz and blues with classical orchestration, creating a landmark American opera that expanded the genre’s cultural boundaries.<br>
+<strong>Clue 4:</strong> Giacomo Puccini’s 1904 tragedy explores cross-cultural romance through soaring vocal lines, representing a pinnacle of Italian verismo opera performed on stages globally.<br>
+<strong>Clue 5:</strong> Gioachino Rossini’s 1816 comic masterpiece features rapid-fire patter and brilliant coloratura, perfectly capturing the energetic spirit of traditional Italian opera buffa.</p>`,
+  },
+  {
     sequence: "#742",
     date: "2026-05-12",
     answer: "Things found in a chemistry laboratory \ud83e\uddfe",
     clues: ["Scale", "Beaker", "pH meter", "Test tube", "Bunsen burner"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Scale:</strong> Scale relates to the answer "Things found in a chemistry laboratory 🧾".<br>
-<strong>Beaker:</strong> Beaker relates to the answer "Things found in a chemistry laboratory 🧾".<br>
-<strong>pH meter:</strong> pH meter relates to the answer "Things found in a chemistry laboratory 🧾".<br>
-<strong>Test tube:</strong> Test tube relates to the answer "Things found in a chemistry laboratory 🧾".<br>
-<strong>Bunsen burner:</strong> Bunsen burner relates to the answer "Things found in a chemistry laboratory 🧾".</p>`,
+<strong>Scale:</strong> Scale relates to the answer "Things found in a chemistry laboratory ".<br>
+<strong>Beaker:</strong> Beaker relates to the answer "Things found in a chemistry laboratory ".<br>
+<strong>pH meter:</strong> pH meter relates to the answer "Things found in a chemistry laboratory ".<br>
+<strong>Test tube:</strong> Test tube relates to the answer "Things found in a chemistry laboratory ".<br>
+<strong>Bunsen burner:</strong> Bunsen burner relates to the answer "Things found in a chemistry laboratory ".</p>`,
   },
   {
     sequence: "#741",
