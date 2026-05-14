@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#744",
+    date: "2026-05-14",
+    answer: "Legislative bodies \ud83d\udcda",
+    clues: ["Diet", "Assembly", "Council", "Congress", "Parliament"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Originating from the Latin word for a scheduled meeting, “Diet” is the official title for the national legislature in several countries, most notably Japan.<br>
+<strong>Clue 2:</strong> This term broadly describes any formally convened group of delegates empowered to debate, draft, and pass laws, such as a state or national assembly.<br>
+<strong>Clue 3:</strong> While occasionally administrative, a council commonly operates as a local or regional legislative body tasked with creating ordinances and governing regulations.<br>
+<strong>Clue 4:</strong> Derived from the Latin for “coming together,” it specifically denotes a formal lawmaking institution, famously serving as the U.S. federal legislature and widely adopted globally.<br>
+<strong>Clue 5:</strong> Rooted in the Old French word for “conversation,” it remains the standard name for the supreme legislative body in parliamentary democracies around the world.<br>
+</p>`,
+  },
+  {
     sequence: "#743",
     date: "2026-05-13",
     answer: "Operas \ud83c\udfbc",
