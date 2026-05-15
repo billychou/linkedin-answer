@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#745",
+    date: "2026-05-15",
+    answer: "Things found on the ceiling",
+    clues: ["Fan", "Mobile", "Smoke detector", "Skylight", "Chandelier"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Ceiling fans are specifically engineered to be mounted overhead, using gravity-free rotation to circulate air efficiently throughout a room.<br>
+<strong>Clue 2:</strong> Decorative mobiles are traditionally suspended from the center of a ceiling so they can catch subtle drafts and spin gracefully above head level.<br>
+<strong>Clue 3:</strong> Because smoke naturally rises, these critical safety devices are strategically installed on ceilings to detect fire hazards at their earliest stage.<br>
+<strong>Clue 4:</strong> A skylight acts as a transparent ceiling panel or roof opening that floods interior spaces with natural daylight and unobstructed views of the sky.<br>
+<strong>Clue 5:</strong> These ornate light fixtures are permanently anchored to ceiling mounts to cast ambient illumination while anchoring a room’s visual design.<br>
+</p>`,
+  },
+  {
     sequence: "#744",
     date: "2026-05-14",
     answer: "Legislative bodies \ud83d\udcda",
