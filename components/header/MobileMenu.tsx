@@ -18,6 +18,10 @@ export default function MobileMenu() {
   // Hardcoded header links in English
   const headerLinks: HeaderLink[] = [
     {
+      name: "Games",
+      href: "/games"
+    },
+    {
       name: "Pinpoint",
       href: "/games/pinpoint"
     }
