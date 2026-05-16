@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#746",
+    date: "2026-05-16",
+    answer: "Words that come before \"cut\" \ud83d\udcda",
+    clues: ["Clear", "Short", "Tax", "Director's", "Hair"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> When combined with "cut," "clear" forms "clearcut," a term used in forestry for harvesting all trees in an area or in digital editing for completely removing unwanted material.<br>
+<strong>Clue 2:</strong> Paired with "cut," it creates "shortcut," which describes a faster route or a more efficient method to accomplish a goal.<br>
+<strong>Clue 3:</strong> Adding "cut" yields "tax cut," a widely recognized economic policy that lowers the percentage of income citizens or businesses owe to the government.<br>
+<strong>Clue 4:</strong> This clue leads to "director's cut," a special film version that preserves the filmmaker's original creative vision rather than the studio-edited theatrical release.<br>
+<strong>Clue 5:</strong> Together with "cut," it makes "haircut," a common grooming service that involves trimming or shaping the hair.</p>`,
+  },
+  {
     sequence: "#745",
     date: "2026-05-15",
     answer: "Things found on the ceiling",
