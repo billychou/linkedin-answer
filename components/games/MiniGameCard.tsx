@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { MiniGame } from "@/data/miniGames";
-import { Layers, Grid3x3, Palette, Gamepad2 } from "lucide-react";
+import { Layers, Grid3x3, Palette, Hash, Gamepad2 } from "lucide-react";
 import type { ComponentType, SVGProps } from "react";
 
 interface MiniGameCardProps {
@@ -26,12 +26,19 @@ const colorMap: Record<string, { bg: string; text: string; border: string; hover
     border: "border-teal-500/20",
     hover: "hover:border-teal-500/40",
   },
+  rose: {
+    bg: "from-rose-500/10 to-rose-600/5",
+    text: "text-rose-500",
+    border: "border-rose-500/20",
+    hover: "hover:border-rose-500/40",
+  },
 };
 
 const iconMap: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   Layers,
   Grid3x3,
   Palette,
+  Hash,
 };
 
 export default function MiniGameCard({ game }: MiniGameCardProps) {
