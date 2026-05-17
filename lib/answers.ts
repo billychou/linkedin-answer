@@ -1,10 +1,20 @@
 import { pinpointAnswers } from "@/data/answers/pinpoint";
 import { queensAnswers } from "@/data/answers/queens";
+import { patchesAnswers } from "@/data/answers/patches";
+import { zipAnswers } from "@/data/answers/zip";
+import { tangoAnswers } from "@/data/answers/tango";
+import { miniSudokuAnswers } from "@/data/answers/mini-sudoku";
+import { crossclimbAnswers } from "@/data/answers/crossclimb";
 import { GameAnswer, GameSlug } from "@/types/game";
 
 const answersMap: Record<GameSlug, GameAnswer[]> = {
   pinpoint: pinpointAnswers,
   queens: queensAnswers,
+  patches: patchesAnswers,
+  zip: zipAnswers,
+  tango: tangoAnswers,
+  "mini-sudoku": miniSudokuAnswers,
+  crossclimb: crossclimbAnswers,
 };
 
 export function getAnswersByGameSlug(slug: GameSlug): GameAnswer[] {
