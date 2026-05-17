@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#747",
+    date: "2026-05-17",
+    answer: "Varieties of grape \ud83c\udf47",
+    clues: ["Kyoho", "Red globe", "Thompson Seedless (Sultana)", "Chardonnay", "Cabernet Sauvignon"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Kyoho is a large, dark purple cultivar widely grown for fresh consumption, showcasing the diverse range of table grapes developed for specific climates and consumer preferences.<br>
+<strong>Clue 2:</strong> Red Globe is a commercially dominant seedless variety celebrated for its round shape and crisp sweetness, representing the standardized breeding practices behind modern eating grapes.<br>
+<strong>Clue 3:</strong> Often renamed Sultana when dried into raisins, this historic seedless cultivar illustrates how a single grape variety can be adapted and marketed under different identities for distinct culinary uses.<br>
+<strong>Clue 4:</strong> Chardonnay is a highly influential green-skinned grape cultivated primarily for fermentation, highlighting how certain varieties are selectively grown for their chemical composition rather than fresh eating.<br>
+<strong>Clue 5:</strong> As the world’s most recognized red wine grape, Cabernet Sauvignon exemplifies how viticulturists name and classify cultivars based on their unique tannin profiles and aging potential.</p>`,
+  },
+  {
     sequence: "#746",
     date: "2026-05-16",
     answer: "Words that come before \"cut\" \ud83d\udcda",
