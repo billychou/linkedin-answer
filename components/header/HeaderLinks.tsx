@@ -1,9 +1,9 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { HeaderLink } from "@/types/common";
 import { ExternalLink } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const HeaderLinks = () => {
   const pathname = usePathname();
@@ -34,10 +34,10 @@ const HeaderLinks = () => {
       name: "Queens",
       href: "/games/queens"
     },
-    {
-      name: "Mini Sudoku",
-      href: "/games/mini-sudoku"
-    },
+    // {
+    //   name: "Mini Sudoku",
+    //   href: "/games/mini-sudoku"
+    // },
     {
       name: "Crossclimb",
       href: "/games/crossclimb"
