@@ -1,6 +1,11 @@
 export type GameSlug =
   | "pinpoint"
-  | "queens";
+  | "queens"
+  | "patches"
+  | "zip"
+  | "tango"
+  | "mini-sudoku"
+  | "crossclimb";
  
 export type GameAnswer = {
   sequence: string;

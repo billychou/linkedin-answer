@@ -24,6 +24,30 @@ export default function MobileMenu() {
     {
       name: "Pinpoint",
       href: "/games/pinpoint"
+    },
+    {
+      name: "Patches",
+      href: "/games/patches"
+    },
+    {
+      name: "Zip",
+      href: "/games/zip"
+    },
+    {
+      name: "Tango",
+      href: "/games/tango"
+    },
+    {
+      name: "Queens",
+      href: "/games/queens"
+    },
+    {
+      name: "Mini Sudoku",
+      href: "/games/mini-sudoku"
+    },
+    {
+      name: "Crossclimb",
+      href: "/games/crossclimb"
     }
   ];
 
