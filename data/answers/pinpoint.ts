@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#748",
+    date: "2026-05-18",
+    answer: "Indian foods \ud83c\udf7d\ufe0f",
+    clues: ["Butter chicken", "Vindaloo", "Palak paneer", "Naan", "Biryani"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Butter chicken is a globally renowned North Indian curry that perfectly captures the rich, tomato-based gravies and warming spice blends central to modern Indian cuisine.<br>
+<strong>Clue 2:</strong> Vindaloo originated in Portugal-influenced Goa but has evolved into a signature dish that highlights India’s regional diversity and mastery of fiery, tangy flavor profiles.<br>
+<strong>Clue 3:</strong> Palak paneer reflects India’s ancient vegetarian traditions, showcasing how simple ingredients like spinach and fresh cottage cheese are elevated through precise spice layering.<br>
+<strong>Clue 4:</strong> Naan is the essential tandoor-baked flatbread that structurally supports Indian meals, providing the traditional vehicle for pairing with and balancing flavorful curries.<br>
+<strong>Clue 5:</strong> Biryani demonstrates the sophisticated slow-cooking technique of marinating proteins and steaming them with fragrant basmati rice and whole spices, a hallmark of royal Indian culinary history.<br>
+</p>`,
+  },
+  {
     sequence: "#747",
     date: "2026-05-17",
     answer: "Varieties of grape \ud83c\udf47",
