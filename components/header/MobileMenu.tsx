@@ -41,10 +41,10 @@ export default function MobileMenu() {
       name: "Queens",
       href: "/games/queens"
     },
-    {
-      name: "Mini Sudoku",
-      href: "/games/mini-sudoku"
-    },
+    // {
+    //   name: "Mini Sudoku",
+    //   href: "/games/mini-sudoku"
+    // },
     {
       name: "Crossclimb",
       href: "/games/crossclimb"
