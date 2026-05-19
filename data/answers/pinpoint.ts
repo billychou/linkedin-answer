@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#749",
+    date: "2026-05-19",
+    answer: "Types of printer \ud83d\udccb",
+    clues: ["Thermal", "Laser", "3D", "Dot matrix", "Inkjet"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Thermal:</strong> Thermal printers generate images using heated elements on temperature-sensitive paper, carving out a specialized niche for receipts and shipping labels.<br>
+<strong>Laser:</strong> Laser printers use a focused light beam and powdered toner fused by heat to rapidly produce crisp documents, defining one of the most widely adopted office categories.<br>
+<strong>3D:</strong> 3D printers construct solid objects by depositing material layer upon layer according to digital blueprints, representing a revolutionary branch that expands printing into physical space.<br>
+<strong>Dot matrix:</strong> Dot matrix printers form text and graphics by physically striking pins against an inked ribbon, preserving a unique impact-based classification still valued for carbon-copy durability.<br>
+<strong>Inkjet:</strong> Inkjet printers project microscopic liquid ink droplets through precision micro-nozzles to create vivid, high-resolution prints, establishing themselves as the dominant choice for home and photography use.<br>
+</p>`,
+  },
+  {
     sequence: "#748",
     date: "2026-05-18",
     answer: "Indian foods \ud83c\udf7d\ufe0f",
