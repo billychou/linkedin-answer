@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#750",
+    date: "2026-05-20",
+    answer: "Types of trail",
+    clues: ["False", "Paper", "Nature", "Campaign", "Breadcrumb (from Hansel & Gretel)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> A false trail is a misleading path or line of inquiry that diverts attention from the actual solution, frequently used in detective work and critical thinking.<br>
+<strong>Clue 2:</strong> A paper trail refers to the physical or digital documentation left behind by transactions or communications, creating a verifiable chain of evidence.<br>
+<strong>Clue 3:</strong> A nature trail is a designated walking path through parks or wilderness areas specifically designed for hiking, wildlife observation, and outdoor recreation.<br>
+<strong>Clue 4:</strong> The campaign trail describes the rigorous schedule and geographic route politicians travel while promoting their platforms during an election cycle.<br>
+<strong>Clue 5:</strong> A breadcrumb trail borrows from the classic fairy tale to describe any series of markers, links, or clues used to navigate forward or retrace your steps.<br>
+</p>`,
+  },
+  {
     sequence: "#749",
     date: "2026-05-19",
     answer: "Types of printer \ud83d\udccb",
