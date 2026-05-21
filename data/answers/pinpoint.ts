@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#751",
+    date: "2026-05-21",
+    answer: "Types of owl \ud83e\udde9",
+    clues: ["Barn", "Snowy", "Screech", "Great", "Horned Hoot (named like its sound)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> "Barn" is the defining prefix for the Barn Owl, a widespread species historically known for nesting in farm outbuildings. <br>
+<strong>Clue 2:</strong> "Snowy" identifies the Snowy Owl, an Arctic specialist named for its brilliant white feathers that blend seamlessly with winter landscapes. <br>
+<strong>Clue 3:</strong> "Screech" names the Screech Owl, whose common title comes directly from the sharp, raspy vocalization that sets it apart. <br>
+<strong>Clue 4:</strong> "Great" stands for the Great Horned Owl (or Great Gray Owl), using the term to emphasize its large frame and dominant ecological role. <br>
+<strong>Clue 5:</strong> "Horned Hoot" merges the Great Horned Owl's feathered ear tufts with its classic call, demonstrating how both anatomy and vocal patterns help classify these birds. <br>
+</p>`,
+  },
+  {
     sequence: "#750",
     date: "2026-05-20",
     answer: "Types of trail",
