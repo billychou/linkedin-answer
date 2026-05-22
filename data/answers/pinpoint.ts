@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#752",
+    date: "2026-05-22",
+    answer: "Words that come before \"control\" \ud83d\udcda",
+    clues: ["Motor", "Damage", "Quality", "Remote", "Air traffic"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> "Motor control" refers to the biological or mechanical systems that regulate muscle movement and machinery functions, forming a precise scientific and engineering term.<br>
+<strong>Clue 2:</strong> "Damage control" describes the strategic efforts to minimize harm or limit negative fallout immediately after a crisis occurs.<br>
+<strong>Clue 3:</strong> "Quality control" encompasses the standardized inspection processes companies use to ensure products meet established performance and safety standards.<br>
+<strong>Clue 4:</strong> A "remote control" is the everyday handheld device that allows users to operate electronics or appliances from a distance.<br>
+<strong>Clue 5:</strong> "Air traffic control" is the essential aviation service responsible for safely coordinating aircraft movements on runways and through managed airspace.</p>`,
+  },
+  {
     sequence: "#751",
     date: "2026-05-21",
     answer: "Types of owl \ud83e\udde9",
