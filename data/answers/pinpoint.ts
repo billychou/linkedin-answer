@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#753",
+    date: "2026-05-23",
+    answer: "Moons in our solar system \ud83c\udf15",
+    clues: ["Titan", "Triton", "Phobos", "Io", "Ganymede (seen by Galileo)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Titan is Saturn’s largest natural satellite, distinguished by its dense atmosphere and liquid methane lakes, making it one of the most iconic moons in our solar system.<br>
+<strong>Clue 2:</strong> Triton orbits Neptune in a rare retrograde direction, strongly suggesting it was captured by the planet's gravity and showcasing the varied origins of solar system moons.<br>
+<strong>Clue 3:</strong> Phobos is one of Mars’ two small, cratered moons, steadily spiraling inward due to tidal forces that will eventually destroy it.<br>
+<strong>Clue 4:</strong> Io is Jupiter’s innermost major moon and holds the record for the most extreme volcanic activity of any known celestial body in the solar system.<br>
+<strong>Clue 5:</strong> Ganymede is Jupiter’s largest moon and the biggest satellite in the entire solar system, famously first identified as a moon by Galileo in 1610.<br>
+</p>`,
+  },
+  {
     sequence: "#752",
     date: "2026-05-22",
     answer: "Words that come before \"control\" \ud83d\udcda",
