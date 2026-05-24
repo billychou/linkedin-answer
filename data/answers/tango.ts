@@ -2,6 +2,12 @@ import { GameAnswer } from "@/types/game";
 
 export const tangoAnswers: GameAnswer[] = [
   {
+    sequence: "#594",
+    date: "2026-05-24",
+    answer: "Tango #594 - Solution grid",
+    image: "https://pub-f7562dec8e4a49c993b8e62385d6e405.r2.dev/linkedintango/tango-answer-594.jpg",
+  },
+  {
     sequence: "#593",
     date: "2026-05-23",
     answer: "Tango #593 - Solution grid",

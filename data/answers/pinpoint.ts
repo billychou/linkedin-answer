@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#754",
+    date: "2026-05-24",
+    answer: "Things shaped like discs (flat and circular objects) \ud83d\udcda",
+    clues: ["Plates", "Coins", "Frisbees", "Manhole covers", "CDs and DVDs (it's the last D)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Plates are everyday examples of flat, circular objects designed with a smooth, disc-like surface for serving food. Their consistent rounded geometry makes them a perfect real-world match for the category.<br>
+<strong>Clue 2:</strong> Coins are minted as compact, flat discs to enable efficient stacking, counting, and secure storage in wallets and banking systems. Their standardized circular shape ensures reliable handling across global economies.<br>
+<strong>Clue 3:</strong> Frisbees are intentionally engineered as lightweight, aerodynamic discs to catch air currents and glide smoothly through the sky. Their flat, circular profile is essential for stable flight and predictable movement during play.<br>
+<strong>Clue 4:</strong> Manhole covers are heavy, cast-iron discs built to safely seal underground infrastructure while bearing significant weight. Their round, disc-shaped design cleverly prevents them from dropping through the circular opening they protect.<br>
+<strong>Clue 5:</strong> CDs and DVDs are thin, flat media discs optimized for spinning at high speeds inside optical drives. Though their names highlight digital functions, their entire technology relies on that precise circular, disc-like structure to read and store data.</p>`,
+  },
+  {
     sequence: "#753",
     date: "2026-05-23",
     answer: "Moons in our solar system \ud83c\udf15",
