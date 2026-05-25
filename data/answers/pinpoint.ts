@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#755",
+    date: "2026-05-25",
+    answer: "Names of mountain ranges \ud83d\uddfa\ufe0f",
+    clues: ["Dolomites", "Rockies", "Andes", "Alps", "Himalayas"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> The Dolomites are a striking limestone mountain range in northeastern Italy, celebrated for their jagged peaks and geological uniqueness.<br>
+<strong>Clue 2:</strong> The Rockies stretch more than 3,000 miles across western North America, forming one of the continent’s most extensive and ecologically vital mountain ranges.<br>
+<strong>Clue 3:</strong> The Andes run along South America’s western edge, holding the title of the longest continuous continental mountain range on Earth.<br>
+<strong>Clue 4:</strong> The Alps span eight central European nations, renowned for their towering summits, glacial valleys, and profound influence on regional climate and culture.<br>
+<strong>Clue 5:</strong> The Himalayas were forged by powerful tectonic collisions and encompass the planet’s highest elevations, standing as the ultimate example of a young, rapidly rising mountain range.</p>`,
+  },
+  {
     sequence: "#754",
     date: "2026-05-24",
     answer: "Things shaped like discs (flat and circular objects) \ud83d\udcda",
