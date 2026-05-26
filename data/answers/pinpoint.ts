@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#756",
+    date: "2026-05-26",
+    answer: "Types of desk",
+    clues: ["Help", "Check-in", "News", "Rolltop", "Standing"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Adding "desk" creates "helpdesk," referring to both a physical service counter and the dedicated team that handles customer or IT support inquiries.<br>
+<strong>Clue 2:</strong> Together they form a "check-in desk," the designated station at hotels, airports, or event venues where visitors officially register and receive access materials.<br>
+<strong>Clue 3:</strong> Combined as "news desk," this term identifies the central command hub in a newsroom where journalists and editors coordinate live coverage and editorial decisions.<br>
+<strong>Clue 4:</strong> This directly names a "rolltop desk," a vintage-style workstation featuring a flexible, curved wooden shutter that rolls down to safely conceal documents and supplies.<br>
+<strong>Clue 5:</strong> As a "standing desk," it describes an ergonomic workstation engineered to elevate the surface height, allowing users to work comfortably while upright to improve posture and circulation.<br>
+</p>`,
+  },
+  {
     sequence: "#755",
     date: "2026-05-25",
     answer: "Names of mountain ranges \ud83d\uddfa\ufe0f",
