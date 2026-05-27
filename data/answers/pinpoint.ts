@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#757",
+    date: "2026-05-27",
+    answer: "Types of pool",
+    clues: ["Car", "Dating", "Jury", "Gene", "Swimming"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> "Car" combines with pool to form carpool, a shared transportation arrangement where passengers split rides and expenses.<br>
+<strong>Clue 2:</strong> "Dating" creates the dating pool, which refers to the collective group of available romantic prospects in a given community or demographic.<br>
+<strong>Clue 3:</strong> "Jury" forms jury pool, the large initial list of eligible citizens randomly summoned from which a trial jury is ultimately selected.<br>
+<strong>Clue 4:</strong> "Gene" makes gene pool, a biological term describing the full range of genetic diversity within a specific population or species.<br>
+<strong>Clue 5:</strong> "Swimming" completes swimming pool, the most familiar example, referring to a man-made basin filled with water designed for aquatic exercise and leisure.<br>
+</p>`,
+  },
+  {
     sequence: "#756",
     date: "2026-05-26",
     answer: "Types of desk",
