@@ -135,6 +135,17 @@ export default function Footer() {
                     Terms of Service
                   </Link>
                 </li>
+                <li>
+                  <a
+                    href="https://json.linkedinanswer.today"
+                    target="_blank"
+                    rel="noreferrer nofollow noopener"
+                    className="text-gray-400 hover:text-white text-sm transition-colors duration-200 inline-flex items-center gap-1"
+                  >
+                    JSON Feed
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </li>
               </ul>
             </div>
 
