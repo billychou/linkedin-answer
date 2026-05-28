@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#758",
+    date: "2026-05-28",
+    answer: "Words that come after \"door\"",
+    clues: ["Way", "Mat", "Bell", "Jamb", "Knob"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Adding "door" before this clue creates "doorway," the standard term for an entrance or passageway.<br>
+<strong>Clue 2:</strong> When preceded by "door," it forms "doormat," a practical rug placed right at an entryway to clean footwear.<br>
+<strong>Clue 3:</strong> Combined with "door," it makes "doorbell," the familiar signaling device visitors press to announce their arrival.<br>
+<strong>Clue 4:</strong> Placing "door" in front yields "doorjamb," the sturdy vertical frame that supports the door and its hardware.<br>
+<strong>Clue 5:</strong> Paired with "door," it completes "doorknob," the classic rotating handle used to open or secure a room.</p>`,
+  },
+  {
     sequence: "#757",
     date: "2026-05-27",
     answer: "Types of pool",
