@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#759",
+    date: "2026-05-29",
+    answer: "Things that grow on trees \ud83c\udf32",
+    clues: ["Apples", "Chestnuts", "Moss", "Bark", "Pine needles"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Apples develop directly from the blossoms on apple tree branches, making them one of the most recognizable fruits cultivated on trees.<br>
+<strong>Clue 2:</strong> These edible nuts mature inside spiky green husks before dropping from the high branches of chestnut trees.<br>
+<strong>Clue 3:</strong> This soft, moisture-loving plant anchors itself to tree trunks and branches, thriving on the rough bark where it absorbs nutrients from rain and air.<br>
+<strong>Clue 4:</strong> Serving as the tree’s living outer layer, bark is continuously produced by the inner cambium and gradually thickens across the trunk and limbs.<br>
+<strong>Clue 5:</strong> Instead of broad leaves, these slender, waxy foliage clusters grow in tight bundles directly from pine tree branches to conserve water in harsh climates.<br>
+</p>`,
+  },
+  {
     sequence: "#758",
     date: "2026-05-28",
     answer: "Words that come after \"door\"",
