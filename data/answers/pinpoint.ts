@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#760",
+    date: "2026-05-30",
+    answer: "Words that come before \"back\"",
+    clues: ["Paper", "Cut", "Feed", "Flash", "Hump (🐋)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> "Paper" pairs with "back" to form "paperback," the standard publishing term for books bound with flexible paper covers rather than rigid hardcovers.<br>
+<strong>Clue 2:</strong> Combined with "back," it creates "cutback," a widely used term describing a deliberate reduction in budget, staff, or operational activity.<br>
+<strong>Clue 3:</strong> This clue completes "feedback," the essential information, reactions, or data shared in response to a performance, product, or idea.<br>
+<strong>Clue 4:</strong> Together they form "flashback," a common narrative device that interrupts the present storyline to depict events from the past.<br>
+<strong>Clue 5:</strong> Paired with "back," it makes "humpback," most famously associated with the massive marine mammal whose distinctive arched spine and breaching behavior are highlighted by the whale emoji.</p>`,
+  },
+  {
     sequence: "#759",
     date: "2026-05-29",
     answer: "Things that grow on trees \ud83c\udf32",
