@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#761",
+    date: "2026-05-31",
+    answer: "Places to find arrows \ud83e\udde9",
+    clues: ["Assembly diagrams", "Compass roses", "Archery classes", "One-way street signs", "Bottom right of your keyboard"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>1:</strong> Instructional manuals and product guides consistently use directional arrows to visually demonstrate part orientation and assembly steps.<br>
+<strong>2:</strong> Navigational charts and maritime maps feature a prominent arrowhead pointing north to help users establish geographic direction.<br>
+<strong>3:</strong> This provides the most literal connection, as students learn to properly nock, aim, and release traditional bow-and-arrow projectiles.<br>
+<strong>4:</strong> Traffic regulations rely on bold, unidirectional arrow symbols to clearly mandate the legal flow of vehicle movement.<br>
+<strong>5:</strong> Standard computer keyboards house a dedicated cluster of four navigational arrow keys in this corner for moving text cursors and scrolling.<br>
+</p>`,
+  },
+  {
     sequence: "#760",
     date: "2026-05-30",
     answer: "Words that come before \"back\"",
