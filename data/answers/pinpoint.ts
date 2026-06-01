@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#762",
+    date: "2026-06-01",
+    answer: "Names of insects \ud83d\udcdd",
+    clues: ["Fly", "Cricket", "June beetle", "Praying mantis", "Lightning bug"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> The fly is a quintessential example of a flying insect, representing the highly diverse and globally widespread order Diptera.<br>
+<strong>Clue 2:</strong> Famous for its rhythmic chirping, the cricket is a classic orthopteran insect easily identified by both its distinctive sound and body structure.<br>
+<strong>Clue 3:</strong> Named for its peak emergence in early summer months, the June beetle is a widely recognized scarab beetle species that highlights common insect naming conventions.<br>
+<strong>Clue 4:</strong> Distinguished by its triangular head and folded forelegs, the praying mantis is a famous predatory insect celebrated for its unique hunting posture.<br>
+<strong>Clue 5:</strong> Commonly called fireflies, lightning bugs are bioluminescent beetles that beautifully illustrate the varied communication methods and survival adaptations found among insects.<br>
+</p>`,
+  },
+  {
     sequence: "#761",
     date: "2026-05-31",
     answer: "Places to find arrows \ud83e\udde9",
