@@ -66,9 +66,20 @@ export default async function PinpointDatePage({ params }: Props) {
     });
   };
 
+  const breadcrumbs = [
+    { label: "Home", url: "/" },
+    { label: "Games", url: "/games" },
+    { label: game.name, url: `/games/${game.slug}` },
+    { label: formatDate(date), url: `/games/${game.slug}/${date}` },
+  ];
+
   return (
     <>
-      <StructuredData game={game} answer={answer} />
+      <StructuredData
+        game={game}
+        answer={answer}
+        breadcrumbs={breadcrumbs}
+      />
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8">
         <GameNavigation game={game} currentPage="answer" />
 

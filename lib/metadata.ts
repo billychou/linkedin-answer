@@ -5,16 +5,31 @@ type MetadataProps = {
   page?: string
   title?: string
   description?: string
+  keywords?: string[]
   images?: string[]
   noIndex?: boolean
   path?: string
   canonicalUrl?: string
 }
 
+const defaultKeywords: Record<string, string[]> = {
+  Home: [
+    'LinkedIn Pinpoint answer',
+    'Crossclimb solution',
+    'LinkedIn game answers today',
+    'Zip puzzle answer',
+    'Tango puzzle answer',
+    'Queens game answer',
+    'Patches puzzle answer',
+    'LinkedIn games daily',
+  ],
+}
+
 export function constructMetadata({
   page = 'Home',
   title = 'LinkedIn Answer Today',
-  description = "Download our app and enjoy new puzzles every day! Find today's answers for Pinpoint, Crossclimb, ZIP, Mini Sudoku, Queens, Tango, and more.",
+  description = "Find today's answers for LinkedIn games — Pinpoint, Crossclimb, Zip, Tango, Queens, and Patches. Updated daily with solutions and explanations.",
+  keywords,
   images = [],
   noIndex = false,
   path,
@@ -22,7 +37,7 @@ export function constructMetadata({
 }: MetadataProps): Metadata {
   // build full title
   const finalTitle = page === 'Home'
-    ? `${title} - ${title}`
+    ? `${title} - Daily Game Solutions`
     : `${title} | LinkedIn Answer Today`
 
   // build image URLs
@@ -42,7 +57,8 @@ export function constructMetadata({
   return {
     title: finalTitle,
     description: description,
-    keywords: [],
+    keywords: keywords ?? defaultKeywords[page] ?? [],
+    applicationName: 'LinkedIn Answer Today',
     authors: siteConfig.authors,
     creator: siteConfig.creator,
     metadataBase: new URL(siteConfig.url),

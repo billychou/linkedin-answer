@@ -6,12 +6,16 @@ interface StructuredDataProps {
   game: Game;
   answer?: GameAnswer;
   type?: "Game" | "FAQPage";
+  breadcrumbs?: { label: string; url: string }[];
+  collectionItems?: { label: string; url: string; date?: string }[];
 }
 
 export default function StructuredData({
   game,
   answer,
   type = "Game",
+  breadcrumbs,
+  collectionItems,
 }: StructuredDataProps) {
   const gameUrl = `${siteConfig.url}/games/${game.slug}`;
   const playUrl = game.playUrl || gameUrl;
@@ -63,7 +67,51 @@ export default function StructuredData({
     ],
   };
 
-  const structuredData = type === "FAQPage" ? faqStructuredData : gameStructuredData;
+  const breadcrumbData = breadcrumbs
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: breadcrumbs.map((crumb, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: crumb.label,
+          item: crumb.url.startsWith("http") ? crumb.url : `${siteConfig.url}${crumb.url}`,
+        })),
+      }
+    : null;
+
+  const collectionData = collectionItems
+    ? {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: `${game.name} Archives`,
+        description: `Historical answers for ${game.name}`,
+        url: gameUrl,
+        hasPart: collectionItems.map((item) => ({
+          "@type": "CreativeWork",
+          name: `${game.name} - ${item.label}`,
+          url: item.url.startsWith("http") ? item.url : `${siteConfig.url}${item.url}`,
+          ...(item.date && { datePublished: item.date }),
+        })),
+      }
+    : null;
+
+  let structuredData: object | null = null;
+  if (type === "FAQPage") {
+    structuredData = faqStructuredData;
+  } else if (breadcrumbs && collectionItems) {
+    structuredData = {
+      "@context": "https://schema.org",
+      "@graph": [gameStructuredData, breadcrumbData, collectionData].filter(Boolean),
+    };
+  } else if (breadcrumbs) {
+    structuredData = {
+      "@context": "https://schema.org",
+      "@graph": [gameStructuredData, breadcrumbData].filter(Boolean),
+    };
+  } else {
+    structuredData = gameStructuredData;
+  }
 
   return (
     <script

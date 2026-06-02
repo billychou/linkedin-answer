@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { getGame, getGameSlugs } from "@/lib/games";
+import StructuredData from "@/components/games/StructuredData";
 import { constructMetadata } from "@/lib/metadata";
 
 type Props = {
@@ -31,7 +32,7 @@ export async function generateMetadata({
   return constructMetadata({
     page: "Game",
     title: `${game.name} - How to Play`,
-    description: `How to play ${game.name}`,
+    description: `Learn how to play ${game.name}. Rules, tips, and strategies for solving this LinkedIn puzzle game.`,
     path: `/games/${gameSlug}/how-to-play`,
     canonicalUrl: `/games/${gameSlug}/how-to-play`,
   });
@@ -45,8 +46,20 @@ export default async function HowToPlayPage({ params }: Props) {
     notFound();
   }
 
+  const breadcrumbs = [
+    { label: "Home", url: "/" },
+    { label: "Games", url: "/games" },
+    { label: game.name, url: `/games/${gameSlug}` },
+    { label: "How to Play", url: `/games/${gameSlug}/how-to-play` },
+  ];
+
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-8">
+      <StructuredData
+        game={game}
+        breadcrumbs={breadcrumbs}
+        type="FAQPage"
+      />
       <div className="mb-6 sm:mb-8">
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-gray-100 mb-2">
           {game.name} - How to Play
