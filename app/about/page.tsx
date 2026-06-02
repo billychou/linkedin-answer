@@ -33,8 +33,8 @@ async function getMDXContent() {
 export async function generateMetadata(): Promise<Metadata> {
   return constructMetadata({
     page: "About",
-    title: "About",
-    description: "About the site",
+    title: "About Us",
+    description: "Learn about LinkedIn Answer Today — your daily source for LinkedIn game answers, solutions, and strategies for Pinpoint, Crossclimb, Zip, and more.",
     path: `/about`,
     canonicalUrl: `/about`,
   });

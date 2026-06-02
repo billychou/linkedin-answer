@@ -5,6 +5,7 @@ import Header from "@/components/header/Header";
 import { TailwindIndicator } from "@/components/TailwindIndicator";
 import { Toaster } from "@/components/ui/toaster";
 import { siteConfig } from "@/config/site";
+import { getAllGames } from "@/lib/games";
 import { constructMetadata } from "@/lib/metadata";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
@@ -15,42 +16,80 @@ import { ThemeProvider } from "next-themes";
 
 /**
  * 生成页面元数据，用于 SEO 优化
- * generateMetadata 函数是 Next.js 框架提供的，用于生成页面元数据
- * @returns {Promise<Metadata>} 返回包含页面标题、描述等信息的元数据对象
  */
 export async function generateMetadata(): Promise<Metadata> {
   return constructMetadata({
     page: "Home",
     title: "LinkedIn Answer Today",
-    description: "Find today's answers for Pinpoint, Crossclimb, ZIP, Mini Sudoku, Queens, Tango, and more.",
+    description: "Find today's answers for Pinpoint, Crossclimb, ZIP, Queens, Tango, and more. Updated daily with solutions and explanations.",
     path: `/`,
     canonicalUrl: `/`,
   });
 }
 
-/**
- * 设置页面视口，用于响应式设计
- * @type {Viewport}
- */
 export const viewport: Viewport = {
   themeColor: siteConfig.themeColors,
 };
 
-/**
- * 根布局组件，包含页面的公共部分，如头部、底部和尾部
- * @param {React.ReactNode} children - 页面的子组件，即页面的主体内容
- * @returns {JSX.Element} 返回包含公共部分和子组件的根布局
- */
-export default function RootLayout({
+async function generateSiteJsonLd() {
+  const games = getAllGames();
+  const navElements = games.map((game) => ({
+    "@type": "SiteNavigationElement",
+    name: game.name,
+    url: `${siteConfig.url}/games/${game.slug}`,
+    description: game.description,
+  }));
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        name: "LinkedIn Answer Today",
+        url: siteConfig.url,
+        description: siteConfig.description,
+        potentialAction: {
+          "@type": "SearchAction",
+          target: `${siteConfig.url}/games/{search_term_string}`,
+          "query-input": "required name=search_term_string",
+        },
+      },
+      {
+        "@type": "Organization",
+        name: "LinkedIn Answer Today",
+        url: siteConfig.url,
+        sameAs: [
+          siteConfig.socialLinks?.github,
+          siteConfig.socialLinks?.twitter,
+          siteConfig.socialLinks?.bluesky,
+        ].filter(Boolean),
+      },
+      ...navElements,
+    ],
+  };
+}
+
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const siteJsonLd = await generateSiteJsonLd();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3410962713385660" crossOrigin="anonymous">
-      </script>
+        <link rel="icon" href={siteConfig.icons.icon} sizes="any" />
+        <link rel="apple-touch-icon" href={siteConfig.icons.apple} />
+        <link rel="shortcut icon" href={siteConfig.icons.shortcut} />
+        {/* Google Search Console verification: replace with your actual verification code */}
+        {/* <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" /> */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+        />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3410962713385660" crossOrigin="anonymous">
+        </script>
       </head>
       <body
         className={cn(

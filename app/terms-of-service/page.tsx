@@ -34,7 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return constructMetadata({
     page: "TermsOfService",
     title: "Terms of Service",
-    description: "Terms of Service",
+    description: "Terms of Service for LinkedIn Answer Today — conditions and guidelines for using our daily game answer solutions.",
     path: `/terms-of-service`,
     canonicalUrl: `/terms-of-service`,
   });

@@ -68,9 +68,19 @@ export default async function GamePage({ params }: Props) {
     });
   };
 
+  const breadcrumbs = [
+    { label: "Home", url: "/" },
+    { label: "Games", url: "/games" },
+    { label: game.name, url: `/games/${gameSlug}` },
+  ];
+
   return (
     <>
-      <StructuredData game={game} answer={answer} />
+      <StructuredData
+        game={game}
+        answer={answer}
+        breadcrumbs={breadcrumbs}
+      />
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8">
         {/* Page Header */}
         <div className="mb-8 sm:mb-10">
