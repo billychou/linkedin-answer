@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#763",
+    date: "2026-06-02",
+    answer: "Things that are black",
+    clues: ["Crows", "Ebony", "Ripe olives", "Charcoal", "Asphalt"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Crows are nature’s most iconic symbols of black, featuring sleek, light-absorbing feathers that appear uniformly dark in daylight. Their strong cultural association with shadows makes them a timeless visual shorthand for the color.<br>
+<strong>Clue 2:</strong> Ebony is a dense hardwood whose name literally translates to "black," prized for its naturally deep, jet-black grain. It has historically been the standard material for luxury crafts requiring a rich, dark finish.<br>
+<strong>Clue 3:</strong> While unripe olives start green, they naturally oxidize and darken to a deep black hue once fully matured and cured. They serve as a perfect culinary example of organic produce transforming into a distinctly black state.<br>
+<strong>Clue 4:</strong> Charcoal is created by burning organic materials at high temperatures, leaving behind a carbon-rich residue that is intensely black. Artists and manufacturers have long relied on it specifically for its pure, matte black properties.<br>
+<strong>Clue 5:</strong> Asphalt is a petroleum-based composite that cools into the rugged, pitch-black pavement covering most modern roads. Its ubiquitous presence makes it an everyday example of a synthetic material defined by its dark hue.<br>
+</p>`,
+  },
+  {
     sequence: "#762",
     date: "2026-06-01",
     answer: "Names of insects \ud83d\udcdd",
