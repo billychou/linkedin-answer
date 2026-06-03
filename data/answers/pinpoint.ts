@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#764",
+    date: "2026-06-03",
+    answer: "\u2014 Desserts (all with many layers) \ud83c\udf7d\ufe0f",
+    clues: ["Trifle", "Parfait", "Tiramisu", "Baklava", "Seven-layer cake"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Trifle is famously assembled in a clear glass dish with distinct, alternating strata of sponge cake, fruit, custard, and cream, turning its internal structure into a visual centerpiece.<br>
+<strong>Clue 2:</strong> Served in a tall, transparent glass, a parfait showcases neatly stacked tiers of yogurt, granola, and fruit or ice cream, emphasizing its signature multi-tiered presentation.<br>
+<strong>Clue 3:</strong> This Italian classic achieves its signature richness through carefully alternating layers of coffee-dipped ladyfingers and sweet mascarpone cream.<br>
+<strong>Clue 4:</strong> Baklava features dozens of paper-thin sheets of phyllo dough separated by crushed nuts and bound together with syrup, creating a dense, flaky architecture.<br>
+<strong>Clue 5:</strong> True to its name, this American staple is literally built from seven distinct tiers of sponge cake and frosting, prioritizing vertical construction in every slice.
+</p>`,
+  },
+  {
     sequence: "#763",
     date: "2026-06-02",
     answer: "Things that are black",
