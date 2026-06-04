@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#765",
+    date: "2026-06-04",
+    answer: "Words that come before \"flag\"",
+    clues: ["White", "Pirate", "National", "Checkered", "Capture the"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> A white flag is a globally recognized symbol of surrender or peace, making "white" the natural prefix in this enduring phrase.<br>
+<strong>Clue 2:</strong> Seafaring outlaws historically flew distinctive banners to mark their vessels, which are universally known as pirate flags.<br>
+<strong>Clue 3:</strong> Every sovereign state displays an official banner representing its history and government, commonly referred to as the national flag.<br>
+<strong>Clue 4:</strong> Auto and horse racing use a black-and-white square pattern to signal the finish line, giving us the familiar term checkered flag.<br>
+<strong>Clue 5:</strong> This points to the classic outdoor team game where players race to seize the opposing squad's banner, known as capture the flag.<br>
+</p>`,
+  },
+  {
     sequence: "#764",
     date: "2026-06-03",
     answer: "\u2014 Desserts (all with many layers) \ud83c\udf7d\ufe0f",
