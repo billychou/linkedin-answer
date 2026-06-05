@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#766",
+    date: "2026-06-05",
+    answer: "Things associated with Germany \ud83c\udde9\ud83c\uddea \ud83e\udde9",
+    clues: ["Pretzels", "The Black Forest", "The Autobahn", "Oktoberfest", "The Berlin Wall"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Originally rooted in Southern German baking traditions, these twisted bread snacks have become an iconic symbol of Bavarian cuisine and German culinary heritage worldwide.<br>
+<strong>Clue 2:</strong> This lush, mountainous region in southwestern Germany is globally renowned for its dense woodlands, traditional craftsmanship, and the famous chocolate cherry cake named after it.<br>
+<strong>Clue 3:</strong> As Germany’s extensive federal highway system, the Autobahn reflects the nation’s automotive innovation and engineering excellence, famously featuring sections with no mandatory speed limits.<br>
+<strong>Clue 4:</strong> Held annually in Munich, this massive cultural festival celebrates quintessential German traditions through stein-holding competitions, folk music, regional attire, and hearty cuisine.<br>
+<strong>Clue 5:</strong> Once a stark symbol of Cold War division, this historic barrier physically split East and West Germany until 1989, now standing as a powerful monument to the country’s reunification.</p>`,
+  },
+  {
     sequence: "#765",
     date: "2026-06-04",
     answer: "Words that come before \"flag\"",
