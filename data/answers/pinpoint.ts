@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#767",
+    date: "2026-06-06",
+    answer: "Words that come before \"station\"",
+    clues: ["Space", "Power", "Police", "TV", "Bus"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Space stations are modular orbital habitats where astronauts live and conduct research, proving that a "station" can serve as a permanent operational base even beyond Earth's atmosphere.<br>
+<strong>Clue 2:</strong> Power stations convert raw energy sources like coal, gas, or wind into electricity, demonstrating how the term marks a centralized facility dedicated to generating essential utilities.<br>
+<strong>Clue 3:</strong> Police stations function as local command centers where officers coordinate patrols and handle public reports, showing how a "station" acts as a fixed headquarters for civic safety.<br>
+<strong>Clue 4:</strong> TV stations produce and transmit broadcast content to audiences nationwide, illustrating how the word designates the primary hub for media creation and distribution.<br>
+<strong>Clue 5:</strong> Bus stations serve as major transit terminals where multiple regional routes converge, highlighting how a "station" provides a structured interchange point for everyday travel.<br>
+</p>`,
+  },
+  {
     sequence: "#766",
     date: "2026-06-05",
     answer: "Things associated with Germany \ud83c\udde9\ud83c\uddea \ud83e\udde9",
