@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#768",
+    date: "2026-06-07",
+    answer: "Words that come before \"class\" \ud83d\udcda",
+    clues: ["First", "Weight", "Fitness", "Business", "World- (the very best)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> "First" combines with "class" to form "first-class," a widely used term denoting premium quality or top-tier service.<br>
+<strong>Clue 2:</strong> "Weight" pairs with "class" to create "weight class," a standardized category in combat sports and athletics that ensures fair competition based on body mass.<br>
+<strong>Clue 3:</strong> "Fitness" links with "class" to make "fitness class," referring to structured group exercise sessions designed to improve strength, endurance, or flexibility.<br>
+<strong>Clue 4:</strong> "Business" forms "business class," the elevated travel tier recognized for enhanced comfort, priority services, and premium amenities.<br>
+<strong>Clue 5:</strong> "World-" hyphenates with "class" to create "world-class," an adjective describing exceptional performance or quality that meets international standards.</p>`,
+  },
+  {
     sequence: "#767",
     date: "2026-06-06",
     answer: "Words that come before \"station\"",
