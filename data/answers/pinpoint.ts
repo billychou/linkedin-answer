@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#769",
+    date: "2026-06-08",
+    answer: "Bits in a byte, Planets in our solar system, Legs on a spider, Corners of a cube, Sides of (most) stop signs",
+    clues: ["Bits in a byte", "Planets in our solar system", "Legs on a spider", "Corners of a cube", "Sides of (most) stop signs"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Each standard byte in computing is composed of exactly eight binary digits (bits), forming a foundational unit for digital data.<br>
+<strong>Clue 2:</strong> Since Pluto’s reclassification as a dwarf planet in 2006, astronomers officially recognize eight major planets orbiting our Sun.<br>
+<strong>Clue 3:</strong> Spiders belong to the arachnid class, which is biologically defined by possessing exactly eight legs rather than the six found in insects.<br>
+<strong>Clue 4:</strong> In solid geometry, a perfect three-dimensional cube features exactly eight vertices where its twelve edges converge.<br>
+<strong>Clue 5:</strong> Global road safety standards mandate that standard stop signs be octagonal, giving them precisely eight equal sides.</p>`,
+  },
+  {
     sequence: "#768",
     date: "2026-06-07",
     answer: "Words that come before \"class\" \ud83d\udcda",
