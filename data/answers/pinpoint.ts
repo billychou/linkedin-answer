@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#770",
+    date: "2026-06-09",
+    answer: "Things you can \"keep\"",
+    clues: ["Score", "A secret", "The peace", "One's distance", "An open mind"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> In games and competitions, you "keep score" to accurately track points and monitor progress toward victory.<br>
+<strong>Clue 2:</strong> When you "keep a secret," you actively guard confidential information, ensuring it remains shared only with trusted individuals.<br>
+<strong>Clue 3:</strong> To "keep the peace" means to consciously foster harmony and de-escalate tensions within a group or relationship.<br>
+<strong>Clue 4:</strong> "Keeping one's distance" involves maintaining intentional physical or emotional space to respect boundaries or prioritize safety.<br>
+<strong>Clue 5:</strong> "Keeping an open mind" requires willingly setting aside preconceptions to remain receptive to fresh ideas and new perspectives.</p>`,
+  },
+  {
     sequence: "#769",
     date: "2026-06-08",
     answer: "Bits in a byte, Planets in our solar system, Legs on a spider, Corners of a cube, Sides of (most) stop signs",
