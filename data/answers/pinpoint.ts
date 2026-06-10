@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#771",
+    date: "2026-06-10",
+    answer: "Terms for wind conditions (varying duration and intensity)",
+    clues: ["Blast", "Zephyr", "Gale", "Gust", "Breeze"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> A blast captures a sudden, high-intensity burst of air that lasts only briefly, highlighting the extreme end of wind intensity.<br>
+<strong>Clue 2:</strong> This poetic term describes a gentle, steady wind, representing low intensity and a longer, calming duration.<br>
+<strong>Clue 3:</strong> Officially recognized in meteorology, a gale signifies strong winds that persist over extended periods, emphasizing both high intensity and duration.<br>
+<strong>Clue 4:</strong> A gust reflects a rapid, temporary spike in wind speed, perfectly illustrating short-duration fluctuations in intensity.<br>
+<strong>Clue 5:</strong> A breeze denotes a light, comfortable airflow that typically maintains a consistent, moderate intensity over a steady span of time.
+</p>`,
+  },
+  {
     sequence: "#770",
     date: "2026-06-09",
     answer: "Things you can \"keep\"",

@@ -2,6 +2,12 @@ import { GameAnswer } from "@/types/game";
 
 export const queensAnswers: GameAnswer[] = [
   {
+    sequence: "#771",
+    date: "2026-06-10",
+    answer: "Queens #771 - Solution grid",
+    image: "https://pub-f7562dec8e4a49c993b8e62385d6e405.r2.dev/linkedinqueens/queens-answer-771.jpg",
+  },
+  {
     sequence: "#769",
     date: "2026-06-08",
     answer: "Queens #769 - Solution grid",
