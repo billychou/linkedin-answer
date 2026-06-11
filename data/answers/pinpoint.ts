@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#772",
+    date: "2026-06-11",
+    answer: "Things found in a wallet or purse \ud83e\uddfe",
+    clues: ["Photos", "Receipts", "Cash", "Emergency contact info", "Identification card"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Small photographs are often tucked into card sleeves or behind IDs as sentimental keepsakes, turning a practical accessory into a portable memory bank.<br>
+<strong>Clue 2:</strong> Transaction records naturally migrate into compartments after shopping, frequently lingering temporarily as proof of purchase before being organized or recycled.<br>
+<strong>Clue 3:</strong> Physical currency has long been folded and secured in dedicated billfold sections, ensuring immediate access for everyday purchases and tips.<br>
+<strong>Clue 4:</strong> A compact card listing names and phone numbers is commonly carried for rapid reference, offering practical safety during unexpected situations.<br>
+<strong>Clue 5:</strong> Official credentials are typically slid into a transparent window sleeve for instant verification, making this document one of the most consistently stored essentials.</p>`,
+  },
+  {
     sequence: "#771",
     date: "2026-06-10",
     answer: "Terms for wind conditions (varying duration and intensity)",
