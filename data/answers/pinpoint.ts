@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#773",
+    date: "2026-06-12",
+    answer: "Words that come before \"order\"",
+    clues: ["Natural", "Standing", "Purchase", "Pecking", "Out of"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Natural completes the phrase "natural order," which refers to the inherent hierarchy or sequence found in biology and ecology.<br>
+<strong>Clue 2:</strong> Standing pairs with "order" to form "standing order," a financial or legal term for a pre-authorized instruction that triggers a recurring action.<br>
+<strong>Clue 3:</strong> Purchase creates "purchase order," the standard business document used to formally request goods or services from a supplier.<br>
+<strong>Clue 4:</strong> Pecking yields "pecking order," a sociological concept borrowed from animal behavior to describe competitive social hierarchies and dominance.<br>
+<strong>Clue 5:</strong> Out of combines with "order" to make "out of order," a widely recognized phrase used to indicate broken equipment or a deviation from procedural rules.<br>
+</p>`,
+  },
+  {
     sequence: "#772",
     date: "2026-06-11",
     answer: "Things found in a wallet or purse \ud83e\uddfe",

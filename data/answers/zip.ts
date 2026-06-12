@@ -2,6 +2,12 @@ import { GameAnswer } from "@/types/game";
 
 export const zipAnswers: GameAnswer[] = [
   {
+    sequence: "#452",
+    date: "2026-06-12",
+    answer: "Zip #452 - Path solution",
+    image: "https://pub-f7562dec8e4a49c993b8e62385d6e405.r2.dev/linkedinzip/zip-answer-452.jpg",
+  },
+  {
     sequence: "#451",
     date: "2026-06-11",
     answer: "Zip #451 - Path solution",

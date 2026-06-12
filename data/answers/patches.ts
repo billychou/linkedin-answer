@@ -2,6 +2,12 @@ import { GameAnswer } from "@/types/game";
 
 export const patchesAnswers: GameAnswer[] = [
   {
+    sequence: "#87",
+    date: "2026-06-12",
+    answer: "Patches #87 - 5x5 grid solution",
+    image: "https://pub-f7562dec8e4a49c993b8e62385d6e405.r2.dev/playpatchesonline/patches-answer-87.jpg",
+  },
+  {
     sequence: "#86",
     date: "2026-06-11",
     answer: "Patches #86 - 5x5 grid solution",
