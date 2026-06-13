@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#774",
+    date: "2026-06-13",
+    answer: "Things that block sunlight",
+    clues: ["Clouds", "Parasols", "Tinted glass", "Dark curtains", "The Moon during some eclipses"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Composed of suspended water droplets and ice crystals, clouds naturally scatter and absorb solar radiation, casting shifting shadows that dim the ground below.<br>
+<strong>Clue 2:</strong> Crafted as handheld canopies, parasols act as portable shields that physically intercept and deflect direct overhead sunlight before it reaches you.<br>
+<strong>Clue 3:</strong> Treated with specialized dyes or metallic coatings, tinted glass absorbs and reflects a large portion of incoming solar energy while still allowing visibility.<br>
+<strong>Clue 4:</strong> Made from heavy, tightly woven fabrics, dark curtains use opacity to trap and absorb photons, effectively sealing sunlight out of interior spaces.<br>
+<strong>Clue 5:</strong> During a solar eclipse, the Moon's solid body travels directly between the Earth and the Sun, casting a sharp shadow that temporarily blocks the star's light entirely.</p>`,
+  },
+  {
     sequence: "#773",
     date: "2026-06-12",
     answer: "Words that come before \"order\"",
