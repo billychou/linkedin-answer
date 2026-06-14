@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#775",
+    date: "2026-06-14",
+    answer: "Different",
+    clues: ["Streak", "Operate", "Campaign (for office)", "Scoring unit (cricket+baseball)", "Move swiftly on foot"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Streak:</strong> Streak relates to the answer "Different".<br>
+<strong>Operate:</strong> Operate relates to the answer "Different".<br>
+<strong>Campaign (for office):</strong> Campaign (for office) relates to the answer "Different".<br>
+<strong>Scoring unit (cricket+baseball):</strong> Scoring unit (cricket+baseball) relates to the answer "Different".<br>
+<strong>Move swiftly on foot:</strong> Move swiftly on foot relates to the answer "Different".</p>`,
+  },
+  {
     sequence: "#774",
     date: "2026-06-13",
     answer: "Things that block sunlight",
