@@ -2,6 +2,32 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#777",
+    date: "2026-06-16",
+    answer: "Terms associated with football",
+    clues: ["Wall", "Volley", "Offside", "Yellow card", "Bicycle kick"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> In association football, a "wall" is a defensive tactic where outfield players stand shoulder-to-shoulder to block incoming free kicks or penalties, creating a human barrier between the ball and the goal.<br>
+<strong>Clue 2:</strong> A "volley" is a fundamental striking technique where a player hits the ball mid-air before it touches the ground, demanding precise timing and clean footwork to control direction and power.<br>
+<strong>Clue 3:</strong> "Offside" is one of the sport's core regulations, penalizing attackers who position themselves ahead of the second-last defender when the ball is played, which enforces structured buildup play.<br>
+<strong>Clue 4:</strong> A "yellow card" is the referee's official caution for tactical fouls or unsporting behavior, serving as a visible record of discipline that accumulates toward potential ejection.<br>
+<strong>Clue 5:</strong> The "bicycle kick" is a celebrated acrobatic finish where a player leaps backward and strikes the ball overhead, perfectly capturing the creativity, agility, and spectacle inherent to football culture.
+</p>`,
+  },
+  {
+    sequence: "#776",
+    date: "2026-06-15",
+    answer: "Names of chemical elements \ud83e\uddfe",
+    clues: ["Lead", "Iron", "Silicon", "Carbon", "Oxygen"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Lead is the standard name for Pb (atomic number 82), a dense metal historically vital to plumbing, batteries, and radiation shielding.<br>
+<strong>Clue 2:</strong> Iron refers to Fe (atomic number 26), a ferromagnetic metal that makes up most of Earth’s core and provides tensile strength to modern construction.<br>
+<strong>Clue 3:</strong> Silicon is the everyday term for Si (atomic number 14), a metalloid whose unique semiconductor behavior enables all modern computing and solar technology.<br>
+<strong>Clue 4:</strong> Carbon denotes C (atomic number 6), a versatile nonmetal capable of forming stable, complex chains that serve as the molecular backbone of all known life.<br>
+<strong>Clue 5:</strong> Oxygen is the familiar name for O (atomic number 8), a highly reactive gas that drives combustion, shapes weather patterns, and sustains aerobic respiration.<br>
+</p>`,
+  },
+  {
     sequence: "#775",
     date: "2026-06-14",
     answer: "Different",
