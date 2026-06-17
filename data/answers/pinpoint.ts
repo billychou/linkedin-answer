@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#778",
+    date: "2026-06-17",
+    answer: "Foods named for cities",
+    clues: ["Gouda", "Frankfurters", "Peking Duck", "Brussels sprouts", "New York Cheesecake"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Gouda takes its name directly from the Dutch city of Gouda, which has been renowned since the Middle Ages as a premier hub for cheese production and trade.<br>
+<strong>Clue 2:</strong> Frankfurters are named after Frankfurt, Germany, the historic hometown that first perfected and popularized this classic sausage in the 18th century.<br>
+<strong>Clue 3:</strong> Peking Duck derives its name from Beijing’s former English name, Peking, honoring the dish's development in Chinese imperial culinary traditions.<br>
+<strong>Clue 4:</strong> Brussels sprouts are named after Belgium’s capital city, where these miniature cabbage varieties were first widely cultivated and embraced by local markets.<br>
+<strong>Clue 5:</strong> New York Cheesecake earns its title from New York City, which adapted a lighter European recipe into the rich, dense dessert that became globally iconic.<br>
+</p>`,
+  },
+  {
     sequence: "#777",
     date: "2026-06-16",
     answer: "Terms associated with football",
