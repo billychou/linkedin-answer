@@ -2,6 +2,19 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#779",
+    date: "2026-06-18",
+    answer: "Things that are the tallest of their kind \ud83d\udcda",
+    clues: ["Angel Falls (in Venezuela)", "Hyperion (redwood tree in US)", "Giraffe (among all land animals)", "Mauna Kea (base to peak)", "Burj Khalifa (Dubai skyscraper)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Angel Falls holds the title of the world’s tallest uninterrupted waterfall, plummeting over 3,200 feet into the Venezuelan rainforest.<br>
+<strong>Clue 2:</strong> Hyperion is a coast redwood recognized as the tallest known living tree on Earth, towering over 380 feet through natural growth alone.<br>
+<strong>Clue 3:</strong> With elongated necks reaching up to six feet, giraffes easily eclipse every other creature walking on solid ground as the tallest living land animal.<br>
+<strong>Clue 4:</strong> Mauna Kea earns the "tallest mountain" title when measured from its hidden ocean-floor base to its summit, making it nearly twice as tall as Everest from bottom to peak.<br>
+<strong>Clue 5:</strong> The Burj Khalifa pierces the Dubai sky at 2,717 feet, standing as the tallest completed building ever engineered by humanity.
+</p>`,
+  },
+  {
     sequence: "#778",
     date: "2026-06-17",
     answer: "Foods named for cities",
