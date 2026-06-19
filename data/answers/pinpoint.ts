@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#780",
+    date: "2026-06-19",
+    answer: "Words that come before \"spot\"",
+    clues: ["Bright", "Blind", "Sweet", "Hits the", "X marks the"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> When paired with "spot," it forms "brightspot," a term used to describe a positive or encouraging element within an otherwise difficult situation.<br>
+<strong>Clue 2:</strong> Combined with "spot," it creates "blindspot," referring to a personal limitation or area where someone lacks awareness or understanding.<br>
+<strong>Clue 3:</strong> This leads to "sweet spot," a widely used idiom that describes the ideal condition, position, or choice that delivers maximum effectiveness.<br>
+<strong>Clue 4:</strong> It completes the familiar expression "hits the spot," which is typically said when a snack, meal, or drink perfectly satisfies a craving.<br>
+<strong>Clue 5:</strong> This sets up the classic treasure-hunt phrase "X marks the spot," instantly signaling the exact location of something being actively searched for.</p>`,
+  },
+  {
     sequence: "#779",
     date: "2026-06-18",
     answer: "Things that are the tallest of their kind \ud83d\udcda",
