@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#781",
+    date: "2026-06-20",
+    answer: "Things people can climb",
+    clues: ["Stairs", "Trees", "Mountains", "The career ladder", "Indoor rock walls"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Clue 1:</strong> Stairs provide a structured, step-by-step pathway designed specifically for physically ascending between levels, making them fundamental everyday climbing infrastructure.<br>
+<strong>Clue 2:</strong> Their sturdy trunks and branching limbs create natural vertical surfaces that people scale using grip, balance, and sometimes ropes for recreation, work, or training.<br>
+<strong>Clue 3:</strong> As massive natural elevations, mountains offer rugged terrain that adventurers systematically ascend through hiking, scrambling, or technical mountaineering techniques.<br>
+<strong>Clue 4:</strong> This metaphorical concept frames professional advancement as a vertical journey, where individuals "climb" upward through promotions, mentorship, and continuous skill acquisition rather than physical effort.<br>
+<strong>Clue 5:</strong> Built for safe, controlled practice, indoor rock walls feature strategically placed handholds and footholds that allow users to simulate outdoor ascent while developing technique indoors.</p>`,
+  },
+  {
     sequence: "#780",
     date: "2026-06-19",
     answer: "Words that come before \"spot\"",
