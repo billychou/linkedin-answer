@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#783",
+    date: "2026-06-22",
+    answer: "Words to indicate directions",
+    clues: ["Stern", "Right", "Forward", "Up", "Northeast"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Stern:</strong> Stern relates to the answer "Words to indicate directions".<br>
+<strong>Right:</strong> Right relates to the answer "Words to indicate directions".<br>
+<strong>Forward:</strong> Forward relates to the answer "Words to indicate directions".<br>
+<strong>Up:</strong> Up relates to the answer "Words to indicate directions".<br>
+<strong>Northeast:</strong> Northeast relates to the answer "Words to indicate directions".</p>`,
+  },
+  {
     sequence: "#781",
     date: "2026-06-20",
     answer: "Things people can climb",
