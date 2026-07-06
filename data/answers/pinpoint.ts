@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#796",
+    date: "2026-07-05",
+    answer: "Different",
+    clues: ["A rapid pace", "Hit at an angle", "Small metal fastener for paper", "Cut with scissors", "Short segment of a film"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>A rapid pace:</strong> A rapid pace relates to the answer "Different".<br>
+<strong>Hit at an angle:</strong> Hit at an angle relates to the answer "Different".<br>
+<strong>Small metal fastener for paper:</strong> Small metal fastener for paper relates to the answer "Different".<br>
+<strong>Cut with scissors:</strong> Cut with scissors relates to the answer "Different".<br>
+<strong>Short segment of a film:</strong> Short segment of a film relates to the answer "Different".</p>`,
+  },
+  {
     sequence: "#783",
     date: "2026-06-22",
     answer: "Words to indicate directions",
