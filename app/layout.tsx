@@ -82,8 +82,6 @@ export default async function RootLayout({
         <link rel="icon" href={siteConfig.icons.icon} sizes="any" />
         <link rel="apple-touch-icon" href={siteConfig.icons.apple} />
         <link rel="shortcut icon" href={siteConfig.icons.shortcut} />
-        {/* Google Search Console verification: replace with your actual verification code */}
-        {/* <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" /> */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
@@ -102,11 +100,9 @@ export default async function RootLayout({
           enableSystem
         >
           <Header />
-
           <main className="flex-1 flex flex-col items-center">
             {children}
           </main>
-
           <Footer />
         </ThemeProvider>
         <Toaster />
