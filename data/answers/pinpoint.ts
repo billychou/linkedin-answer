@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#817",
+    date: "2026-07-27",
+    answer: "Parts of a brass instrument (like a trumpet) \ud83c\udfbc",
+    clues: ["Bell", "Valves", "Tuning slide", "Mouthpiece", "Metal tubing (muted gold/yellow)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Bell:</strong> Bell relates to the answer "Parts of a brass instrument (like a trumpet) 🎼".<br>
+<strong>Valves:</strong> Valves relates to the answer "Parts of a brass instrument (like a trumpet) 🎼".<br>
+<strong>Tuning slide:</strong> Tuning slide relates to the answer "Parts of a brass instrument (like a trumpet) 🎼".<br>
+<strong>Mouthpiece:</strong> Mouthpiece relates to the answer "Parts of a brass instrument (like a trumpet) 🎼".<br>
+<strong>Metal tubing (muted gold/yellow):</strong> Metal tubing (muted gold/yellow) relates to the answer "Parts of a brass instrument (like a trumpet) 🎼".</p>`,
+  },
+  {
     sequence: "#796",
     date: "2026-07-05",
     answer: "Different",
