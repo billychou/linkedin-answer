@@ -1,5 +1,6 @@
 "use client";
 
+import UserAuth from "@/components/auth/UserAuth";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import {
   DropdownMenu,
@@ -90,6 +91,8 @@ export default function MobileMenu() {
               </DropdownMenuItem>
             ))}
           </DropdownMenuGroup>
+          <DropdownMenuSeparator />
+          <UserAuth mobile />
         </DropdownMenuContent>
       </DropdownMenu>
     </div>

@@ -13,6 +13,11 @@
       }
     ]
   },
+  "Auth": {
+    "signInWithGoogle": "Googleでログイン",
+    "signOut": "ログアウト",
+    "signedInAs": "ログイン中のアカウント"
+  },
   "Footer": {
     "Copyright": "Copyright © {year} {name} All rights reserved.",
     "PrivacyPolicy": "プライバシーポリシー",

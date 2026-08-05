@@ -13,6 +13,11 @@
       }
     ]
   },
+  "Auth": {
+    "signInWithGoogle": "使用 Google 登录",
+    "signOut": "退出登录",
+    "signedInAs": "当前登录账号"
+  },
   "Footer": {
     "Copyright": "版权所有 © {year} {name} 保留所有权利。",
     "PrivacyPolicy": "隐私政策",
