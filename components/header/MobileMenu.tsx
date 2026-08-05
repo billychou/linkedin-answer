@@ -49,6 +49,10 @@ export default function MobileMenu() {
     {
       name: "Crossclimb",
       href: "/games/crossclimb"
+    },
+    {
+      name: "Chat",
+      href: "/chat"
     }
   ];
 

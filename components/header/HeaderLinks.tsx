@@ -41,6 +41,10 @@ const HeaderLinks = () => {
     {
       name: "Crossclimb",
       href: "/games/crossclimb"
+    },
+    {
+      name: "Chat",
+      href: "/chat"
     }
   ];
 
