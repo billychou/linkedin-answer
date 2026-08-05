@@ -13,6 +13,11 @@
       }
     ]
   },
+  "Auth": {
+    "signInWithGoogle": "Sign in with Google",
+    "signOut": "Sign out",
+    "signedInAs": "Signed in as"
+  },
   "Footer": {
     "Copyright": "Copyright © {year} {name} All rights reserved.",
     "PrivacyPolicy": "Privacy Policy",
