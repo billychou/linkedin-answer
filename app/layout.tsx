@@ -1,5 +1,6 @@
 import GoogleAdsense from "@/app/GoogleAdsense";
 import GoogleAnalytics from "@/app/GoogleAnalytics";
+import GoogleSignInScript from "@/app/GoogleSignInScript";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import { TailwindIndicator } from "@/components/TailwindIndicator";
@@ -107,6 +108,7 @@ export default async function RootLayout({
         </ThemeProvider>
         <Toaster />
         <TailwindIndicator />
+        <GoogleSignInScript />
         {process.env.NODE_ENV === "development" ? (
           <></>
         ) : (

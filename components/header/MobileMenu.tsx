@@ -1,5 +1,6 @@
 "use client";
 
+import UserAuth from "@/components/auth/UserAuth";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import {
   DropdownMenu,
@@ -48,6 +49,10 @@ export default function MobileMenu() {
     {
       name: "Crossclimb",
       href: "/games/crossclimb"
+    },
+    {
+      name: "Chat",
+      href: "/chat"
     }
   ];
 
@@ -90,6 +95,8 @@ export default function MobileMenu() {
               </DropdownMenuItem>
             ))}
           </DropdownMenuGroup>
+          <DropdownMenuSeparator />
+          <UserAuth mobile />
         </DropdownMenuContent>
       </DropdownMenu>
     </div>

@@ -51,6 +51,7 @@
     "zustand": "^5.0.3"
   },
   "devDependencies": {
+    "@types/google.accounts": "^0.0.18",
     "@types/node": "^20",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",

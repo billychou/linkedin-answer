@@ -1,3 +1,4 @@
+import UserAuth from "@/components/auth/UserAuth";
 import HeaderLinks from "@/components/header/HeaderLinks";
 import MobileMenu from "@/components/header/MobileMenu";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -31,6 +32,7 @@ const Header = () => {
           {/* PC */}
           <div className="hidden md:flex items-center gap-x-4">
             <ThemeToggle />
+            <UserAuth />
           </div>
 
           {/* Mobile */}
