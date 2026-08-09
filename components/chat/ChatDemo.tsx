@@ -4,6 +4,7 @@ import ChatInput from "@/components/chat/ChatInput";
 import MessageBubble from "@/components/chat/MessageBubble";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { fetchSession } from "@/lib/authClient";
 import { streamChat } from "@/lib/chatAgent";
 import { ChatMessage, ChatStatus } from "@/types/chat";
 import { MessageCircle, Trash2 } from "lucide-react";
@@ -23,11 +24,21 @@ export default function ChatDemo({ isLive }: ChatDemoProps) {
   const [input, setInput] = useState("");
   const [status, setStatus] = useState<ChatStatus>("idle");
   const [error, setError] = useState<string | null>(null);
+  const [sessionChecked, setSessionChecked] = useState(false);
 
   const abortRef = useRef<AbortController | null>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
 
   const isStreaming = status === "streaming";
+
+  // Defense in depth: if the server session is gone (e.g. expired while the
+  // page was open), leave for the login page instead of using the chat.
+  useEffect(() => {
+    void fetchSession().then((user) => {
+      setSessionChecked(true);
+      if (!user) window.location.replace("/login");
+    });
+  }, []);
 
   // 新消息/流式追加时自动滚动到底部（instant，避免逐 token smooth 滚动抖动）
   useEffect(() => {
@@ -104,6 +115,10 @@ export default function ChatDemo({ isLive }: ChatDemoProps) {
     setError(null);
     setStatus("idle");
   }, []);
+
+  if (!sessionChecked) {
+    return null;
+  }
 
   return (
     <div className="flex h-[70vh] flex-col rounded-xl border bg-card shadow-sm">

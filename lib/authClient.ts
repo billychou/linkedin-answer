@@ -1,0 +1,64 @@
+import { useUserStore } from "@/stores/userStore";
+import type { GoogleUser } from "@/types/user";
+
+/**
+ * Client helpers for the server-backed Google session.
+ *
+ * The server (Cloudflare Pages Functions) is the source of truth: it verifies
+ * the Google ID token, issues the HttpOnly session cookie, and reports the
+ * current user. The zustand store below only mirrors that state for UI.
+ */
+
+const PROTECTED_PATHS = ["/chat", "/en/chat", "/zh/chat", "/ja/chat"];
+
+/** Exchange a Google ID token for a server session and update local state. */
+export async function loginWithGoogle(
+  credential: string
+): Promise<GoogleUser | null> {
+  try {
+    const res = await fetch("/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ credential }),
+    });
+    const data = (await res.json()) as { user?: GoogleUser | null };
+    const user = res.ok && data.user ? data.user : null;
+    useUserStore.getState().setUser(user);
+    return user;
+  } catch {
+    useUserStore.getState().setUser(null);
+    return null;
+  }
+}
+
+/** Fetch the current user from the server session and sync local state. */
+export async function fetchSession(): Promise<GoogleUser | null> {
+  try {
+    const res = await fetch("/api/auth/session", {
+      headers: { Accept: "application/json" },
+    });
+    const data = (await res.json()) as { user?: GoogleUser | null };
+    const user = res.ok ? (data.user ?? null) : null;
+    useUserStore.getState().setUser(user);
+    return user;
+  } catch {
+    useUserStore.getState().setUser(null);
+    return null;
+  }
+}
+
+/** Clear the server session and local state; leave protected pages. */
+export async function logout(): Promise<void> {
+  try {
+    await fetch("/api/auth/logout", { method: "POST" });
+  } catch {
+    // Ignore network errors; local state is cleared below regardless.
+  }
+  useUserStore.getState().signOut();
+  if (
+    typeof window !== "undefined" &&
+    PROTECTED_PATHS.includes(window.location.pathname)
+  ) {
+    window.location.replace("/login");
+  }
+}

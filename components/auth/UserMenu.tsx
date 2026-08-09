@@ -1,5 +1,6 @@
 "use client";
 
+import { logout } from "@/lib/authClient";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,7 +18,6 @@ import { LogOut } from "lucide-react";
  */
 export default function UserMenu() {
   const user = useUserStore((state) => state.user);
-  const signOut = useUserStore((state) => state.signOut);
 
   if (!user) return null;
 
@@ -40,7 +40,7 @@ export default function UserMenu() {
           </p>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={signOut}>
+        <DropdownMenuItem onClick={() => void logout()}>
           <LogOut className="h-4 w-4" />
           Sign out
         </DropdownMenuItem>
