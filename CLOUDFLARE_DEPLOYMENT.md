@@ -225,6 +225,12 @@ NEXT_PUBLIC_LOCALE_DETECTION=false
 # API Keys（如果有）
 # RESEND_API_KEY=...
 # UPSTASH_REDIS_URL=...
+
+# /chat 登录鉴权（Cloudflare Pages Functions 运行时环境变量）
+# 与 NEXT_PUBLIC_GOOGLE_CLIENT_ID 相同，用于服务端校验 Google ID Token
+GOOGLE_CLIENT_ID=xxxxxxxx.apps.googleusercontent.com
+# 会话签名密钥：openssl rand -base64 48 生成，必须与本地 .env 中一致
+SESSION_SECRET=xxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ### 在 Cloudflare Pages 中设置
@@ -232,6 +238,11 @@ NEXT_PUBLIC_LOCALE_DETECTION=false
 1. 进入项目 **Settings** → **Environment variables**
 2. 为每个环境（Production, Preview）添加变量
 3. 敏感信息使用 **Encrypt** 选项
+
+> `/chat` 页面的登录访问控制由仓库根目录的 `functions/`（Cloudflare Pages
+> Functions）实现：中间件拦截未登录请求并跳转 `/login`。部署时无需额外配置，
+> Git 集成会自动识别 `functions/`；只需在 Pages 控制台配置上述
+> `GOOGLE_CLIENT_ID` 与 `SESSION_SECRET` 两个运行时变量。
 
 ## 📊 构建优化建议
 
