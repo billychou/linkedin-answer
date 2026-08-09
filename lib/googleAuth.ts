@@ -72,23 +72,28 @@ export function waitForGoogleAccounts(timeoutMs = 5000): Promise<boolean> {
 }
 
 let initializePromise: Promise<boolean> | null = null;
-let onCredential: ((credential: string) => void) | null = null;
+const credentialHandlers = new Set<(credential: string) => void>();
 
 /**
  * Initialize GIS exactly once per page. Safe for React StrictMode and for
- * multiple components (desktop header + mobile menu) calling in parallel.
+ * multiple components (desktop header + mobile menu + login page) calling in
+ * parallel: every registered handler is invoked with the credential.
  * Resolves to false when the client id is missing or the script failed to
  * load.
  */
 export function initializeGoogleSignIn(
   handler: (credential: string) => void
 ): Promise<boolean> {
-  onCredential = handler;
+  credentialHandlers.add(handler);
   initializePromise ??= waitForGoogleAccounts().then((loaded) => {
     if (!loaded) return false;
     google.accounts.id.initialize({
       client_id: GOOGLE_CLIENT_ID,
-      callback: (response) => onCredential?.(response.credential),
+      callback: (response) => {
+        for (const onCredential of credentialHandlers) {
+          onCredential(response.credential);
+        }
+      },
     });
     return true;
   });

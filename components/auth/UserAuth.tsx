@@ -3,6 +3,7 @@
 import GoogleSignInButton from "@/components/auth/GoogleSignInButton";
 import UserMenu from "@/components/auth/UserMenu";
 import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
+import { fetchSession, loginWithGoogle, logout } from "@/lib/authClient";
 import { GOOGLE_CLIENT_ID, initializeGoogleSignIn } from "@/lib/googleAuth";
 import { useUserStore } from "@/stores/userStore";
 import { LogOut } from "lucide-react";
@@ -23,18 +24,13 @@ interface UserAuthProps {
  */
 export default function UserAuth({ mobile = false }: UserAuthProps) {
   const user = useUserStore((state) => state.user);
-  const signIn = useUserStore((state) => state.signIn);
-  const signOut = useUserStore((state) => state.signOut);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    // Drop sessions whose Google ID token has expired.
-    const current = useUserStore.getState().user;
-    if (current?.exp && current.exp * 1000 < Date.now()) {
-      signOut();
-    }
-  }, [signOut]);
+    // The server session is the source of truth: hydrate the local UI state.
+    void fetchSession();
+  }, []);
 
   const handleMobileSignIn = () => {
     // Fast path: GIS was already initialized on mount by the desktop
@@ -43,7 +39,7 @@ export default function UserAuth({ mobile = false }: UserAuthProps) {
       google.accounts.id.prompt();
       return;
     }
-    void initializeGoogleSignIn((credential) => signIn(credential)).then(
+    void initializeGoogleSignIn((credential) => void loginWithGoogle(credential)).then(
       (ok) => {
         if (ok) google.accounts.id.prompt();
       }
@@ -87,7 +83,7 @@ export default function UserAuth({ mobile = false }: UserAuthProps) {
             </p>
           </div>
         </div>
-        <DropdownMenuItem onSelect={() => signOut()}>
+        <DropdownMenuItem onSelect={() => void logout()}>
           <LogOut className="h-4 w-4" />
           Sign out
         </DropdownMenuItem>
