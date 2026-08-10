@@ -326,3 +326,22 @@ NODE_ENV=production
 - [ ] 推送到 GitHub 触发自动部署
 - [ ] 检查构建日志确认成功
 - [ ] 测试生产环境功能（API Routes、i18n 等）
+
+## 🗄️ D1 数据库（用户系统）
+
+登录与 `/api/me` 依赖 Cloudflare D1（binding 名 `DB`）。本地 `wrangler pages dev`
+会自动读取 `wrangler.toml` 中的 `[[d1_databases]]`；**生产环境必须在
+Cloudflare Pages 控制台手动配置同名绑定**，否则线上登录与资料接口不可用。
+
+1. Cloudflare Pages → 项目 → Settings → Functions → D1 database bindings → Add binding：
+   - binding：`DB`
+   - database：`linkedin-answer`（id `a219d727-e714-499e-9f9c-a8bd531154e1`）
+2. 应用迁移（本地已在 `.wrangler/state` 应用；远程执行）：
+   ```bash
+   pnpm exec wrangler d1 migrations apply linkedin-answer --remote
+   ```
+3. 本地开发（构建后启动，绑定与 `.env` 密钥自动生效）：
+   ```bash
+   pnpm build
+   pnpm exec wrangler pages dev out
+   ```

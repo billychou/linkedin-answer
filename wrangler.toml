@@ -1,0 +1,13 @@
+# wrangler 本地开发配置（`wrangler pages dev` / `wrangler pages deploy` 读取）。
+# 注意：cloudflare.toml 只是参考文档，wrangler 不会读取它。
+name = "linkedin-answer"
+compatibility_date = "2025-09-01"
+pages_build_output_dir = "out"
+
+# D1 数据库（用户系统）
+# 生产环境请在 Cloudflare Pages 控制台 → Settings → Functions → D1 database
+# 绑定同名 binding `DB`，否则线上登录与 /api/me 不可用。
+[[d1_databases]]
+binding = "DB"
+database_name = "linkedin-answer"
+database_id = "a219d727-e714-499e-9f9c-a8bd531154e1"

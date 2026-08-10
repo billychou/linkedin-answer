@@ -4,6 +4,7 @@ import {
   sessionCookieHeader,
   type AuthEnv,
 } from "../../_lib/auth";
+import { detectLocale, findOrCreateUserByIdentity } from "../../_lib/db";
 
 interface Context {
   request: Request;
@@ -32,18 +33,38 @@ export const onRequest = async (context: Context): Promise<Response> => {
   if (!env.SESSION_SECRET) {
     return jsonResponse({ error: "SESSION_SECRET is not configured" }, 500);
   }
+  if (!env.DB) {
+    return jsonResponse({ error: "DB binding is not configured" }, 500);
+  }
 
   const name = "Dev User";
   const email = "dev@example.com";
   const picture = "";
-  const { token, exp } = await createSessionToken(env, {
-    sub: "dev-local-user",
+
+  // 与真实登录一致：dev 用户也落库，便于本地验证用户系统。
+  const user = await findOrCreateUserByIdentity(env.DB, {
+    provider: "dev",
+    subject: "dev-local-user",
     email,
     name,
     picture,
+    locale: detectLocale(request.headers.get("accept-language")),
   });
-  const user = { name, email, picture, exp };
-  return jsonResponse({ user }, 200, {
+
+  const { token, exp } = await createSessionToken(env, {
+    id: user.id,
+    email: user.email,
+    name: user.name || name,
+    picture: user.avatar_url || picture,
+  });
+  const sessionUser = {
+    id: user.id,
+    name: user.name || name,
+    email: user.email,
+    picture: user.avatar_url || picture,
+    exp,
+  };
+  return jsonResponse({ user: sessionUser }, 200, {
     "Set-Cookie": sessionCookieHeader(token),
   });
 };

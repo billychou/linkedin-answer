@@ -1,4 +1,5 @@
 import { createRemoteJWKSet, jwtVerify, SignJWT } from "jose";
+import type { D1Database } from "./db";
 
 /**
  * Shared server-side auth helpers for Cloudflare Pages Functions.
@@ -14,10 +15,13 @@ export const SESSION_TTL_SECONDS = 7 * 24 * 60 * 60; // 7 days
 export interface AuthEnv {
   GOOGLE_CLIENT_ID?: string;
   SESSION_SECRET?: string;
+  /** D1 binding（用户系统）。 */
+  DB?: D1Database;
 }
 
 export interface SessionUser {
-  sub: string;
+  /** 内部用户 ID（users.id），即会话 JWT 的 subject。 */
+  id: string;
   email: string;
   name?: string;
   picture?: string;
@@ -52,7 +56,7 @@ export async function verifyGoogleIdToken(
 /** Sign a session JWT (HS256) valid for SESSION_TTL_SECONDS. */
 export async function createSessionToken(
   env: AuthEnv,
-  claims: { sub: string; email: string; name?: string; picture?: string }
+  claims: { id: string; email: string; name?: string; picture?: string }
 ): Promise<{ token: string; exp: number }> {
   const secret = new TextEncoder().encode(env.SESSION_SECRET ?? "");
   if (!secret.length) throw new Error("SESSION_SECRET is not configured");
@@ -61,9 +65,9 @@ export async function createSessionToken(
     email: claims.email,
     ...(claims.name ? { name: claims.name } : {}),
     ...(claims.picture ? { picture: claims.picture } : {}),
-  })
+    })
     .setProtectedHeader({ alg: "HS256" })
-    .setSubject(claims.sub)
+    .setSubject(claims.id)
     .setIssuedAt()
     .setExpirationTime(exp)
     .sign(secret);
@@ -84,7 +88,7 @@ export async function verifySessionToken(
     const email = typeof payload.email === "string" ? payload.email : "";
     if (!payload.sub || !email) return null;
     return {
-      sub: String(payload.sub),
+      id: String(payload.sub),
       email,
       name: typeof payload.name === "string" ? payload.name : undefined,
       picture:
