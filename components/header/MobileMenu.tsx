@@ -67,7 +67,7 @@ export default function MobileMenu() {
           <DropdownMenuLabel>
             <a
               href="/"
-              title="LinkedIn Answer Today"
+              title="Simple"
               className="flex items-center space-x-1 font-bold"
             >
               <Image
