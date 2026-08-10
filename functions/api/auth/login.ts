@@ -5,6 +5,10 @@ import {
   verifyGoogleIdToken,
   type AuthEnv,
 } from "../../_lib/auth";
+import {
+  detectLocale,
+  findOrCreateUserByIdentity,
+} from "../../_lib/db";
 
 interface Context {
   request: Request;
@@ -31,6 +35,9 @@ export const onRequest = async (context: Context): Promise<Response> => {
   if (!env.SESSION_SECRET) {
     return jsonResponse({ error: "SESSION_SECRET is not configured" }, 500);
   }
+  if (!env.DB) {
+    return jsonResponse({ error: "DB binding is not configured" }, 500);
+  }
 
   let credential = "";
   try {
@@ -54,14 +61,33 @@ export const onRequest = async (context: Context): Promise<Response> => {
     const name = typeof payload.name === "string" ? payload.name : email;
     const picture =
       typeof payload.picture === "string" ? payload.picture : "";
-    const { token, exp } = await createSessionToken(env, {
-      sub,
+    const cf = (request as unknown as { cf?: { timezone?: string } }).cf;
+
+    // 登录即落库：按身份查找/创建用户（users + user_identities）。
+    const user = await findOrCreateUserByIdentity(env.DB, {
+      provider: "google",
+      subject: sub,
       email,
       name,
       picture,
+      locale: detectLocale(request.headers.get("accept-language")),
+      timezone: cf?.timezone ?? "UTC",
     });
-    const user = { name, email, picture, exp };
-    return jsonResponse({ user }, 200, {
+
+    const { token, exp } = await createSessionToken(env, {
+      id: user.id,
+      email: user.email,
+      name: user.name || name,
+      picture: user.avatar_url || picture,
+    });
+    const sessionUser = {
+      id: user.id,
+      name: user.name || name,
+      email: user.email,
+      picture: user.avatar_url || picture,
+      exp,
+    };
+    return jsonResponse({ user: sessionUser }, 200, {
       "Set-Cookie": sessionCookieHeader(token),
     });
   } catch {

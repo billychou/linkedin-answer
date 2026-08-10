@@ -1,7 +1,8 @@
 "use client";
 
 import GoogleSignInButton from "@/components/auth/GoogleSignInButton";
-import { fetchSession } from "@/lib/authClient";
+import { Button } from "@/components/ui/button";
+import { devLogin, DEV_FAKE_LOGIN_ENABLED, fetchSession } from "@/lib/authClient";
 import { useUserStore } from "@/stores/userStore";
 import { useCallback, useEffect, useState } from "react";
 
@@ -47,6 +48,11 @@ export default function LoginClient() {
     setError(!ok);
   }, []);
 
+  const handleDevLogin = useCallback(async () => {
+    const ok = await devLogin();
+    setError(!ok);
+  }, []);
+
   return (
     <div className="mx-auto w-full max-w-md space-y-6 px-4 py-16">
       <div className="space-y-2 text-center">
@@ -61,6 +67,20 @@ export default function LoginClient() {
       <div className="flex justify-center">
         <GoogleSignInButton onResult={handleResult} />
       </div>
+
+      {DEV_FAKE_LOGIN_ENABLED && (
+        <div className="flex flex-col items-center gap-2">
+          <span className="text-xs text-muted-foreground">— or —</span>
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            onClick={() => void handleDevLogin()}
+          >
+            Dev login (local only)
+          </Button>
+        </div>
+      )}
 
       {error && (
         <p className="text-center text-sm text-red-600 dark:text-red-400">

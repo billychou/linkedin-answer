@@ -6,7 +6,7 @@ import {
 } from "./_lib/auth";
 
 /** Routes that require a valid session. */
-const PROTECTED_PATHS = new Set(["/chat", "/en/chat", "/zh/chat", "/ja/chat"]);
+const PROTECTED_PATHS = new Set(["/chat", "/settings"]);
 
 interface Context {
   request: Request;

@@ -25,6 +25,7 @@ export const onRequest = async (context: Context): Promise<Response> => {
   const session = token ? await verifySessionToken(token, env) : null;
   const user = session
     ? {
+        id: session.id,
         name: session.name ?? session.email,
         email: session.email,
         picture: session.picture ?? "",

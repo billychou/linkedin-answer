@@ -10,3 +10,9 @@ NODE_VERSION = "20"
 
 # 注意：静态导出不需要部署命令
 # 请在 Cloudflare Pages 控制台中将"部署命令"留空
+
+# --- D1 数据库（用户系统）---
+# 请在 Cloudflare Pages 控制台 → Settings → Functions → D1 database 绑定：
+#   binding         = "DB"
+#   database_name   = "linkedin-answer"
+#   database_id     = "a219d727-e714-499e-9f9c-a8bd531154e1"
