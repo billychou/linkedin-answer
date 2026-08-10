@@ -11,6 +11,14 @@ import type { GoogleUser } from "@/types/user";
 
 const PROTECTED_PATHS = ["/chat", "/en/chat", "/zh/chat", "/ja/chat"];
 
+/**
+ * Build-time flag (inlined by Next.js). When true, the login page shows a
+ * "Dev login" button that uses /api/auth/dev-login. Only set this in local
+ * .env — never in the production build.
+ */
+export const DEV_FAKE_LOGIN_ENABLED =
+  process.env.NEXT_PUBLIC_DEV_FAKE_LOGIN === "true";
+
 /** Exchange a Google ID token for a server session and update local state. */
 export async function loginWithGoogle(
   credential: string
@@ -21,6 +29,24 @@ export async function loginWithGoogle(
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ credential }),
     });
+    const data = (await res.json()) as { user?: GoogleUser | null };
+    const user = res.ok && data.user ? data.user : null;
+    useUserStore.getState().setUser(user);
+    return user;
+  } catch {
+    useUserStore.getState().setUser(null);
+    return null;
+  }
+}
+
+/**
+ * DEV-ONLY: mint a session without Google verification. Returns null when the
+ * route is disabled on the server (DEV_FAKE_LOGIN not set), mirroring how a
+ * failed Google login behaves.
+ */
+export async function devLogin(): Promise<GoogleUser | null> {
+  try {
+    const res = await fetch("/api/auth/dev-login", { method: "POST" });
     const data = (await res.json()) as { user?: GoogleUser | null };
     const user = res.ok && data.user ? data.user : null;
     useUserStore.getState().setUser(user);

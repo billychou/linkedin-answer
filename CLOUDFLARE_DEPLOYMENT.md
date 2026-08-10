@@ -244,6 +244,21 @@ SESSION_SECRET=xxxxxxxxxxxxxxxxxxxxxxxx
 > Git 集成会自动识别 `functions/`；只需在 Pages 控制台配置上述
 > `GOOGLE_CLIENT_ID` 与 `SESSION_SECRET` 两个运行时变量。
 
+### 本地开发（可选）：dev-only 假登录
+
+本地 `wrangler pages dev` 沙箱在受限网络下无法访问 Google JWKS，导致
+`/api/auth/login` 必然返回 401。如需在本地完整测试登录流程，可在本地 `.env`
+中设置（**切勿在 Pages 控制台设置，生产环境不可用**）：
+
+```bash
+DEV_FAKE_LOGIN=true
+NEXT_PUBLIC_DEV_FAKE_LOGIN=true
+```
+
+重新 `pnpm build` 后，`/login` 页面会出现 "Dev login (local only)" 按钮，
+直接签发本地测试会话（dev@example.com）；服务端 `/api/auth/dev-login` 仅在
+`DEV_FAKE_LOGIN=true` 时可用，否则返回 404。
+
 ## 📊 构建优化建议
 
 1. **使用构建缓存**
