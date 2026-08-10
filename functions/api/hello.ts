@@ -11,7 +11,7 @@ interface Context {
 export async function onRequest(context: Context) {
   // context 包含 request, env, params 等上下文数据
   const { request, env } = context;
-
+  /*  */
   return new Response(JSON.stringify({ message: "Hello from Cloudflare Pages Function!" }), {
     headers: {
       "Content-Type": "application/json;charset=UTF-8",

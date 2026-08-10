@@ -22,7 +22,7 @@ const Header = () => {
               height={32}
             />
             <span className="text-gray-800 dark:text-gray-200">
-              LinkedIn Answer Today
+              Simple
             </span>
           </a>
           <HeaderLinks />
