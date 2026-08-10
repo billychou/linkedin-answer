@@ -1,12 +1,14 @@
-# wrangler 本地开发配置（`wrangler pages dev` / `wrangler pages deploy` 读取）。
-# 注意：cloudflare.toml 只是参考文档，wrangler 不会读取它。
+# wrangler 本地开发配置（仅供 `wrangler pages dev` 使用）。
+#
+# 重要：不要添加 pages_build_output_dir —— 一旦带上该 key 并部署，
+# Cloudflare 会把本项目切换为 wrangler.toml 管理模式，控制台的普通环境
+# 变量（含构建期 NEXT_PUBLIC_*）会被锁定为"必须写在 wrangler.toml"。
+# 本项目生产配置走 Cloudflare Pages 控制台（Git 集成构建 + 控制台变量）。
 name = "linkedin-answer"
 compatibility_date = "2025-09-01"
-pages_build_output_dir = "out"
 
-# D1 数据库（用户系统）
-# 生产环境请在 Cloudflare Pages 控制台 → Settings → Functions → D1 database
-# 绑定同名 binding `DB`，否则线上登录与 /api/me 不可用。
+# D1 数据库（仅本地 pages dev 使用；生产请在控制台
+# Settings → Bindings → D1 database 绑定同名 binding `DB`）。
 [[d1_databases]]
 binding = "DB"
 database_name = "linkedin-answer"

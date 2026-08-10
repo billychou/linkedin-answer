@@ -226,8 +226,11 @@ NEXT_PUBLIC_LOCALE_DETECTION=false
 # RESEND_API_KEY=...
 # UPSTASH_REDIS_URL=...
 
-# /chat 登录鉴权（Cloudflare Pages Functions 运行时环境变量）
-# 与 NEXT_PUBLIC_GOOGLE_CLIENT_ID 相同，用于服务端校验 Google ID Token
+# --- 登录（Google）---
+# 构建期内联变量（进浏览器 bundle）：与 GOOGLE_CLIENT_ID 值相同；
+# 在 Pages 中配置时不要勾选 Encrypt，否则构建进程读不到，登录按钮不会渲染。
+NEXT_PUBLIC_GOOGLE_CLIENT_ID=xxxxxxxx.apps.googleusercontent.com
+# 运行期变量：服务端校验 Google ID Token 用，值同上。
 GOOGLE_CLIENT_ID=xxxxxxxx.apps.googleusercontent.com
 # 会话签名密钥：openssl rand -base64 48 生成，必须与本地 .env 中一致
 SESSION_SECRET=xxxxxxxxxxxxxxxxxxxxxxxx
@@ -237,12 +240,14 @@ SESSION_SECRET=xxxxxxxxxxxxxxxxxxxxxxxx
 
 1. 进入项目 **Settings** → **Environment variables**
 2. 为每个环境（Production, Preview）添加变量
-3. 敏感信息使用 **Encrypt** 选项
+3. 敏感信息使用 **Encrypt** 选项；**`NEXT_PUBLIC_*` 前缀的变量是构建期内联，
+   必须保持不加密**（加密后仅运行时可见，`next build` 会把它内联成空值）
 
 > `/chat` 页面的登录访问控制由仓库根目录的 `functions/`（Cloudflare Pages
 > Functions）实现：中间件拦截未登录请求并跳转 `/login`。部署时无需额外配置，
-> Git 集成会自动识别 `functions/`；只需在 Pages 控制台配置上述
-> `GOOGLE_CLIENT_ID` 与 `SESSION_SECRET` 两个运行时变量。
+> Git 集成会自动识别 `functions/`；只需在 Pages 控制台配置
+> `NEXT_PUBLIC_GOOGLE_CLIENT_ID`（构建期）、`GOOGLE_CLIENT_ID` 与
+> `SESSION_SECRET`（运行期）三个变量。
 
 ### 本地开发（可选）：dev-only 假登录
 
@@ -332,6 +337,13 @@ NODE_ENV=production
 登录与 `/api/me` 依赖 Cloudflare D1（binding 名 `DB`）。本地 `wrangler pages dev`
 会自动读取 `wrangler.toml` 中的 `[[d1_databases]]`；**生产环境必须在
 Cloudflare Pages 控制台手动配置同名绑定**，否则线上登录与资料接口不可用。
+
+> **配置模式说明**：本项目使用**控制台管理模式**（Git 集成构建 + 控制台环境
+> 变量）。仓库根目录的 `wrangler.toml` 仅用于本地开发，**不要给它添加
+> `pages_build_output_dir`**——一旦带上该 key 并部署，Cloudflare 会把它当作
+> 配置的唯一来源，控制台的普通环境变量（含构建期 `NEXT_PUBLIC_*`）会被锁定为
+> "必须写在 wrangler.toml"，而 `[vars]` 又无法进入 `next build`，会导致
+> `NEXT_PUBLIC_*` 变量彻底无法配置。
 
 1. Cloudflare Pages → 项目 → Settings → Functions → D1 database bindings → Add binding：
    - binding：`DB`
