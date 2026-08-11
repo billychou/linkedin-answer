@@ -8,12 +8,14 @@ import { AccountSection } from "./AccountSection";
 import { DataSection } from "./DataSection";
 import { ProfileForm } from "./ProfileForm";
 import { SubscriptionSection } from "./SubscriptionSection";
+import { TeamSection } from "./TeamSection";
 
-type Tab = "profile" | "account" | "subscription" | "data";
+type Tab = "profile" | "account" | "team" | "subscription" | "data";
 
 const TABS: { id: Tab; label: string }[] = [
   { id: "profile", label: "Profile" },
   { id: "account", label: "Account" },
+  { id: "team", label: "Team" },
   { id: "subscription", label: "Subscription" },
   { id: "data", label: "Data & Privacy" },
 ];
@@ -112,6 +114,9 @@ export default function SettingsClient() {
           <ProfileForm profile={profile} onChange={setProfile} />
         )}
         {tab === "account" && <AccountSection profile={profile} />}
+        {tab === "team" && (
+          <TeamSection profile={profile} onChange={setProfile} />
+        )}
         {tab === "subscription" && (
           <SubscriptionSection profile={profile} />
         )}

@@ -18,6 +18,10 @@ const PROTECTED_PATHS = [
   "/en/settings",
   "/zh/settings",
   "/ja/settings",
+  "/admin",
+  "/en/admin",
+  "/zh/admin",
+  "/ja/admin",
 ];
 
 /**

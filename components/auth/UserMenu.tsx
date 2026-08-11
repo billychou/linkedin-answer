@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useUserStore } from "@/stores/userStore";
-import { LogOut, Settings } from "lucide-react";
+import { LogOut, Settings, Shield } from "lucide-react";
 import Link from "next/link";
 
 /**
@@ -47,6 +47,14 @@ export default function UserMenu() {
             Settings
           </Link>
         </DropdownMenuItem>
+        {user.role === "admin" && (
+          <DropdownMenuItem asChild>
+            <Link href="/admin" className="flex items-center gap-2">
+              <Shield className="h-4 w-4" />
+              Admin Console
+            </Link>
+          </DropdownMenuItem>
+        )}
         <DropdownMenuItem onClick={() => void logout()}>
           <LogOut className="h-4 w-4" />
           Sign out

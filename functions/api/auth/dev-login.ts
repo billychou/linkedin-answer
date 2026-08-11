@@ -5,6 +5,7 @@ import {
   type AuthEnv,
 } from "../../_lib/auth";
 import { detectLocale, findOrCreateUserByIdentity } from "../../_lib/db";
+import { ensureDefaultTenant } from "../../_lib/tenants";
 
 interface Context {
   request: Request;
@@ -51,17 +52,22 @@ export const onRequest = async (context: Context): Promise<Response> => {
     locale: detectLocale(request.headers.get("accept-language")),
   });
 
+  // 与真实登录一致：保证 dev 用户也有可用租户。
+  await ensureDefaultTenant(env.DB, user);
+
   const { token, exp } = await createSessionToken(env, {
     id: user.id,
     email: user.email,
     name: user.name || name,
     picture: user.avatar_url || picture,
+    role: user.role,
   });
   const sessionUser = {
     id: user.id,
     name: user.name || name,
     email: user.email,
     picture: user.avatar_url || picture,
+    role: user.role,
     exp,
   };
   return jsonResponse({ user: sessionUser }, 200, {

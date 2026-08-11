@@ -9,6 +9,7 @@
 export interface D1PreparedStatement {
   bind(...values: unknown[]): D1PreparedStatement;
   first<T = unknown>(): Promise<T | null>;
+  all<T = unknown>(): Promise<{ results: T[]; success: boolean; meta: unknown }>;
   run(): Promise<{ success: boolean }>;
 }
 
@@ -32,6 +33,8 @@ export interface DbUser {
   created_at: number;
   updated_at: number;
   last_login_at: number | null;
+  /** 当前所处租户（migrations/0002_tenants.sql）。 */
+  current_tenant_id: string | null;
 }
 
 export interface DbIdentity {
@@ -53,7 +56,8 @@ export interface IdentityInput {
 }
 
 const USER_COLUMNS = `id, email, name, avatar_url, bio, locale, timezone,
-  status, role, stripe_customer_id, created_at, updated_at, last_login_at`;
+  status, role, stripe_customer_id, created_at, updated_at, last_login_at,
+  current_tenant_id`;
 
 export function newUserId(): string {
   return crypto.randomUUID();

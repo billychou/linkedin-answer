@@ -9,6 +9,7 @@ import {
   detectLocale,
   findOrCreateUserByIdentity,
 } from "../../_lib/db";
+import { ensureDefaultTenant } from "../../_lib/tenants";
 
 interface Context {
   request: Request;
@@ -74,17 +75,22 @@ export const onRequest = async (context: Context): Promise<Response> => {
       timezone: cf?.timezone ?? "UTC",
     });
 
+    // 租户保障：确保用户拥有可用租户（首次登录自动创建个人租户）。
+    await ensureDefaultTenant(env.DB, user);
+
     const { token, exp } = await createSessionToken(env, {
       id: user.id,
       email: user.email,
       name: user.name || name,
       picture: user.avatar_url || picture,
+      role: user.role,
     });
     const sessionUser = {
       id: user.id,
       name: user.name || name,
       email: user.email,
       picture: user.avatar_url || picture,
+      role: user.role,
       exp,
     };
     return jsonResponse({ user: sessionUser }, 200, {

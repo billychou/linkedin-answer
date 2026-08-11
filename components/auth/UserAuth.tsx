@@ -6,7 +6,7 @@ import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { fetchSession, loginWithGoogle, logout } from "@/lib/authClient";
 import { GOOGLE_CLIENT_ID, initializeGoogleSignIn } from "@/lib/googleAuth";
 import { useUserStore } from "@/stores/userStore";
-import { LogOut, Settings } from "lucide-react";
+import { LogOut, Settings, Shield } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
@@ -90,6 +90,14 @@ export default function UserAuth({ mobile = false }: UserAuthProps) {
           Settings
         </Link>
       </DropdownMenuItem>
+      {user.role === "admin" && (
+        <DropdownMenuItem asChild>
+          <Link href="/admin" className="flex items-center gap-2">
+            <Shield className="h-4 w-4" />
+            Admin Console
+          </Link>
+        </DropdownMenuItem>
+      )}
       <DropdownMenuItem onSelect={() => void logout()}>
         <LogOut className="h-4 w-4" />
         Sign out
