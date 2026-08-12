@@ -76,7 +76,7 @@ export const NewsletterWelcomeEmail: React.FC<
       </p>
 
       <p style={styles.paragraph}>
-        We're excited to have you on board!
+        We&apos;re excited to have you on board!
       </p>
 
       <div style={styles.footer}>

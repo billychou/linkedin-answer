@@ -4,13 +4,14 @@ import MobileMenu from "@/components/header/MobileMenu";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { siteConfig } from "@/config/site";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <header className="py-2 px-6 backdrop-blur-md sticky top-0 z-50">
       <nav className="flex justify-between items-center w-full mx-auto">
         <div className="flex items-center space-x-6 md:space-x-12">
-          <a
+          <Link
             href="/"
             className="flex items-center space-x-1 font-bold"
           >
@@ -24,7 +25,7 @@ const Header = () => {
             <span className="text-gray-800 dark:text-gray-200">
               Simple
             </span>
-          </a>
+          </Link>
           <HeaderLinks />
         </div>
 

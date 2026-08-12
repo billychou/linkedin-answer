@@ -1,6 +1,7 @@
 "use client";
 
 import { Game } from "@/types/game";
+import Link from "next/link";
 import { ExternalLink, Archive, BookOpen, Home } from "lucide-react";
 
 interface GameNavigationProps {
@@ -14,13 +15,13 @@ export default function GameNavigation({
 }: GameNavigationProps) {
   return (
     <nav className="flex flex-wrap items-center gap-2 sm:gap-4 mb-6 sm:mb-8 pb-4 border-b border-slate-200 dark:border-slate-700 text-sm sm:text-base">
-      <a
+      <Link
         href="/"
         className="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-gray-100 transition-colors"
       >
         <Home className="w-4 h-4" />
         <span>Home</span>
-      </a>
+      </Link>
 
       <span className="text-slate-300 dark:text-slate-600">/</span>
 
@@ -32,7 +33,7 @@ export default function GameNavigation({
             : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-gray-100"
         }`}
       >
-        Today's Answer
+        Today&apos;s Answer
       </a>
 
       <span className="text-slate-300 dark:text-slate-600">/</span>

@@ -14,6 +14,7 @@ import {
 import { HeaderLink } from "@/types/common";
 import { Menu } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function MobileMenu() {
   // Hardcoded header links in English
@@ -65,7 +66,7 @@ export default function MobileMenu() {
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-64">
           <DropdownMenuLabel>
-            <a
+            <Link
               href="/"
               title="Simple"
               className="flex items-center space-x-1 font-bold"
@@ -78,7 +79,7 @@ export default function MobileMenu() {
                 height={32}
               />
               <span className="highlight-text">LinkedIn Answer Today</span>
-            </a>
+            </Link>
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
