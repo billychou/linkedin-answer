@@ -68,17 +68,17 @@ export function TeamSection({ profile, onChange }: TeamSectionProps) {
   }, [onChange]);
 
   useEffect(() => {
-    if (!profile.current_tenant_id) {
-      setMembers(null);
-      return;
-    }
+    const tenantId = profile.current_tenant_id;
     let cancelled = false;
+    // 同步清空/置 loading 属常规模式(set-state-in-effect 已降级为 warn)。
+    setMembers(null);
     setMembersLoading(true);
-    void fetchTenantDetail(profile.current_tenant_id).then((detail) => {
+    void (async () => {
+      const detail = tenantId ? await fetchTenantDetail(tenantId) : null;
       if (cancelled) return;
       setMembers(detail?.members ?? null);
       setMembersLoading(false);
-    });
+    })();
     return () => {
       cancelled = true;
     };

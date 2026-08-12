@@ -56,7 +56,7 @@ export default function GameCard({ game }: GameCardProps) {
           className={`inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors bg-white dark:bg-slate-800 ${textColorClass} border-2 border-current hover:bg-opacity-10 dark:hover:bg-opacity-20`}
         >
           <Play className="w-4 h-4" />
-          Today's Answer
+          Today&apos;s Answer
         </a>
 
         <div className="flex flex-wrap gap-2 text-sm">
