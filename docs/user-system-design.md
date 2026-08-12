@@ -212,9 +212,14 @@ PATCH 校验规则：`name` 1–50 字符；`bio` ≤ 500 字符；`locale` ∈ 
 | POST | `/api/me/export` | 导出用户全部数据（GDPR） |
 | DELETE | `/api/me` | 注销账号（软删除 + 清理敏感数据） |
 
-### 三期（管理后台）
+### 三期（管理后台 + 租户）
 
-`GET /api/admin/users`、`GET /api/admin/users/:id`、`PATCH /api/admin/users/:id`（role/status），管理员基于 `users.role === 'admin'` 鉴权。
+> ✅ **已实施（2026-08-11）**：租户系统（`tenants`/`tenant_members` 表、
+> 登录自动创建个人租户、租户 CRUD/成员/切换 API）与管理后台
+> （`/admin` 页面 + `/api/admin/users`、`/api/admin/tenants`）已实现并本地联调。
+> 详见下文「11. 租户系统」。
+
+管理员接口基于 `users.role === 'admin'` 鉴权（每次请求查库校验，不信任 JWT 缓存）。
 
 ## 7. 设置页设计
 
@@ -289,3 +294,64 @@ PATCH 校验规则：`name` 1–50 字符；`bio` ≤ 500 字符；`locale` ∈ 
 - [ ] 未登录访问 `/settings` 被重定向到 `/login`
 - [ ] 登录方式新增（如 Apple/邮箱）时，同一人可合并到同一 `users.id`，订阅不丢
 - [ ] 数据结构为订阅预留（`plans`/`subscriptions` 表存在，`users.stripe_customer_id` 可用）
+
+## 11. 租户系统（2026-08-11 实施）
+
+### 11.1 模型
+
+```sql
+tenants         id / name / slug(唯一) / avatar_url / plan(free|pro) /
+                status(active|disabled) / is_personal / owner_id / 时间戳
+tenant_members  (tenant_id, user_id) 复合主键 / role(owner|admin|member) /
+                status(active|removed) / 时间戳
+users.current_tenant_id  用户当前租户上下文（可空）
+```
+
+- **个人租户**：登录时 `ensureDefaultTenant()` 保证每个用户至少有一个可用
+  租户；首次登录自动创建 `is_personal=1` 的个人租户并设为当前租户。
+- **多租户**：用户可创建更多租户（团队工作区），并按邮箱邀请其他已注册
+  用户加入；同一用户可属于多个租户，`users.current_tenant_id` 记录当前切换。
+- 成员移除为软删除（`status='removed'`），重新邀请时 `upsertMember` 恢复。
+
+### 11.2 权限规则
+
+| 操作 | 允许角色 |
+| --- | --- |
+| 查看租户详情/成员、切换租户 | 任意有效成员 |
+| 修改租户资料（name/avatar） | 租户 owner / admin |
+| 邀请成员 | 租户 owner / admin（授予 admin 角色仅 owner） |
+| 调整成员角色 | 仅 owner（owner 自身角色不可改） |
+| 移除成员 | owner / admin 移除非 owner 成员；非 owner 可移除自己（退出） |
+| 站点级用户/租户管理 | `users.role === 'admin'`（查库校验；禁止修改自己） |
+
+### 11.3 API 一览
+
+| 端点 | 方法 | 说明 |
+| --- | --- | --- |
+| `/api/me` | GET | 资料 + `current_tenant_id` + `tenants[]`（含角色/成员数） |
+| `/api/tenants` | GET / POST | 我的租户列表 / 创建租户（自动切换） |
+| `/api/tenants/:id` | GET / PATCH | 详情（含成员）/ 更新资料 |
+| `/api/tenants/:id/switch` | POST | 切换当前租户 |
+| `/api/tenants/:id/members` | GET / POST | 成员列表 / 按邮箱添加成员 |
+| `/api/tenants/:id/members/:userId` | PATCH / DELETE | 调整角色 / 移除成员 |
+| `/api/admin/users` | GET | 用户列表（search/limit/offset） |
+| `/api/admin/users/:id` | PATCH | 调整用户 role/status |
+| `/api/admin/tenants` | GET | 租户列表（含 owner 邮箱/成员数） |
+| `/api/admin/tenants/:id` | PATCH | 调整租户 name/status/plan |
+
+### 11.4 前端
+
+- `/settings` 新增 **Team** Tab（`components/settings/TeamSection.tsx`）：
+  工作区列表与切换、创建工作区、当前工作区成员管理（邀请/角色/移除/退出）。
+- `/admin`（`components/admin/AdminClient.tsx`，noIndex）：仅 `role=admin`
+  可见，Users / Tenants 两个 Tab，支持搜索、角色/状态/套餐调整。
+  中间件 `PROTECTED_PATHS` 负责登录态拦截，角色校验在 API 层查库完成。
+- 会话 JWT 新增 `role` 缓存声明（仅供菜单显隐等 UI 用途；一切权限判断以
+  服务端查库为准）。`UserMenu` / 移动端菜单为 admin 显示 Admin Console 入口。
+
+### 11.5 迁移
+
+- `migrations/0002_tenants.sql`：tenants / tenant_members 表 +
+  `users.current_tenant_id` 列。
+- 本地：`npx wrangler d1 migrations apply linkedin-answer --local`（已应用）。
+- 生产：`npx wrangler d1 migrations apply linkedin-answer --remote`。

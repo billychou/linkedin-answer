@@ -29,6 +29,7 @@ export const onRequest = async (context: Context): Promise<Response> => {
         name: session.name ?? session.email,
         email: session.email,
         picture: session.picture ?? "",
+        role: session.role,
         exp: session.exp,
       }
     : null;

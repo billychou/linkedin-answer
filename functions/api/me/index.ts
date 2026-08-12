@@ -9,6 +9,7 @@ import {
   toPublicUser,
   updateUserProfile,
 } from "../../_lib/db";
+import { listTenantsForUser, toTenantSummary } from "../../_lib/tenants";
 import { z } from "zod";
 
 interface Context {
@@ -69,7 +70,14 @@ export const onRequest = async (context: Context): Promise<Response> => {
   }
 
   if (request.method === "GET") {
-    return jsonResponse({ user: toPublicUser(user) });
+    const tenants = await listTenantsForUser(env.DB, user.id);
+    return jsonResponse({
+      user: {
+        ...toPublicUser(user),
+        current_tenant_id: user.current_tenant_id,
+        tenants: tenants.map(toTenantSummary),
+      },
+    });
   }
 
   let body: unknown;

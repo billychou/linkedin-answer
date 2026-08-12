@@ -4,9 +4,13 @@ export interface GoogleUser {
   name: string;
   email: string;
   picture: string;
+  /** 会话缓存的角色（仅用于 UI 展示，权限以服务端查库为准）。 */
+  role?: "user" | "admin";
   /** Google ID token expiry in seconds since epoch (0 = unknown). */
   exp: number;
 }
+
+import type { TenantSummary } from "@/types/tenant";
 
 /** `/api/me` 返回的完整用户资料。 */
 export interface ProfileUser {
@@ -20,6 +24,10 @@ export interface ProfileUser {
   role: "user" | "admin";
   created_at: number;
   subscription: { plan: string; status: string };
+  /** 当前所处租户 ID（租户系统，migration 0002）。 */
+  current_tenant_id: string | null;
+  /** 用户所属的全部租户（含角色与成员数）。 */
+  tenants: TenantSummary[];
 }
 
 /** PATCH /api/me 允许更新的字段。 */

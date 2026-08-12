@@ -1,5 +1,5 @@
 import { createRemoteJWKSet, jwtVerify, SignJWT } from "jose";
-import type { D1Database } from "./db";
+import { getUserById, type D1Database, type DbUser } from "./db";
 
 /**
  * Shared server-side auth helpers for Cloudflare Pages Functions.
@@ -15,6 +15,8 @@ export const SESSION_TTL_SECONDS = 7 * 24 * 60 * 60; // 7 days
 export interface AuthEnv {
   GOOGLE_CLIENT_ID?: string;
   SESSION_SECRET?: string;
+  /** 仅本地开发：启用 /api/auth/dev-login（切勿在生产配置）。 */
+  DEV_FAKE_LOGIN?: string;
   /** D1 binding（用户系统）。 */
   DB?: D1Database;
 }
@@ -25,6 +27,8 @@ export interface SessionUser {
   email: string;
   name?: string;
   picture?: string;
+  /** 登录时缓存的角色（仅用于 UI 展示；权限校验一律查库）。 */
+  role: string;
   /** Session expiry in seconds since epoch. */
   exp: number;
 }
@@ -56,13 +60,20 @@ export async function verifyGoogleIdToken(
 /** Sign a session JWT (HS256) valid for SESSION_TTL_SECONDS. */
 export async function createSessionToken(
   env: AuthEnv,
-  claims: { id: string; email: string; name?: string; picture?: string }
+  claims: {
+    id: string;
+    email: string;
+    name?: string;
+    picture?: string;
+    role?: string;
+  }
 ): Promise<{ token: string; exp: number }> {
   const secret = new TextEncoder().encode(env.SESSION_SECRET ?? "");
   if (!secret.length) throw new Error("SESSION_SECRET is not configured");
   const exp = Math.floor(Date.now() / 1000) + SESSION_TTL_SECONDS;
   const token = await new SignJWT({
     email: claims.email,
+    role: claims.role ?? "user",
     ...(claims.name ? { name: claims.name } : {}),
     ...(claims.picture ? { picture: claims.picture } : {}),
     })
@@ -93,6 +104,7 @@ export async function verifySessionToken(
       name: typeof payload.name === "string" ? payload.name : undefined,
       picture:
         typeof payload.picture === "string" ? payload.picture : undefined,
+      role: typeof payload.role === "string" ? payload.role : "user",
       exp: typeof payload.exp === "number" ? payload.exp : 0,
     };
   } catch {
@@ -147,4 +159,20 @@ export function jsonResponse(
       ...extraHeaders,
     },
   });
+}
+
+/**
+ * 校验会话并查库返回当前活跃用户。
+ * JWT 仅作身份索引，角色/状态等权限数据一律以数据库为准。
+ */
+export async function getRequestUser(
+  request: Request,
+  env: AuthEnv
+): Promise<{ session: SessionUser; user: DbUser } | null> {
+  const token = getSessionToken(request);
+  const session = token ? await verifySessionToken(token, env) : null;
+  if (!session || !env.DB) return null;
+  const user = await getUserById(env.DB, session.id);
+  if (!user || user.status !== "active") return null;
+  return { session, user };
 }
