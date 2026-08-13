@@ -16,10 +16,10 @@ export default function GamesPage() {
     <div className="max-w-6xl mx-auto px-4 py-8 space-y-12">
       {/* Page Header */}
       <section className="text-center py-6">
-        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-gray-100 mb-3">
+        <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">
           LinkedIn Game Answers & Mini Games
         </h1>
-        <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+        <p className="text-muted-foreground max-w-2xl mx-auto">
           Check today&apos;s answers for all LinkedIn puzzle games or play our free mini games. Updated daily with solutions and explanations.
         </p>
       </section>

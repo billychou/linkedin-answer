@@ -84,10 +84,10 @@ export default async function PinpointDatePage({ params }: Props) {
         <GameNavigation game={game} currentPage="answer" />
 
         <div className="mb-8 sm:mb-10">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-gray-100 mb-3">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3">
             {game.name}
           </h1>
-          <div className="flex items-center gap-2 text-base sm:text-lg text-slate-600 dark:text-slate-400 mb-4">
+          <div className="flex items-center gap-2 text-base sm:text-lg text-muted-foreground mb-4">
             <Calendar className="w-5 h-5" />
             <span>{formatDate(answer.date)}</span>
           </div>

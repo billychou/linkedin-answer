@@ -8,35 +8,36 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="py-2 px-6 backdrop-blur-md sticky top-0 z-50">
-      <nav className="flex justify-between items-center w-full mx-auto">
-        <div className="flex items-center space-x-6 md:space-x-12">
+    <header className="sticky top-0 z-50 border-b border-border/70 bg-background/80 backdrop-blur-md">
+      <nav className="mx-auto flex h-14 w-full max-w-7xl items-center justify-between px-4 sm:px-6">
+        <div className="flex items-center space-x-6 lg:space-x-10">
           <Link
             href="/"
-            className="flex items-center space-x-1 font-bold"
+            title={siteConfig.name}
+            className="flex items-center space-x-2 font-display font-bold tracking-tight"
           >
             <Image
               alt={siteConfig.name}
               src="/logo.svg"
-              className="w-6 h-6"
-              width={32}
-              height={32}
+              className="h-7 w-7"
+              width={28}
+              height={28}
             />
-            <span className="text-gray-800 dark:text-gray-200">
-              Simple
+            <span className="hidden text-foreground sm:inline">
+              {siteConfig.name}
             </span>
           </Link>
           <HeaderLinks />
         </div>
 
-        <div className="flex items-center gap-x-2 md:gap-x-4 lg:gap-x-6 flex-1 justify-end">
+        <div className="flex flex-1 items-center justify-end gap-x-2 md:gap-x-4">
           {/* PC */}
-          <div className="hidden md:flex items-center gap-x-4">
+          <div className="hidden items-center gap-x-4 lg:flex">
             <ThemeToggle />
             <UserAuth />
           </div>
 
-          {/* Mobile */}
+          {/* Mobile / Tablet */}
           <MobileMenu />
         </div>
       </nav>

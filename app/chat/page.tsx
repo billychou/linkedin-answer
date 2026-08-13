@@ -22,14 +22,14 @@ export default function ChatPage() {
     <div className="w-full max-w-3xl mx-auto px-4 py-8 space-y-6">
       <div className="space-y-2">
         <div className="flex items-center gap-3">
-          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-gray-100">
+          <h1 className="text-2xl sm:text-3xl font-bold text-foreground">
             AI Chat Demo
           </h1>
           <span
             className={cn(
               "inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-medium",
               isLive
-                ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400"
+                ? "bg-success/10 text-success"
                 : "bg-muted text-muted-foreground"
             )}
           >

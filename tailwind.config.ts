@@ -18,6 +18,10 @@ const config = {
       }
     },
     extend: {
+      fontFamily: {
+        sans: 'var(--font-sans)',
+        display: 'var(--font-display)',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -35,6 +39,14 @@ const config = {
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))'
+        },
+        success: {
+          DEFAULT: 'hsl(var(--success))',
+          foreground: 'hsl(var(--success-foreground))'
+        },
+        warning: {
+          DEFAULT: 'hsl(var(--warning))',
+          foreground: 'hsl(var(--warning-foreground))'
         },
         muted: {
           DEFAULT: 'hsl(var(--muted))',
@@ -59,6 +71,10 @@ const config = {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))'
         }
+      },
+      boxShadow: {
+        card: '0 1px 2px rgb(16 24 40 / 0.06), 0 8px 24px -8px rgb(16 24 40 / 0.12)',
+        lift: '0 2px 4px rgb(16 24 40 / 0.08), 0 16px 32px -12px rgb(10 102 194 / 0.25)',
       },
       borderRadius: {
         lg: 'var(--radius)',

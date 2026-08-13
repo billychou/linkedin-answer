@@ -28,27 +28,40 @@ html {
 }
 
 @layer base {
+  /* Accessible keyboard focus ring (theme-aware). */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+}
+
+@layer base {
   /* Change global styles at: https://tweakcn.com/editor/theme */
   :root {
-    --background: 223.8136 -172.5242% 100.0000%;
+    --background: 0 0% 100%;
     --foreground: 223.8136 0.0000% 3.9388%;
-    --card: 223.8136 -172.5242% 100.0000%;
+    --card: 0 0% 100%;
     --card-foreground: 223.8136 0.0000% 3.9388%;
-    --popover: 223.8136 -172.5242% 100.0000%;
+    --popover: 0 0% 100%;
     --popover-foreground: 223.8136 0.0000% 3.9388%;
-    --primary: 223.8136 0.0000% 9.0527%;
-    --primary-foreground: 223.8136 0.0004% 98.0256%;
+    --primary: 210 90.2% 40.2%;
+    --primary-foreground: 0 0% 100%;
     --secondary: 223.8136 0.0002% 96.0587%;
     --secondary-foreground: 223.8136 0.0000% 9.0527%;
     --muted: 223.8136 0.0002% 96.0587%;
     --muted-foreground: 223.8136 0.0000% 45.1519%;
     --accent: 223.8136 0.0002% 96.0587%;
     --accent-foreground: 223.8136 0.0000% 9.0527%;
-    --destructive: 351.7303 123.6748% 40.5257%;
-    --destructive-foreground: 223.8136 -172.5242% 100.0000%;
+    --destructive: 351.7 90% 45%;
+    --destructive-foreground: 0 0% 100%;
     --border: 223.8136 0.0001% 89.8161%;
     --input: 223.8136 0.0001% 89.8161%;
-    --ring: 223.8136 0.0000% 63.0163%;
+    --ring: 210 90% 45%;
+    --success: 161 94% 30%;
+    --success-foreground: 0 0% 100%;
+    --warning: 32 95% 37%;
+    --warning-foreground: 0 0% 100%;
     --chart-1: 211.7880 101.9718% 78.6759%;
     --chart-2: 217.4076 91.3672% 59.5787%;
     --chart-3: 221.4336 86.3731% 54.0624%;
@@ -56,12 +69,13 @@ html {
     --chart-5: 226.5426 70.0108% 39.9224%;
     --sidebar: 223.8136 0.0004% 98.0256%;
     --sidebar-foreground: 223.8136 0.0000% 3.9388%;
-    --sidebar-primary: 223.8136 0.0000% 9.0527%;
+    --sidebar-primary: 210 90.2% 40.2%;
     --sidebar-primary-foreground: 223.8136 0.0004% 98.0256%;
     --sidebar-accent: 223.8136 0.0002% 96.0587%;
     --sidebar-accent-foreground: 223.8136 0.0000% 9.0527%;
     --sidebar-border: 223.8136 0.0001% 89.8161%;
     --sidebar-ring: 223.8136 0.0000% 63.0163%;
+    --font-display: 'Sora', 'Inter', ui-sans-serif, system-ui, sans-serif;
     --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -85,8 +99,8 @@ html {
     --card-foreground: 223.8136 0.0004% 98.0256%;
     --popover: 223.8136 0.0000% 14.9382%;
     --popover-foreground: 223.8136 0.0004% 98.0256%;
-    --primary: 223.8136 0.0001% 89.8161%;
-    --primary-foreground: 223.8136 0.0000% 9.0527%;
+    --primary: 205 67.4% 57.8%;
+    --primary-foreground: 223.8 60% 8%;
     --secondary: 223.8136 0.0000% 14.9382%;
     --secondary-foreground: 223.8136 0.0004% 98.0256%;
     --muted: 223.8136 0.0000% 14.9382%;
@@ -97,7 +111,11 @@ html {
     --destructive-foreground: 223.8136 0.0004% 98.0256%;
     --border: 223.8136 0.0000% 15.5096%;
     --input: 223.8136 0.0000% 20.3885%;
-    --ring: 223.8136 0.0000% 45.1519%;
+    --ring: 205 67% 58%;
+    --success: 159 64% 52%;
+    --success-foreground: 223.8 60% 8%;
+    --warning: 41 96% 56%;
+    --warning-foreground: 223.8 60% 8%;
     --chart-1: 211.7880 101.9718% 78.6759%;
     --chart-2: 217.4076 91.3672% 59.5787%;
     --chart-3: 221.4336 86.3731% 54.0624%;
@@ -186,4 +204,16 @@ html {
   .card-glow-blue {
     box-shadow: 0 0 15px rgba(59, 130, 246, 0.2), 0 0 30px rgba(59, 130, 246, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05);
   }
+}
+
+/* Hero ambient glow (brand-tinted, theme aware) */
+.bg-hero-glow {
+  background:
+    radial-gradient(600px 300px at 15% 0%, hsl(210 90% 40% / 0.10), transparent 60%),
+    radial-gradient(520px 260px at 85% 10%, hsl(250 80% 60% / 0.08), transparent 60%);
+}
+.dark .bg-hero-glow {
+  background:
+    radial-gradient(600px 300px at 15% 0%, hsl(210 90% 55% / 0.16), transparent 60%),
+    radial-gradient(520px 260px at 85% 10%, hsl(250 80% 65% / 0.12), transparent 60%);
 }
