@@ -86,7 +86,7 @@ export default async function GamePlayPage({ params }: { params: Promise<{ gameI
         <div className="flex justify-center">
           <a
             href="#game-area"
-            className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold text-lg hover:from-blue-600 hover:to-blue-700 transition-all shadow-lg shadow-blue-500/25 active:scale-95"
+            className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/25 active:scale-95"
           >
             <Gamepad2 className="h-5 w-5" />
             Play Now
@@ -112,7 +112,7 @@ export default async function GamePlayPage({ params }: { params: Promise<{ gameI
         {game.tips && game.tips.length > 0 && (
           <section className="space-y-4">
             <div className="flex items-center gap-2">
-              <Lightbulb className="h-5 w-5 text-yellow-500" />
+              <Lightbulb className="h-5 w-5 text-warning" />
               <h2 className="text-xl font-semibold">Pro Tips</h2>
             </div>
             <div className="rounded-xl border bg-card p-6 space-y-2">

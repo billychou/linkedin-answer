@@ -31,9 +31,9 @@ function formatDate(ts: number | null): string {
 
 function StatusBadge({ status }: { status: string }) {
   const styles: Record<string, string> = {
-    active: "bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300",
-    disabled: "bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-300",
-    deleted: "bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400",
+    active: "bg-success/15 text-success",
+    disabled: "bg-destructive/15 text-destructive",
+    deleted: "bg-muted text-muted-foreground",
   };
   return (
     <span
@@ -184,7 +184,7 @@ export default function AdminClient() {
   return (
     <div className="w-full max-w-5xl mx-auto px-4 py-8 space-y-8">
       <div className="space-y-2">
-        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-gray-100">
+        <h1 className="text-2xl sm:text-3xl font-bold text-foreground">
           Admin Console
         </h1>
         <p className="text-sm text-muted-foreground">
@@ -396,7 +396,7 @@ export default function AdminClient() {
                         <p className="truncate font-medium">
                           {row.name}
                           {row.is_personal && (
-                            <span className="ml-2 rounded-full bg-gray-100 px-2 py-0.5 text-xs font-normal text-gray-600 dark:bg-gray-800 dark:text-gray-400">
+                            <span className="ml-2 rounded-full bg-muted px-2 py-0.5 text-xs font-normal text-muted-foreground">
                               Personal
                             </span>
                           )}

@@ -139,3 +139,4 @@ _bmad/
 .venv/
 *.pyc
 .dev.vars
+.out

@@ -72,7 +72,7 @@ export default function ArchivesList({ answers, gameSlug }: ArchivesListProps) {
 
   if (answers.length === 0) {
     return (
-      <div className="text-center py-12 text-slate-500 dark:text-slate-400">
+      <div className="text-center py-12 text-muted-foreground">
         No archived answers available.
       </div>
     );
@@ -84,7 +84,7 @@ export default function ArchivesList({ answers, gameSlug }: ArchivesListProps) {
       <div className="flex items-center gap-3">
         <label
           htmlFor="month-filter"
-          className="text-sm font-medium text-slate-600 dark:text-slate-300"
+          className="text-sm font-medium text-muted-foreground"
         >
           Filter by month:
         </label>
@@ -92,7 +92,7 @@ export default function ArchivesList({ answers, gameSlug }: ArchivesListProps) {
           id="month-filter"
           value={selectedMonth}
           onChange={(e) => handleMonthChange(e.target.value)}
-          className="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+          className="px-3 py-2 rounded-lg border border-input bg-card text-foreground text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
           <option value="all">All</option>
           {availableMonths.map((month) => (
@@ -101,7 +101,7 @@ export default function ArchivesList({ answers, gameSlug }: ArchivesListProps) {
             </option>
           ))}
         </select>
-        <span className="text-xs text-slate-500 dark:text-slate-400">
+        <span className="text-xs text-muted-foreground">
           ({filteredAnswers.length} results)
         </span>
       </div>
@@ -114,27 +114,27 @@ export default function ArchivesList({ answers, gameSlug }: ArchivesListProps) {
             <a
               key={answer.date}
               href={`/games/${gameSlug}/${answer.date}`}
-              className="block rounded-lg border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-3 sm:p-4 hover:bg-blue-500/10 hover:border-blue-500/30 transition-all duration-200"
+              className="block rounded-lg border-2 border-border bg-card p-3 sm:p-4 hover:bg-primary/10 hover:border-primary/30 transition-all duration-200"
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 text-xs sm:text-sm mb-2">
-                    <Calendar className="w-4 h-4 flex-shrink-0 text-blue-400" />
-                    <span className="text-blue-400 font-medium">{formatDate(answer.date)}</span>
+                    <Calendar className="w-4 h-4 flex-shrink-0 text-primary" />
+                    <span className="text-primary font-medium">{formatDate(answer.date)}</span>
                   </div>
                   {isArray ? (
                     <div className="flex flex-wrap gap-2">
                       {(answer.answer as string[]).map((item: string, index: number) => (
                         <span
                           key={index}
-                          className="inline-block px-2 sm:px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded font-semibold text-xs sm:text-sm"
+                          className="inline-block px-2 sm:px-3 py-1 bg-primary/10 text-primary rounded font-semibold text-xs sm:text-sm"
                         >
                           {item}
                         </span>
                       ))}
                     </div>
                   ) : (
-                    <p className="text-base sm:text-lg font-bold text-slate-900 dark:text-gray-100 break-words">
+                    <p className="text-base sm:text-lg font-bold text-foreground break-words">
                       {typeof answer.answer === "string" ? answer.answer : ""}
                     </p>
                   )}
@@ -150,12 +150,12 @@ export default function ArchivesList({ answers, gameSlug }: ArchivesListProps) {
         {hasMore ? (
           <button
             onClick={handleShowMore}
-            className="px-6 py-2 rounded-lg border-2 border-blue-400 text-blue-400 hover:bg-blue-500/10 hover:text-blue-300 hover:border-blue-300 transition-all duration-200 font-medium"
+            className="px-6 py-2 rounded-lg border-2 border-primary/40 text-primary hover:bg-primary/10 hover:border-primary/70 transition-all duration-200 font-medium"
           >
             Show More
           </button>
         ) : filteredAnswers.length > ITEMS_PER_PAGE ? (
-          <span className="text-sm text-slate-500 dark:text-slate-400">
+          <span className="text-sm text-muted-foreground">
             No more answers
           </span>
         ) : null}

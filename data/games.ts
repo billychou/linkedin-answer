@@ -41,14 +41,6 @@ export const games: Game[] = [
     playUrl: "https://www.linkedin.com/games/queens/",
     color: "pink",
   },
-  // {
-  //   slug: "mini-sudoku",
-  //   name: "LinkedIn Mini Sudoku",
-  //   description:
-  //     "Mini Sudoku is a logic puzzle where you fill a 4×4 grid with numbers 1–4. Each row, column, and 2×2 box must contain each number exactly once, with some numbers given as clues.",
-  //   playUrl: "https://www.linkedin.com/games/mini-sudoku/",
-  //   color: "cyan",
-  // },
   {
     slug: "crossclimb",
     name: "LinkedIn Crossclimb",

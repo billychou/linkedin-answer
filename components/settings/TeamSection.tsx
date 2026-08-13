@@ -26,9 +26,9 @@ interface TeamSectionProps {
 
 function RoleBadge({ role }: { role: TenantMember["role"] }) {
   const styles: Record<TenantMember["role"], string> = {
-    owner: "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300",
-    admin: "bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300",
-    member: "bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300",
+    owner: "bg-warning/15 text-warning",
+    admin: "bg-primary/10 text-primary",
+    member: "bg-muted text-foreground",
   };
   return (
     <span
@@ -199,7 +199,7 @@ export function TeamSection({ profile, onChange }: TeamSectionProps) {
                     <p className="truncate text-sm font-medium">
                       {tenant.name}
                       {tenant.is_personal && (
-                        <span className="ml-2 rounded-full bg-gray-100 px-2 py-0.5 text-xs font-normal text-gray-600 dark:bg-gray-800 dark:text-gray-400">
+                        <span className="ml-2 rounded-full bg-muted px-2 py-0.5 text-xs font-normal text-muted-foreground">
                           Personal
                         </span>
                       )}

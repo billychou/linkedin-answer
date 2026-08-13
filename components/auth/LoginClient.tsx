@@ -56,7 +56,7 @@ export default function LoginClient() {
   return (
     <div className="mx-auto w-full max-w-md space-y-6 px-4 py-16">
       <div className="space-y-2 text-center">
-        <h1 className="text-2xl font-bold text-slate-900 dark:text-gray-100">
+        <h1 className="text-2xl font-bold text-foreground">
           Sign in to access Chat
         </h1>
         <p className="text-sm text-muted-foreground">
@@ -83,7 +83,7 @@ export default function LoginClient() {
       )}
 
       {error && (
-        <p className="text-center text-sm text-red-600 dark:text-red-400">
+        <p className="text-center text-sm text-destructive">
           Sign-in failed. Please try again.
         </p>
       )}

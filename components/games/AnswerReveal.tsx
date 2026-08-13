@@ -1,8 +1,8 @@
 "use client";
 
-import { Copy, Check } from "lucide-react";
-import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { Check, Copy } from "lucide-react";
+import { useState } from "react";
 
 interface AnswerRevealProps {
   answer: string | string[];
@@ -15,66 +15,80 @@ export default function AnswerReveal({ answer, gameName, sequence, formattedDate
   const [copied, setCopied] = useState(false);
   const { toast } = useToast();
   const isArray = Array.isArray(answer);
+  const answerText = isArray ? answer.join(", ") : answer;
+  const asTiles = !isArray && answerText.length <= 14 && !answerText.includes(" ");
 
   const handleCopy = async () => {
-    const textToCopy = isArray ? answer.join(", ") : answer;
-    
     try {
-      await navigator.clipboard.writeText(textToCopy);
+      await navigator.clipboard.writeText(answerText);
       setCopied(true);
-      toast({
-        title: "Copied!",
-        description: "Answer copied to clipboard",
-      });
+      toast({ title: "Copied!", description: "Answer copied to clipboard" });
       setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      toast({
-        title: "Failed to copy",
-        description: "Please try again",
-        variant: "destructive",
-      });
+    } catch {
+      toast({ title: "Failed to copy", description: "Please try again", variant: "destructive" });
     }
   };
 
   return (
-    <div className="rounded-xl border-4 border-blue-500 dark:border-blue-400 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950/50 dark:to-blue-900/50 p-6 sm:p-8 shadow-xl">
-      <div className="mb-4">
-        <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-gray-100 mb-2">
-          {gameName}{sequence ? ` ${sequence}` : ""} Answer{formattedDate ? ` (${formattedDate})` : ""}:
-        </h3>
+    <div className="rounded-2xl border-2 border-primary/30 bg-primary/5 p-6 sm:p-8">
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <div className="text-[11px] font-semibold uppercase tracking-wider text-primary">
+            Today&apos;s answer
+          </div>
+          <h3 className="mt-1 font-display text-xl font-bold text-foreground sm:text-2xl">
+            {gameName}
+            {sequence ? ` ${sequence}` : ""}
+            {formattedDate && (
+              <span className="ml-2 text-sm font-medium text-muted-foreground sm:text-base">
+                ({formattedDate})
+              </span>
+            )}
+          </h3>
+        </div>
+        <button
+          onClick={handleCopy}
+          className="grid h-10 w-10 place-items-center rounded-lg border border-border bg-card shadow-card transition hover:bg-muted active:scale-95"
+          title="Copy answer"
+          aria-label="Copy answer"
+        >
+          {copied ? (
+            <Check className="h-4 w-4 text-success" />
+          ) : (
+            <Copy className="h-4 w-4 text-muted-foreground" />
+          )}
+        </button>
       </div>
 
-      <div className="space-y-4">
+      <div className="mt-5">
         {isArray ? (
-          <div className="flex flex-wrap gap-3 sm:gap-4">
+          <div className="flex flex-wrap gap-2 sm:gap-3">
             {answer.map((item, index) => (
               <span
                 key={index}
-                className="inline-block px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 text-white rounded-xl font-bold text-xl sm:text-2xl shadow-lg transform hover:scale-105 transition-transform duration-200"
+                className="animate-stagger-fade-in rounded-xl bg-primary px-5 py-3 font-display text-lg font-bold text-primary-foreground shadow-card sm:text-xl"
+                style={{ animationDelay: `${index * 0.08}s` }}
               >
                 {item}
               </span>
             ))}
           </div>
-        ) : (
-          <div className="bg-white dark:bg-slate-800 rounded-lg p-6 sm:p-8 border-2 border-blue-300 dark:border-blue-600 relative">
-            <p className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-blue-600 dark:text-blue-400 break-words text-center pr-14">
-              {answer}
-            </p>
-            {/* 复制按钮 - 右上角 */}
-            <button
-              onClick={handleCopy}
-              className="absolute top-4 right-4 p-2.5 rounded-lg bg-blue-100 dark:bg-blue-900/30 hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-all duration-200 group hover:scale-110 active:scale-95 shadow-sm hover:shadow-md"
-              title="Copy answer"
-              aria-label="Copy answer"
-            >
-              {copied ? (
-                <Check className="w-5 h-5 text-green-600 dark:text-green-400" />
-              ) : (
-                <Copy className="w-5 h-5 text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300" />
-              )}
-            </button>
+        ) : asTiles ? (
+          <div className="flex flex-wrap gap-1.5 sm:gap-2">
+            {answerText.split("").map((ch, i) => (
+              <span
+                key={i}
+                className="grid h-11 w-11 place-items-center rounded-lg bg-primary font-display text-xl font-bold text-primary-foreground animate-stagger-fade-in sm:h-12 sm:w-12 sm:text-2xl"
+                style={{ animationDelay: `${i * 0.06}s` }}
+              >
+                {ch}
+              </span>
+            ))}
           </div>
+        ) : (
+          <p className="break-words font-display text-3xl font-extrabold text-primary sm:text-4xl lg:text-5xl">
+            {answerText}
+          </p>
         )}
       </div>
     </div>

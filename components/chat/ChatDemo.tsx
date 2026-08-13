@@ -128,7 +128,7 @@ export default function ChatDemo({ isLive }: ChatDemoProps) {
           <span
             className={cn(
               "h-2 w-2 rounded-full",
-              isStreaming ? "animate-pulse bg-emerald-500" : "bg-muted-foreground/40"
+              isStreaming ? "animate-pulse bg-success" : "bg-muted-foreground/40"
             )}
           />
           {isStreaming ? "Generating…" : isLive ? "Live agent" : "Mock mode"}

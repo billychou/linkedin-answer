@@ -31,7 +31,7 @@ const MDXComponents: MDXComponentsProps = {
   h2: (props) => (
     <Heading
       level={2}
-      className="text-3xl font-semibold mt-8 mb-6 border-b-2 border-gray-200 pb-2"
+      className="text-3xl font-semibold mt-8 mb-6 border-b-2 border-border pb-2"
       {...props}
     />
   ),
@@ -55,16 +55,16 @@ const MDXComponents: MDXComponentsProps = {
       {...props}
     />
   ),
-  hr: (props) => <hr className="border-t border-gray-200 my-8" {...props} />,
+  hr: (props) => <hr className="border-t border-border my-8" {...props} />,
   p: (props) => (
     <p
-      className="mt-6 mb-6 leading-relaxed text-gray-700 dark:text-gray-300"
+      className="mt-6 mb-6 leading-relaxed text-foreground"
       {...props}
     />
   ),
   a: (props) => (
     <a
-      className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors underline underline-offset-4"
+      className="text-primary hover:text-primary/80 transition-colors underline underline-offset-4"
       target="_blank"
       {...props}
     />
@@ -72,28 +72,28 @@ const MDXComponents: MDXComponentsProps = {
   ul: (props) => <ul className="list-disc pl-6 mt-0 mb-6" {...props} />,
   ol: (props) => <ol className="list-decimal pl-6 mt-0 mb-6" {...props} />,
   li: (props) => (
-    <li className="mb-3 text-gray-700 dark:text-gray-300" {...props} />
+    <li className="mb-3 text-foreground" {...props} />
   ),
   code: (props) => (
     <code
-      className="bg-gray-100 dark:bg-gray-700 rounded px-2 py-1 font-mono text-sm"
+      className="bg-muted dark:bg-muted rounded px-2 py-1 font-mono text-sm"
       {...props}
     />
   ),
   pre: (props) => (
     <pre
-      className="rounded-lg p-4 overflow-x-auto my-4 bg-gray-100 dark:bg-gray-800"
+      className="rounded-lg p-4 overflow-x-auto my-4 bg-muted"
       {...props}
     />
   ),
   blockquote: (props) => (
     <blockquote
-      className="pl-6 border-l-4 my-6 text-gray-600 dark:text-gray-400 italic"
+      className="pl-6 border-l-4 my-6 text-muted-foreground italic"
       {...props}
     />
   ),
   img: (props) => (
-    <img className="rounded-lg border-2 border-gray-200 my-6" {...props} />
+    <img className="rounded-lg border-2 border-border my-6" {...props} />
   ),
   strong: (props) => <strong className="font-bold" {...props} />,
   table: (props) => (
@@ -104,16 +104,16 @@ const MDXComponents: MDXComponentsProps = {
       />
     </div>
   ),
-  tr: (props) => <tr className="border-t border-gray-200" {...props} />,
+  tr: (props) => <tr className="border-t border-border" {...props} />,
   th: (props) => (
     <th
-      className="px-6 py-3 font-bold text-left bg-gray-100 dark:bg-gray-700 [&[align=center]]:text-center [&[align=right]]:text-right"
+      className="px-6 py-3 font-bold text-left bg-muted dark:bg-muted [&[align=center]]:text-center [&[align=right]]:text-right"
       {...props}
     />
   ),
   td: (props) => (
     <td
-      className="px-6 py-4 text-left border-t border-gray-100 dark:border-gray-700 [&[align=center]]:text-center [&[align=right]]:text-right"
+      className="px-6 py-4 text-left border-t border-border [&[align=center]]:text-center [&[align=right]]:text-right"
       {...props}
     />
   ),

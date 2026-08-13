@@ -13,7 +13,30 @@ import "@/styles/globals.css";
 import "@/styles/loading.css";
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
+
+// Self-hosted (fontsource) to keep builds network-independent (Cloudflare Pages).
+const fontSans = localFont({
+  src: [
+    { path: "./fonts/inter-latin-400-normal.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/inter-latin-500-normal.woff2", weight: "500", style: "normal" },
+    { path: "./fonts/inter-latin-600-normal.woff2", weight: "600", style: "normal" },
+    { path: "./fonts/inter-latin-700-normal.woff2", weight: "700", style: "normal" },
+  ],
+  variable: "--font-sans",
+  fallback: ["system-ui", "sans-serif"],
+});
+
+const fontDisplay = localFont({
+  src: [
+    { path: "./fonts/sora-latin-600-normal.woff2", weight: "600", style: "normal" },
+    { path: "./fonts/sora-latin-700-normal.woff2", weight: "700", style: "normal" },
+    { path: "./fonts/sora-latin-800-normal.woff2", weight: "800", style: "normal" },
+  ],
+  variable: "--font-display",
+  fallback: ["system-ui", "sans-serif"],
+});
 
 /**
  * 生成页面元数据，用于 SEO 优化
@@ -92,6 +115,8 @@ export default async function RootLayout({
       </head>
       <body
         className={cn(
+          fontSans.variable,
+          fontDisplay.variable,
           "min-h-screen bg-background flex flex-col font-sans antialiased"
         )}
       >
