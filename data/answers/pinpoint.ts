@@ -2,16 +2,28 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#835",
+    date: "2026-08-13",
+    answer: "Things that have spots",
+    clues: ["The Sun", "Dominoes", "Leopards", "Dalmations", "Ladybirds / ladybugs (🐞)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>The Sun:</strong> The Sun relates to the answer "Things that have spots Once that category landed, the rest of the board felt almost generous. Dalmations are the poster dogs for black-on-white spotting, and Ladybirds / ladybugs (🐞) seal it with those tiny wing dots. Classic Pinpoint move: start weird, finish obvious. 🧩".<br>
+<strong>Dominoes:</strong> Dominoes relates to the answer "Things that have spots Once that category landed, the rest of the board felt almost generous. Dalmations are the poster dogs for black-on-white spotting, and Ladybirds / ladybugs (🐞) seal it with those tiny wing dots. Classic Pinpoint move: start weird, finish obvious. 🧩".<br>
+<strong>Leopards:</strong> Leopards relates to the answer "Things that have spots Once that category landed, the rest of the board felt almost generous. Dalmations are the poster dogs for black-on-white spotting, and Ladybirds / ladybugs (🐞) seal it with those tiny wing dots. Classic Pinpoint move: start weird, finish obvious. 🧩".<br>
+<strong>Dalmations:</strong> Dalmations relates to the answer "Things that have spots Once that category landed, the rest of the board felt almost generous. Dalmations are the poster dogs for black-on-white spotting, and Ladybirds / ladybugs (🐞) seal it with those tiny wing dots. Classic Pinpoint move: start weird, finish obvious. 🧩".<br>
+<strong>Ladybirds / ladybugs (🐞):</strong> Ladybirds / ladybugs (🐞) relates to the answer "Things that have spots Once that category landed, the rest of the board felt almost generous. Dalmations are the poster dogs for black-on-white spotting, and Ladybirds / ladybugs (🐞) seal it with those tiny wing dots. Classic Pinpoint move: start weird, finish obvious. 🧩".</p>`,
+  },
+  {
     sequence: "#817",
     date: "2026-07-27",
     answer: "Parts of a brass instrument (like a trumpet) \ud83c\udfbc",
     clues: ["Bell", "Valves", "Tuning slide", "Mouthpiece", "Metal tubing (muted gold/yellow)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Bell:</strong> Bell relates to the answer "Parts of a brass instrument (like a trumpet) 🎼".<br>
-<strong>Valves:</strong> Valves relates to the answer "Parts of a brass instrument (like a trumpet) 🎼".<br>
-<strong>Tuning slide:</strong> Tuning slide relates to the answer "Parts of a brass instrument (like a trumpet) 🎼".<br>
-<strong>Mouthpiece:</strong> Mouthpiece relates to the answer "Parts of a brass instrument (like a trumpet) 🎼".<br>
-<strong>Metal tubing (muted gold/yellow):</strong> Metal tubing (muted gold/yellow) relates to the answer "Parts of a brass instrument (like a trumpet) 🎼".</p>`,
+<strong>Bell:</strong> Bell relates to the answer "Parts of a brass instrument (like a trumpet) ".<br>
+<strong>Valves:</strong> Valves relates to the answer "Parts of a brass instrument (like a trumpet) ".<br>
+<strong>Tuning slide:</strong> Tuning slide relates to the answer "Parts of a brass instrument (like a trumpet) ".<br>
+<strong>Mouthpiece:</strong> Mouthpiece relates to the answer "Parts of a brass instrument (like a trumpet) ".<br>
+<strong>Metal tubing (muted gold/yellow):</strong> Metal tubing (muted gold/yellow) relates to the answer "Parts of a brass instrument (like a trumpet) ".</p>`,
   },
   {
     sequence: "#796",
