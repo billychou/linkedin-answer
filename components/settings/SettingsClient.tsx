@@ -82,7 +82,7 @@ export default function SettingsClient() {
   return (
     <div className="w-full max-w-3xl mx-auto px-4 py-8 space-y-8">
       <div className="space-y-2">
-        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-gray-100">
+        <h1 className="text-2xl sm:text-3xl font-bold text-foreground">
           Account Settings
         </h1>
         <p className="text-sm text-muted-foreground">

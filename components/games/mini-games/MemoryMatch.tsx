@@ -124,7 +124,7 @@ export default function MemoryMatch() {
               card.isFlipped || card.isMatched
                 ? card.isMatched
                   ? "bg-green-500/20 border-2 border-green-500/40 scale-95"
-                  : "bg-white dark:bg-gray-800 border-2 border-purple-500/40 scale-100"
+                  : "bg-card dark:bg-gray-800 border-2 border-purple-500/40 scale-100"
                 : "bg-gradient-to-br from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 border-2 border-purple-500/20 hover:scale-105 active:scale-95 cursor-pointer"
             }`}
             aria-label={card.isFlipped || card.isMatched ? card.emoji : "Hidden card"}

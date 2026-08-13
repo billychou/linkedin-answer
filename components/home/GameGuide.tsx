@@ -43,42 +43,42 @@ export default function GameGuide() {
     <div className="relative">
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
-        <div className="p-2.5 bg-blue-100 dark:bg-blue-900/30 rounded-xl">
-          <BookOpen className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+        <div className="p-2.5 bg-primary/10 rounded-xl">
+          <BookOpen className="w-6 h-6 text-primary" />
         </div>
         <div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-gray-100">
+          <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
             How to Play Pinpoint
           </h2>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
+          <p className="text-sm text-muted-foreground mt-1">
             Quick guide to get you started
           </p>
         </div>
       </div>
 
       {/* Guide Cards */}
-      <div className="rounded-2xl border-2 border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50/80 to-white dark:from-blue-950/30 dark:to-slate-900/50 p-4 sm:p-6 shadow-xl shadow-blue-900/5">
+      <div className="rounded-2xl border-2 border-primary/20 dark:border-primary/30 bg-gradient-to-br from-primary/5 to-card dark:from-primary/10 dark:to-card p-4 sm:p-6 shadow-xl shadow-primary/5">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-4">
           {guideSteps.map((step) => (
             <div
               key={step.step}
-              className="relative bg-white dark:bg-slate-800 rounded-xl p-4 sm:p-5 lg:p-4 border-2 border-blue-100 dark:border-blue-800/50 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="relative bg-card rounded-xl p-4 sm:p-5 lg:p-4 border-2 border-primary/20 dark:border-primary/30 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
               {/* Step Number Badge */}
-              <div className="absolute -top-3 -left-3 w-7 h-7 lg:w-6 lg:h-6 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-sm lg:text-xs">{step.step}</span>
+              <div className="absolute -top-3 -left-3 w-7 h-7 lg:w-6 lg:h-6 bg-primary dark:bg-primary rounded-full flex items-center justify-center shadow-lg">
+                <span className="text-primary-foreground font-bold text-sm lg:text-xs">{step.step}</span>
               </div>
 
               {/* Icon */}
-              <div className="mb-3 lg:mb-2 p-2.5 lg:p-2 bg-blue-100 dark:bg-blue-900/30 rounded-xl w-fit text-blue-600 dark:text-blue-400">
+              <div className="mb-3 lg:mb-2 p-2.5 lg:p-2 bg-primary/10 rounded-xl w-fit text-primary">
                 {step.icon}
               </div>
 
               {/* Content */}
-              <h3 className="text-base lg:text-sm font-bold text-slate-900 dark:text-gray-100 mb-2 lg:mb-1">
+              <h3 className="text-base lg:text-sm font-bold text-foreground mb-2 lg:mb-1">
                 {step.title}
               </h3>
-              <p className="text-sm lg:text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p className="text-sm lg:text-xs text-muted-foreground leading-relaxed">
                 {step.description}
               </p>
             </div>
@@ -86,9 +86,9 @@ export default function GameGuide() {
         </div>
 
         {/* Tip */}
-        <div className="mt-4 p-3 sm:p-4 bg-blue-100/50 dark:bg-blue-900/20 rounded-xl">
-          <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            <span className="font-medium text-blue-600 dark:text-blue-400">
+        <div className="mt-4 p-3 sm:p-4 bg-primary/10 rounded-xl">
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            <span className="font-medium text-primary">
               Pro tip:
             </span>{" "}
             Difficulty varies daily - some puzzles require specific cultural knowledge. 

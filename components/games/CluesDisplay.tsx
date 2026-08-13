@@ -40,7 +40,7 @@ export default function CluesDisplay({ clues, gameName, number, clueHint }: Clue
   return (
     <div className="mb-6">
       {/* 标题 */}
-      <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-gray-100 mb-3">
+      <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-3">
         {gameName} {number ? `#${number} ` : ""}Clues:
       </h2>
       {/* 线索框 - 5列布局 */}
@@ -63,11 +63,11 @@ export default function CluesDisplay({ clues, gameName, number, clueHint }: Clue
         ))}
       </div>
       {/* 提示文字 */}
-      <div className="flex items-start gap-2 mt-4 text-xs sm:text-sm text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-800/50 rounded-lg p-2.5">
-        <Info className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-blue-500 dark:text-blue-400" />
+      <div className="flex items-start gap-2 mt-4 text-xs sm:text-sm text-muted-foreground bg-muted/50 rounded-lg p-2.5">
+        <Info className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-primary dark:text-primary" />
         {containsHTML ? (
           <div 
-            className="leading-relaxed prose prose-sm dark:prose-invert max-w-none [&_strong]:font-semibold [&_strong]:text-slate-700 dark:[&_strong]:text-slate-200"
+            className="leading-relaxed prose prose-sm dark:prose-invert max-w-none [&_strong]:font-semibold [&_strong]:text-foreground "
             dangerouslySetInnerHTML={{ __html: processedHint }}
           />
         ) : (

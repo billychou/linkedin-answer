@@ -167,7 +167,7 @@ export default function TicTacToe() {
                     ? "bg-card border-2 border-border"
                     : "bg-muted/50 border-2 border-border/50 hover:bg-muted cursor-pointer active:scale-95"
               } ${
-                cell === "X" ? "text-blue-500" : cell === "O" ? "text-red-500" : ""
+                cell === "X" ? "text-primary" : cell === "O" ? "text-red-500" : ""
               }`}
               aria-label={cell ? `Cell ${cell}` : `Empty cell ${i + 1}`}
             >

@@ -18,7 +18,7 @@ const colorStyles: Record<Color, { base: string; active: string; glow: string }>
     glow: "shadow-green-500/50",
   },
   blue: {
-    base: "bg-blue-500 dark:bg-blue-600",
+    base: "bg-primary dark:bg-primary",
     active: "bg-blue-300 dark:bg-blue-400 scale-95",
     glow: "shadow-blue-500/50",
   },

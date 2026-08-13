@@ -61,13 +61,13 @@ export default async function HowToPlayPage({ params }: Props) {
         type="FAQPage"
       />
       <div className="mb-6 sm:mb-8">
-        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-gray-100 mb-2">
+        <h1 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
           {game.name} - How to Play
         </h1>
       </div>
 
-      <div className="rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 sm:p-6">
-        <p className="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+      <div className="rounded-xl border-2 border-border bg-card p-4 sm:p-6">
+        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4">
           {game.description}
         </p>
 
@@ -77,7 +77,7 @@ export default async function HowToPlayPage({ params }: Props) {
               href={game.playUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors text-sm sm:text-base w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors text-sm sm:text-base w-full sm:w-auto"
             >
               Play {game.name}
             </a>

@@ -1,10 +1,12 @@
 import AnswerDisplay from "@/components/games/AnswerDisplay";
 import ArchivesList from "@/components/games/ArchivesList";
+import GameNavigation from "@/components/games/GameNavigation";
+import GameSidebar from "@/components/games/GameSidebar";
 import StructuredData from "@/components/games/StructuredData";
 import { getAllAnswers, getTodayAnswer } from "@/lib/answers";
 import { getGame, getGameSlugs } from "@/lib/games";
 import { constructMetadata } from "@/lib/metadata";
-import { Archive, Calendar } from "lucide-react";
+import { Archive } from "lucide-react";
 import { notFound } from "next/navigation";
 
 type Props = {
@@ -59,15 +61,6 @@ export default async function GamePage({ params }: Props) {
     ? allAnswers.filter((a) => a.date !== answer.date)
     : allAnswers;
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
-  };
-
   const breadcrumbs = [
     { label: "Home", url: "/" },
     { label: "Games", url: "/games" },
@@ -76,42 +69,43 @@ export default async function GamePage({ params }: Props) {
 
   return (
     <>
-      <StructuredData
-        game={game}
-        answer={answer}
-        breadcrumbs={breadcrumbs}
-      />
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8">
-        {/* Page Header */}
-        <div className="mb-8 sm:mb-10">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-gray-100 mb-3">
-            {game.name}
-          </h1>
-          {answer && (
-            <div className="flex items-center gap-2 text-base sm:text-lg text-slate-600 dark:text-slate-400 mb-4">
-              <Calendar className="w-5 h-5" />
-              <span>{formatDate(answer.date)}</span>
-            </div>
-          )}
-        </div>
+      <StructuredData game={game} answer={answer} breadcrumbs={breadcrumbs} />
+      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
+        <GameNavigation game={game} currentPage="answer" />
 
-        {/* Answer Content */}
-        {answer ? (
-          <AnswerDisplay answer={answer} gameName={game.name} />
-        ) : (
-          <div className="rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 sm:p-12 text-center">
-            <p className="text-lg sm:text-xl text-slate-500 dark:text-slate-400">
-              No answer available for this date.
-            </p>
+        <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
+          {/* Main column */}
+          <div>
+            <div className="mb-6 sm:mb-8">
+              <h1 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                {game.name}
+              </h1>
+              <p className="mt-2 text-sm text-muted-foreground sm:text-base">
+                {game.description}
+              </p>
+            </div>
+
+            {answer ? (
+              <AnswerDisplay answer={answer} gameName={game.name} />
+            ) : (
+              <div className="rounded-xl border-2 border-border bg-card p-8 text-center sm:p-12">
+                <p className="text-lg text-muted-foreground sm:text-xl">
+                  No answer available for this date.
+                </p>
+              </div>
+            )}
           </div>
-        )}
+
+          {/* Sidebar */}
+          <GameSidebar game={game} answer={answer} allAnswers={allAnswers} />
+        </div>
 
         {/* Archives Section */}
         {archiveAnswers.length > 0 && (
           <div className="mt-12 sm:mt-16">
-            <div className="flex items-center gap-2 mb-6">
-              <Archive className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-gray-100">
+            <div className="mb-6 flex items-center gap-2">
+              <Archive className="h-6 w-6 text-primary" />
+              <h2 className="font-display text-2xl font-bold text-foreground sm:text-3xl">
                 Historical Answers
               </h2>
             </div>

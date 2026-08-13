@@ -71,10 +71,10 @@ export default async function ArchivesPage({ params }: Props) {
         collectionItems={collectionItems}
       />
       <div className="mb-6 sm:mb-8">
-        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-gray-100 mb-2">
+        <h1 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
           {game.name} - Archives
         </h1>
-        <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+        <p className="text-sm sm:text-base text-muted-foreground">
           Browse all historical answers for {game.name}
         </p>
       </div>
