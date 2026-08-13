@@ -7,11 +7,11 @@ export const pinpointAnswers: GameAnswer[] = [
     answer: "Things that have spots",
     clues: ["The Sun", "Dominoes", "Leopards", "Dalmations", "Ladybirds / ladybugs (🐞)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>The Sun:</strong> The Sun relates to the answer "Things that have spots Once that category landed, the rest of the board felt almost generous. Dalmations are the poster dogs for black-on-white spotting, and Ladybirds / ladybugs (🐞) seal it with those tiny wing dots. Classic Pinpoint move: start weird, finish obvious. 🧩".<br>
-<strong>Dominoes:</strong> Dominoes relates to the answer "Things that have spots Once that category landed, the rest of the board felt almost generous. Dalmations are the poster dogs for black-on-white spotting, and Ladybirds / ladybugs (🐞) seal it with those tiny wing dots. Classic Pinpoint move: start weird, finish obvious. 🧩".<br>
-<strong>Leopards:</strong> Leopards relates to the answer "Things that have spots Once that category landed, the rest of the board felt almost generous. Dalmations are the poster dogs for black-on-white spotting, and Ladybirds / ladybugs (🐞) seal it with those tiny wing dots. Classic Pinpoint move: start weird, finish obvious. 🧩".<br>
-<strong>Dalmations:</strong> Dalmations relates to the answer "Things that have spots Once that category landed, the rest of the board felt almost generous. Dalmations are the poster dogs for black-on-white spotting, and Ladybirds / ladybugs (🐞) seal it with those tiny wing dots. Classic Pinpoint move: start weird, finish obvious. 🧩".<br>
-<strong>Ladybirds / ladybugs (🐞):</strong> Ladybirds / ladybugs (🐞) relates to the answer "Things that have spots Once that category landed, the rest of the board felt almost generous. Dalmations are the poster dogs for black-on-white spotting, and Ladybirds / ladybugs (🐞) seal it with those tiny wing dots. Classic Pinpoint move: start weird, finish obvious. 🧩".</p>`,
+<strong>The Sun:</strong> The Sun relates to the answer "Things that have spots".<br>
+<strong>Dominoes:</strong> Dominoes relates to the answer "Things that have spots".<br>
+<strong>Leopards:</strong> Leopards relates to the answer "Things that have spots".<br>
+<strong>Dalmations:</strong> Dalmations relates to the answer "Things that have spots".<br>
+<strong>Ladybirds / ladybugs (🐞):</strong> Ladybirds / ladybugs (🐞) relates to the answer "Things that have spots".</p>`,
   },
   {
     sequence: "#817",
@@ -554,14 +554,14 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#741",
     date: "2026-05-11",
-    answer: "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. \ud83e\uddf8",
+    answer: "Toy companies",
     clues: ["Steiff", "Lego", "Hasbro", "Bandai Namco", "Mattel"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Steiff:</strong> Steiff relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. ".<br>
-<strong>Lego:</strong> Lego relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. ".<br>
-<strong>Hasbro:</strong> Hasbro relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. ".<br>
-<strong>Bandai Namco:</strong> Bandai Namco relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. ".<br>
-<strong>Mattel:</strong> Mattel relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. ".</p>`,
+<strong>Steiff:</strong> Steiff relates to the answer "Toy companies".<br>
+<strong>Lego:</strong> Lego relates to the answer "Toy companies".<br>
+<strong>Hasbro:</strong> Hasbro relates to the answer "Toy companies".<br>
+<strong>Bandai Namco:</strong> Bandai Namco relates to the answer "Toy companies".<br>
+<strong>Mattel:</strong> Mattel relates to the answer "Toy companies".</p>`,
   },
   {
     sequence: "#740",
@@ -699,14 +699,14 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#724",
     date: "2026-04-24",
-    answer: "Words that come after \"hand\" And just to seal it, the final clue \u2014 Kerchief \u2014 confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. \ud83d\udcda",
+    answer: "Words that come after \"hand\"",
     clues: ["Stand", "Shake", "Made", "Writing", "Kerchief"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Stand:</strong> Stand relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".<br>
-<strong>Shake:</strong> Shake relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".<br>
-<strong>Made:</strong> Made relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".<br>
-<strong>Writing:</strong> Writing relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".<br>
-<strong>Kerchief:</strong> Kerchief relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".</p>`,
+<strong>Stand:</strong> Stand relates to the answer "Words that come after "hand"".<br>
+<strong>Shake:</strong> Shake relates to the answer "Words that come after "hand"".<br>
+<strong>Made:</strong> Made relates to the answer "Words that come after "hand"".<br>
+<strong>Writing:</strong> Writing relates to the answer "Words that come after "hand"".<br>
+<strong>Kerchief:</strong> Kerchief relates to the answer "Words that come after "hand"".</p>`,
   },
   {
     sequence: "#722",
