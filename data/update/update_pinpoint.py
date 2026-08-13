@@ -9,17 +9,23 @@
        export DASHSCOPE_API_KEY="your-key"  # 阿里云 DashScope API Key
 
     3. 运行脚本:
-       python3 data/update/update_pinpoint.py            # 抓取并写入 data/answers/pinpoint.ts
-       python3 data/update/update_pinpoint.py --dry-run  # 只抓取解析并打印，不写文件、不调用 AI
+       python3 data/update/update_pinpoint.py                    # 抓取当日数据并写入
+       python3 data/update/update_pinpoint.py --dry-run          # 只抓取解析并打印，不写文件、不调用 AI
+       python3 data/update/update_pinpoint.py --repair           # 审计历史数据，预览修复（不写文件）
+       python3 data/update/update_pinpoint.py --repair --apply   # 审计并实际写入修复
+       python3 data/update/update_pinpoint.py --repair --only 741,724  # 只处理指定期号
 
     注意: 如果不设置 API key，脚本会使用简单的 fallback 模式生成提示。
 
 特性:
     - 自动抓取最新的 Pinpoint 答案和线索
-    - 答案优先使用 DOM 结构化提取（详情页 "Category: Pinpoint #N" 标题后的首个 <p>），
-      避免把答案后面的解说段落一起抓进来导致 answer 偏长/不准确
-    - 提取结果做清洗（压缩空白、去掉首尾标点与 emoji）并校验长度，异常时直接报错而不是写入脏数据
+    - 答案优先使用 DOM 结构化提取（兼容三代页面格式），避免把答案后面的解说段落
+      一起抓进来导致 answer 偏长/不准确
+    - 提取结果做清洗（压缩空白、去掉首尾标点与 emoji）并校验长度，异常时直接报错
+      而不是写入脏数据
     - 使用 AI 生成简洁的 clueHint（解释每个线索与答案的关系），无 API key 时自动 fallback
+    - --repair 模式可审计并修正历史数据（截断污染、补全残缺、统一引号/emoji、
+      修正错误答案），并同步清理 clueHint 中的脏答案
     - 自动更新 data/answers/pinpoint.ts 文件
 """
 
@@ -27,6 +33,7 @@ import argparse
 import json
 import os
 import re
+import time
 from dataclasses import dataclass
 from urllib.parse import urljoin
 
@@ -40,14 +47,28 @@ TODAY_PAGE_URL = f"{BASE_URL}/#todays-answer"
 # 历史数据中最长的合法答案约 110 字符；超过该阈值基本可以判定混入了解说文本
 MAX_ANSWER_LEN = 140
 
-# 详情页标题形如: <h3>🏁 Category: Pinpoint 835</h3> / <h3>✅ Category: Pinpoint 817</h3>
+# 详情页标题形如:
+#   新格式: <h3>🏁 Category: Pinpoint 835</h3>（答案在随后 <p> 的 <strong> 内）
+#   旧格式: <h3>✅ Category: Pinpoint 721 — Things seen at a beach</h3>（答案在标题内）
 _CATEGORY_HEADING_RE = re.compile(r"Category\s*:?\s*Pinpoint\s*#?\d+", re.I)
+_CATEGORY_HEADING_TRAIL_RE = re.compile(
+    r"Category\s*:?\s*Pinpoint\s*#?\d+(?:\s*[—–]\s*|\s+)(.+)$", re.I
+)
+# 更旧格式: <p><strong>Category: Pinpoint 673</strong> Words that come after "prime"</p>
+_CATEGORY_INLINE_RE = re.compile(r"Category\s*:\s*(?:Pinpoint\s*#?\d+\s*)?(.+)$", re.I)
 
 # 答案首尾可能出现的 emoji 区间（保留答案中间的 emoji，如 "Ladybirds (🐞)"）
 _EDGE_EMOJI_RE = re.compile(
     r"^[\U0001F000-\U0001FAFF\u2190-\u21FF\u2600-\u27BF\u2B00-\u2BFF\uFE0F\u200D\s]+"
     r"|[\U0001F000-\U0001FAFF\u2190-\u21FF\u2600-\u27BF\u2B00-\u2BFF\uFE0F\u200D\s]+$"
 )
+
+TS_PREFIX = """import { GameAnswer } from "@/types/game";
+
+export const pinpointAnswers: GameAnswer[] = """
+
+REPAIR_CACHE_DIR = "/tmp/pinpoint_repair_cache"
+REPAIR_FETCH_DELAY = 0.3  # 每次抓取详情页后的间隔，避免对站点不友好
 
 
 def _clean_answer(raw: str) -> str:
@@ -58,6 +79,49 @@ def _clean_answer(raw: str) -> str:
     text = _EDGE_EMOJI_RE.sub("", text)
     text = text.strip(" \t-–—:：|•·")
     return text.strip()
+
+
+def _normalize_for_compare(text: str) -> str:
+    """仅用于比较的归一化: 清洗 + 弯引号转直引号。"""
+    t = _clean_answer(text)
+    t = t.replace("\u201c", '"').replace("\u201d", '"')
+    t = t.replace("\u2018", "'").replace("\u2019", "'")
+    return t.strip()
+
+
+def _classify_answer(saved: str, parsed: str) -> str:
+    """
+    对比已存答案与页面解析答案，返回处置类型:
+      ok       完全一致
+      normalize 归一化后一致（首尾 emoji/标点、弯直引号差异）
+      truncate 已存答案 = 解析答案 + 多余尾巴（emoji 尾巴或解说文本污染）
+      extend   已存答案是解析答案的前缀（历史抓取被截断）
+      differs  内容不同（大概率是历史错录，需要人工确认）
+    """
+    if saved == parsed:
+        return "ok"
+    sn, pn = _normalize_for_compare(saved), _normalize_for_compare(parsed)
+    if sn == pn:
+        return "normalize"
+    if pn and sn.startswith(pn) and len(sn) > len(pn):
+        return "truncate"
+    if sn and pn.startswith(sn) and len(pn) > len(sn):
+        return "extend"
+    return "differs"
+
+
+def _repair_hint(hint: str, old: str, new: str) -> str:
+    """clueHint 中引用的旧答案替换为新答案，并规整引号内的首尾空白。"""
+    if not hint or not old or old == new:
+        return hint
+    hint = hint.replace(old, new)
+    # 规整引号内答案前后的空白，如 the answer " xxx " -> the answer "xxx"
+    hint = re.sub(
+        r'"\s*' + re.escape(new) + r'\s*"',
+        lambda _m: f'"{new}"',
+        hint,
+    )
+    return hint
 
 
 def _generate_clue_hint_with_ai(clues: list[str], answer: str) -> str:
@@ -96,9 +160,7 @@ def _generate_clue_hint_with_ai(clues: list[str], answer: str) -> str:
     model = "qwen3.6-flash"
 
     clues_text = "\n".join([f"{i+1}. {clue}" for i, clue in enumerate(clues)])
-    clue_lines = "\n".join(
-        [f"<strong>{clue}:</strong> ..." for clue in clues]
-    )
+    clue_lines = "\n".join([f"<strong>{clue}:</strong> ..." for clue in clues])
     prompt = f"""LinkedIn Pinpoint puzzle:
 
 Answer: {answer}
@@ -250,30 +312,42 @@ def _parse_answer(html: str) -> str | None:
     """
     从详情页 HTML 解析 Answer 文本。
 
-    优先使用 DOM 结构化提取:
-      - 当前格式: <h3>🏁/✅ Category: Pinpoint #N</h3> 后的第一个 <p>，
-        答案位于其中的 <strong> 内，<p> 的其余文本/后续段落是解说，不能要。
-      - 旧格式:   <strong>Category: Words that come after "mega"</strong>，答案与
-        "Category:" 前缀在同一个元素内。
+    优先使用 DOM 结构化提取，兼容三代页面格式:
+      1a. 新格式:   <h3>🏁 Category: Pinpoint #N</h3> 后第一个 <p> 内的 <strong>
+      1b. 旧格式A:  <h3>✅ Category: Pinpoint 721 — Things seen at a beach</h3>
+                    （答案直接跟在标题内的期号后面）
+      2.  旧格式B:  <p><strong>Category: Pinpoint 673</strong> Words that come after "prime"</p>
+                    （答案与 "Category:" 前缀在同一个段落内）
     DOM 提取失败时再退回到全文正则（收紧了截断标记）。
     """
     soup = BeautifulSoup(html, "html.parser")
 
-    # 方案1（当前格式）: Category 标题后的首个段落，优先取 <strong>/<b>
+    # 方案1: Category 标题
     for heading in soup.find_all(["h1", "h2", "h3", "h4"]):
-        if not _CATEGORY_HEADING_RE.search(heading.get_text(" ", strip=True)):
+        heading_text = heading.get_text(" ", strip=True)
+        if not _CATEGORY_HEADING_RE.search(heading_text):
             continue
+        # 1a. 答案直接位于标题内（期号之后，可能带 — 分隔）
+        trail = _CATEGORY_HEADING_TRAIL_RE.search(heading_text)
+        if trail:
+            candidate = _clean_answer(trail.group(1))
+            if candidate:
+                return candidate
+        # 1b. 答案位于标题后的首个段落，优先取 <strong>/<b>
         para = heading.find_next("p")
-        if not para:
-            continue
-        strong = para.find(["strong", "b"])
-        candidate = _clean_answer((strong or para).get_text(" ", strip=True))
-        if candidate:
-            return candidate
+        if para:
+            strong = para.find(["strong", "b"])
+            candidate = _clean_answer((strong or para).get_text(" ", strip=True))
+            if candidate:
+                return candidate
 
-    # 方案2（旧格式）: 元素文本本身以 "Category:" 开头
+    # 方案2（旧格式B）: "Category:" 前缀与答案在同一段落（常见于 <strong> 内）
     for strong in soup.find_all(["strong", "b"]):
-        m = re.match(r"Category\s*:\s*(.+)$", strong.get_text(" ", strip=True), re.I)
+        text = strong.get_text(" ", strip=True)
+        if not re.match(r"Category\s*:", text, re.I):
+            continue
+        container = strong.find_parent("p") or strong
+        m = _CATEGORY_INLINE_RE.match(container.get_text(" ", strip=True))
         if m:
             candidate = _clean_answer(m.group(1))
             if candidate:
@@ -350,49 +424,30 @@ def get_today_pinpoint() -> TodayPinpoint:
     )
 
 
-def update_pinpoint_ts(
-    pinpoint: TodayPinpoint,
-    ts_file_path: str = "./data/answers/pinpoint.ts",
-):
-    """
-    根据get_today_pinpoint返回的结果，更新pinpoint.ts答案列表。
-    如果pinpoint_number已存在，不更新。
-    否则，将新结果插入为第一条。
-    文件为ts文件(json数组包裹在TS导出语法格式)，需json级别直接更新。
-    """
-    from datetime import date
+# ---------------------------------------------------------------------------
+# data/answers/pinpoint.ts 读写
+# ---------------------------------------------------------------------------
 
-    # Step 1. 读取文件内容
+
+def _load_ts_entries(ts_file_path: str) -> tuple[list[dict], str]:
+    """解析 pinpoint.ts，返回 (条目列表, 数组结束后的尾部内容)。"""
+    import json5
+
     with open(ts_file_path, "r", encoding="utf-8") as f:
         ts_content = f.read()
 
-    # Step 2. 提取pinpointAnswers数组的JS内容，去除前缀和末尾
-    prefix = """import { GameAnswer } from "@/types/game";
-
-export const pinpointAnswers: GameAnswer[] = """
-    if not ts_content.startswith(prefix):
+    if not ts_content.startswith(TS_PREFIX):
         raise ValueError("未能在TypeScript文件中找到pinpointAnswers数组定义")
-    arr_start = len(prefix)
 
-    # 从 arr_start 位置开始搜索，找到最后一个 ]; 作为数组结束
-    remaining_content = ts_content[arr_start:]
-    array_match = re.search(
-        r"\[\s*.*\s*\](?=\s*;?\s*$)", remaining_content, re.DOTALL
-    )
+    remaining = ts_content[len(TS_PREFIX):]
+    array_match = re.search(r"\[\s*.*\s*\](?=\s*;?\s*$)", remaining, re.DOTALL)
     if not array_match:
         raise ValueError("未找到数组主体")
 
-    array_str = array_match.group(0)
+    postfix = remaining[array_match.end():]
 
-    # 计算 array_match 在整个文件中的结束位置
-    array_match_end_in_full = arr_start + array_match.end()
-    postfix = ts_content[array_match_end_in_full:]
-
-    # Step 3. 将数组内容转为合法json（注意用json5或做预处理）
-    import json5
-
-    array_clean = array_str
-    # Replace backticks with double quotes for clueHint（多行；闭合反引号后可为逗号或 }，即允许是对象最后一个属性）
+    array_clean = array_match.group(0)
+    # Replace backticks with double quotes for clueHint（多行；闭合反引号后可为逗号或 }）
     array_clean = re.sub(
         r"clueHint:\s*`([^`]*)`\s*(?=\s*(?:,|\}))",
         lambda m: f"clueHint: {json.dumps(m.group(1))},",
@@ -407,40 +462,32 @@ export const pinpointAnswers: GameAnswer[] = """
     )
     # Remove trailing commas in objects/arrays
     array_clean = re.sub(r",(\s*[\]\}])", r"\1", array_clean)
-    # 由于部分字符串会内嵌换行和html，采用json5解析
+
     try:
-        answers = json5.loads(array_clean)
+        entries = json5.loads(array_clean)
     except Exception as e:
         raise ValueError(f"解析pinpointAnswers时异常: {e}")
 
-    # Step 4. 判断是否已存在
-    pinpoint_seq = f"#{pinpoint.pinpoint_number}"
-    if any(entry.get("sequence") == pinpoint_seq for entry in answers):
-        ic(f"{pinpoint_seq} 已存在，跳过更新")
-        return False  # 已存在，不更新
+    # 旧版脚本用 json.dumps(ensure_ascii=True) 写入，emoji 在文件里是 \ud83c\udfbc
+    # 这类转义；json5 解析后是孤立代理对，需合并为正常字符
+    def _fix_surrogates(value):
+        if isinstance(value, str):
+            return value.encode("utf-16", "surrogatepass").decode("utf-16")
+        if isinstance(value, list):
+            return [_fix_surrogates(v) for v in value]
+        return value
 
-    # Step 5. 使用 AI 生成 clueHint
-    ic("Generating clue hint with AI...")
-    clue_hint = _generate_clue_hint_with_ai(pinpoint.clues, pinpoint.answer)
-    clue_hint = _sanitize_for_template_literal(clue_hint)
+    for entry in entries:
+        for key in list(entry.keys()):
+            entry[key] = _fix_surrogates(entry[key])
 
-    today_str = date.today().strftime("%Y-%m-%d")
+    return entries, postfix
 
-    # Step 6. 新建entry
-    new_entry = {
-        "sequence": pinpoint_seq,
-        "date": today_str,
-        "answer": pinpoint.answer,
-        "clues": pinpoint.clues,
-        "clueHint": clue_hint,
-    }
 
-    # Step 7. 更新到最前面
-    answers.insert(0, new_entry)
+def _serialize_entries(entries: list[dict]) -> str:
+    """序列化成 TS 数组块（缩进2空格，clueHint 用反引号，保持原格式风格）。"""
 
-    # Step 8. 序列化成js数组块（美化缩进2空格，保留反引号用于 clueHint 字段，保持原格式风格）
     def js_entry_repr(entry):
-        # answer用双引号json转义，clueHint用反引号，其他标准json
         clues_str = ", ".join(json.dumps(c, ensure_ascii=False) for c in entry["clues"])
         return (
             "  {\n"
@@ -452,38 +499,202 @@ export const pinpointAnswers: GameAnswer[] = """
             "  },"
         )
 
-    # 重新生成列表js字符串
-    array_js = "[\n" + "\n".join(js_entry_repr(entry) for entry in answers) + "\n]"
+    return "[\n" + "\n".join(js_entry_repr(entry) for entry in entries) + "\n]"
 
-    new_content = prefix + array_js + postfix
 
+def _write_ts_entries(ts_file_path: str, entries: list[dict], postfix: str):
+    new_content = TS_PREFIX + _serialize_entries(entries) + postfix
     # 清理 surrogate 字符，避免编码错误
     new_content = new_content.encode("utf-8", "ignore").decode("utf-8")
-
     with open(ts_file_path, "w", encoding="utf-8") as f:
         f.write(new_content)
+
+
+def update_pinpoint_ts(
+    pinpoint: TodayPinpoint,
+    ts_file_path: str = "./data/answers/pinpoint.ts",
+):
+    """
+    根据get_today_pinpoint返回的结果，更新pinpoint.ts答案列表。
+    如果pinpoint_number已存在，不更新。
+    否则，将新结果插入为第一条。
+    """
+    from datetime import date
+
+    entries, postfix = _load_ts_entries(ts_file_path)
+
+    pinpoint_seq = f"#{pinpoint.pinpoint_number}"
+    if any(entry.get("sequence") == pinpoint_seq for entry in entries):
+        ic(f"{pinpoint_seq} 已存在，跳过更新")
+        return False  # 已存在，不更新
+
+    ic("Generating clue hint with AI...")
+    clue_hint = _generate_clue_hint_with_ai(pinpoint.clues, pinpoint.answer)
+    clue_hint = _sanitize_for_template_literal(clue_hint)
+
+    new_entry = {
+        "sequence": pinpoint_seq,
+        "date": date.today().strftime("%Y-%m-%d"),
+        "answer": pinpoint.answer,
+        "clues": pinpoint.clues,
+        "clueHint": clue_hint,
+    }
+    entries.insert(0, new_entry)
+    _write_ts_entries(ts_file_path, entries, postfix)
 
     ic(f"已写入 {pinpoint_seq} 到 {ts_file_path}")
     return True
 
 
+# ---------------------------------------------------------------------------
+# 历史数据修复
+# ---------------------------------------------------------------------------
+
+_KIND_LABELS = {
+    "normalize": "格式统一(首尾emoji/标点/弯引号)",
+    "truncate": "截断污染尾巴",
+    "extend": "补全被截断的答案",
+    "differs": "内容不同(历史错录，请人工复核)",
+}
+
+
+def _fetch_detail_page_cached(num: str) -> str | None:
+    """抓取指定期号详情页（带本地缓存），失败返回 None。"""
+    cache_path = os.path.join(REPAIR_CACHE_DIR, f"{num}.html")
+    if os.path.exists(cache_path) and os.path.getsize(cache_path) > 0:
+        with open(cache_path, "r", encoding="utf-8") as f:
+            return f.read()
+
+    url = f"{BASE_URL}/linkedin-pinpoint-answer/pinpoint-{num}/"
+    try:
+        resp = requests.get(
+            url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+            },
+            timeout=15,
+        )
+    except Exception as e:
+        ic(f"#{num} 抓取失败: {e}")
+        return None
+    if resp.status_code != 200:
+        ic(f"#{num} HTTP {resp.status_code}，跳过")
+        return None
+
+    with open(cache_path, "w", encoding="utf-8") as f:
+        f.write(resp.text)
+    time.sleep(REPAIR_FETCH_DELAY)
+    return resp.text
+
+
+def repair_history(
+    ts_file_path: str = "./data/answers/pinpoint.ts",
+    only: set[str] | None = None,
+    apply: bool = False,
+):
+    """
+    审计并修复历史答案数据。
+
+    对每条记录重新抓取详情页并解析答案，与已存值对比后分类处置:
+      - 格式差异/污染尾巴/被截断/内容错录 → 更新为页面解析值
+      - clueHint 中引用的旧答案同步替换
+    默认只预览；apply=True 时才写回文件。抓取失败或解析失败只报告、不改动。
+    """
+    entries, postfix = _load_ts_entries(ts_file_path)
+    os.makedirs(REPAIR_CACHE_DIR, exist_ok=True)
+
+    changes: list[tuple[str, str, str, str]] = []
+    skipped: list[str] = []
+    ok_count = 0
+
+    for entry in entries:
+        seq = str(entry.get("sequence", ""))
+        num = seq.lstrip("#")
+        if only and num not in only:
+            continue
+
+        html = _fetch_detail_page_cached(num)
+        if html is None:
+            skipped.append(f"#{num}: 页面抓取失败")
+            continue
+
+        parsed = _parse_answer(html)
+        if not parsed or len(parsed) > MAX_ANSWER_LEN:
+            skipped.append(f"#{num}: 答案解析失败或异常偏长 ({parsed!r})")
+            continue
+
+        saved = entry.get("answer", "")
+        kind = _classify_answer(saved, parsed)
+        if kind == "ok":
+            ok_count += 1
+            continue
+
+        entry["answer"] = parsed
+        if entry.get("clueHint"):
+            entry["clueHint"] = _repair_hint(entry["clueHint"], saved, parsed)
+        changes.append((num, kind, saved, parsed))
+
+    # 报告
+    print(f"\n审计完成: 共 {len(entries)} 条，一致 {ok_count}，"
+          f"建议修复 {len(changes)}，跳过 {len(skipped)}")
+    for num, kind, saved, parsed in changes:
+        print(f"\n[({_KIND_LABELS[kind]})] #{num}")
+        print(f"  旧: {saved}")
+        print(f"  新: {parsed}")
+    for s in skipped:
+        print(f"[跳过] {s}")
+
+    if not changes:
+        print("无需修复。")
+        return changes
+
+    if apply:
+        _write_ts_entries(ts_file_path, entries, postfix)
+        print(f"\n✅ 已写入 {len(changes)} 条修复到 {ts_file_path}")
+    else:
+        print(f"\n预览模式，未写入文件。确认无误后加 --apply 实际写入。")
+    return changes
+
+
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="同步当日 LinkedIn Pinpoint 答案")
+    parser = argparse.ArgumentParser(description="同步/修复 LinkedIn Pinpoint 答案数据")
     parser.add_argument(
         "--dry-run",
         action="store_true",
-        help="只抓取并解析，打印结果，不写入文件、不调用 AI",
+        help="只抓取并解析当日数据，打印结果，不写入文件、不调用 AI",
+    )
+    parser.add_argument(
+        "--repair",
+        action="store_true",
+        help="审计历史数据并预览修复（默认不写文件，加 --apply 才写入）",
+    )
+    parser.add_argument(
+        "--apply",
+        action="store_true",
+        help="与 --repair 配合使用: 实际写入修复结果",
+    )
+    parser.add_argument(
+        "--only",
+        help="与 --repair 配合使用: 只处理指定期号，逗号分隔，如 741,724",
     )
     args = parser.parse_args()
 
-    data = get_today_pinpoint()
-    print(f"期号: #{data.pinpoint_number}")
-    print(f"详情: {data.detail_url}")
-    print(f"线索: {data.clues}")
-    print(f"答案: {data.answer}")
-
-    if args.dry_run:
-        print("[dry-run] 未写入文件")
+    if args.repair:
+        only_set = (
+            {x.strip().lstrip("#") for x in args.only.split(",") if x.strip()}
+            if args.only
+            else None
+        )
+        repair_history(only=only_set, apply=args.apply)
     else:
-        updated = update_pinpoint_ts(data)
-        print("更新完成" if updated else "无新增更新")
+        data = get_today_pinpoint()
+        print(f"期号: #{data.pinpoint_number}")
+        print(f"详情: {data.detail_url}")
+        print(f"线索: {data.clues}")
+        print(f"答案: {data.answer}")
+
+        if args.dry_run:
+            print("[dry-run] 未写入文件")
+        else:
+            updated = update_pinpoint_ts(data)
+            print("更新完成" if updated else "无新增更新")
