@@ -7,35 +7,35 @@ export const pinpointAnswers: GameAnswer[] = [
     answer: "Things that have spots",
     clues: ["The Sun", "Dominoes", "Leopards", "Dalmations", "Ladybirds / ladybugs (🐞)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>The Sun:</strong> The Sun relates to the answer "Things that have spots Once that category landed, the rest of the board felt almost generous. Dalmations are the poster dogs for black-on-white spotting, and Ladybirds / ladybugs (🐞) seal it with those tiny wing dots. Classic Pinpoint move: start weird, finish obvious. 🧩".<br>
-<strong>Dominoes:</strong> Dominoes relates to the answer "Things that have spots Once that category landed, the rest of the board felt almost generous. Dalmations are the poster dogs for black-on-white spotting, and Ladybirds / ladybugs (🐞) seal it with those tiny wing dots. Classic Pinpoint move: start weird, finish obvious. 🧩".<br>
-<strong>Leopards:</strong> Leopards relates to the answer "Things that have spots Once that category landed, the rest of the board felt almost generous. Dalmations are the poster dogs for black-on-white spotting, and Ladybirds / ladybugs (🐞) seal it with those tiny wing dots. Classic Pinpoint move: start weird, finish obvious. 🧩".<br>
-<strong>Dalmations:</strong> Dalmations relates to the answer "Things that have spots Once that category landed, the rest of the board felt almost generous. Dalmations are the poster dogs for black-on-white spotting, and Ladybirds / ladybugs (🐞) seal it with those tiny wing dots. Classic Pinpoint move: start weird, finish obvious. 🧩".<br>
-<strong>Ladybirds / ladybugs (🐞):</strong> Ladybirds / ladybugs (🐞) relates to the answer "Things that have spots Once that category landed, the rest of the board felt almost generous. Dalmations are the poster dogs for black-on-white spotting, and Ladybirds / ladybugs (🐞) seal it with those tiny wing dots. Classic Pinpoint move: start weird, finish obvious. 🧩".</p>`,
+<strong>The Sun:</strong> The Sun relates to the answer "Things that have spots".<br>
+<strong>Dominoes:</strong> Dominoes relates to the answer "Things that have spots".<br>
+<strong>Leopards:</strong> Leopards relates to the answer "Things that have spots".<br>
+<strong>Dalmations:</strong> Dalmations relates to the answer "Things that have spots".<br>
+<strong>Ladybirds / ladybugs (🐞):</strong> Ladybirds / ladybugs (🐞) relates to the answer "Things that have spots".</p>`,
   },
   {
     sequence: "#817",
     date: "2026-07-27",
-    answer: "Parts of a brass instrument (like a trumpet) \ud83c\udfbc",
+    answer: "Parts of a brass instrument (like a trumpet)",
     clues: ["Bell", "Valves", "Tuning slide", "Mouthpiece", "Metal tubing (muted gold/yellow)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Bell:</strong> Bell relates to the answer "Parts of a brass instrument (like a trumpet) ".<br>
-<strong>Valves:</strong> Valves relates to the answer "Parts of a brass instrument (like a trumpet) ".<br>
-<strong>Tuning slide:</strong> Tuning slide relates to the answer "Parts of a brass instrument (like a trumpet) ".<br>
-<strong>Mouthpiece:</strong> Mouthpiece relates to the answer "Parts of a brass instrument (like a trumpet) ".<br>
-<strong>Metal tubing (muted gold/yellow):</strong> Metal tubing (muted gold/yellow) relates to the answer "Parts of a brass instrument (like a trumpet) ".</p>`,
+<strong>Bell:</strong> Bell relates to the answer "Parts of a brass instrument (like a trumpet)".<br>
+<strong>Valves:</strong> Valves relates to the answer "Parts of a brass instrument (like a trumpet)".<br>
+<strong>Tuning slide:</strong> Tuning slide relates to the answer "Parts of a brass instrument (like a trumpet)".<br>
+<strong>Mouthpiece:</strong> Mouthpiece relates to the answer "Parts of a brass instrument (like a trumpet)".<br>
+<strong>Metal tubing (muted gold/yellow):</strong> Metal tubing (muted gold/yellow) relates to the answer "Parts of a brass instrument (like a trumpet)".</p>`,
   },
   {
     sequence: "#796",
     date: "2026-07-05",
-    answer: "Different",
+    answer: "Different meanings of \"clip\"",
     clues: ["A rapid pace", "Hit at an angle", "Small metal fastener for paper", "Cut with scissors", "Short segment of a film"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>A rapid pace:</strong> A rapid pace relates to the answer "Different".<br>
-<strong>Hit at an angle:</strong> Hit at an angle relates to the answer "Different".<br>
-<strong>Small metal fastener for paper:</strong> Small metal fastener for paper relates to the answer "Different".<br>
-<strong>Cut with scissors:</strong> Cut with scissors relates to the answer "Different".<br>
-<strong>Short segment of a film:</strong> Short segment of a film relates to the answer "Different".</p>`,
+<strong>A rapid pace:</strong> A rapid pace relates to the answer "Different meanings of "clip"".<br>
+<strong>Hit at an angle:</strong> Hit at an angle relates to the answer "Different meanings of "clip"".<br>
+<strong>Small metal fastener for paper:</strong> Small metal fastener for paper relates to the answer "Different meanings of "clip"".<br>
+<strong>Cut with scissors:</strong> Cut with scissors relates to the answer "Different meanings of "clip"".<br>
+<strong>Short segment of a film:</strong> Short segment of a film relates to the answer "Different meanings of "clip"".</p>`,
   },
   {
     sequence: "#783",
@@ -76,7 +76,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#779",
     date: "2026-06-18",
-    answer: "Things that are the tallest of their kind \ud83d\udcda",
+    answer: "Things that are the tallest of their kind",
     clues: ["Angel Falls (in Venezuela)", "Hyperion (redwood tree in US)", "Giraffe (among all land animals)", "Mauna Kea (base to peak)", "Burj Khalifa (Dubai skyscraper)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> Angel Falls holds the title of the world’s tallest uninterrupted waterfall, plummeting over 3,200 feet into the Venezuelan rainforest.<br>
@@ -115,7 +115,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#776",
     date: "2026-06-15",
-    answer: "Names of chemical elements \ud83e\uddfe",
+    answer: "Names of chemical elements",
     clues: ["Lead", "Iron", "Silicon", "Carbon", "Oxygen"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> Lead is the standard name for Pb (atomic number 82), a dense metal historically vital to plumbing, batteries, and radiation shielding.<br>
@@ -128,14 +128,14 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#775",
     date: "2026-06-14",
-    answer: "Different",
+    answer: "Different meanings of \"run\"",
     clues: ["Streak", "Operate", "Campaign (for office)", "Scoring unit (cricket+baseball)", "Move swiftly on foot"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Streak:</strong> Streak relates to the answer "Different".<br>
-<strong>Operate:</strong> Operate relates to the answer "Different".<br>
-<strong>Campaign (for office):</strong> Campaign (for office) relates to the answer "Different".<br>
-<strong>Scoring unit (cricket+baseball):</strong> Scoring unit (cricket+baseball) relates to the answer "Different".<br>
-<strong>Move swiftly on foot:</strong> Move swiftly on foot relates to the answer "Different".</p>`,
+<strong>Streak:</strong> Streak relates to the answer "Different meanings of "run"".<br>
+<strong>Operate:</strong> Operate relates to the answer "Different meanings of "run"".<br>
+<strong>Campaign (for office):</strong> Campaign (for office) relates to the answer "Different meanings of "run"".<br>
+<strong>Scoring unit (cricket+baseball):</strong> Scoring unit (cricket+baseball) relates to the answer "Different meanings of "run"".<br>
+<strong>Move swiftly on foot:</strong> Move swiftly on foot relates to the answer "Different meanings of "run"".</p>`,
   },
   {
     sequence: "#774",
@@ -165,7 +165,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#772",
     date: "2026-06-11",
-    answer: "Things found in a wallet or purse \ud83e\uddfe",
+    answer: "Things found in a wallet or purse",
     clues: ["Photos", "Receipts", "Cash", "Emergency contact info", "Identification card"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> Small photographs are often tucked into card sleeves or behind IDs as sentimental keepsakes, turning a practical accessory into a portable memory bank.<br>
@@ -202,7 +202,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#769",
     date: "2026-06-08",
-    answer: "Bits in a byte, Planets in our solar system, Legs on a spider, Corners of a cube, Sides of (most) stop signs",
+    answer: "Things that come in eights (including games on LinkedIn after tomorrow's debut!)",
     clues: ["Bits in a byte", "Planets in our solar system", "Legs on a spider", "Corners of a cube", "Sides of (most) stop signs"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> Each standard byte in computing is composed of exactly eight binary digits (bits), forming a foundational unit for digital data.<br>
@@ -214,7 +214,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#768",
     date: "2026-06-07",
-    answer: "Words that come before \"class\" \ud83d\udcda",
+    answer: "Words that come before \"class\"",
     clues: ["First", "Weight", "Fitness", "Business", "World- (the very best)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> "First" combines with "class" to form "first-class," a widely used term denoting premium quality or top-tier service.<br>
@@ -239,7 +239,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#766",
     date: "2026-06-05",
-    answer: "Things associated with Germany \ud83c\udde9\ud83c\uddea \ud83e\udde9",
+    answer: "Things associated with Germany",
     clues: ["Pretzels", "The Black Forest", "The Autobahn", "Oktoberfest", "The Berlin Wall"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> Originally rooted in Southern German baking traditions, these twisted bread snacks have become an iconic symbol of Bavarian cuisine and German culinary heritage worldwide.<br>
@@ -264,7 +264,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#764",
     date: "2026-06-03",
-    answer: "\u2014 Desserts (all with many layers) \ud83c\udf7d\ufe0f",
+    answer: "Desserts (all with many layers)",
     clues: ["Trifle", "Parfait", "Tiramisu", "Baklava", "Seven-layer cake"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> Trifle is famously assembled in a clear glass dish with distinct, alternating strata of sponge cake, fruit, custard, and cream, turning its internal structure into a visual centerpiece.<br>
@@ -290,7 +290,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#762",
     date: "2026-06-01",
-    answer: "Names of insects \ud83d\udcdd",
+    answer: "Names of insects",
     clues: ["Fly", "Cricket", "June beetle", "Praying mantis", "Lightning bug"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> The fly is a quintessential example of a flying insect, representing the highly diverse and globally widespread order Diptera.<br>
@@ -303,7 +303,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#761",
     date: "2026-05-31",
-    answer: "Places to find arrows \ud83e\udde9",
+    answer: "Places to find arrows",
     clues: ["Assembly diagrams", "Compass roses", "Archery classes", "One-way street signs", "Bottom right of your keyboard"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>1:</strong> Instructional manuals and product guides consistently use directional arrows to visually demonstrate part orientation and assembly steps.<br>
@@ -328,7 +328,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#759",
     date: "2026-05-29",
-    answer: "Things that grow on trees \ud83c\udf32",
+    answer: "Things that grow on trees",
     clues: ["Apples", "Chestnuts", "Moss", "Bark", "Pine needles"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> Apples develop directly from the blossoms on apple tree branches, making them one of the most recognizable fruits cultivated on trees.<br>
@@ -379,7 +379,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#755",
     date: "2026-05-25",
-    answer: "Names of mountain ranges \ud83d\uddfa\ufe0f",
+    answer: "Names of mountain ranges",
     clues: ["Dolomites", "Rockies", "Andes", "Alps", "Himalayas"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> The Dolomites are a striking limestone mountain range in northeastern Italy, celebrated for their jagged peaks and geological uniqueness.<br>
@@ -391,7 +391,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#754",
     date: "2026-05-24",
-    answer: "Things shaped like discs (flat and circular objects) \ud83d\udcda",
+    answer: "Things shaped like discs (flat and circular objects)",
     clues: ["Plates", "Coins", "Frisbees", "Manhole covers", "CDs and DVDs (it's the last D)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> Plates are everyday examples of flat, circular objects designed with a smooth, disc-like surface for serving food. Their consistent rounded geometry makes them a perfect real-world match for the category.<br>
@@ -403,7 +403,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#753",
     date: "2026-05-23",
-    answer: "Moons in our solar system \ud83c\udf15",
+    answer: "Moons in our solar system",
     clues: ["Titan", "Triton", "Phobos", "Io", "Ganymede (seen by Galileo)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> Titan is Saturn’s largest natural satellite, distinguished by its dense atmosphere and liquid methane lakes, making it one of the most iconic moons in our solar system.<br>
@@ -416,7 +416,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#752",
     date: "2026-05-22",
-    answer: "Words that come before \"control\" \ud83d\udcda",
+    answer: "Words that come before \"control\"",
     clues: ["Motor", "Damage", "Quality", "Remote", "Air traffic"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> "Motor control" refers to the biological or mechanical systems that regulate muscle movement and machinery functions, forming a precise scientific and engineering term.<br>
@@ -428,7 +428,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#751",
     date: "2026-05-21",
-    answer: "Types of owl \ud83e\udde9",
+    answer: "Types of owl",
     clues: ["Barn", "Snowy", "Screech", "Great", "Horned Hoot (named like its sound)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> "Barn" is the defining prefix for the Barn Owl, a widespread species historically known for nesting in farm outbuildings. <br>
@@ -454,7 +454,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#749",
     date: "2026-05-19",
-    answer: "Types of printer \ud83d\udccb",
+    answer: "Types of printer",
     clues: ["Thermal", "Laser", "3D", "Dot matrix", "Inkjet"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Thermal:</strong> Thermal printers generate images using heated elements on temperature-sensitive paper, carving out a specialized niche for receipts and shipping labels.<br>
@@ -467,7 +467,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#748",
     date: "2026-05-18",
-    answer: "Indian foods \ud83c\udf7d\ufe0f",
+    answer: "Indian foods",
     clues: ["Butter chicken", "Vindaloo", "Palak paneer", "Naan", "Biryani"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> Butter chicken is a globally renowned North Indian curry that perfectly captures the rich, tomato-based gravies and warming spice blends central to modern Indian cuisine.<br>
@@ -480,7 +480,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#747",
     date: "2026-05-17",
-    answer: "Varieties of grape \ud83c\udf47",
+    answer: "Varieties of grape",
     clues: ["Kyoho", "Red globe", "Thompson Seedless (Sultana)", "Chardonnay", "Cabernet Sauvignon"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> Kyoho is a large, dark purple cultivar widely grown for fresh consumption, showcasing the diverse range of table grapes developed for specific climates and consumer preferences.<br>
@@ -492,7 +492,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#746",
     date: "2026-05-16",
-    answer: "Words that come before \"cut\" \ud83d\udcda",
+    answer: "Words that come before \"cut\"",
     clues: ["Clear", "Short", "Tax", "Director's", "Hair"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> When combined with "cut," "clear" forms "clearcut," a term used in forestry for harvesting all trees in an area or in digital editing for completely removing unwanted material.<br>
@@ -517,7 +517,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#744",
     date: "2026-05-14",
-    answer: "Legislative bodies \ud83d\udcda",
+    answer: "Legislative bodies",
     clues: ["Diet", "Assembly", "Council", "Congress", "Parliament"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> Originating from the Latin word for a scheduled meeting, “Diet” is the official title for the national legislature in several countries, most notably Japan.<br>
@@ -530,7 +530,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#743",
     date: "2026-05-13",
-    answer: "Operas \ud83c\udfbc",
+    answer: "Operas",
     clues: ["The Magic Flute", "Carmen", "Porgy and Bess", "Madame Butterfly", "The Barber of Seville"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> Wolfgang Amadeus Mozart’s 1791 masterpiece seamlessly blends spoken dialogue with sweeping melodies, making it a foundational staple of the operatic repertoire.<br>
@@ -542,38 +542,38 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#742",
     date: "2026-05-12",
-    answer: "Things found in a chemistry laboratory \ud83e\uddfe",
+    answer: "Things found in a chemistry laboratory",
     clues: ["Scale", "Beaker", "pH meter", "Test tube", "Bunsen burner"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Scale:</strong> Scale relates to the answer "Things found in a chemistry laboratory ".<br>
-<strong>Beaker:</strong> Beaker relates to the answer "Things found in a chemistry laboratory ".<br>
-<strong>pH meter:</strong> pH meter relates to the answer "Things found in a chemistry laboratory ".<br>
-<strong>Test tube:</strong> Test tube relates to the answer "Things found in a chemistry laboratory ".<br>
-<strong>Bunsen burner:</strong> Bunsen burner relates to the answer "Things found in a chemistry laboratory ".</p>`,
+<strong>Scale:</strong> Scale relates to the answer "Things found in a chemistry laboratory".<br>
+<strong>Beaker:</strong> Beaker relates to the answer "Things found in a chemistry laboratory".<br>
+<strong>pH meter:</strong> pH meter relates to the answer "Things found in a chemistry laboratory".<br>
+<strong>Test tube:</strong> Test tube relates to the answer "Things found in a chemistry laboratory".<br>
+<strong>Bunsen burner:</strong> Bunsen burner relates to the answer "Things found in a chemistry laboratory".</p>`,
   },
   {
     sequence: "#741",
     date: "2026-05-11",
-    answer: "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. \ud83e\uddf8",
+    answer: "Toy companies",
     clues: ["Steiff", "Lego", "Hasbro", "Bandai Namco", "Mattel"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Steiff:</strong> Steiff relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. ".<br>
-<strong>Lego:</strong> Lego relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. ".<br>
-<strong>Hasbro:</strong> Hasbro relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. ".<br>
-<strong>Bandai Namco:</strong> Bandai Namco relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. ".<br>
-<strong>Mattel:</strong> Mattel relates to the answer "Toy companies Sometimes Pinpoint rewards overthinking. Sometimes it rewards trusting your gut. This was the latter. ".</p>`,
+<strong>Steiff:</strong> Steiff relates to the answer "Toy companies".<br>
+<strong>Lego:</strong> Lego relates to the answer "Toy companies".<br>
+<strong>Hasbro:</strong> Hasbro relates to the answer "Toy companies".<br>
+<strong>Bandai Namco:</strong> Bandai Namco relates to the answer "Toy companies".<br>
+<strong>Mattel:</strong> Mattel relates to the answer "Toy companies".</p>`,
   },
   {
     sequence: "#740",
     date: "2026-05-10",
-    answer: "Parts of a pen \ud83d\udcdd",
+    answer: "Parts of a pen",
     clues: ["Barrel", "Spring", "Tip", "Cap", "Ink chamber"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Barrel:</strong> Barrel relates to the answer "Parts of a pen ".<br>
-<strong>Spring:</strong> Spring relates to the answer "Parts of a pen ".<br>
-<strong>Tip:</strong> Tip relates to the answer "Parts of a pen ".<br>
-<strong>Cap:</strong> Cap relates to the answer "Parts of a pen ".<br>
-<strong>Ink chamber:</strong> Ink chamber relates to the answer "Parts of a pen ".</p>`,
+<strong>Barrel:</strong> Barrel relates to the answer "Parts of a pen".<br>
+<strong>Spring:</strong> Spring relates to the answer "Parts of a pen".<br>
+<strong>Tip:</strong> Tip relates to the answer "Parts of a pen".<br>
+<strong>Cap:</strong> Cap relates to the answer "Parts of a pen".<br>
+<strong>Ink chamber:</strong> Ink chamber relates to the answer "Parts of a pen".</p>`,
   },
   {
     sequence: "#739",
@@ -602,38 +602,38 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#737",
     date: "2026-05-07",
-    answer: "Jobs on a film set \ud83c\udfac",
+    answer: "Jobs on a film set",
     clues: ["Grip", "Best Boy", "Costumer", "Director", "Actor"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Grip:</strong> Grip relates to the answer "Jobs on a film set ".<br>
-<strong>Best Boy:</strong> Best Boy relates to the answer "Jobs on a film set ".<br>
-<strong>Costumer:</strong> Costumer relates to the answer "Jobs on a film set ".<br>
-<strong>Director:</strong> Director relates to the answer "Jobs on a film set ".<br>
-<strong>Actor:</strong> Actor relates to the answer "Jobs on a film set ".</p>`,
+<strong>Grip:</strong> Grip relates to the answer "Jobs on a film set".<br>
+<strong>Best Boy:</strong> Best Boy relates to the answer "Jobs on a film set".<br>
+<strong>Costumer:</strong> Costumer relates to the answer "Jobs on a film set".<br>
+<strong>Director:</strong> Director relates to the answer "Jobs on a film set".<br>
+<strong>Actor:</strong> Actor relates to the answer "Jobs on a film set".</p>`,
   },
   {
     sequence: "#736",
     date: "2026-05-06",
-    answer: "Capital cities \ud83d\udccd",
+    answer: "Capital cities",
     clues: ["Hamilton", "Sofia", "Lima", "Athens", "Mexico City"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Hamilton:</strong> Hamilton relates to the answer "Capital cities ".<br>
-<strong>Sofia:</strong> Sofia relates to the answer "Capital cities ".<br>
-<strong>Lima:</strong> Lima relates to the answer "Capital cities ".<br>
-<strong>Athens:</strong> Athens relates to the answer "Capital cities ".<br>
-<strong>Mexico City:</strong> Mexico City relates to the answer "Capital cities ".</p>`,
+<strong>Hamilton:</strong> Hamilton relates to the answer "Capital cities".<br>
+<strong>Sofia:</strong> Sofia relates to the answer "Capital cities".<br>
+<strong>Lima:</strong> Lima relates to the answer "Capital cities".<br>
+<strong>Athens:</strong> Athens relates to the answer "Capital cities".<br>
+<strong>Mexico City:</strong> Mexico City relates to the answer "Capital cities".</p>`,
   },
   {
     sequence: "#735",
     date: "2026-05-05",
-    answer: "Types of cord \ud83d\udcda",
+    answer: "Types of cord",
     clues: ["Vocal", "Spinal", "Extension", "Rip", "Bungee"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Vocal:</strong> Vocal relates to the answer "Types of cord ".<br>
-<strong>Spinal:</strong> Spinal relates to the answer "Types of cord ".<br>
-<strong>Extension:</strong> Extension relates to the answer "Types of cord ".<br>
-<strong>Rip:</strong> Rip relates to the answer "Types of cord ".<br>
-<strong>Bungee:</strong> Bungee relates to the answer "Types of cord ".</p>`,
+<strong>Vocal:</strong> Vocal relates to the answer "Types of cord".<br>
+<strong>Spinal:</strong> Spinal relates to the answer "Types of cord".<br>
+<strong>Extension:</strong> Extension relates to the answer "Types of cord".<br>
+<strong>Rip:</strong> Rip relates to the answer "Types of cord".<br>
+<strong>Bungee:</strong> Bungee relates to the answer "Types of cord".</p>`,
   },
   {
     sequence: "#730",
@@ -650,7 +650,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#729",
     date: "2026-04-29",
-    answer: "Camera makers (past and present) \ud83d\udcf8",
+    answer: "Camera makers (past and present)",
     clues: ["Olympus", "Fuji", "Canon", "Polaroid", "GoPro"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> This Japanese brand was legendary for its OM-system film cameras and durable Tough digital compacts before exiting the camera market.<br>
@@ -674,7 +674,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#727",
     date: "2026-04-27",
-    answer: "Music festivals \ud83c\udfa4",
+    answer: "Music festivals",
     clues: ["Tomorrowland", "Lollapalooza", "Woodstock", "Rock in Rio", "Coachella"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> Tomorrowland is a globally renowned event specifically dedicated to electronic dance music enthusiasts.<br>
@@ -699,50 +699,50 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#724",
     date: "2026-04-24",
-    answer: "Words that come after \"hand\" And just to seal it, the final clue \u2014 Kerchief \u2014 confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. \ud83d\udcda",
+    answer: "Words that come after \"hand\"",
     clues: ["Stand", "Shake", "Made", "Writing", "Kerchief"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Stand:</strong> Stand relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".<br>
-<strong>Shake:</strong> Shake relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".<br>
-<strong>Made:</strong> Made relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".<br>
-<strong>Writing:</strong> Writing relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".<br>
-<strong>Kerchief:</strong> Kerchief relates to the answer "Words that come after "hand" And just to seal it, the final clue — Kerchief — confirmed it perfectly: Handkerchief. Chef's kiss. Five clean compounds, all starting with the same word. And I almost missed it because I was stuck staring at suffix patterns. Classic Pinpoint misdirection. ".</p>`,
+<strong>Stand:</strong> Stand relates to the answer "Words that come after "hand"".<br>
+<strong>Shake:</strong> Shake relates to the answer "Words that come after "hand"".<br>
+<strong>Made:</strong> Made relates to the answer "Words that come after "hand"".<br>
+<strong>Writing:</strong> Writing relates to the answer "Words that come after "hand"".<br>
+<strong>Kerchief:</strong> Kerchief relates to the answer "Words that come after "hand"".</p>`,
   },
   {
     sequence: "#722",
     date: "2026-04-22",
-    answer: "Types of sock \ud83e\udde6",
+    answer: "Types of sock",
     clues: ["Tube", "Dress", "Crew", "Ankle", "Knee-high"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Tube:</strong> Tube relates to the answer "Types of sock ".<br>
-<strong>Dress:</strong> Dress relates to the answer "Types of sock ".<br>
-<strong>Crew:</strong> Crew relates to the answer "Types of sock ".<br>
-<strong>Ankle:</strong> Ankle relates to the answer "Types of sock ".<br>
-<strong>Knee-high:</strong> Knee-high relates to the answer "Types of sock ".</p>`,
+<strong>Tube:</strong> Tube relates to the answer "Types of sock".<br>
+<strong>Dress:</strong> Dress relates to the answer "Types of sock".<br>
+<strong>Crew:</strong> Crew relates to the answer "Types of sock".<br>
+<strong>Ankle:</strong> Ankle relates to the answer "Types of sock".<br>
+<strong>Knee-high:</strong> Knee-high relates to the answer "Types of sock".</p>`,
   },
   {
     sequence: "#721",
     date: "2026-04-21",
-    answer: "\u2014 Things seen at a beach",
+    answer: "Things seen at a beach",
     clues: ["Umbrellas", "Volleyballs", "Shells", "Lifeguards", "Sandcastles"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Umbrellas:</strong> Umbrellas relates to the answer "— Things seen at a beach".<br>
-<strong>Volleyballs:</strong> Volleyballs relates to the answer "— Things seen at a beach".<br>
-<strong>Shells:</strong> Shells relates to the answer "— Things seen at a beach".<br>
-<strong>Lifeguards:</strong> Lifeguards relates to the answer "— Things seen at a beach".<br>
-<strong>Sandcastles:</strong> Sandcastles relates to the answer "— Things seen at a beach".</p>`,
+<strong>Umbrellas:</strong> Umbrellas relates to the answer "Things seen at a beach".<br>
+<strong>Volleyballs:</strong> Volleyballs relates to the answer "Things seen at a beach".<br>
+<strong>Shells:</strong> Shells relates to the answer "Things seen at a beach".<br>
+<strong>Lifeguards:</strong> Lifeguards relates to the answer "Things seen at a beach".<br>
+<strong>Sandcastles:</strong> Sandcastles relates to the answer "Things seen at a beach".</p>`,
   },
   {
     sequence: "#720",
     date: "2026-04-20",
-    answer: "Gardening tools \ud83c\udf3c",
+    answer: "Gardening tools",
     clues: ["Spade", "Rake", "Trowel", "Hoe", "Wheelbarrow (to move soil)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Spade:</strong> Spade relates to the answer "Gardening tools ".<br>
-<strong>Rake:</strong> Rake relates to the answer "Gardening tools ".<br>
-<strong>Trowel:</strong> Trowel relates to the answer "Gardening tools ".<br>
-<strong>Hoe:</strong> Hoe relates to the answer "Gardening tools ".<br>
-<strong>Wheelbarrow (to move soil):</strong> Wheelbarrow (to move soil) relates to the answer "Gardening tools ".</p>`,
+<strong>Spade:</strong> Spade relates to the answer "Gardening tools".<br>
+<strong>Rake:</strong> Rake relates to the answer "Gardening tools".<br>
+<strong>Trowel:</strong> Trowel relates to the answer "Gardening tools".<br>
+<strong>Hoe:</strong> Hoe relates to the answer "Gardening tools".<br>
+<strong>Wheelbarrow (to move soil):</strong> Wheelbarrow (to move soil) relates to the answer "Gardening tools".</p>`,
   },
   {
     sequence: "#719",
@@ -759,50 +759,50 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#718",
     date: "2026-04-18",
-    answer: "Names of universities \ud83d\udcda",
+    answer: "Names of universities",
     clues: ["Brown", "Rice", "Duke", "Sorbonne", "Oxford"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Brown:</strong> Brown relates to the answer "Names of universities ".<br>
-<strong>Rice:</strong> Rice relates to the answer "Names of universities ".<br>
-<strong>Duke:</strong> Duke relates to the answer "Names of universities ".<br>
-<strong>Sorbonne:</strong> Sorbonne relates to the answer "Names of universities ".<br>
-<strong>Oxford:</strong> Oxford relates to the answer "Names of universities ".</p>`,
+<strong>Brown:</strong> Brown relates to the answer "Names of universities".<br>
+<strong>Rice:</strong> Rice relates to the answer "Names of universities".<br>
+<strong>Duke:</strong> Duke relates to the answer "Names of universities".<br>
+<strong>Sorbonne:</strong> Sorbonne relates to the answer "Names of universities".<br>
+<strong>Oxford:</strong> Oxford relates to the answer "Names of universities".</p>`,
   },
   {
     sequence: "#717",
     date: "2026-04-17",
-    answer: "Words that come before \"aid\" \ud83d\udcda",
+    answer: "Words that come before \"aid\"",
     clues: ["First", "Foreign", "Financial", "Hearing", "Band"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>First:</strong> First relates to the answer "Words that come before "aid" ".<br>
-<strong>Foreign:</strong> Foreign relates to the answer "Words that come before "aid" ".<br>
-<strong>Financial:</strong> Financial relates to the answer "Words that come before "aid" ".<br>
-<strong>Hearing:</strong> Hearing relates to the answer "Words that come before "aid" ".<br>
-<strong>Band:</strong> Band relates to the answer "Words that come before "aid" ".</p>`,
+<strong>First:</strong> First relates to the answer "Words that come before "aid"".<br>
+<strong>Foreign:</strong> Foreign relates to the answer "Words that come before "aid"".<br>
+<strong>Financial:</strong> Financial relates to the answer "Words that come before "aid"".<br>
+<strong>Hearing:</strong> Hearing relates to the answer "Words that come before "aid"".<br>
+<strong>Band:</strong> Band relates to the answer "Words that come before "aid"".</p>`,
   },
   {
     sequence: "#716",
     date: "2026-04-16",
-    answer: "Potato dishes \ud83e\udde9",
+    answer: "Potato dishes",
     clues: ["Dum aloo", "Gnocchi", "Hash browns", "French fries", "Tater tots"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Dum aloo:</strong> Dum aloo relates to the answer "Potato dishes ".<br>
-<strong>Gnocchi:</strong> Gnocchi relates to the answer "Potato dishes ".<br>
-<strong>Hash browns:</strong> Hash browns relates to the answer "Potato dishes ".<br>
-<strong>French fries:</strong> French fries relates to the answer "Potato dishes ".<br>
-<strong>Tater tots:</strong> Tater tots relates to the answer "Potato dishes ".</p>`,
+<strong>Dum aloo:</strong> Dum aloo relates to the answer "Potato dishes".<br>
+<strong>Gnocchi:</strong> Gnocchi relates to the answer "Potato dishes".<br>
+<strong>Hash browns:</strong> Hash browns relates to the answer "Potato dishes".<br>
+<strong>French fries:</strong> French fries relates to the answer "Potato dishes".<br>
+<strong>Tater tots:</strong> Tater tots relates to the answer "Potato dishes".</p>`,
   },
   {
     sequence: "#715",
     date: "2026-04-15",
-    answer: "Types of paint \ud83e\udde9",
+    answer: "Types of paint",
     clues: ["Finger", "Oil", "Spray", "Latex", "Acrylic"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Finger:</strong> Finger relates to the answer "Types of paint ".<br>
-<strong>Oil:</strong> Oil relates to the answer "Types of paint ".<br>
-<strong>Spray:</strong> Spray relates to the answer "Types of paint ".<br>
-<strong>Latex:</strong> Latex relates to the answer "Types of paint ".<br>
-<strong>Acrylic:</strong> Acrylic relates to the answer "Types of paint ".</p>`,
+<strong>Finger:</strong> Finger relates to the answer "Types of paint".<br>
+<strong>Oil:</strong> Oil relates to the answer "Types of paint".<br>
+<strong>Spray:</strong> Spray relates to the answer "Types of paint".<br>
+<strong>Latex:</strong> Latex relates to the answer "Types of paint".<br>
+<strong>Acrylic:</strong> Acrylic relates to the answer "Types of paint".</p>`,
   },
   {
     sequence: "#714",
@@ -819,31 +819,31 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#713",
     date: "2026-04-14",
-    answer: "\ud83d\udd34 Things that are red",
+    answer: "Things that are red",
     clues: ["Cardinals", "Stoplights", "Blood", "Raspberries", "Rubies"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Cardinals:</strong> Cardinals relates to the answer " Things that are red".<br>
-<strong>Stoplights:</strong> Stoplights relates to the answer " Things that are red".<br>
-<strong>Blood:</strong> Blood relates to the answer " Things that are red".<br>
-<strong>Raspberries:</strong> Raspberries relates to the answer " Things that are red".<br>
-<strong>Rubies:</strong> Rubies relates to the answer " Things that are red".</p>`,
+<strong>Cardinals:</strong> Cardinals relates to the answer "Things that are red".<br>
+<strong>Stoplights:</strong> Stoplights relates to the answer "Things that are red".<br>
+<strong>Blood:</strong> Blood relates to the answer "Things that are red".<br>
+<strong>Raspberries:</strong> Raspberries relates to the answer "Things that are red".<br>
+<strong>Rubies:</strong> Rubies relates to the answer "Things that are red".</p>`,
   },
   {
     sequence: "#711",
     date: "2026-04-11",
-    answer: "Constructed Languages \ud83d\udcda",
+    answer: "Constructed Languages",
     clues: ["Na'vi", "Klingon", "Elvish", "Esperanto", "Interlingua"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Na'vi:</strong> Na'vi relates to the answer "Constructed Languages ".<br>
-<strong>Klingon:</strong> Klingon relates to the answer "Constructed Languages ".<br>
-<strong>Elvish:</strong> Elvish relates to the answer "Constructed Languages ".<br>
-<strong>Esperanto:</strong> Esperanto relates to the answer "Constructed Languages ".<br>
-<strong>Interlingua:</strong> Interlingua relates to the answer "Constructed Languages ".</p>`,
+<strong>Na'vi:</strong> Na'vi relates to the answer "Constructed Languages".<br>
+<strong>Klingon:</strong> Klingon relates to the answer "Constructed Languages".<br>
+<strong>Elvish:</strong> Elvish relates to the answer "Constructed Languages".<br>
+<strong>Esperanto:</strong> Esperanto relates to the answer "Constructed Languages".<br>
+<strong>Interlingua:</strong> Interlingua relates to the answer "Constructed Languages".</p>`,
   },
   {
     sequence: "#710",
     date: "2026-04-10",
-    answer: "Words that come before \u201cpatch\u201d",
+    answer: "Words that come before “patch”",
     clues: ["Software", "Eye", "Rough", "Vegetable", "Iron-on"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Software:</strong> Software relates to the answer "Words that come before “patch”".<br>
@@ -855,7 +855,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#709",
     date: "2026-04-09",
-    answer: "Famous works by Leonardo da Vinci \ud83d\uddbc\ufe0f",
+    answer: "Famous works by Leonardo da Vinci",
     clues: ["The Last Supper", "Lady with an Ermine", "Virgin of the Rocks", "Vitruvian Man", "Mona Lisa"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>The Last Supper:</strong> The Last Supper relates to the answer "Famous works by Leonardo da Vinci ️".<br>
@@ -867,14 +867,14 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#707",
     date: "2026-04-07",
-    answer: "Major cities in Brazil \ud83d\udcda",
+    answer: "Major cities in Brazil",
     clues: ["Salvador", "Manaus", "São Paulo", "Rio de Janeiro", "Brasília"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Salvador:</strong> Salvador relates to the answer "Major cities in Brazil ".<br>
-<strong>Manaus:</strong> Manaus relates to the answer "Major cities in Brazil ".<br>
-<strong>São Paulo:</strong> São Paulo relates to the answer "Major cities in Brazil ".<br>
-<strong>Rio de Janeiro:</strong> Rio de Janeiro relates to the answer "Major cities in Brazil ".<br>
-<strong>Brasília:</strong> Brasília relates to the answer "Major cities in Brazil ".</p>`,
+<strong>Salvador:</strong> Salvador relates to the answer "Major cities in Brazil".<br>
+<strong>Manaus:</strong> Manaus relates to the answer "Major cities in Brazil".<br>
+<strong>São Paulo:</strong> São Paulo relates to the answer "Major cities in Brazil".<br>
+<strong>Rio de Janeiro:</strong> Rio de Janeiro relates to the answer "Major cities in Brazil".<br>
+<strong>Brasília:</strong> Brasília relates to the answer "Major cities in Brazil".</p>`,
   },
   {
     sequence: "#706",
@@ -903,7 +903,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#703",
     date: "2026-04-03",
-    answer: "\u2014 Types of Frog \ud83e\udde9",
+    answer: "Types of Frog",
     clues: ["Goliath", "Bull", "Pacman (or S. American Horned)", "Red-eyed Tree", "Poison dart (don't croak?)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Goliath:</strong> Goliath relates to the answer "— Types of Frog ".<br>
@@ -915,14 +915,14 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#702",
     date: "2026-04-02",
-    answer: "Words that come before \"pack\" \ud83d\udcda",
+    answer: "Words that come before \"pack\"",
     clues: ["Ice", "Jet", "Booster", "Six", "Back"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Ice:</strong> Ice relates to the answer "Words that come before "pack" ".<br>
-<strong>Jet:</strong> Jet relates to the answer "Words that come before "pack" ".<br>
-<strong>Booster:</strong> Booster relates to the answer "Words that come before "pack" ".<br>
-<strong>Six:</strong> Six relates to the answer "Words that come before "pack" ".<br>
-<strong>Back:</strong> Back relates to the answer "Words that come before "pack" ".</p>`,
+<strong>Ice:</strong> Ice relates to the answer "Words that come before "pack"".<br>
+<strong>Jet:</strong> Jet relates to the answer "Words that come before "pack"".<br>
+<strong>Booster:</strong> Booster relates to the answer "Words that come before "pack"".<br>
+<strong>Six:</strong> Six relates to the answer "Words that come before "pack"".<br>
+<strong>Back:</strong> Back relates to the answer "Words that come before "pack"".</p>`,
   },
   {
     sequence: "#701",
@@ -951,7 +951,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#699",
     date: "2026-03-31",
-    answer: "Flavors of ice cream \ud83d\udcdd",
+    answer: "Flavors of ice cream",
     clues: ["Pistachio", "Coffee", "Vanilla", "Cookie dough", "Mint chocolate chip"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> Pistachio is a beloved nut-based variety recognized by its signature pale green color and rich, buttery taste.<br>
@@ -963,7 +963,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#697",
     date: "2026-03-28",
-    answer: "\u2014 Geographical capes \ud83d\udcda",
+    answer: "Geographical capes",
     clues: ["Horn", "Cod", "Verde", "Canaveral", "Of Good Hope"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> This refers to Cape Horn, the southernmost headland of South America known for treacherous sailing conditions.<br>
@@ -1001,7 +1001,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#694",
     date: "2026-03-25",
-    answer: "Types of Rock Building Materials \ud83e\uddf1",
+    answer: "Types of Rock",
     clues: ["Marble", "Obsidian", "Slate", "Granite", "Sandstone"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Marble:</strong> Marble relates to the answer "Types of Rock Building Materials ".<br>
@@ -1013,14 +1013,14 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#693",
     date: "2026-03-24",
-    answer: "\"Thank you\" in different languages \ud83c\udf0d",
+    answer: "\"Thank you\" in different languages",
     clues: ["Mahalo", "Danke", "Arigato", "Merci", "Gracias"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Mahalo:</strong> Mahalo relates to the answer ""Thank you" in different languages ".<br>
-<strong>Danke:</strong> Danke relates to the answer ""Thank you" in different languages ".<br>
-<strong>Arigato:</strong> Arigato relates to the answer ""Thank you" in different languages ".<br>
-<strong>Merci:</strong> Merci relates to the answer ""Thank you" in different languages ".<br>
-<strong>Gracias:</strong> Gracias relates to the answer ""Thank you" in different languages ".</p>`,
+<strong>Mahalo:</strong> Mahalo relates to the answer ""Thank you" in different languages".<br>
+<strong>Danke:</strong> Danke relates to the answer ""Thank you" in different languages".<br>
+<strong>Arigato:</strong> Arigato relates to the answer ""Thank you" in different languages".<br>
+<strong>Merci:</strong> Merci relates to the answer ""Thank you" in different languages".<br>
+<strong>Gracias:</strong> Gracias relates to the answer ""Thank you" in different languages".</p>`,
   },
   {
     sequence: "#692",
@@ -1037,19 +1037,19 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#689",
     date: "2026-03-20",
-    answer: "Types of candle \ud83e\udde9",
+    answer: "Types of candle",
     clues: ["Aromatherapy", "Unscented", "Votive", "Citronella", "Birthday (make a wish!)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Aromatherapy:</strong> Aromatherapy relates to the answer "Types of candle ".<br>
-<strong>Unscented:</strong> Unscented relates to the answer "Types of candle ".<br>
-<strong>Votive:</strong> Votive relates to the answer "Types of candle ".<br>
-<strong>Citronella:</strong> Citronella relates to the answer "Types of candle ".<br>
-<strong>Birthday (make a wish!):</strong> Birthday (make a wish!) relates to the answer "Types of candle ".</p>`,
+<strong>Aromatherapy:</strong> Aromatherapy relates to the answer "Types of candle".<br>
+<strong>Unscented:</strong> Unscented relates to the answer "Types of candle".<br>
+<strong>Votive:</strong> Votive relates to the answer "Types of candle".<br>
+<strong>Citronella:</strong> Citronella relates to the answer "Types of candle".<br>
+<strong>Birthday (make a wish!):</strong> Birthday (make a wish!) relates to the answer "Types of candle".</p>`,
   },
   {
     sequence: "#688",
     date: "2026-03-19",
-    answer: "Words that come before \u201cray\u201d",
+    answer: "Words that come before “ray”",
     clues: ["X", "Sting", "Cosmic", "Manta", "Gamma (high energy radiation)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> The letter X serves as the prefix for the medical imaging term "X-ray," allowing us to see inside the human body.<br>
@@ -1074,19 +1074,19 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#686",
     date: "2026-03-17",
-    answer: "Types of bicycle \ud83d\udeb4",
+    answer: "Types of bicycle",
     clues: ["Mountain", "Electric", "Recumbent", "Tandem", "Ten-Speed"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Mountain:</strong> Mountain relates to the answer "Types of bicycle ".<br>
-<strong>Electric:</strong> Electric relates to the answer "Types of bicycle ".<br>
-<strong>Recumbent:</strong> Recumbent relates to the answer "Types of bicycle ".<br>
-<strong>Tandem:</strong> Tandem relates to the answer "Types of bicycle ".<br>
-<strong>Ten-Speed:</strong> Ten-Speed relates to the answer "Types of bicycle ".</p>`,
+<strong>Mountain:</strong> Mountain relates to the answer "Types of bicycle".<br>
+<strong>Electric:</strong> Electric relates to the answer "Types of bicycle".<br>
+<strong>Recumbent:</strong> Recumbent relates to the answer "Types of bicycle".<br>
+<strong>Tandem:</strong> Tandem relates to the answer "Types of bicycle".<br>
+<strong>Ten-Speed:</strong> Ten-Speed relates to the answer "Types of bicycle".</p>`,
   },
   {
     sequence: "#685",
     date: "2026-03-16",
-    answer: "Magazines (with global readership / versions) \ud83d\udcd6",
+    answer: "Magazines (with global readership / versions)",
     clues: ["Time", "The Economist", "Cosmopolitan", "National Geographic", "Reader's Digest"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1: Time</strong> - This is a well-known magazine that has been published since 1923, known for its global coverage and readership, fitting the theme of magazines with international appeal.<br>
@@ -1099,7 +1099,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#684",
     date: "2026-03-15",
-    answer: "Words that come before \"roses\" \ud83c\udf3c",
+    answer: "Words that come before \"roses\"",
     clues: ["English", "Dog", "Damask", "(Hybrid) Tea", "Stop and smell the (🌹🌹🌹)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1:</strong> "English" refers to the phrase "Every rose has its thorn," but more specifically, it points to the common saying "Roses are red, violets are blue," which starts with "roses."<br>
@@ -1125,14 +1125,14 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#682",
     date: "2026-03-13",
-    answer: "Types of doll \ud83d\udcda",
+    answer: "Types of doll",
     clues: ["Ball-jointed", "Bobblehead", "Voodoo", "Russian nesting (Matryoshka)", "Barbie"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Ball-jointed:</strong> Ball-jointed relates to the answer "Types of doll ".<br>
-<strong>Bobblehead:</strong> Bobblehead relates to the answer "Types of doll ".<br>
-<strong>Voodoo:</strong> Voodoo relates to the answer "Types of doll ".<br>
-<strong>Russian nesting (Matryoshka):</strong> Russian nesting (Matryoshka) relates to the answer "Types of doll ".<br>
-<strong>Barbie:</strong> Barbie relates to the answer "Types of doll ".</p>`,
+<strong>Ball-jointed:</strong> Ball-jointed relates to the answer "Types of doll".<br>
+<strong>Bobblehead:</strong> Bobblehead relates to the answer "Types of doll".<br>
+<strong>Voodoo:</strong> Voodoo relates to the answer "Types of doll".<br>
+<strong>Russian nesting (Matryoshka):</strong> Russian nesting (Matryoshka) relates to the answer "Types of doll".<br>
+<strong>Barbie:</strong> Barbie relates to the answer "Types of doll".</p>`,
   },
   {
     sequence: "#681",
@@ -1162,14 +1162,14 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#679",
     date: "2026-03-10",
-    answer: "Characters in the Super Mario video game series \ud83e\udde9",
+    answer: "Characters in the Super Mario video game series",
     clues: ["Toad", "Piranha Plant", "Bowser", "Luigi", "Princess Peach"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
-<strong>Toad:</strong> Toad relates to the answer "Characters in the Super Mario video game series ".<br>
-<strong>Piranha Plant:</strong> Piranha Plant relates to the answer "Characters in the Super Mario video game series ".<br>
-<strong>Bowser:</strong> Bowser relates to the answer "Characters in the Super Mario video game series ".<br>
-<strong>Luigi:</strong> Luigi relates to the answer "Characters in the Super Mario video game series ".<br>
-<strong>Princess Peach:</strong> Princess Peach relates to the answer "Characters in the Super Mario video game series ".</p>`,
+<strong>Toad:</strong> Toad relates to the answer "Characters in the Super Mario video game series".<br>
+<strong>Piranha Plant:</strong> Piranha Plant relates to the answer "Characters in the Super Mario video game series".<br>
+<strong>Bowser:</strong> Bowser relates to the answer "Characters in the Super Mario video game series".<br>
+<strong>Luigi:</strong> Luigi relates to the answer "Characters in the Super Mario video game series".<br>
+<strong>Princess Peach:</strong> Princess Peach relates to the answer "Characters in the Super Mario video game series".</p>`,
   },
   {
     sequence: "#678",
@@ -1186,7 +1186,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#676",
     date: "2026-03-08",
-    answer: "Types of dresses \ud83d\udccb",
+    answer: "Words that come after \"mega\"",
     clues: ["Sun", "Wrap", "Cocktail", "Wedding", "Little black"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1: Sun</strong> A "sun dress" is a casual, often sleeveless dress designed for warm weather.<br>
@@ -1199,7 +1199,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#675",
     date: "2026-03-06",
-    answer: "Types of sign \ud83d\udccb",
+    answer: "Types of sign",
     clues: ["Peace", "Equal", "Percent", "Stop", "For Sale"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1: Peace</strong> A "peace sign" is a common hand gesture (forming a V) or symbol representing the concept.<br>
@@ -1212,7 +1212,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#674",
     date: "2026-03-05",
-    answer: "Places with benches \ud83e\ude91",
+    answer: "Places with benches",
     clues: ["Parks", "Courtrooms", "Piano lounges", "Bus stops", "Stadiums (for team substitutes)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1: Parks</strong> Public parks commonly have benches for visitors to sit, relax, and enjoy the scenery.<br>
@@ -1225,7 +1225,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#673",
     date: "2026-03-04",
-    answer: "Words that come after \"prime\" \ud83d\udccb",
+    answer: "Words that come after \"prime\"",
     clues: ["Time", "Suspect", "Minister", "Number", "Meridian (0° Longitude)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Clue 1: Time</strong> "Prime time" is the peak viewing period on television, making this a common and well-known phrase.<br>
@@ -1368,7 +1368,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#655",
     date: "2026-02-14",
-    answer: "Words that come after \"sweet\"",
+    answer: "Words that come after “sweet”",
     clues: ["Tooth", "Talk", "Potato", "Nothings", "Heart (💖 Happy Valentine's 💖)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
     <strong>Tooth:</strong> Tooth is a type of bone that comes after sweet.<br>
@@ -1454,7 +1454,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#645",
     date: "2026-02-04",
-    answer: "Terms that come after \"cat\"!",
+    answer: "Terms that come after “cat”",
     clues: ["Nap", "Carrier", "Burglar", "Litter", "Got your tongue?"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
     <strong>Nap:</strong> A nap is a short sleep.<br>
@@ -1479,7 +1479,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#642",
     date: "2026-02-01",
-    answer: "Traditional anniversary gifts (by year) !",
+    answer: "Traditional anniversary gifts (by year)",
     clues: ["Bronze (8)", "China (20)", "Wood (5)", "Silver (25)", "Gold (50)"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Bronze (8):</strong> is the traditional gift associated with the 8th wedding anniversary. <br>
@@ -1491,7 +1491,7 @@ export const pinpointAnswers: GameAnswer[] = [
   {
     sequence: "#641",
     date: "2026-01-31",
-    answer: "Words that follow \"master\"",
+    answer: "Words that follow “master”",
     clues: ["Class", "Mind", "Stroke", "Piece", "Of ceremonies"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Class:</strong> "Master class" is a special class taught by an expert.<br>
@@ -1505,7 +1505,7 @@ All of these common phrases start with the word "master".
   {
     sequence: "#640",
     date: "2026-01-30",
-    answer: "Different meanings of \"set\"!",
+    answer: "Different meanings of “set”",
     clues: ["Rigid", "Prearranged", "Backdrop", "Establish (a record)", "{Collection of objects}"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Rigid:</strong> Rigid is a set of objects.<br>
@@ -1517,7 +1517,7 @@ All of these common phrases start with the word "master".
   {
     sequence: "#639",
     date: "2025-01-29",
-    answer: "Places with \"City\" in their names!",
+    answer: "Places with “City” in their names",
     clues: ["Mexico", "Panama", "Ho Chi Minh", "Vatican", "Gotham"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Mexico:</strong> Mexico is a city in Mexico.<br>
@@ -1529,7 +1529,7 @@ All of these common phrases start with the word "master".
   {
     sequence: "#638",
     date: "2025-01-28",
-    answer: "Words that come before \"address\"!",
+    answer: "Words that come before “address”",
     clues: ["Business", "Keynote", "Forwarding", "IP", "Email"],
     clueHint: `Here is how each clue relates to that word:<br>
 <strong>Business:</strong> A business is a company that provides a service.<br>
@@ -1565,7 +1565,7 @@ All of these common phrases start with the word "master".
   {
     sequence: "#635",
     date: "2025-01-25",
-    answer: "flights",
+    answer: "Things that come in “flights”",
     clues: ["Stairs", "Fancy", "Shots of whiskey", "Group of swallows", "Airline passengers"],
     clueHint: `<p>Here is how each clue relates to that word:<br>
 <strong>Stairs:</strong> A set of stairs between floors is called a flight of stairs.<br>
@@ -1576,7 +1576,7 @@ All of these common phrases start with the word "master".
   {
     sequence: "#634",
     date: "2025-01-20",
-    answer: "Fruits",
+    answer: "Things you enter",
     clues: ["Apple", "Banana", "Orange", "Grape", "Strawberry"],
     clueHint: `Here is how each clue relates to that word:<br>
 <strong>Apple:</strong> An apple is a fruit.<br>
@@ -1588,7 +1588,7 @@ All of these common phrases start with the word "master".
   {
     sequence: "#633",
     date: "2025-01-19",
-    answer: "Countries",
+    answer: "Types of sharks",
     clues: ["France", "Japan", "Brazil", "India", "Canada"],
     clueHint: `Here is how each clue relates to that word:<br>
 <strong>France:</strong> France is a country in Europe.<br>
