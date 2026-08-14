@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#836",
+    date: "2026-08-14",
+    answer: "Terms that come after “Super Mario” in video game titles",
+    clues: ["Odyssey", "Galaxy", "Kart", "64", "Bros. 3"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Odyssey:</strong> Odyssey relates to the answer "Terms that come after “Super Mario” in video game titles".<br>
+<strong>Galaxy:</strong> Galaxy relates to the answer "Terms that come after “Super Mario” in video game titles".<br>
+<strong>Kart:</strong> Kart relates to the answer "Terms that come after “Super Mario” in video game titles".<br>
+<strong>64:</strong> 64 relates to the answer "Terms that come after “Super Mario” in video game titles".<br>
+<strong>Bros. 3:</strong> Bros. 3 relates to the answer "Terms that come after “Super Mario” in video game titles".</p>`,
+  },
+  {
     sequence: "#835",
     date: "2026-08-13",
     answer: "Things that have spots",
