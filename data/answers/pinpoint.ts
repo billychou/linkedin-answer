@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#837",
+    date: "2026-08-15",
+    answer: "Things that are delivered",
+    clues: ["A speech", "The daily newspaper", "The mail", "A knockout blow", "Restaurant food brought to you"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>A speech:</strong> A speech relates to the answer "Things that are delivered".<br>
+<strong>The daily newspaper:</strong> The daily newspaper relates to the answer "Things that are delivered".<br>
+<strong>The mail:</strong> The mail relates to the answer "Things that are delivered".<br>
+<strong>A knockout blow:</strong> A knockout blow relates to the answer "Things that are delivered".<br>
+<strong>Restaurant food brought to you:</strong> Restaurant food brought to you relates to the answer "Things that are delivered".</p>`,
+  },
+  {
     sequence: "#836",
     date: "2026-08-14",
     answer: "Terms that come after “Super Mario” in video game titles",
