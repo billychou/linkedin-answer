@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#838",
+    date: "2026-08-16",
+    answer: "Words that come before “frame”",
+    clues: ["Freeze", "Time", "Bed", "Door", "Picture (🖼️)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Freeze:</strong> Freeze relates to the answer "Words that come before “frame”".<br>
+<strong>Time:</strong> Time relates to the answer "Words that come before “frame”".<br>
+<strong>Bed:</strong> Bed relates to the answer "Words that come before “frame”".<br>
+<strong>Door:</strong> Door relates to the answer "Words that come before “frame”".<br>
+<strong>Picture (🖼️):</strong> Picture (🖼️) relates to the answer "Words that come before “frame”".</p>`,
+  },
+  {
     sequence: "#837",
     date: "2026-08-15",
     answer: "Things that are delivered",
