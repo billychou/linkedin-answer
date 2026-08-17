@@ -258,3 +258,39 @@ export async function revokeTenantInvite(
     return false;
   }
 }
+
+// ---------------------------------------------------------------------------
+// 管理后台：运营指标（P2 增长）
+// ---------------------------------------------------------------------------
+
+export interface AdminMetrics {
+  users: {
+    total: number;
+    active_7d: number;
+    new_7d: number;
+    new_30d: number;
+    signups_by_day: { d: string; n: number }[];
+  };
+  tenants: { total: number; personal: number; team: number };
+  billing: {
+    paid_active: number;
+    by_plan: Record<string, number>;
+    mrr_cents: number;
+    revenue_total_cents: number;
+    revenue_30d_cents: number;
+    invoices_paid: number;
+  };
+  engagement: {
+    chat_by_day: { d: string; n: number }[];
+    activity_by_day: { d: string; n: number }[];
+  };
+}
+
+export async function adminFetchMetrics(): Promise<AdminMetrics | null> {
+  try {
+    const res = await fetch("/api/admin/metrics");
+    return await json<AdminMetrics>(res);
+  } catch {
+    return null;
+  }
+}
