@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#839",
+    date: "2026-08-17",
+    answer: "Names of world currencies",
+    clues: ["Dram", "Krone", "Rupee", "Peso", "Euro (€)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Dram:</strong> Dram relates to the answer "Names of world currencies".<br>
+<strong>Krone:</strong> Krone relates to the answer "Names of world currencies".<br>
+<strong>Rupee:</strong> Rupee relates to the answer "Names of world currencies".<br>
+<strong>Peso:</strong> Peso relates to the answer "Names of world currencies".<br>
+<strong>Euro (€):</strong> Euro (€) relates to the answer "Names of world currencies".</p>`,
+  },
+  {
     sequence: "#838",
     date: "2026-08-16",
     answer: "Words that come before “frame”",
