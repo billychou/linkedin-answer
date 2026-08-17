@@ -28,5 +28,8 @@ jobs:
       - name: Typecheck (Cloudflare Pages Functions)
         run: npx tsc --noEmit -p tsconfig.functions.json
 
+      - name: Unit tests
+        run: pnpm test
+
       - name: Lint
         run: npx eslint .

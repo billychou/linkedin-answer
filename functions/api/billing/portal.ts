@@ -10,10 +10,11 @@ import {
   createBillingPortalSession,
   isStripeConfigured,
 } from "../../_lib/stripe";
+import { reportError, type ErrorReportEnv } from "../../_lib/errorReporter";
 
 interface Context {
   request: Request;
-  env: AuthEnv;
+  env: AuthEnv & ErrorReportEnv;
 }
 
 /**
@@ -49,6 +50,7 @@ export const onRequest = async (context: Context): Promise<Response> => {
     });
     return jsonResponse({ url: session.url });
   } catch (error) {
+    void reportError(env, error, { context: "billing/portal", userId: auth.user.id });
     const message = error instanceof Error ? error.message : "Portal failed";
     return jsonResponse({ error: message }, 502);
   }

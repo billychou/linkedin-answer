@@ -8,10 +8,11 @@ import { getOrCreateStripeCustomer, getPlanById } from "../../_lib/billing";
 import { rateLimitOr429 } from "../../_lib/rateLimit";
 import { createCheckoutSession, isStripeConfigured } from "../../_lib/stripe";
 import { z } from "zod";
+import { reportError, type ErrorReportEnv } from "../../_lib/errorReporter";
 
 interface Context {
   request: Request;
-  env: AuthEnv;
+  env: AuthEnv & ErrorReportEnv;
 }
 
 const bodySchema = z
@@ -81,6 +82,7 @@ export const onRequest = async (context: Context): Promise<Response> => {
     }
     return jsonResponse({ url: session.url });
   } catch (error) {
+    void reportError(env, error, { context: "billing/checkout", userId: auth.user.id });
     const message = error instanceof Error ? error.message : "Checkout failed";
     return jsonResponse({ error: message }, 502);
   }

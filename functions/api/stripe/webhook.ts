@@ -9,6 +9,7 @@ import {
 } from "../../_lib/billing";
 import type { D1Database } from "../../_lib/db";
 import { sendEmail, siteUrl, type EmailEnv } from "../../_lib/email";
+import { reportError, type ErrorReportEnv } from "../../_lib/errorReporter";
 import {
   formatAmount,
   paymentFailedEmail,
@@ -25,13 +26,16 @@ import {
 
 interface Context {
   request: Request;
-  env: AuthEnv & EmailEnv;
+  env: AuthEnv & EmailEnv & ErrorReportEnv;
 }
 
-/** 事件处理失败只记录、不向 Stripe 抛错（避免无意义重试风暴）。 */
-function logError(where: string, error: unknown): void {
-  const message = error instanceof Error ? error.message : String(error);
-  console.error(`[stripe-webhook] ${where}: ${message}`);
+/** 事件处理失败只上报、不向 Stripe 抛错（避免无意义重试风暴）。 */
+function logError(
+  env: AuthEnv & ErrorReportEnv,
+  where: string,
+  error: unknown
+): void {
+  void reportError(env, error, { context: `stripe-webhook:${where}` });
 }
 
 async function handleSubscriptionEvent(
@@ -55,7 +59,7 @@ async function handleSubscriptionEvent(
 }
 
 async function handleCheckoutCompleted(
-  env: AuthEnv,
+  env: AuthEnv & ErrorReportEnv,
   db: D1Database,
   session: StripeCheckoutSession
 ): Promise<void> {
@@ -66,7 +70,7 @@ async function handleCheckoutCompleted(
     await handleSubscriptionEvent(env, db, sub);
   } catch (error) {
     // 回查失败不致命：customer.subscription.created 事件会再次同步。
-    logError(`checkout fetch subscription ${session.subscription}`, error);
+    logError(env, `checkout fetch subscription ${session.subscription}`, error);
   }
 }
 
@@ -215,7 +219,7 @@ export const onRequest = async (context: Context): Promise<Response> => {
         break;
     }
   } catch (error) {
-    logError(`event ${event.id} (${event.type})`, error);
+    logError(env, `event ${event.id} (${event.type})`, error);
   }
 
   return jsonResponse({ received: true });

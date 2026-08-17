@@ -296,7 +296,19 @@ PATCH 校验规则：`name` 1–50 字符；`bio` ≤ 500 字符；`locale` ∈ 
 
 ### Phase 3 — 管理与运营
 
-管理员接口与页面、审计日志、~~导出/注销~~（已随 Phase 2 落地）、Resend 邮件通知（欢迎、续费失败、发票）。
+管理员接口与页面、审计日志、~~导出/注销~~（已随 Phase 2 落地）、Resend 邮件通知（欢迎、~~续费失败、发票~~已随 P1 落地）。
+
+> ✅ **P1 质量基建（2026-08-18）**：
+> - **测试**：vitest + sql.js 假 D1（真实 SQLite 语义），覆盖验签、entitlements、
+>   订阅同步幂等、webhook 幂等、邀请状态机、邮件模板、safeNextPath（45 用例）。
+>   `pnpm test`；CI 已加测试步骤。
+> - **chat 持久化**：`chat_conversations`/`chat_messages`（migration 0005）+
+>   `/api/chat/history`（GET/DELETE）、`/api/chat/messages`（POST）；历史窗口按
+>   entitlements.historyDays 裁剪；ChatDemo 加载历史、发送/流结束后落库、Clear 清库。
+> - **错误上报**：`functions/_lib/errorReporter.ts` —— 结构化 JSON 日志（Cloudflare
+>   Dashboard 可查）+ 可选 `SENTRY_DSN` 转发；已接入 webhook 与 checkout/portal。
+> - **其他**：新增 `pnpm-workspace.yaml` 锁定项目为独立 workspace 根，
+>   防止 pnpm 误入上层目录的意外 workspace。
 
 ## 10. 验收标准（Phase 1）
 
