@@ -60,3 +60,13 @@ export interface AdminTenantRow {
   member_count: number;
   created_at: number;
 }
+
+/** 待处理的租户邮件邀请（toPublicInvite 的输出）。 */
+export interface TenantInvite {
+  id: string;
+  email: string;
+  role: "member" | "admin";
+  status: "pending" | "accepted" | "revoked" | "expired";
+  expires_at: number;
+  created_at: number;
+}

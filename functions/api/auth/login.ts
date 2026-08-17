@@ -10,6 +10,7 @@ import {
   findOrCreateUserByIdentity,
 } from "../../_lib/db";
 import { ensureDefaultTenant } from "../../_lib/tenants";
+import { rateLimitOr429 } from "../../_lib/rateLimit";
 
 interface Context {
   request: Request;
@@ -28,6 +29,10 @@ export const onRequest = async (context: Context): Promise<Response> => {
   if (request.method !== "POST") {
     return jsonResponse({ error: "Method Not Allowed" }, 405);
   }
+
+  // 防爆破/防刷：同一 IP 每分钟最多 10 次登录尝试。
+  const limited = await rateLimitOr429(env, request, "auth/login", 10, 60);
+  if (limited) return limited;
 
   const clientId = env.GOOGLE_CLIENT_ID ?? "";
   if (!clientId) {

@@ -6,7 +6,7 @@ import {
 } from "./_lib/auth";
 
 /** Routes that require a valid session (matched after stripping locale prefix). */
-const PROTECTED_PATHS = new Set(["chat", "settings", "admin"]);
+const PROTECTED_PATHS = new Set(["chat", "settings", "admin", "invites"]);
 
 /** Locale prefixes used by next-intl (`as-needed` strategy, see i18n/routing.ts). */
 const LOCALE_PREFIXES = new Set(["en", "zh", "ja"]);
@@ -19,8 +19,10 @@ interface Context {
 
 /**
  * Edge access control: unauthenticated requests to protected paths
- * (/chat, /settings, /admin, including /zh//ja/ prefixed variants) are
- * redirected to /login?next=<path>; everything else passes through.
+ * (/chat, /settings, /admin, /invites, including /zh//ja/ prefixed
+ * variants) are redirected to /login?next=<path>?<query>; everything
+ * else passes through. The query string is preserved so flows like
+ * /invites/accept?token=... survive the login round-trip.
  */
 export const onRequest = async (context: Context): Promise<Response> => {
   const { request, env, next } = context;
@@ -41,8 +43,10 @@ export const onRequest = async (context: Context): Promise<Response> => {
     return next();
   }
 
+  // 保留 query：邀请接受等流程依赖 ?token=... 跨登录往返。
+  const nextPath = safeNextPath(url.pathname + url.search) ?? "/chat";
   const target = new URL(
-    `/login?next=${encodeURIComponent(safeNextPath(url.pathname) ?? "/chat")}`,
+    `/login?next=${encodeURIComponent(nextPath)}`,
     url.origin
   );
   return Response.redirect(target.toString(), 302);

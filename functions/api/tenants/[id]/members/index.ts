@@ -6,6 +6,7 @@ import {
   listMembers,
   upsertMember,
 } from "../../../../_lib/tenants";
+import { rateLimitOr429 } from "../../../../_lib/rateLimit";
 import { z } from "zod";
 
 interface Context {
@@ -68,6 +69,10 @@ export const onRequest = async (context: Context): Promise<Response> => {
   if (membership.role !== "owner" && membership.role !== "admin") {
     return jsonResponse({ error: "Forbidden" }, 403);
   }
+
+  // 防刷邀请：同一 IP 每小时最多 30 次。
+  const limited = await rateLimitOr429(env, request, "tenants/invite", 30, 3600);
+  if (limited) return limited;
 
   let body: unknown;
   try {

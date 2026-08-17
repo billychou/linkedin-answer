@@ -251,7 +251,10 @@ export interface PublicUser {
   subscription: { plan: string; status: string };
 }
 
-export function toPublicUser(user: DbUser): PublicUser {
+export function toPublicUser(
+  user: DbUser,
+  subscription?: { plan: string; status: string }
+): PublicUser {
   return {
     id: user.id,
     email: user.email,
@@ -262,7 +265,8 @@ export function toPublicUser(user: DbUser): PublicUser {
     timezone: user.timezone,
     role: user.role,
     created_at: user.created_at,
-    subscription: { plan: "free", status: "active" },
+    // 默认 free/active；/api/me 会传入按订阅查库的真实摘要。
+    subscription: subscription ?? { plan: "free", status: "active" },
   };
 }
 

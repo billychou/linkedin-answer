@@ -2,6 +2,7 @@ import type {
   AdminTenantRow,
   AdminUserRow,
   TenantDetail,
+  TenantInvite,
   TenantMember,
   TenantSummary,
 } from "@/types/tenant";
@@ -191,6 +192,66 @@ export async function adminUpdateTenant(
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(patch),
+    });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// 邮件邀请（Phase 1 协作补全，migration 0004）
+// ---------------------------------------------------------------------------
+
+/** 待处理邀请列表。 */
+export async function fetchTenantInvites(
+  tenantId: string
+): Promise<TenantInvite[] | null> {
+  try {
+    const res = await fetch(`/api/tenants/${tenantId}/invites`);
+    const data = await json<{ invites: TenantInvite[] }>(res);
+    return data?.invites ?? null;
+  } catch {
+    return null;
+  }
+}
+
+export interface CreateInviteResult {
+  invite?: TenantInvite;
+  email_sent?: boolean;
+  error?: string;
+}
+
+/** 创建邀请并发送邮件；同邮箱重复调用 = 撤销旧邀请并重发。 */
+export async function createTenantInvite(
+  tenantId: string,
+  email: string,
+  role: "member" | "admin"
+): Promise<CreateInviteResult> {
+  try {
+    const res = await fetch(`/api/tenants/${tenantId}/invites`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, role }),
+    });
+    const data = (await res.json().catch(() => null)) as CreateInviteResult | null;
+    if (!res.ok) {
+      return { error: data?.error ?? `Request failed (${res.status})` };
+    }
+    return data ?? {};
+  } catch {
+    return { error: "Network error" };
+  }
+}
+
+/** 撤销待处理邀请。 */
+export async function revokeTenantInvite(
+  tenantId: string,
+  inviteId: string
+): Promise<boolean> {
+  try {
+    const res = await fetch(`/api/tenants/${tenantId}/invites/${inviteId}`, {
+      method: "DELETE",
     });
     return res.ok;
   } catch {
