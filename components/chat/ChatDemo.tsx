@@ -6,6 +6,11 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { fetchSession } from "@/lib/authClient";
 import { consumeChatQuota, fetchQuota, type QuotaInfo } from "@/lib/billingClient";
+import {
+  appendChatMessage,
+  clearChatHistory,
+  fetchChatHistory,
+} from "@/lib/chatClient";
 import { streamChat } from "@/lib/chatAgent";
 import { ChatMessage, ChatStatus } from "@/types/chat";
 import { MessageCircle, Trash2 } from "lucide-react";
@@ -41,6 +46,26 @@ export default function ChatDemo({ isLive }: ChatDemoProps) {
       setSessionChecked(true);
       if (!user) window.location.replace("/login");
     });
+  }, []);
+
+  // 加载持久化的历史消息（按套餐 historyDays 裁剪）。
+  useEffect(() => {
+    let cancelled = false;
+    void fetchChatHistory().then((history) => {
+      if (cancelled || !history) return;
+      setMessages((prev) =>
+        prev.length === 0
+          ? history.messages.map((message) => ({
+              id: message.id,
+              role: message.role,
+              content: message.content,
+            }))
+          : prev
+      );
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // 实时 agent 模式下拉取今日配额，用于顶栏展示与发送前闸门。
@@ -101,11 +126,16 @@ export default function ChatDemo({ isLive }: ChatDemoProps) {
     setMessages((prev) => [...prev, userMessage, assistantMessage]);
     setStatus("streaming");
 
+    // 持久化用户消息（失败不阻断聊天）。
+    void appendChatMessage("user", text);
+
     const controller = new AbortController();
     abortRef.current = controller;
 
+    let accumulated = "";
     try {
       for await (const chunk of streamChat(history, { signal: controller.signal })) {
+        accumulated += chunk;
         setMessages((prev) => {
           const next = [...prev];
           const last = next[next.length - 1];
@@ -131,6 +161,10 @@ export default function ChatDemo({ isLive }: ChatDemoProps) {
     } finally {
       abortRef.current = null;
       setStatus((prev) => (prev === "streaming" ? "idle" : prev));
+      // 持久化 assistant 最终回复（含中断时的部分内容；失败不阻断）。
+      if (accumulated.length > 0) {
+        void appendChatMessage("assistant", accumulated);
+      }
     }
   }, [input, messages, status, isLive]);
 
@@ -143,6 +177,7 @@ export default function ChatDemo({ isLive }: ChatDemoProps) {
     setMessages([]);
     setError(null);
     setStatus("idle");
+    void clearChatHistory();
   }, []);
 
   if (!sessionChecked) {
