@@ -45,6 +45,9 @@ export function ProfileForm({ profile, onChange }: ProfileFormProps) {
   const [avatarUrl, setAvatarUrl] = useState(profile.avatar_url);
   const [locale, setLocale] = useState(profile.locale);
   const [timezone, setTimezone] = useState(profile.timezone);
+  const [showOnLeaderboard, setShowOnLeaderboard] = useState(
+    profile.show_on_leaderboard
+  );
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -70,6 +73,7 @@ export function ProfileForm({ profile, onChange }: ProfileFormProps) {
       avatar_url: trimmedAvatar,
       locale,
       timezone,
+      show_on_leaderboard: showOnLeaderboard,
     });
     setSaving(false);
 
@@ -138,6 +142,22 @@ export function ProfileForm({ profile, onChange }: ProfileFormProps) {
             placeholder="A short introduction (optional)"
           />
         </div>
+
+        <label className="flex items-start gap-3 rounded-md border p-3">
+          <input
+            type="checkbox"
+            className="mt-0.5 h-4 w-4 rounded border-input"
+            checked={showOnLeaderboard}
+            onChange={(event) => setShowOnLeaderboard(event.target.checked)}
+          />
+          <span className="text-sm">
+            <span className="font-medium">Show me on the streak leaderboard</span>
+            <span className="mt-0.5 block text-xs text-muted-foreground">
+              Your display name appears in the top-10 streak list on the Games
+              page. Turn off to stay anonymous.
+            </span>
+          </span>
+        </label>
 
         <div className="grid gap-5 sm:grid-cols-2">
           <div className="space-y-2">

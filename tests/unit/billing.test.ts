@@ -34,6 +34,8 @@ function makeUser(overrides?: Partial<DbUser>): DbUser {
     updated_at: NOW,
     last_login_at: null,
     current_tenant_id: null,
+    show_on_leaderboard: 1,
+    onboarded_at: null,
     ...overrides,
   };
 }

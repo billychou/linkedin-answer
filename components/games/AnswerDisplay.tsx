@@ -1,4 +1,5 @@
 import AnswerReveal from "@/components/games/AnswerReveal";
+import DailyCheckIn from "@/components/games/DailyCheckIn";
 import { GameAnswer } from "@/types/game";
 import CluesDisplay from "./CluesDisplay";
 import Image from "next/image";
@@ -20,6 +21,9 @@ export default function AnswerDisplay({ answer, gameName }: AnswerDisplayProps) 
 
   return (
     <div className="space-y-6">
+      {/* 每日打卡（静默、幂等；有 streak 时展示小火苗） */}
+      <DailyCheckIn />
+
       {/* Clues first (context before reveal) */}
       {answer.clues && answer.clues.length > 0 && (
         <CluesDisplay clues={answer.clues} gameName={gameName} clueHint={answer.clueHint} />

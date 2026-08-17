@@ -310,6 +310,17 @@ PATCH 校验规则：`name` 1–50 字符；`bio` ≤ 500 字符；`locale` ∈ 
 > - **其他**：新增 `pnpm-workspace.yaml` 锁定项目为独立 workspace 根，
 >   防止 pnpm 误入上层目录的意外 workspace。
 
+> ✅ **P2 增长（2026-08-18）**：
+> - **Streak 留存**：`user_activity` 打卡表（migration 0006）；访问任意答案页
+>   静默幂等打卡（`DailyCheckIn` 挂在共用的 `AnswerDisplay`）；连续天数纯函数
+>   `computeStreaks`（今天未打卡不断连，过了今天才断）——14 个单测用例。
+> - **排行榜**：`/api/activity/leaderboard`（前 10，仅登录可见），Games 页展示；
+>   `users.show_on_leaderboard` 开关（Profile 页可关）。
+> - **Onboarding**：`users.onboarded_at`（只写一次）；首页引导卡
+>   （streak/AI chat/团队三卖点 + 关闭即标记）。
+> - **Admin 指标**：`/api/admin/metrics`（注册/活跃/租户/MRR/收入/chat 与打卡
+>   趋势）+ AdminConsole 新增 Metrics Tab（stat 卡 + 纯 CSS 柱状图，无图表库）。
+
 ## 10. 验收标准（Phase 1）
 
 - [ ] 登录后 D1 中产生唯一用户记录，重复登录不产生重复用户
