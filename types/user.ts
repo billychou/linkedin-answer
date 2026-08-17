@@ -23,6 +23,8 @@ export interface ProfileUser {
   timezone: string;
   role: "user" | "admin";
   created_at: number;
+  show_on_leaderboard: boolean;
+  onboarded_at: number | null;
   subscription: { plan: string; status: string };
   /** 当前所处租户 ID（租户系统，migration 0002）。 */
   current_tenant_id: string | null;
@@ -32,5 +34,5 @@ export interface ProfileUser {
 
 /** PATCH /api/me 允许更新的字段。 */
 export type ProfilePatch = Partial<
-  Pick<ProfileUser, "name" | "bio" | "avatar_url" | "locale" | "timezone">
->;
+  Pick<ProfileUser, "name" | "bio" | "avatar_url" | "locale" | "timezone" | "show_on_leaderboard">
+> & { onboarded?: true };
