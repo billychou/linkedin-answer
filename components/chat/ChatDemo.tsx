@@ -5,6 +5,7 @@ import MessageBubble from "@/components/chat/MessageBubble";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { fetchSession } from "@/lib/authClient";
+import { consumeChatQuota, fetchQuota, type QuotaInfo } from "@/lib/billingClient";
 import { streamChat } from "@/lib/chatAgent";
 import { ChatMessage, ChatStatus } from "@/types/chat";
 import { MessageCircle, Trash2 } from "lucide-react";
@@ -25,6 +26,8 @@ export default function ChatDemo({ isLive }: ChatDemoProps) {
   const [status, setStatus] = useState<ChatStatus>("idle");
   const [error, setError] = useState<string | null>(null);
   const [sessionChecked, setSessionChecked] = useState(false);
+  /** 实时 agent 才计配额；mock 模式不限量，保证 demo 开箱即用。 */
+  const [quota, setQuota] = useState<QuotaInfo | null>(null);
 
   const abortRef = useRef<AbortController | null>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -40,6 +43,18 @@ export default function ChatDemo({ isLive }: ChatDemoProps) {
     });
   }, []);
 
+  // 实时 agent 模式下拉取今日配额，用于顶栏展示与发送前闸门。
+  useEffect(() => {
+    if (!isLive) return;
+    let cancelled = false;
+    void fetchQuota().then((info) => {
+      if (!cancelled) setQuota(info);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [isLive]);
+
   // 新消息/流式追加时自动滚动到底部（instant，避免逐 token smooth 滚动抖动）
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ block: "end" });
@@ -48,6 +63,20 @@ export default function ChatDemo({ isLive }: ChatDemoProps) {
   const handleSend = useCallback(async () => {
     const text = input.trim();
     if (!text || status === "streaming") return;
+
+    // 配额闸门：真实 agent 按套餐扣次（检查+计数原子完成）。
+    // 配额服务异常时 fail-open；超限则拒绝并引导升级。
+    if (isLive) {
+      const result = await consumeChatQuota();
+      if (result.ok) {
+        setQuota(result.quota);
+      } else if (result.reason === "limit") {
+        setError(
+          "You've reached today's chat limit on the Free plan. Upgrade to Pro for more."
+        );
+        return;
+      }
+    }
 
     setError(null);
     setInput("");
@@ -103,7 +132,7 @@ export default function ChatDemo({ isLive }: ChatDemoProps) {
       abortRef.current = null;
       setStatus((prev) => (prev === "streaming" ? "idle" : prev));
     }
-  }, [input, messages, status]);
+  }, [input, messages, status, isLive]);
 
   const handleStop = useCallback(() => {
     abortRef.current?.abort();
@@ -132,6 +161,11 @@ export default function ChatDemo({ isLive }: ChatDemoProps) {
             )}
           />
           {isStreaming ? "Generating…" : isLive ? "Live agent" : "Mock mode"}
+          {isLive && quota && (
+            <span className="text-muted-foreground/70">
+              · {quota.remaining}/{quota.limit} today
+            </span>
+          )}
         </div>
         <Button
           variant="ghost"

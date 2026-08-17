@@ -277,15 +277,26 @@ PATCH 校验规则：`name` 1–50 字符；`bio` ≤ 500 字符；`locale` ∈ 
 
 ### Phase 2 — 订阅与计费（Stripe）
 
-1. `migrations/0002_plans.sql` + seed；`0003_subscriptions.sql`。
-2. Stripe 账号、`STRIPE_SECRET_KEY` / `STRIPE_WEBHOOK_SECRET` 进环境变量（test mode 先行）。
-3. `/api/billing/checkout`、`/api/billing/portal`、`/api/stripe/webhook`。
-4. `getEntitlements(userId)` 接入 `/chat` 等业务入口。
-5. `/settings` 订阅 Tab + 发票历史。
+> ✅ **已实施（2026-08-17）**：计费闭环骨架落地并本地全链路验证通过
+> （登录 → 订阅 webhook 同步 → 权益升级 → 发票落账 → 幂等 → 注销拦截）。
+> 与最初草案的差异：`plans/subscriptions/invoices/webhook_events` 合并在
+> `migrations/0003_billing.sql`（0002 已被租户占用），并额外增加 `usage_daily`
+> 配额表。Stripe 客户端为边缘原生实现（fetch + Web Crypto 验签），不依赖 stripe-node。
+
+1. ~~`migrations/0002_plans.sql` + seed；`0003_subscriptions.sql`~~ → `migrations/0003_billing.sql`（plans/subscriptions/invoices/webhook_events/usage_daily + plans seed）。
+2. `STRIPE_SECRET_KEY` / `STRIPE_WEBHOOK_SECRET` 进环境变量（test mode 先行）。
+3. `/api/billing/plans`、`/api/billing/subscription`、`/api/billing/checkout`、`/api/billing/portal`、`/api/billing/quota`、`/api/stripe/webhook` 已实现（`functions/_lib/stripe.ts` + `billing.ts`）。
+4. `getEntitlements(userId)` 接入 `/api/me`、`/api/billing/quota` 与 `/chat` 前端闸门（实时 agent 模式按 `chatPerDay` 扣次）。
+5. `/settings` 订阅 Tab（真实套餐 + 发票历史 + Billing Portal）与 `/pricing` 定价页已上线。
+6. 限流（Upstash）已接入 login / me PATCH / 邀请 / checkout / portal / quota。
+7. 合规：`GET /api/me/export`（数据导出）与 `DELETE /api/me`（注销，软删除 + PII 匿名化）已实现并在 DataSection 接线。
+
+**上线前剩余**：在 Stripe 控制台建 Price 并回填 `plans.stripe_price_id`（seed 里现为 NULL），
+配置真实 `STRIPE_SECRET_KEY`/`STRIPE_WEBHOOK_SECRET`，`wrangler d1 migrations apply --remote`。
 
 ### Phase 3 — 管理与运营
 
-管理员接口与页面、审计日志、导出/注销、Resend 邮件通知（欢迎、续费失败、发票）。
+管理员接口与页面、审计日志、~~导出/注销~~（已随 Phase 2 落地）、Resend 邮件通知（欢迎、续费失败、发票）。
 
 ## 10. 验收标准（Phase 1）
 

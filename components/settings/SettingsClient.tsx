@@ -1,6 +1,7 @@
 "use client";
 
 import { fetchProfile, fetchSession, logout } from "@/lib/authClient";
+import { useToast } from "@/hooks/use-toast";
 import { useUserStore } from "@/stores/userStore";
 import type { ProfileUser } from "@/types/user";
 import { useEffect, useState } from "react";
@@ -25,11 +26,40 @@ const TABS: { id: Tab; label: string }[] = [
  * and loads the full profile from /api/me; unauthenticated visitors are
  * redirected to /login?next=/settings.
  */
+const VALID_TABS = new Set<Tab>([
+  "profile",
+  "account",
+  "team",
+  "subscription",
+  "data",
+]);
+
+/** 从 URL 读取初始 Tab（/settings?tab=subscription，Checkout 回跳用）。 */
+function initialTab(): Tab {
+  if (typeof window === "undefined") return "profile";
+  const requested = new URLSearchParams(window.location.search).get("tab");
+  return requested && VALID_TABS.has(requested as Tab) ? (requested as Tab) : "profile";
+}
+
 export default function SettingsClient() {
+  const { toast } = useToast();
   const sessionUser = useUserStore((state) => state.user);
   const [profile, setProfile] = useState<ProfileUser | null>(null);
   const [status, setStatus] = useState<"loading" | "ready" | "error">("loading");
-  const [tab, setTab] = useState<Tab>("profile");
+  const [tab, setTab] = useState<Tab>(initialTab);
+
+  // Stripe Checkout 成功回跳：/settings?tab=subscription&checkout=success
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("checkout") === "success") {
+      toast({
+        title: "Thanks for upgrading!",
+        description:
+          "Your subscription is being activated — it may take a few seconds to appear.",
+      });
+      window.history.replaceState({}, "", "/settings?tab=subscription");
+    }
+  }, [toast]);
 
   useEffect(() => {
     let cancelled = false;

@@ -19,6 +19,21 @@ export interface AuthEnv {
   DEV_FAKE_LOGIN?: string;
   /** D1 binding（用户系统）。 */
   DB?: D1Database;
+  /** Stripe（Phase 2 计费，functions/_lib/stripe.ts）。 */
+  STRIPE_SECRET_KEY?: string;
+  STRIPE_WEBHOOK_SECRET?: string;
+  /** Upstash Redis 限流（functions/_lib/rateLimit.ts）。 */
+  UPSTASH_REDIS_REST_URL?: string;
+  UPSTASH_REDIS_REST_TOKEN?: string;
+  /** 站点 URL（Checkout 回跳等），未配置时回退请求 Origin。 */
+  NEXT_PUBLIC_SITE_URL?: string;
+}
+
+/** 站点绝对 URL（去掉尾部斜杠）；未配置时回退请求 Origin。 */
+export function siteBaseUrl(env: AuthEnv, request: Request): string {
+  const configured = env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/+$/, "");
+  if (configured) return configured;
+  return new URL(request.url).origin;
 }
 
 export interface SessionUser {
