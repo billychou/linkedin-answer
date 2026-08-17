@@ -37,9 +37,8 @@ function StatusBadge({ status }: { status: string }) {
   };
   return (
     <span
-      className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium capitalize ${
-        styles[status] ?? styles.deleted
-      }`}
+      className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium capitalize ${styles[status] ?? styles.deleted
+        }`}
     >
       {status}
     </span>
@@ -204,11 +203,10 @@ export default function AdminClient() {
             role="tab"
             aria-selected={tab === id}
             onClick={() => setTab(id)}
-            className={`-mb-px rounded-t-md px-3 py-2 text-sm font-medium transition-colors ${
-              tab === id
+            className={`-mb-px rounded-t-md px-3 py-2 text-sm font-medium transition-colors ${tab === id
                 ? "border-b-2 border-primary text-foreground"
                 : "text-muted-foreground hover:text-foreground"
-            }`}
+              }`}
           >
             {label}
           </button>
