@@ -4,16 +4,18 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { fetchProfile } from "@/lib/authClient";
 import {
-  addTenantMember,
   createTenant,
+  createTenantInvite,
   fetchTenantDetail,
+  fetchTenantInvites,
   removeTenantMember,
+  revokeTenantInvite,
   switchTenant,
   updateTenantMemberRole,
 } from "@/lib/tenantClient";
-import type { TenantMember } from "@/types/tenant";
+import type { TenantInvite, TenantMember } from "@/types/tenant";
 import type { ProfileUser } from "@/types/user";
-import { Check, Plus, UserPlus } from "lucide-react";
+import { Check, Plus, UserPlus, X } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 
 const inputClasses =
@@ -53,6 +55,7 @@ export function TeamSection({ profile, onChange }: TeamSectionProps) {
   const [inviteEmail, setInviteEmail] = useState("");
   const [inviteRole, setInviteRole] = useState<"member" | "admin">("member");
   const [inviting, setInviting] = useState(false);
+  const [invites, setInvites] = useState<TenantInvite[]>([]);
   const [busyMemberId, setBusyMemberId] = useState<string | null>(null);
   const [switchingId, setSwitchingId] = useState<string | null>(null);
 
@@ -73,11 +76,14 @@ export function TeamSection({ profile, onChange }: TeamSectionProps) {
     // 同步清空/置 loading 属常规模式(set-state-in-effect 已降级为 warn)。
     setMembers(null);
     setMembersLoading(true);
+    setInvites([]);
     void (async () => {
       const detail = tenantId ? await fetchTenantDetail(tenantId) : null;
+      const pending = tenantId ? await fetchTenantInvites(tenantId) : null;
       if (cancelled) return;
       setMembers(detail?.members ?? null);
       setMembersLoading(false);
+      setInvites(pending ?? []);
     })();
     return () => {
       cancelled = true;
@@ -116,21 +122,37 @@ export function TeamSection({ profile, onChange }: TeamSectionProps) {
     const email = inviteEmail.trim();
     if (!email) return;
     setInviting(true);
-    const { members: nextMembers, error } = await addTenantMember(
-      currentTenant.id,
-      email,
-      inviteRole
-    );
-    if (nextMembers) {
-      setMembers(nextMembers);
+    const result = await createTenantInvite(currentTenant.id, email, inviteRole);
+    if (result.invite) {
       setInviteEmail("");
       setInviteRole("member");
-      await refreshProfile();
-      toast({ title: "Member added" });
+      setInvites((prev) => [
+        result.invite as TenantInvite,
+        ...prev.filter((invite) => invite.email !== result.invite?.email),
+      ]);
+      toast({
+        title: result.email_sent
+          ? "Invitation sent"
+          : "Invitation created (email delivery is not configured)",
+      });
     } else {
-      toast({ title: error ?? "Failed to add member", variant: "destructive" });
+      toast({
+        title: result.error ?? "Failed to send invitation",
+        variant: "destructive",
+      });
     }
     setInviting(false);
+  };
+
+  const handleRevokeInvite = async (invite: TenantInvite) => {
+    if (!currentTenant) return;
+    const ok = await revokeTenantInvite(currentTenant.id, invite.id);
+    if (ok) {
+      setInvites((prev) => prev.filter((item) => item.id !== invite.id));
+      toast({ title: "Invitation revoked" });
+    } else {
+      toast({ title: "Failed to revoke invitation", variant: "destructive" });
+    }
   };
 
   const handleRoleChange = async (userId: string, role: "admin" | "member") => {
@@ -261,7 +283,7 @@ export function TeamSection({ profile, onChange }: TeamSectionProps) {
             </p>
             <p className="text-xs text-muted-foreground">
               {canManage
-                ? "Invite registered users by email. Only the owner can grant admin roles."
+                ? "Invite teammates by email — they don't need an account yet. Only the owner can grant admin roles."
                 : "Ask a workspace owner or admin to invite new members."}
             </p>
           </div>
@@ -373,8 +395,43 @@ export function TeamSection({ profile, onChange }: TeamSectionProps) {
                 disabled={inviting || !inviteEmail.trim()}
               >
                 <UserPlus className="h-4 w-4" />
-                {inviting ? "Adding…" : "Add member"}
+                {inviting ? "Sending…" : "Send invite"}
               </Button>
+            </div>
+          )}
+
+          {canManage && invites.length > 0 && (
+            <div className="space-y-2">
+              <p className="text-xs font-medium text-muted-foreground">
+                Pending invitations
+              </p>
+              <ul className="divide-y rounded-md border">
+                {invites.map((invite) => (
+                  <li
+                    key={invite.id}
+                    className="flex flex-wrap items-center gap-3 px-3 py-2"
+                  >
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-sm">{invite.email}</p>
+                      <p className="text-xs text-muted-foreground">
+                        invited as {invite.role} · expires{" "}
+                        {new Date(invite.expires_at).toLocaleDateString()}
+                      </p>
+                    </div>
+                    <span className="inline-flex items-center rounded-full bg-warning/15 px-2 py-0.5 text-xs font-medium text-warning">
+                      pending
+                    </span>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      title="Revoke invitation"
+                      onClick={() => void handleRevokeInvite(invite)}
+                    >
+                      <X className="h-4 w-4" />
+                    </Button>
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
         </div>

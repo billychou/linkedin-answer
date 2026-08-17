@@ -1,11 +1,19 @@
 import { jsonResponse, type AuthEnv } from "../../_lib/auth";
 import {
   claimWebhookEvent,
+  getPlanById,
+  getSubscriptionByStripeId,
   getUserByStripeCustomer,
   recordInvoiceFromStripe,
   syncSubscriptionFromStripe,
 } from "../../_lib/billing";
 import type { D1Database } from "../../_lib/db";
+import { sendEmail, siteUrl, type EmailEnv } from "../../_lib/email";
+import {
+  formatAmount,
+  paymentFailedEmail,
+  paymentReceiptEmail,
+} from "../../_lib/emailTemplates";
 import {
   getSubscription,
   verifyStripeSignature,
@@ -17,7 +25,7 @@ import {
 
 interface Context {
   request: Request;
-  env: AuthEnv;
+  env: AuthEnv & EmailEnv;
 }
 
 /** 事件处理失败只记录、不向 Stripe 抛错（避免无意义重试风暴）。 */
@@ -63,9 +71,10 @@ async function handleCheckoutCompleted(
 }
 
 async function handleInvoiceEvent(
+  env: AuthEnv & EmailEnv,
   db: D1Database,
   invoice: StripeInvoice,
-  subscriptionLocalId: string | null
+  eventType: string
 ): Promise<void> {
   const user = await getUserByStripeCustomer(db, invoice.customer);
   if (!user) {
@@ -74,7 +83,49 @@ async function handleInvoiceEvent(
     );
     return;
   }
-  await recordInvoiceFromStripe(db, user.id, subscriptionLocalId, invoice);
+
+  // 本地订阅行 → 关联发票 + 套餐名（发票邮件展示用）。
+  const localSub = invoice.subscription
+    ? await getSubscriptionByStripeId(db, invoice.subscription)
+    : null;
+  let planName = "Pro";
+  if (localSub) {
+    const plan = await getPlanById(db, localSub.plan_id);
+    if (plan) planName = plan.name;
+  }
+  await recordInvoiceFromStripe(db, user.id, localSub?.id ?? null, invoice);
+
+  // 交易类邮件：收据（invoice.paid）/ 扣款失败提醒（invoice.payment_failed）。
+  const amount = invoice.amount_paid ?? invoice.amount_due ?? 0;
+  const amountLabel = formatAmount(amount, invoice.currency);
+  if (eventType === "invoice.paid" && amount > 0) {
+    const email = paymentReceiptEmail({
+      userName: user.name,
+      amountLabel,
+      planName,
+      invoiceUrl: invoice.hosted_invoice_url ?? null,
+      siteUrl: siteUrl(env),
+    });
+    await sendEmail(env, {
+      to: user.email,
+      subject: email.subject,
+      html: email.html,
+      text: email.text,
+    });
+  } else if (eventType === "invoice.payment_failed") {
+    const email = paymentFailedEmail({
+      userName: user.name,
+      amountLabel,
+      planName,
+      siteUrl: siteUrl(env),
+    });
+    await sendEmail(env, {
+      to: user.email,
+      subject: email.subject,
+      html: email.html,
+      text: email.text,
+    });
+  }
 }
 
 /**
@@ -143,7 +194,7 @@ export const onRequest = async (context: Context): Promise<Response> => {
       case "invoice.paid":
       case "invoice.payment_failed": {
         const invoice = event.data.object as unknown as StripeInvoice;
-        await handleInvoiceEvent(db, invoice, null);
+        await handleInvoiceEvent(env, db, invoice, event.type);
         break;
       }
       case "customer.deleted": {

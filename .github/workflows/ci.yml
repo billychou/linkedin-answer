@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        # 版本取 package.json 的 packageManager 字段（pnpm@10.x）
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck (frontend)
+        run: npx tsc --noEmit
+
+      - name: Typecheck (Cloudflare Pages Functions)
+        run: npx tsc --noEmit -p tsconfig.functions.json
+
+      - name: Lint
+        run: npx eslint .

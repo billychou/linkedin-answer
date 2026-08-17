@@ -323,6 +323,11 @@ users.current_tenant_id  用户当前租户上下文（可空）
 - **多租户**：用户可创建更多租户（团队工作区），并按邮箱邀请其他已注册
   用户加入；同一用户可属于多个租户，`users.current_tenant_id` 记录当前切换。
 - 成员移除为软删除（`status='removed'`），重新邀请时 `upsertMember` 恢复。
+- **邮件邀请（2026-08-17 实施）**：`tenant_invites` 表（migration 0004）。
+  owner/admin 按邮箱创建邀请（不要求对方已注册）→ Resend 发送含
+  `/invites/accept?token=...` 链接的邀请邮件 → 对方登录（邮箱须一致）后
+  接受邀请加入租户并自动切换当前工作区。邀请 7 天过期，可撤销；
+  同邮箱重复邀请 = 撤销旧邀请并重发。撤销接口按 invite id（token 不暴露在列表中）。
 
 ### 11.2 权限规则
 

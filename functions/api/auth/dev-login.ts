@@ -38,14 +38,30 @@ export const onRequest = async (context: Context): Promise<Response> => {
     return jsonResponse({ error: "DB binding is not configured" }, 500);
   }
 
-  const name = "Dev User";
-  const email = "dev@example.com";
+  // 可选 body { email?, name? }：本地模拟多个用户（邀请/租户流程联调用）。
+  // subject 由邮箱派生，保证同一邮箱始终是同一个 dev 用户。
+  let email = "dev@example.com";
+  let name = "Dev User";
+  try {
+    const body = (await request.json().catch(() => null)) as {
+      email?: unknown;
+      name?: unknown;
+    } | null;
+    if (typeof body?.email === "string" && body.email.includes("@")) {
+      email = body.email.trim().toLowerCase();
+    }
+    if (typeof body?.name === "string" && body.name.trim()) {
+      name = body.name.trim().slice(0, 50);
+    }
+  } catch {
+    /* 空 body 用默认值 */
+  }
   const picture = "";
 
   // 与真实登录一致：dev 用户也落库，便于本地验证用户系统。
   const user = await findOrCreateUserByIdentity(env.DB, {
     provider: "dev",
-    subject: "dev-local-user",
+    subject: `dev-local-${email}`,
     email,
     name,
     picture,
