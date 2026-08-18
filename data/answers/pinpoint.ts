@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#840",
+    date: "2026-08-18",
+    answer: "Properties of The Walt Disney Company",
+    clues: ["The Muppets", "Star Wars", "Marvel", "Pixar", "Mickey Mouse"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>The Muppets:</strong> The Muppets relates to the answer "Properties of The Walt Disney Company".<br>
+<strong>Star Wars:</strong> Star Wars relates to the answer "Properties of The Walt Disney Company".<br>
+<strong>Marvel:</strong> Marvel relates to the answer "Properties of The Walt Disney Company".<br>
+<strong>Pixar:</strong> Pixar relates to the answer "Properties of The Walt Disney Company".<br>
+<strong>Mickey Mouse:</strong> Mickey Mouse relates to the answer "Properties of The Walt Disney Company".</p>`,
+  },
+  {
     sequence: "#839",
     date: "2026-08-17",
     answer: "Names of world currencies",
