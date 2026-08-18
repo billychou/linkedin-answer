@@ -11,12 +11,14 @@ import {
 } from "@/lib/tenantClient";
 import { useUserStore } from "@/stores/userStore";
 import type { AdminTenantRow, AdminUserRow } from "@/types/tenant";
+import MetricsPanel from "@/components/admin/MetricsPanel";
 import { Search } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 
-type Tab = "users" | "tenants";
+type Tab = "metrics" | "users" | "tenants";
 
 const TABS: { id: Tab; label: string }[] = [
+  { id: "metrics", label: "Metrics" },
   { id: "users", label: "Users" },
   { id: "tenants", label: "Tenants" },
 ];
@@ -56,7 +58,7 @@ export default function AdminClient() {
   const [status, setStatus] = useState<"loading" | "ready" | "forbidden">(
     "loading"
   );
-  const [tab, setTab] = useState<Tab>("users");
+  const [tab, setTab] = useState<Tab>("metrics");
 
   const [users, setUsers] = useState<AdminUserRow[]>([]);
   const [userSearch, setUserSearch] = useState("");
@@ -212,6 +214,8 @@ export default function AdminClient() {
           </button>
         ))}
       </div>
+
+      {tab === "metrics" && <MetricsPanel />}
 
       {tab === "users" && (
         <div className="space-y-4">

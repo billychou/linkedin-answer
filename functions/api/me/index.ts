@@ -43,6 +43,8 @@ const patchSchema = z
     ]),
     locale: z.enum(["en", "zh", "ja"]),
     timezone: z.string().refine(isValidTimezone, "Invalid timezone"),
+    show_on_leaderboard: z.boolean(),
+    onboarded: z.literal(true),
   })
   .strict() // 拒绝未知字段
   .partial(); // 允许只更新其中一部分

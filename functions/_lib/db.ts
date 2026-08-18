@@ -35,6 +35,10 @@ export interface DbUser {
   last_login_at: number | null;
   /** 当前所处租户（migrations/0002_tenants.sql）。 */
   current_tenant_id: string | null;
+  /** 排行榜展示开关（migration 0006）。 */
+  show_on_leaderboard: number;
+  /** onboarding 完成时间（migration 0006，null = 未完成）。 */
+  onboarded_at: number | null;
 }
 
 export interface DbIdentity {
@@ -57,7 +61,7 @@ export interface IdentityInput {
 
 const USER_COLUMNS = `id, email, name, avatar_url, bio, locale, timezone,
   status, role, stripe_customer_id, created_at, updated_at, last_login_at,
-  current_tenant_id`;
+  current_tenant_id, show_on_leaderboard, onboarded_at`;
 
 export function newUserId(): string {
   return crypto.randomUUID();
@@ -213,6 +217,9 @@ export async function updateUserProfile(
     avatar_url?: string;
     locale?: string;
     timezone?: string;
+    show_on_leaderboard?: boolean;
+    /** true = 标记 onboarding 完成（只写一次）。 */
+    onboarded?: boolean;
   }
 ): Promise<DbUser> {
   const sets: string[] = [];
@@ -223,6 +230,15 @@ export async function updateUserProfile(
       sets.push(`${key} = ?`);
       values.push(value);
     }
+  }
+  if (fields.show_on_leaderboard !== undefined) {
+    sets.push(`show_on_leaderboard = ?`);
+    values.push(fields.show_on_leaderboard ? 1 : 0);
+  }
+  if (fields.onboarded) {
+    // 只写一次：已完成则保持原时间戳。
+    sets.push(`onboarded_at = COALESCE(onboarded_at, ?)`);
+    values.push(Date.now());
   }
   if (sets.length) {
     values.push(Date.now(), id);
@@ -245,6 +261,8 @@ export interface PublicUser {
   bio: string;
   locale: string;
   timezone: string;
+  show_on_leaderboard: boolean;
+  onboarded_at: number | null;
   role: string;
   created_at: number;
   /** Phase 1 尚无套餐表，固定 free；Phase 2 改为查询 subscriptions。 */
@@ -265,6 +283,8 @@ export function toPublicUser(
     timezone: user.timezone,
     role: user.role,
     created_at: user.created_at,
+    show_on_leaderboard: Boolean(user.show_on_leaderboard),
+    onboarded_at: user.onboarded_at ?? null,
     // 默认 free/active；/api/me 会传入按订阅查库的真实摘要。
     subscription: subscription ?? { plan: "free", status: "active" },
   };

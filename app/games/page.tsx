@@ -1,5 +1,6 @@
 import { getAllMiniGames } from "@/lib/miniGames";
 import GameGrid from "@/components/games/GameGrid";
+import Leaderboard from "@/components/games/Leaderboard";
 import MiniGameCard from "@/components/games/MiniGameCard";
 import { constructMetadata } from "@/lib/metadata";
 
@@ -39,6 +40,9 @@ export default function GamesPage() {
         <h2 className="text-2xl font-bold mb-6">LinkedIn Game Answers</h2>
         <GameGrid />
       </section>
+
+      {/* Streak Leaderboard（登录且有数据时展示） */}
+      <Leaderboard />
     </div>
   );
 }
