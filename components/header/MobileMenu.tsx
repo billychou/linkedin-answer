@@ -14,9 +14,9 @@ import {
 import { cn } from "@/lib/utils";
 import { HeaderLink } from "@/types/common";
 import { Menu } from "lucide-react";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function MobileMenu() {
   const pathname = usePathname();
@@ -30,30 +30,6 @@ export default function MobileMenu() {
     {
       name: "Pinpoint",
       href: "/games/pinpoint"
-    },
-    {
-      name: "Patches",
-      href: "/games/patches"
-    },
-    {
-      name: "Zip",
-      href: "/games/zip"
-    },
-    {
-      name: "Tango",
-      href: "/games/tango"
-    },
-    {
-      name: "Queens",
-      href: "/games/queens"
-    },
-    // {
-    //   name: "Mini Sudoku",
-    //   href: "/games/mini-sudoku"
-    // },
-    {
-      name: "Crossclimb",
-      href: "/games/crossclimb"
     },
     {
       name: "Chat",
