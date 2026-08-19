@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#841",
+    date: "2026-08-19",
+    answer: "Famous astronomers",
+    clues: ["William and Caroline Herschel", "Tycho Brahe", "Carl Sagan", "Nicolaus Copernicus", "Galileo Galilei"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>William and Caroline Herschel:</strong> William and Caroline Herschel relates to the answer "Famous astronomers".<br>
+<strong>Tycho Brahe:</strong> Tycho Brahe relates to the answer "Famous astronomers".<br>
+<strong>Carl Sagan:</strong> Carl Sagan relates to the answer "Famous astronomers".<br>
+<strong>Nicolaus Copernicus:</strong> Nicolaus Copernicus relates to the answer "Famous astronomers".<br>
+<strong>Galileo Galilei:</strong> Galileo Galilei relates to the answer "Famous astronomers".</p>`,
+  },
+  {
     sequence: "#840",
     date: "2026-08-18",
     answer: "Properties of The Walt Disney Company",
