@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#842",
+    date: "2026-08-20",
+    answer: "Food items that are dehydrated",
+    clues: ["Nori", "Jerky", "Instant coffee", "Prunes", "Raisins"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Nori:</strong> Nori relates to the answer "Food items that are dehydrated".<br>
+<strong>Jerky:</strong> Jerky relates to the answer "Food items that are dehydrated".<br>
+<strong>Instant coffee:</strong> Instant coffee relates to the answer "Food items that are dehydrated".<br>
+<strong>Prunes:</strong> Prunes relates to the answer "Food items that are dehydrated".<br>
+<strong>Raisins:</strong> Raisins relates to the answer "Food items that are dehydrated".</p>`,
+  },
+  {
     sequence: "#841",
     date: "2026-08-19",
     answer: "Famous astronomers",
