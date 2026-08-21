@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#843",
+    date: "2026-08-21",
+    answer: "Things you might “shoot”",
+    clues: ["A video", "A glance", "The messenger", "Fish in a barrel", "Oneself in the foot"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>A video:</strong> A video relates to the answer "Things you might “shoot”".<br>
+<strong>A glance:</strong> A glance relates to the answer "Things you might “shoot”".<br>
+<strong>The messenger:</strong> The messenger relates to the answer "Things you might “shoot”".<br>
+<strong>Fish in a barrel:</strong> Fish in a barrel relates to the answer "Things you might “shoot”".<br>
+<strong>Oneself in the foot:</strong> Oneself in the foot relates to the answer "Things you might “shoot”".</p>`,
+  },
+  {
     sequence: "#842",
     date: "2026-08-20",
     answer: "Food items that are dehydrated",
