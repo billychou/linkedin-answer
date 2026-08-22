@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#844",
+    date: "2026-08-22",
+    answer: "Different ways to use a hammer (besides the most common one)",
+    clues: ["Crushing ice", "Removing nails", "Tenderizing meat", "Shaping metal (over an anvil)", "Chiseling stone (hit with this)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Crushing ice:</strong> Crushing ice relates to the answer "Different ways to use a hammer (besides the most common one)".<br>
+<strong>Removing nails:</strong> Removing nails relates to the answer "Different ways to use a hammer (besides the most common one)".<br>
+<strong>Tenderizing meat:</strong> Tenderizing meat relates to the answer "Different ways to use a hammer (besides the most common one)".<br>
+<strong>Shaping metal (over an anvil):</strong> Shaping metal (over an anvil) relates to the answer "Different ways to use a hammer (besides the most common one)".<br>
+<strong>Chiseling stone (hit with this):</strong> Chiseling stone (hit with this) relates to the answer "Different ways to use a hammer (besides the most common one)".</p>`,
+  },
+  {
     sequence: "#843",
     date: "2026-08-21",
     answer: "Things you might “shoot”",
