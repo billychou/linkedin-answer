@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#845",
+    date: "2026-08-23",
+    answer: "Words that come after “think”",
+    clues: ["Tank", "Piece", "Twice", "Out loud", "Outside the box"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Tank:</strong> Tank relates to the answer "Words that come after “think”".<br>
+<strong>Piece:</strong> Piece relates to the answer "Words that come after “think”".<br>
+<strong>Twice:</strong> Twice relates to the answer "Words that come after “think”".<br>
+<strong>Out loud:</strong> Out loud relates to the answer "Words that come after “think”".<br>
+<strong>Outside the box:</strong> Outside the box relates to the answer "Words that come after “think”".</p>`,
+  },
+  {
     sequence: "#844",
     date: "2026-08-22",
     answer: "Different ways to use a hammer (besides the most common one)",
