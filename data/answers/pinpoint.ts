@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#846",
+    date: "2026-08-24",
+    answer: "Types of snake",
+    clues: ["Krait", "Copperhead", "Python", "Viper", "Boa constrictor"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Krait:</strong> Krait relates to the answer "Types of snake".<br>
+<strong>Copperhead:</strong> Copperhead relates to the answer "Types of snake".<br>
+<strong>Python:</strong> Python relates to the answer "Types of snake".<br>
+<strong>Viper:</strong> Viper relates to the answer "Types of snake".<br>
+<strong>Boa constrictor:</strong> Boa constrictor relates to the answer "Types of snake".</p>`,
+  },
+  {
     sequence: "#845",
     date: "2026-08-23",
     answer: "Words that come after “think”",
