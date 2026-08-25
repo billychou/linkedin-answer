@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#847",
+    date: "2026-08-25",
+    answer: "Names of fonts",
+    clues: ["Impact", "Courier", "Wingdings", "Lucida Handwriting", "Calibri or Aptos (in MS Office)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Impact:</strong> Impact relates to the answer "Names of fonts".<br>
+<strong>Courier:</strong> Courier relates to the answer "Names of fonts".<br>
+<strong>Wingdings:</strong> Wingdings relates to the answer "Names of fonts".<br>
+<strong>Lucida Handwriting:</strong> Lucida Handwriting relates to the answer "Names of fonts".<br>
+<strong>Calibri or Aptos (in MS Office):</strong> Calibri or Aptos (in MS Office) relates to the answer "Names of fonts".</p>`,
+  },
+  {
     sequence: "#846",
     date: "2026-08-24",
     answer: "Types of snake",
