@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#848",
+    date: "2026-08-26",
+    answer: "Names of dance crazes (with \"The\")",
+    clues: ["Twist", "Floss", "Robot", "Moonwalk", "Macarena"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Twist:</strong> Twist relates to the answer "Names of dance crazes (with "The")".<br>
+<strong>Floss:</strong> Floss relates to the answer "Names of dance crazes (with "The")".<br>
+<strong>Robot:</strong> Robot relates to the answer "Names of dance crazes (with "The")".<br>
+<strong>Moonwalk:</strong> Moonwalk relates to the answer "Names of dance crazes (with "The")".<br>
+<strong>Macarena:</strong> Macarena relates to the answer "Names of dance crazes (with "The")".</p>`,
+  },
+  {
     sequence: "#847",
     date: "2026-08-25",
     answer: "Names of fonts",
