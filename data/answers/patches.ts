@@ -2,6 +2,13 @@ import { GameAnswer } from "@/types/game";
 
 export const patchesAnswers: GameAnswer[] = [
   {
+    sequence: "#164",
+    date: "2026-08-28",
+    answer: "12 patches on an 7x7 grid",
+    clueHint: `<p>Drag the scattered patches onto the board to rebuild the hidden picture, matching edges and colors. Today's completed image: <strong>12 patches on an 7x7 grid</strong>.</p>`,
+    image: "https://pub-f7562dec8e4a49c993b8e62385d6e405.r2.dev/playpatchesonline/patches-answer-164.jpg",
+  },
+  {
     sequence: "#162",
     date: "2026-08-26",
     answer: "8 patches on an 6x6 grid",
