@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#850",
+    date: "2026-08-28",
+    answer: "Words that come after “free”",
+    clues: ["Will", "Trade", "Rein", "Speech", "As a bird"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Will:</strong> Will relates to the answer "Words that come after “free”".<br>
+<strong>Trade:</strong> Trade relates to the answer "Words that come after “free”".<br>
+<strong>Rein:</strong> Rein relates to the answer "Words that come after “free”".<br>
+<strong>Speech:</strong> Speech relates to the answer "Words that come after “free”".<br>
+<strong>As a bird:</strong> As a bird relates to the answer "Words that come after “free”".</p>`,
+  },
+  {
     sequence: "#849",
     date: "2026-08-27",
     answer: "Things that change colors",
