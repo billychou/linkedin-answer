@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#850",
+    date: "2026-08-28",
+    answer: "JACK \u2192 BACK \u2192 BACH \u2192 BATH \u2192 PATH \u2192 PATS \u2192 POTS",
+    clues: ["\"Returned from a trip abroad\"", "\"Johann Sebastian ___ (German composer)\"", "\"Alternative to a shower\"", "\"Route from one place to another\"", "\"Gently touches, as a pet dog\""],
+    clueHint: `<p>Word ladder from <strong>JACK</strong> to <strong>POTS</strong>:<br>
+JACK → BACK → BACH → BATH → PATH → PATS → POTS</p>`,
+  },
+  {
     sequence: "#849",
     date: "2026-08-27",
     answer: "SAID \u2192 LAID \u2192 LAND \u2192 LANE \u2192 CANE \u2192 CONE \u2192 DONE",
