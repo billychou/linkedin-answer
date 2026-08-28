@@ -1,0 +1,61 @@
+---
+title: "LinkedIn Zip Strategy: Counting Cells to Find the Path"
+description: "How to solve LinkedIn Zip puzzles: the numbered-dot path rules, the cell-counting technique that drives most deductions, and how to recover when your path gets stuck."
+slug: /linkedin-zip-strategy
+tags: linkedin zip,zip puzzle,zip strategy,linkedin games,path puzzle
+date: 2026-08-23
+visible: published
+---
+
+Zip is LinkedIn's path-drawing puzzle: numbered dots mark waypoints, and you must connect them in order with a single continuous path that fills every cell of the grid — without crossing itself. It looks like doodling. In practice it is arithmetic in disguise, and the players who count before they draw finish dramatically faster.
+
+## The rules
+
+1. Numbered cells are waypoints. Visit them in ascending order: 1, 2, 3, and so on.
+2. Your path is one continuous line through orthogonally adjacent cells.
+3. The path must pass through **every** cell of the grid exactly once.
+4. The path cannot cross or revisit itself.
+
+Because the path covers the whole grid, the total number of cells in the grid is fixed — and that number is the foundation of every good deduction.
+
+## Technique 1: Count cells between waypoints
+
+This is the core skill. If waypoint 2 and waypoint 3 are separated by six cells of distance along the grid, the path segment between them must consume exactly that many cells. Concretely:
+
+- Count the total cells in the grid.
+- Subtract the waypoint cells themselves.
+- Divide the remainder among the segments between consecutive waypoints.
+
+When a segment has only one plausible route that consumes exactly its cell budget, that segment is forced — draw it with confidence.
+
+## Technique 2: Start at the tightest segments
+
+Not all segments are equal. A pair of waypoints that sit close together but whose cell budget is large forces the path to wander — and wandering paths reveal structure (dead ends, corners they must round). Start with the segment whose budget most tightly constrains its route, not with waypoint 1 by default.
+
+## Technique 3: Corners and dead-end cells must be on the path
+
+Since the path visits every cell exactly once, every corner cell and every narrow pocket is a hard constraint: the path must enter and leave each through its only openings. If a corner cell has just two neighbours, the path is forced straight through it. Mark those forced passages early — they act as anchors.
+
+## Technique 4: Watch for isolation
+
+If drawing a tentative segment would seal off a region of unfilled cells with no remaining entrance, that segment is wrong — the sealed cells could never be visited. When you stall, look for cells that are about to become unreachable; the fix is almost always one or two steps back.
+
+## Technique 5: When stuck, count what remains
+
+Near the end of a puzzle, count the cells your path still needs to cover versus the cells available. If the numbers disagree, an earlier segment stole or skipped a cell. If they agree but you are blocked, the remaining cells almost always form a forced corridor — trace the only available route.
+
+## Fixing mistakes without starting over
+
+Zip is forgiving in one way: a wrong path usually breaks visibly within a few moves (a dead end, an isolated pocket, a count mismatch). The moment something breaks:
+
+1. Identify the first cell where your path diverges from all valid routes — usually the last corner or forced passage.
+2. Erase back to that point.
+3. Try the alternative branch.
+
+Starting completely over is rarely necessary.
+
+## Practice
+
+Zip puzzles vary a lot from day to day — grid sizes, waypoint counts, and how generous the cell budgets are. If today's path is fighting you, compare against the completed route on our daily [Zip answer page](/games/zip), which includes an explanation of how the path can be derived. Drilling past puzzles in the [Zip archives](/games/zip/archives) is the fastest way to internalize the counting instinct.
+
+Count first, draw second — that is the whole game.

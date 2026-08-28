@@ -127,3 +127,67 @@ export function formatAmount(cents: number, currency: string): string {
   if (code === "JPY") return `¥${cents}`;
   return `${major} ${code}`;
 }
+
+const GAMES_LINK_LIST = [
+  { name: "Pinpoint", path: "/games/pinpoint" },
+  { name: "Queens", path: "/games/queens" },
+  { name: "Tango", path: "/games/tango" },
+  { name: "Zip", path: "/games/zip" },
+  { name: "Crossclimb", path: "/games/crossclimb" },
+  { name: "Patches", path: "/games/patches" },
+  { name: "Mini Sudoku", path: "/games/mini-sudoku" },
+];
+
+const UNSUBSCRIBE_FOOTER = (unsubscribeUrl: string) =>
+  `<p style="font-size:12px;color:#94a3b8;margin-top:24px;">You are receiving this email because you subscribed to LinkedIn Answer Today updates. <a href="${unsubscribeUrl}" style="color:#94a3b8;text-decoration:underline;">Unsubscribe</a> anytime with one click.</p>`;
+
+export function newsletterWelcomeEmail(input: {
+  siteUrl: string;
+  unsubscribeUrl: string;
+}): { subject: string; html: string; text: string } {
+  const subject = "Welcome! Your daily LinkedIn game answers start now";
+  const html = shell({
+    title: "Welcome aboard 👋",
+    bodyHtml:
+      P("Thanks for subscribing to <strong>LinkedIn Answer Today</strong>.") +
+      P(
+        "Every day we publish the answers and step-by-step explanations for all seven LinkedIn games — Pinpoint, Queens, Tango, Zip, Crossclimb, Patches and Mini Sudoku. Everything is free."
+      ) +
+      BUTTON(`${input.siteUrl}/games`, "See today's answers") +
+      P(
+        `Stuck before looking at the answer? Our <a href="${input.siteUrl}/chat" style="color:#2563eb;">AI assistant</a> gives hints without spoilers.`
+      ) +
+      UNSUBSCRIBE_FOOTER(input.unsubscribeUrl),
+    footerText: "LinkedIn Answer Today — daily LinkedIn game answers & AI chat",
+  });
+  const text = `Welcome to LinkedIn Answer Today!\n\nEvery day we publish answers and explanations for all seven LinkedIn games: ${input.siteUrl}/games\n\nHint without spoilers: ${input.siteUrl}/chat\n\nUnsubscribe: ${input.unsubscribeUrl}`;
+  return { subject, html, text };
+}
+
+export function dailyDigestEmail(input: {
+  dateLabel: string;
+  siteUrl: string;
+  unsubscribeUrl: string;
+}): { subject: string; html: string; text: string } {
+  const subject = `Today's LinkedIn game answers are live (${input.dateLabel})`;
+  const gameLinks = GAMES_LINK_LIST.map(
+    (g) =>
+      `<li style="margin:0 0 8px;font-size:15px;line-height:1.6;color:#475569;"><a href="${input.siteUrl}${g.path}" style="color:#2563eb;text-decoration:none;font-weight:600;">${g.name}</a> — today's answer &amp; explanation</li>`
+  ).join("");
+  const html = shell({
+    title: `Answers for ${escapeHtml(input.dateLabel)} 🧩`,
+    bodyHtml:
+      P("A new puzzle dropped for every LinkedIn game. Here is where to find today's answers:") +
+      `<ul style="padding-left:20px;margin:0 0 16px;">${gameLinks}</ul>` +
+      P(
+        `Want a nudge instead of the answer? Ask the <a href="${input.siteUrl}/chat" style="color:#2563eb;">AI assistant</a> for a hint — it guides without spoiling.`
+      ) +
+      BUTTON(`${input.siteUrl}/games`, "Open today's answers") +
+      UNSUBSCRIBE_FOOTER(input.unsubscribeUrl),
+    footerText: "LinkedIn Answer Today — answers updated daily, free for everyone",
+  });
+  const text = `Today's LinkedIn game answers are live (${input.dateLabel}).\n\n${GAMES_LINK_LIST.map(
+    (g) => `${g.name}: ${input.siteUrl}${g.path}`
+  ).join("\n")}\n\nHint without spoilers: ${input.siteUrl}/chat\n\nUnsubscribe: ${input.unsubscribeUrl}`;
+  return { subject, html, text };
+}

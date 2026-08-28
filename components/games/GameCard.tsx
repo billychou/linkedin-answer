@@ -55,6 +55,10 @@ const accents: Record<string, { chip: string; text: string }> = {
     chip: "bg-orange-600/10 text-orange-700 dark:bg-orange-400/15 dark:text-orange-400",
     text: "text-orange-700 dark:text-orange-400",
   },
+  cyan: {
+    chip: "bg-cyan-600/10 text-cyan-700 dark:bg-cyan-400/15 dark:text-cyan-400",
+    text: "text-cyan-700 dark:text-cyan-400",
+  },
 };
 
 export default function GameCard({ game }: GameCardProps) {

@@ -1,0 +1,55 @@
+---
+title: "LinkedIn Mini Sudoku Strategy: Six-by-Six Deduction in Five Minutes"
+description: "How LinkedIn Mini Sudoku works and the deduction techniques that solve it: row-column-box scanning, naked singles, and box-line reasoning on the compact 6x6 grid."
+slug: /linkedin-mini-sudoku-strategy
+tags: linkedin mini sudoku,mini sudoku strategy,6x6 sudoku,linkedin games,sudoku tips
+date: 2026-08-20
+visible: published
+---
+
+Mini Sudoku is LinkedIn's compact number puzzle: a 6×6 grid where you fill the digits 1–6 so that every row, every column, and every 2×3 box contains each digit exactly once. It keeps all the deduction of classic sudoku and finishes in a fraction of the time — which makes it the perfect daily warm-up, and the ideal on-ramp if full 9×9 sudoku feels like a commitment.
+
+## The rules
+
+1. Fill every cell with a digit from 1 to 6.
+2. Each **row** contains 1–6 exactly once.
+3. Each **column** contains 1–6 exactly once.
+4. Each **2×3 box** contains 1–6 exactly once.
+
+Note the box shape: two rows by three columns, not the 3×3 boxes of classic sudoku. Forgetting the box layout is the most common beginner mistake.
+
+## Technique 1: Scan digit by digit, not cell by cell
+
+Pick a digit — say 3 — and look across the grid: which boxes already contain a 3? In every box without one, the 3 must sit in the rows and columns that do not yet hold a 3. Usually one box has exactly one legal cell for the digit. Place it, move to the next digit. One full pass through 1–6 solves several cells on almost every puzzle.
+
+## Technique 2: Naked singles
+
+When a cell's row, column, and box together already contain five different digits, the cell's value is whatever is left. Late in the puzzle, naked singles chain: each placement creates the next one. If you stall, recount rows and columns that are one cell short of full.
+
+## Technique 3: Box-line interaction
+
+If a digit's remaining candidates inside a box all sit in a single row (or column), that digit cannot appear elsewhere in the same row outside the box. On a 6×6 grid this eliminates candidates quickly because rows are short — a row of six cells fills fast, and every elimination is meaningful.
+
+## Technique 4: The two-row box trick
+
+Because boxes are two rows tall, digits often lock into pairs: if a box needs digits 4 and 5 and both must sit in its two open cells, those two cells are decided even before you know which is which. That knowledge eliminates 4 and 5 from the rest of those cells' columns — which is often enough to cascade.
+
+## Technique 5: Count before you guess
+
+Mini Sudoku always has a unique solution. If you feel forced to guess, something is uncounted: a row missing one digit, a box with a single open cell, or a column where five digits already appear. Recounting is nearly always faster than guessing — and guessing is how unique-solution puzzles punish you three moves later.
+
+## A good solving order
+
+1. One full digit-scan pass (1 through 6).
+2. Fill any row, column, or box with a single gap.
+3. Repeat the digit scan with the new placements.
+4. Use box-line interaction for whatever remains.
+5. Finish with naked singles.
+
+Most daily puzzles surrender within those five steps.
+
+## Practice
+
+Mini Sudoku publishes one new grid every day. If you want to see a clean solving pattern, our daily [Mini Sudoku answer page](/games/mini-sudoku) shows the completed grid with an explanation of how it can be derived, and the [archives](/games/mini-sudoku/archives) hold every past puzzle — ideal for drilling the digit-scan until it becomes automatic.
+
+Six rows, six columns, six digits — and five focused minutes.

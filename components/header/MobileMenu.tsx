@@ -34,6 +34,14 @@ export default function MobileMenu() {
     {
       name: "Chat",
       href: "/chat"
+    },
+    {
+      name: "Blog",
+      href: "/blog"
+    },
+    {
+      name: "Pricing",
+      href: "/pricing"
     }
   ];
 

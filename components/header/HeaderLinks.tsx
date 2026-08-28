@@ -23,6 +23,10 @@ const HeaderLinks = () => {
       href: "/chat"
     },
     {
+      name: "Blog",
+      href: "/blog"
+    },
+    {
       name: "Pricing",
       href: "/pricing"
     }

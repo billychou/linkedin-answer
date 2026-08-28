@@ -1,0 +1,32 @@
+# 每日定时抓取当日 Zip 答案并自动提交到 main（复用 update-answer-reusable.yml）。
+#
+# GitHub Actions 的 cron 使用 UTC 时间：
+#   45 8 UTC = 北京时间 16:45；12:30 UTC 为兜底重跑（源站发布较晚时）。
+# 定时触发只在默认分支 (main) 上生效；合入本文件后才会开始按计划运行。
+# Zip 需要 DASHSCOPE_API_KEY（AI 生成 clueHint；未配置时脚本自动降级为模板）。
+
+name: Daily Zip Data Update
+
+on:
+  schedule:
+    - cron: "45 8 * * *"
+    - cron: "30 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: update-zip
+  cancel-in-progress: false
+
+jobs:
+  update:
+    uses: ./.github/workflows/update-answer-reusable.yml
+    with:
+      game: zip
+      script: data/update/update_zip.py
+      data_file: data/answers/zip.ts
+      needs_dashscope: true
+    secrets: inherit

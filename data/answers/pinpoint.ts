@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#849",
+    date: "2026-08-27",
+    answer: "Things that change colors",
+    clues: ["Octopuses", "Arctic hares (twice a year)", "Mood rings", "Leaves (in autumn)", "Chameleons"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Octopuses:</strong> Octopuses relates to the answer "Things that change colors".<br>
+<strong>Arctic hares (twice a year):</strong> Arctic hares (twice a year) relates to the answer "Things that change colors".<br>
+<strong>Mood rings:</strong> Mood rings relates to the answer "Things that change colors".<br>
+<strong>Leaves (in autumn):</strong> Leaves (in autumn) relates to the answer "Things that change colors".<br>
+<strong>Chameleons:</strong> Chameleons relates to the answer "Things that change colors".</p>`,
+  },
+  {
     sequence: "#848",
     date: "2026-08-26",
     answer: "Names of dance crazes (with \"The\")",

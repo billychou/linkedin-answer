@@ -15,6 +15,7 @@ export type GameAnswer = {
   clueHint?: string; // Optional hint text for clues (e.g., "Hover (desktop) or tap (mobile) each clue...")
   hints?: string[]; // Optional hints
   image?: string; // Optional image URL for the answer
+  grid?: number[][]; // Optional solution grid (mini-sudoku)
 };
 
 export type Game = {

@@ -33,6 +33,7 @@ export async function createTestDb(): Promise<FakeD1> {
     "../../../migrations/0002_tenants.sql",
     "../../../migrations/0003_billing.sql",
     "../../../migrations/0004_tenant_invites.sql",
+    "../../../migrations/0007_subscriptions.sql",
   ];
   for (const rel of migrations) {
     const sql = readFileSync(new URL(rel, import.meta.url), "utf-8");

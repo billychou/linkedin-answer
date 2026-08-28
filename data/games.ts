@@ -13,7 +13,7 @@ export const games: Game[] = [
     slug: "patches",
     name: "LinkedIn Patches",
     description:
-      "Patches is a spatial logic puzzle where you fill a 5x5 grid with rectangles and squares based on clues. Each region has a clue telling you either the number of cells to cover or the shape type (rectangle or square). Fill the entire grid with no overlaps and no gaps.",
+      "Patches is a picture puzzle where you drag scattered patches onto a grid board to rebuild a hidden image. Every patch belongs somewhere on the board, and pieces fit together by matching edges and colors.",
     playUrl: "https://www.linkedin.com/games/patches/",
     color: "green",
   },
@@ -29,7 +29,7 @@ export const games: Game[] = [
     slug: "tango",
     name: "LinkedIn Tango",
     description:
-      "Tango is a logic puzzle where you fill a 6x6 grid with suns (☀️) and moons (🌑). Each row and column must have an equal number of suns and moons, and no more than two identical symbols can be adjacent.",
+      "Tango is a logic puzzle where you fill a 6x6 grid with suns (☀️) and moons (🌙). Each row and column must have an equal number of suns and moons, and no more than two identical symbols can be adjacent.",
     playUrl: "https://www.linkedin.com/games/tango/",
     color: "amber",
   },
@@ -40,6 +40,14 @@ export const games: Game[] = [
       "Queens is a visual logic game where you place exactly one Crown (👑) in every row, column, and colored region. Crowns cannot touch each other, even diagonally.",
     playUrl: "https://www.linkedin.com/games/queens/",
     color: "pink",
+  },
+  {
+    slug: "mini-sudoku",
+    name: "LinkedIn Mini Sudoku",
+    description:
+      "Mini Sudoku is a compact 6x6 number puzzle. Fill the grid with digits 1-6 so that every row, column, and 2x3 box contains each digit exactly once - a quick daily logic warm-up.",
+    playUrl: "https://www.linkedin.com/games/mini-sudoku/",
+    color: "cyan",
   },
   {
     slug: "crossclimb",

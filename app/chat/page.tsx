@@ -6,16 +6,17 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = constructMetadata({
   page: "Chat",
-  title: "AI Chat Demo",
+  title: "AI Assistant",
   description:
-    "Demo page for testing the agent frontend chat box: SSE streaming output, stop generation, and multi-turn conversation.",
+    "Chat with our AI assistant about LinkedIn daily puzzle games: get hints, strategies and explanations for Pinpoint, Queens, Tango, Zip, Crossclimb, Patches and Mini Sudoku.",
   path: `/chat`,
   canonicalUrl: `/chat`,
   noIndex: true,
 });
 
-// 静态导出下 NEXT_PUBLIC_* 在构建时内联：切换 Mock / Live 模式需重新构建
-const isLive = Boolean(process.env.NEXT_PUBLIC_AGENT_API_URL);
+// 默认走本站服务端补全端点（/api/chat/completions）；
+// NEXT_PUBLIC_AGENT_API_URL="mock" 时为本地模拟。静态导出下切换需重新构建。
+const isLive = process.env.NEXT_PUBLIC_AGENT_API_URL !== "mock";
 
 export default function ChatPage() {
   return (
@@ -23,7 +24,7 @@ export default function ChatPage() {
       <div className="space-y-2">
         <div className="flex items-center gap-3">
           <h1 className="text-2xl sm:text-3xl font-bold text-foreground">
-            AI Chat Demo
+            AI Assistant
           </h1>
           <span
             className={cn(
@@ -34,13 +35,13 @@ export default function ChatPage() {
             )}
           >
             <Bot className="h-3.5 w-3.5" />
-            {isLive ? "Live agent" : "Mock mode"}
+            {isLive ? "Live" : "Mock mode"}
           </span>
         </div>
         <p className="text-sm text-muted-foreground">
           {isLive
-            ? "Connected to the configured agent API (NEXT_PUBLIC_AGENT_API_URL)."
-            : "No agent API configured — replies are mocked locally. Set NEXT_PUBLIC_AGENT_API_URL to connect a real agent."}
+            ? "Ask for hints and strategies on today's LinkedIn puzzles. Usage counts against your plan's daily chat quota."
+            : "No agent backend configured — replies are mocked locally. Set NEXT_PUBLIC_AGENT_API_URL to connect a real agent."}
         </p>
       </div>
 

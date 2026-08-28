@@ -1,0 +1,176 @@
+# 每日答案更新的可复用 workflow。
+#
+# 由各游戏的调度 workflow（如 update-queens.yml）通过 workflow_call 触发：
+#   1. 运行对应抓取脚本并自动提交数据变更；
+#   2. 成功时自动关闭该游戏的历史告警 issue；
+#   3. 失败时自动开告警 issue（去重）并可选推送 webhook。
+#
+# 告警通道：
+#   - GitHub Issue（label: data-alert），仓库 watcher 会收到邮件通知；
+#   - 可选：配置仓库 secret ALERT_WEBHOOK_URL 后，失败时会 POST 一个 JSON 事件
+#     （{source, game, title, run_url}），可对接 IM/邮件网关。
+
+name: Reusable Daily Answer Update
+
+on:
+  workflow_call:
+    inputs:
+      game:
+        description: "游戏 slug（用于告警标题与提交信息）"
+        required: true
+        type: string
+      script:
+        description: "抓取脚本路径"
+        required: true
+        type: string
+      data_file:
+        description: "答案数据文件路径（用于判断是否有变更）"
+        required: true
+        type: string
+      needs_dashscope:
+        description: "是否需要 DASHSCOPE_API_KEY（AI 解析）"
+        required: false
+        type: boolean
+        default: false
+    secrets:
+      DASHSCOPE_API_KEY:
+        required: false
+      ALERT_WEBHOOK_URL:
+        required: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: data/update/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r data/update/requirements.txt
+
+      - name: Fetch today's answer
+        env:
+          # 未配置时脚本自动降级（如 pinpoint 使用 fallback 模板），不会导致失败
+          DASHSCOPE_API_KEY: ${{ inputs.needs_dashscope && secrets.DASHSCOPE_API_KEY || '' }}
+        run: python ${{ inputs.script }}
+
+      - name: Commit & push if changed
+        run: |
+          if git diff --quiet -- "${{ inputs.data_file }}"; then
+            echo "数据无变化，跳过提交。"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "${{ inputs.data_file }}"
+          git commit -m "chore(data): auto-update ${{ inputs.game }} answer $(date -u +%Y-%m-%d)"
+          git push origin main
+
+      - name: Close resolved alerts
+        if: success()
+        uses: actions/github-script@v7
+        continue-on-error: true
+        with:
+          script: |
+            const prefix = `[${'${{ inputs.game }}'}]`;
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'data-alert',
+              state: 'open',
+              per_page: 100,
+            });
+            for (const issue of issues) {
+              if (issue.pull_request) continue;
+              if (!issue.title.startsWith(prefix)) continue;
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: `✅ 更新已恢复正常（run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}），自动关闭。`,
+              });
+              await github.rest.issues.updateIssue({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                state: 'closed',
+              });
+            }
+
+  notify-failure:
+    needs: update
+    if: failure()
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
+    steps:
+      - name: Open alert issue (deduped by game)
+        uses: actions/github-script@v7
+        continue-on-error: true
+        with:
+          script: |
+            const game = '${{ inputs.game }}';
+            const title = `[${game}] 答案更新失败`;
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'data-alert',
+              state: 'open',
+              per_page: 100,
+            });
+            const existing = issues.find(i => !i.pull_request && i.title.startsWith(`[${game}]`));
+            const body = [
+              `**${game}** 的每日答案更新失败，请检查抓取脚本或源站结构。`,
+              '',
+              `- 时间: ${new Date().toISOString()}`,
+              `- 失败运行: ${runUrl}`,
+              `- 数据文件: \`${'${{ inputs.data_file }}'}\``,
+              `- 脚本: \`${'${{ inputs.script }}'}\``,
+              '',
+              '修复后本告警会在下次成功运行时自动关闭。',
+            ].join('\n');
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body: `❌ 再次失败（${new Date().toISOString()}）: ${runUrl}`,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['data-alert'],
+              });
+            }
+
+      - name: Optional webhook notification
+        if: env.ALERT_WEBHOOK_URL != ''
+        continue-on-error: true
+        run: |
+          curl -fsS -X POST "$ALERT_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "source": "linkedin-answer-daily-update",
+              "game": "${{ inputs.game }}",
+              "title": "[${{ inputs.game }}] 答案更新失败",
+              "run_url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            }' || echo "webhook 通知失败（已忽略）"

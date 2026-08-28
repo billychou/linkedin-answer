@@ -2,6 +2,356 @@ import { GameAnswer } from "@/types/game";
 
 export const queensAnswers: GameAnswer[] = [
   {
+    sequence: "#848",
+    date: "2026-08-26",
+    answer: "R1C7, R2C4, R3C6, R4C2, R5C5, R6C1, R7C3",
+  },
+  {
+    sequence: "#847",
+    date: "2026-08-25",
+    answer: "R1C5, R2C2, R3C6, R4C4, R5C1, R6C3, R7C7",
+  },
+  {
+    sequence: "#846",
+    date: "2026-08-24",
+    answer: "R1C4, R2C1, R3C8, R4C6, R5C9, R6C2, R7C5, R8C7, R9C3",
+  },
+  {
+    sequence: "#845",
+    date: "2026-08-23",
+    answer: "R1C4, R2C1, R3C9, R4C2, R5C6, R6C3, R7C8, R8C5, R9C7",
+  },
+  {
+    sequence: "#844",
+    date: "2026-08-22",
+    answer: "R1C8, R2C6, R3C1, R4C5, R5C2, R6C4, R7C7, R8C3, R9C9",
+  },
+  {
+    sequence: "#843",
+    date: "2026-08-21",
+    answer: "R1C3, R2C6, R3C8, R4C2, R5C5, R6C7, R7C1, R8C4",
+  },
+  {
+    sequence: "#842",
+    date: "2026-08-20",
+    answer: "R1C2, R2C6, R3C9, R4C1, R5C8, R6C5, R7C3, R8C7, R9C4",
+  },
+  {
+    sequence: "#841",
+    date: "2026-08-19",
+    answer: "R1C2, R2C7, R3C1, R4C6, R5C4, R6C8, R7C3, R8C5",
+  },
+  {
+    sequence: "#840",
+    date: "2026-08-18",
+    answer: "R1C7, R2C5, R3C3, R4C6, R5C2, R6C4, R7C1",
+  },
+  {
+    sequence: "#839",
+    date: "2026-08-17",
+    answer: "R1C1, R2C3, R3C6, R4C4, R5C2, R6C5, R7C7",
+  },
+  {
+    sequence: "#838",
+    date: "2026-08-16",
+    answer: "R1C1, R2C9, R3C6, R4C3, R5C8, R6C5, R7C7, R8C4, R9C2",
+  },
+  {
+    sequence: "#837",
+    date: "2026-08-15",
+    answer: "R1C5, R2C1, R3C8, R4C2, R5C9, R6C3, R7C7, R8C4, R9C6",
+  },
+  {
+    sequence: "#836",
+    date: "2026-08-14",
+    answer: "R1C3, R2C5, R3C7, R4C2, R5C9, R6C6, R7C8, R8C4, R9C1",
+  },
+  {
+    sequence: "#835",
+    date: "2026-08-13",
+    answer: "R1C1, R2C3, R3C6, R4C2, R5C8, R6C5, R7C9, R8C7, R9C4",
+  },
+  {
+    sequence: "#834",
+    date: "2026-08-12",
+    answer: "R1C2, R2C5, R3C8, R4C6, R5C3, R6C1, R7C4, R8C7",
+  },
+  {
+    sequence: "#833",
+    date: "2026-08-11",
+    answer: "R1C6, R2C1, R3C5, R4C2, R5C4, R6C7, R7C3",
+  },
+  {
+    sequence: "#832",
+    date: "2026-08-10",
+    answer: "R1C5, R2C7, R3C4, R4C2, R5C6, R6C3, R7C1",
+  },
+  {
+    sequence: "#831",
+    date: "2026-08-09",
+    answer: "R1C2, R2C6, R3C9, R4C3, R5C5, R6C7, R7C4, R8C1, R9C8",
+  },
+  {
+    sequence: "#830",
+    date: "2026-08-08",
+    answer: "R1C8, R2C1, R3C4, R4C6, R5C3, R6C7, R7C5, R8C2, R9C9",
+  },
+  {
+    sequence: "#829",
+    date: "2026-08-07",
+    answer: "R1C4, R2C7, R3C9, R4C2, R5C5, R6C3, R7C6, R8C1, R9C8",
+  },
+  {
+    sequence: "#828",
+    date: "2026-08-06",
+    answer: "R1C5, R2C1, R3C6, R4C4, R5C2, R6C7, R7C3, R8C8",
+  },
+  {
+    sequence: "#827",
+    date: "2026-08-05",
+    answer: "R1C8, R2C6, R3C2, R4C5, R5C7, R6C4, R7C1, R8C3",
+  },
+  {
+    sequence: "#826",
+    date: "2026-08-04",
+    answer: "R1C2, R2C5, R3C3, R4C1, R5C6, R6C4, R7C7",
+  },
+  {
+    sequence: "#825",
+    date: "2026-08-03",
+    answer: "R1C6, R2C3, R3C1, R4C4, R5C7, R6C5, R7C2",
+  },
+  {
+    sequence: "#824",
+    date: "2026-08-02",
+    answer: "R1C1, R2C7, R3C3, R4C5, R5C8, R6C2, R7C4, R8C6, R9C9",
+  },
+  {
+    sequence: "#823",
+    date: "2026-08-01",
+    answer: "R1C1, R2C6, R3C3, R4C9, R5C2, R6C7, R7C5, R8C8, R9C4",
+  },
+  {
+    sequence: "#822",
+    date: "2026-07-31",
+    answer: "R1C6, R2C9, R3C5, R4C7, R5C1, R6C3, R7C8, R8C4, R9C2",
+  },
+  {
+    sequence: "#821",
+    date: "2026-07-30",
+    answer: "R1C1, R2C8, R3C6, R4C3, R5C5, R6C7, R7C2, R8C9, R9C4",
+  },
+  {
+    sequence: "#820",
+    date: "2026-07-29",
+    answer: "R1C4, R2C6, R3C2, R4C7, R5C3, R6C8, R7C5, R8C1",
+  },
+  {
+    sequence: "#819",
+    date: "2026-07-28",
+    answer: "R1C1, R2C3, R3C6, R4C4, R5C7, R6C5, R7C8, R8C2",
+  },
+  {
+    sequence: "#818",
+    date: "2026-07-27",
+    answer: "R1C4, R2C2, R3C5, R4C7, R5C3, R6C6, R7C1",
+  },
+  {
+    sequence: "#817",
+    date: "2026-07-26",
+    answer: "R1C3, R2C5, R3C1, R4C6, R5C8, R6C2, R7C7, R8C9, R9C4",
+  },
+  {
+    sequence: "#816",
+    date: "2026-07-25",
+    answer: "R1C5, R2C2, R3C4, R4C7, R5C3, R6C8, R7C1, R8C9, R9C6",
+  },
+  {
+    sequence: "#815",
+    date: "2026-07-24",
+    answer: "R1C6, R2C1, R3C8, R4C3, R5C5, R6C7, R7C2, R8C9, R9C4",
+  },
+  {
+    sequence: "#814",
+    date: "2026-07-23",
+    answer: "R1C8, R2C2, R3C7, R4C5, R5C3, R6C6, R7C1, R8C4",
+  },
+  {
+    sequence: "#813",
+    date: "2026-07-22",
+    answer: "R1C2, R2C6, R3C3, R4C5, R5C8, R6C4, R7C1, R8C7",
+  },
+  {
+    sequence: "#812",
+    date: "2026-07-21",
+    answer: "R1C8, R2C6, R3C4, R4C1, R5C3, R6C5, R7C2, R8C7",
+  },
+  {
+    sequence: "#811",
+    date: "2026-07-20",
+    answer: "R1C1, R2C5, R3C7, R4C2, R5C4, R6C6, R7C3",
+  },
+  {
+    sequence: "#810",
+    date: "2026-07-19",
+    answer: "R1C1, R2C4, R3C7, R4C3, R5C5, R6C8, R7C2, R8C6, R9C9",
+  },
+  {
+    sequence: "#809",
+    date: "2026-07-18",
+    answer: "R1C9, R2C4, R3C6, R4C8, R5C5, R6C2, R7C7, R8C3, R9C1",
+  },
+  {
+    sequence: "#808",
+    date: "2026-07-17",
+    answer: "R1C6, R2C8, R3C5, R4C7, R5C9, R6C2, R7C4, R8C1, R9C3",
+  },
+  {
+    sequence: "#807",
+    date: "2026-07-16",
+    answer: "R1C5, R2C8, R3C3, R4C1, R5C7, R6C2, R7C9, R8C4, R9C6",
+  },
+  {
+    sequence: "#806",
+    date: "2026-07-15",
+    answer: "R1C5, R2C8, R3C2, R4C6, R5C3, R6C9, R7C4, R8C7, R9C1",
+  },
+  {
+    sequence: "#805",
+    date: "2026-07-14",
+    answer: "R1C8, R2C5, R3C2, R4C4, R5C7, R6C1, R7C6, R8C3",
+  },
+  {
+    sequence: "#804",
+    date: "2026-07-13",
+    answer: "R1C5, R2C2, R3C7, R4C4, R5C1, R6C3, R7C6",
+  },
+  {
+    sequence: "#803",
+    date: "2026-07-12",
+    answer: "R1C4, R2C9, R3C1, R4C8, R5C5, R6C2, R7C6, R8C3, R9C7",
+  },
+  {
+    sequence: "#802",
+    date: "2026-07-11",
+    answer: "R1C8, R2C2, R3C7, R4C9, R5C4, R6C1, R7C6, R8C3, R9C5",
+  },
+  {
+    sequence: "#801",
+    date: "2026-07-10",
+    answer: "R1C4, R2C2, R3C6, R4C9, R5C5, R6C8, R7C3, R8C1, R9C7",
+  },
+  {
+    sequence: "#800",
+    date: "2026-07-09",
+    answer: "R1C3, R2C1, R3C8, R4C4, R5C6, R6C2, R7C5, R8C7",
+  },
+  {
+    sequence: "#799",
+    date: "2026-07-08",
+    answer: "R1C4, R2C2, R3C5, R4C3, R5C6, R6C1, R7C7",
+  },
+  {
+    sequence: "#798",
+    date: "2026-07-07",
+    answer: "R1C1, R2C3, R3C6, R4C4, R5C2, R6C7, R7C5",
+  },
+  {
+    sequence: "#797",
+    date: "2026-07-06",
+    answer: "R1C1, R2C3, R3C7, R4C5, R5C2, R6C6, R7C4",
+  },
+  {
+    sequence: "#796",
+    date: "2026-07-05",
+    answer: "R1C2, R2C4, R3C9, R4C7, R5C5, R6C3, R7C6, R8C1, R9C8",
+  },
+  {
+    sequence: "#795",
+    date: "2026-07-04",
+    answer: "R1C8, R2C2, R3C6, R4C4, R5C1, R6C3, R7C5, R8C7, R9C9",
+  },
+  {
+    sequence: "#794",
+    date: "2026-07-03",
+    answer: "R1C2, R2C8, R3C3, R4C7, R5C4, R6C1, R7C5, R8C9, R9C6",
+  },
+  {
+    sequence: "#793",
+    date: "2026-07-02",
+    answer: "R1C8, R2C2, R3C4, R4C7, R5C5, R6C3, R7C6, R8C1",
+  },
+  {
+    sequence: "#792",
+    date: "2026-07-01",
+    answer: "R1C9, R2C6, R3C3, R4C1, R5C8, R6C4, R7C7, R8C2, R9C5",
+  },
+  {
+    sequence: "#791",
+    date: "2026-06-30",
+    answer: "R1C6, R2C2, R3C8, R4C5, R5C3, R6C1, R7C7, R8C4",
+  },
+  {
+    sequence: "#790",
+    date: "2026-06-29",
+    answer: "R1C7, R2C3, R3C5, R4C1, R5C4, R6C2, R7C6",
+  },
+  {
+    sequence: "#789",
+    date: "2026-06-28",
+    answer: "R1C5, R2C1, R3C7, R4C3, R5C9, R6C2, R7C8, R8C4, R9C6",
+  },
+  {
+    sequence: "#788",
+    date: "2026-06-27",
+    answer: "R1C2, R2C5, R3C8, R4C3, R5C1, R6C4, R7C7, R8C9, R9C6",
+  },
+  {
+    sequence: "#787",
+    date: "2026-06-26",
+    answer: "R1C3, R2C6, R3C8, R4C2, R5C9, R6C5, R7C1, R8C4, R9C7",
+  },
+  {
+    sequence: "#786",
+    date: "2026-06-25",
+    answer: "R1C3, R2C5, R3C7, R4C1, R5C8, R6C6, R7C2, R8C4",
+  },
+  {
+    sequence: "#785",
+    date: "2026-06-24",
+    answer: "R1C2, R2C5, R3C3, R4C6, R5C4, R6C7, R7C1",
+  },
+  {
+    sequence: "#784",
+    date: "2026-06-23",
+    answer: "R1C1, R2C7, R3C5, R4C3, R5C6, R6C4, R7C2, R8C8",
+  },
+  {
+    sequence: "#783",
+    date: "2026-06-22",
+    answer: "R1C6, R2C3, R3C7, R4C5, R5C2, R6C4, R7C1",
+  },
+  {
+    sequence: "#782",
+    date: "2026-06-21",
+    answer: "R1C6, R2C1, R3C7, R4C5, R5C2, R6C8, R7C3, R8C9, R9C4",
+  },
+  {
+    sequence: "#781",
+    date: "2026-06-20",
+    answer: "R1C1, R2C7, R3C5, R4C2, R5C4, R6C6, R7C3, R8C8",
+  },
+  {
+    sequence: "#779",
+    date: "2026-06-18",
+    answer: "R1C7, R2C3, R3C6, R4C4, R5C2, R6C8, R7C5, R8C1",
+  },
+  {
+    sequence: "#849",
+    date: "2026-08-27",
+    answer: "R1C5, R2C8, R3C2, R4C6, R5C4, R6C7, R7C3, R8C1",
+  },
+  {
     sequence: "#780",
     date: "2026-06-19",
     answer: "Queens #780 - Solution grid",

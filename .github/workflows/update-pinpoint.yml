@@ -1,22 +1,21 @@
-# 每日定时抓取当日 Pinpoint 答案并自动提交到 main。
+# 每日定时抓取当日 Pinpoint 答案并自动提交到 main（复用 update-answer-reusable.yml）。
 #
-# 注意：GitHub Actions 的 cron 表达式使用 UTC 时间。
-#   08:30 UTC = 北京时间 16:30 (UTC+8)
-# 定时触发只会在默认分支 (main) 上生效；合入本文件后才会开始按计划运行。
-# 若当天源站尚未发布答案，脚本会报错退出（不会产生提交），
-# 之后可通过 Actions 页面手动 "Run workflow" 重跑。
+# GitHub Actions 的 cron 使用 UTC 时间：
+#   30 8 UTC = 北京时间 16:30；12:30 UTC 为兜底重跑（源站发布较晚时）。
+# 定时触发只在默认分支 (main) 上生效；合入本文件后才会开始按计划运行。
+# Pinpoint 需要 DASHSCOPE_API_KEY（AI 生成 clueHint；未配置时脚本自动降级为模板）。
 
 name: Daily Pinpoint Data Update
 
 on:
   schedule:
-    # UTC 08:30 = 北京时间 16:30
     - cron: "30 8 * * *"
-  # 支持在 Actions 页面手动触发
+    - cron: "30 12 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: update-pinpoint
@@ -24,38 +23,10 @@ concurrency:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: main
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: pip
-          cache-dependency-path: data/update/requirements.txt
-
-      - name: Install dependencies
-        run: pip install -r data/update/requirements.txt
-
-      - name: Fetch today's Pinpoint answer
-        env:
-          # 可选：配置该 secret 后用 AI 生成 clueHint；未配置时脚本自动使用 fallback 模板
-          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
-        run: python data/update/update_pinpoint.py
-
-      - name: Commit & push if changed
-        run: |
-          if git diff --quiet -- data/answers/pinpoint.ts; then
-            echo "数据无变化，跳过提交。"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/answers/pinpoint.ts
-          git commit -m "chore(data): auto-update pinpoint answer $(date -u +%Y-%m-%d)"
-          git push origin main
+    uses: ./.github/workflows/update-answer-reusable.yml
+    with:
+      game: pinpoint
+      script: data/update/update_pinpoint.py
+      data_file: data/answers/pinpoint.ts
+      needs_dashscope: true
+    secrets: inherit

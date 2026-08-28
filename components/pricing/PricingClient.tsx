@@ -31,10 +31,10 @@ const PLAN_CARDS: PlanCard[] = [
     period: "forever",
     tagline: "Everything you need for today's games.",
     features: [
-      "Daily answers for all 6 LinkedIn games",
-      "5 AI chat messages per day",
-      "7-day answer history",
-      "Community support",
+      "Daily answers for all 7 LinkedIn games",
+      "Full answer archives — free for everyone",
+      "AI assistant: 5 messages per day",
+      "7-day AI chat history",
     ],
   },
   {
@@ -42,13 +42,12 @@ const PLAN_CARDS: PlanCard[] = [
     name: "Pro Monthly",
     price: "$5.99",
     period: "per month",
-    tagline: "For players who never want to miss a streak.",
+    tagline: "For players who lean on the AI assistant every day.",
     features: [
       "Everything in Free",
-      "100 AI chat messages per day",
-      "Full 365-day answer archive",
+      "AI assistant: 100 messages per day",
+      "365-day AI chat history",
       "Priority support",
-      "Early access to new game coverage",
     ],
     highlighted: true,
   },
@@ -168,8 +167,9 @@ export default function PricingClient() {
           Simple, transparent pricing
         </h1>
         <p className="text-muted-foreground max-w-xl mx-auto">
-          Daily answers stay free forever. Pro unlocks the AI assistant, the
-          full archive, and priority support.
+          Daily answers and the full archive stay free for everyone. Pro
+          raises your AI assistant limits and keeps a full year of chat
+          history.
         </p>
       </div>
 

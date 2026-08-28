@@ -2,6 +2,7 @@ import AnswerReveal from "@/components/games/AnswerReveal";
 import DailyCheckIn from "@/components/games/DailyCheckIn";
 import { GameAnswer } from "@/types/game";
 import CluesDisplay from "./CluesDisplay";
+import SudokuGrid from "./SudokuGrid";
 import Image from "next/image";
 
 interface AnswerDisplayProps {
@@ -44,6 +45,11 @@ export default function AnswerDisplay({ answer, gameName }: AnswerDisplayProps) 
         </div>
       )}
 
+      {/* Solution Grid Display (mini-sudoku) */}
+      {answer.grid && (
+        <SudokuGrid grid={answer.grid} gameName={gameName} sequence={answer.sequence} />
+      )}
+
       {/* Answer Reveal */}
       <AnswerReveal
         answer={answer.answer}
@@ -51,6 +57,19 @@ export default function AnswerDisplay({ answer, gameName }: AnswerDisplayProps) 
         sequence={answer.sequence}
         formattedDate={formatDate(answer.date)}
       />
+
+      {/* Solution walkthrough for games without clues (Queens, Tango, Zip, ...) */}
+      {answer.clueHint && !(answer.clues && answer.clues.length > 0) && (
+        <div className="rounded-xl border-2 border-border bg-card p-4 sm:p-6">
+          <h4 className="text-sm sm:text-base font-medium text-muted-foreground mb-3">
+            How to solve it:
+          </h4>
+          <div
+            className="text-sm sm:text-base text-muted-foreground leading-relaxed prose prose-sm dark:prose-invert max-w-none [&_strong]:font-semibold [&_strong]:text-foreground"
+            dangerouslySetInnerHTML={{ __html: answer.clueHint }}
+          />
+        </div>
+      )}
 
       {/* Hints Display (if available) */}
       {answer.hints && answer.hints.length > 0 && (

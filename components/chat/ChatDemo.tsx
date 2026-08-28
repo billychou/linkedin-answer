@@ -5,7 +5,7 @@ import MessageBubble from "@/components/chat/MessageBubble";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { fetchSession } from "@/lib/authClient";
-import { consumeChatQuota, fetchQuota, type QuotaInfo } from "@/lib/billingClient";
+import { fetchQuota, type QuotaInfo } from "@/lib/billingClient";
 import {
   appendChatMessage,
   clearChatHistory,
@@ -89,20 +89,6 @@ export default function ChatDemo({ isLive }: ChatDemoProps) {
     const text = input.trim();
     if (!text || status === "streaming") return;
 
-    // 配额闸门：真实 agent 按套餐扣次（检查+计数原子完成）。
-    // 配额服务异常时 fail-open；超限则拒绝并引导升级。
-    if (isLive) {
-      const result = await consumeChatQuota();
-      if (result.ok) {
-        setQuota(result.quota);
-      } else if (result.reason === "limit") {
-        setError(
-          "You've reached today's chat limit on the Free plan. Upgrade to Pro for more."
-        );
-        return;
-      }
-    }
-
     setError(null);
     setInput("");
 
@@ -126,8 +112,11 @@ export default function ChatDemo({ isLive }: ChatDemoProps) {
     setMessages((prev) => [...prev, userMessage, assistantMessage]);
     setStatus("streaming");
 
-    // 持久化用户消息（失败不阻断聊天）。
-    void appendChatMessage("user", text);
+    // Live 模式由服务端完成配额扣减与消息持久化；
+    // mock 模式没有补全端点，仍走客户端持久化（失败不阻断）。
+    if (!isLive) {
+      void appendChatMessage("user", text);
+    }
 
     const controller = new AbortController();
     abortRef.current = controller;
@@ -161,8 +150,11 @@ export default function ChatDemo({ isLive }: ChatDemoProps) {
     } finally {
       abortRef.current = null;
       setStatus((prev) => (prev === "streaming" ? "idle" : prev));
-      // 持久化 assistant 最终回复（含中断时的部分内容；失败不阻断）。
-      if (accumulated.length > 0) {
+      if (isLive) {
+        // 服务端已扣配额/落库，这里只刷新顶栏余量展示。
+        void fetchQuota().then(setQuota);
+      } else if (accumulated.length > 0) {
+        // mock 模式：持久化 assistant 回复（失败不阻断）。
         void appendChatMessage("assistant", accumulated);
       }
     }

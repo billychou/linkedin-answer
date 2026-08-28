@@ -2,6 +2,351 @@ import { GameAnswer } from "@/types/game";
 
 export const zipAnswers: GameAnswer[] = [
   {
+    sequence: "#527",
+    date: "2026-08-26",
+    answer: "Path from 1 through 15",
+  },
+  {
+    sequence: "#526",
+    date: "2026-08-25",
+    answer: "Path from 1 through 6",
+  },
+  {
+    sequence: "#525",
+    date: "2026-08-24",
+    answer: "Path from 1 through 10",
+  },
+  {
+    sequence: "#524",
+    date: "2026-08-23",
+    answer: "Path from 1 through 14",
+  },
+  {
+    sequence: "#523",
+    date: "2026-08-22",
+    answer: "Path from 1 through 16",
+  },
+  {
+    sequence: "#522",
+    date: "2026-08-21",
+    answer: "Path from 1 through 9",
+  },
+  {
+    sequence: "#521",
+    date: "2026-08-20",
+    answer: "Path from 1 through 12",
+  },
+  {
+    sequence: "#520",
+    date: "2026-08-19",
+    answer: "Path from 1 through 8",
+  },
+  {
+    sequence: "#519",
+    date: "2026-08-18",
+    answer: "Path from 1 through 6",
+  },
+  {
+    sequence: "#518",
+    date: "2026-08-17",
+    answer: "Path from 1 through 12",
+  },
+  {
+    sequence: "#517",
+    date: "2026-08-16",
+    answer: "Path from 1 through 12",
+  },
+  {
+    sequence: "#516",
+    date: "2026-08-15",
+    answer: "Path from 1 through 16",
+  },
+  {
+    sequence: "#515",
+    date: "2026-08-14",
+    answer: "Path from 1 through 13",
+  },
+  {
+    sequence: "#514",
+    date: "2026-08-13",
+    answer: "Path from 1 through 10",
+  },
+  {
+    sequence: "#513",
+    date: "2026-08-12",
+    answer: "Path from 1 through 12",
+  },
+  {
+    sequence: "#512",
+    date: "2026-08-11",
+    answer: "Path from 1 through 10",
+  },
+  {
+    sequence: "#511",
+    date: "2026-08-10",
+    answer: "Path from 1 through 4",
+  },
+  {
+    sequence: "#510",
+    date: "2026-08-09",
+    answer: "Path from 1 through 12",
+  },
+  {
+    sequence: "#509",
+    date: "2026-08-08",
+    answer: "Path from 1 through 12",
+  },
+  {
+    sequence: "#508",
+    date: "2026-08-07",
+    answer: "Path from 1 through 16",
+  },
+  {
+    sequence: "#507",
+    date: "2026-08-06",
+    answer: "Path from 1 through 14",
+  },
+  {
+    sequence: "#506",
+    date: "2026-08-05",
+    answer: "Path from 1 through 10",
+  },
+  {
+    sequence: "#505",
+    date: "2026-08-04",
+    answer: "Path from 1 through 8",
+  },
+  {
+    sequence: "#504",
+    date: "2026-08-03",
+    answer: "Path from 1 through 12",
+  },
+  {
+    sequence: "#503",
+    date: "2026-08-02",
+    answer: "Path from 1 through 8",
+  },
+  {
+    sequence: "#502",
+    date: "2026-08-01",
+    answer: "Path from 1 through 8",
+  },
+  {
+    sequence: "#501",
+    date: "2026-07-31",
+    answer: "Path from 1 through 8",
+  },
+  {
+    sequence: "#500",
+    date: "2026-07-30",
+    answer: "Path from 1 through 4",
+  },
+  {
+    sequence: "#499",
+    date: "2026-07-29",
+    answer: "Path from 1 through 10",
+  },
+  {
+    sequence: "#498",
+    date: "2026-07-28",
+    answer: "Path from 1 through 10",
+  },
+  {
+    sequence: "#497",
+    date: "2026-07-27",
+    answer: "Path from 1 through 8",
+  },
+  {
+    sequence: "#496",
+    date: "2026-07-26",
+    answer: "Path from 1 through 16",
+  },
+  {
+    sequence: "#495",
+    date: "2026-07-25",
+    answer: "Path from 1 through 16",
+  },
+  {
+    sequence: "#494",
+    date: "2026-07-24",
+    answer: "Path from 1 through 12",
+  },
+  {
+    sequence: "#493",
+    date: "2026-07-23",
+    answer: "Path from 1 through 8",
+  },
+  {
+    sequence: "#492",
+    date: "2026-07-22",
+    answer: "Path from 1 through 10",
+  },
+  {
+    sequence: "#491",
+    date: "2026-07-21",
+    answer: "Path from 1 through 6",
+  },
+  {
+    sequence: "#490",
+    date: "2026-07-20",
+    answer: "Path from 1 through 14",
+  },
+  {
+    sequence: "#489",
+    date: "2026-07-19",
+    answer: "Path from 1 through 10",
+  },
+  {
+    sequence: "#488",
+    date: "2026-07-18",
+    answer: "Path from 1 through 16",
+  },
+  {
+    sequence: "#487",
+    date: "2026-07-17",
+    answer: "Path from 1 through 16",
+  },
+  {
+    sequence: "#486",
+    date: "2026-07-16",
+    answer: "Path from 1 through 9",
+  },
+  {
+    sequence: "#485",
+    date: "2026-07-15",
+    answer: "Path from 1 through 20",
+  },
+  {
+    sequence: "#484",
+    date: "2026-07-14",
+    answer: "Path from 1 through 8",
+  },
+  {
+    sequence: "#483",
+    date: "2026-07-13",
+    answer: "Path from 1 through 6",
+  },
+  {
+    sequence: "#482",
+    date: "2026-07-12",
+    answer: "Path from 1 through 12",
+  },
+  {
+    sequence: "#481",
+    date: "2026-07-11",
+    answer: "Path from 1 through 12",
+  },
+  {
+    sequence: "#480",
+    date: "2026-07-10",
+    answer: "Path from 1 through 18",
+  },
+  {
+    sequence: "#479",
+    date: "2026-07-09",
+    answer: "Path from 1 through 10",
+  },
+  {
+    sequence: "#478",
+    date: "2026-07-08",
+    answer: "Path from 1 through 10",
+  },
+  {
+    sequence: "#477",
+    date: "2026-07-07",
+    answer: "Path from 1 through 8",
+  },
+  {
+    sequence: "#476",
+    date: "2026-07-06",
+    answer: "Path from 1 through 8",
+  },
+  {
+    sequence: "#475",
+    date: "2026-07-05",
+    answer: "Path from 1 through 16",
+  },
+  {
+    sequence: "#474",
+    date: "2026-07-04",
+    answer: "Path from 1 through 16",
+  },
+  {
+    sequence: "#473",
+    date: "2026-07-03",
+    answer: "Path from 1 through 10",
+  },
+  {
+    sequence: "#472",
+    date: "2026-07-02",
+    answer: "Path from 1 through 12",
+  },
+  {
+    sequence: "#471",
+    date: "2026-07-01",
+    answer: "Path from 1 through 20",
+  },
+  {
+    sequence: "#470",
+    date: "2026-06-30",
+    answer: "Path from 1 through 10",
+  },
+  {
+    sequence: "#469",
+    date: "2026-06-29",
+    answer: "Path from 1 through 13",
+  },
+  {
+    sequence: "#468",
+    date: "2026-06-28",
+    answer: "Path from 1 through 12",
+  },
+  {
+    sequence: "#467",
+    date: "2026-06-27",
+    answer: "Path from 1 through 8",
+  },
+  {
+    sequence: "#466",
+    date: "2026-06-26",
+    answer: "Path from 1 through 9",
+  },
+  {
+    sequence: "#465",
+    date: "2026-06-25",
+    answer: "Path from 1 through 10",
+  },
+  {
+    sequence: "#464",
+    date: "2026-06-24",
+    answer: "Path from 1 through 11",
+  },
+  {
+    sequence: "#463",
+    date: "2026-06-23",
+    answer: "Path from 1 through 6",
+  },
+  {
+    sequence: "#462",
+    date: "2026-06-22",
+    answer: "Path from 1 through 8",
+  },
+  {
+    sequence: "#461",
+    date: "2026-06-21",
+    answer: "Path from 1 through 8",
+  },
+  {
+    sequence: "#459",
+    date: "2026-06-19",
+    answer: "Path from 1 through 14",
+  },
+  {
+    sequence: "#528",
+    date: "2026-08-27",
+    answer: "Path from 1 through 8",
+  },
+  {
     sequence: "#460",
     date: "2026-06-20",
     answer: "Zip #460 - Path solution",

@@ -102,7 +102,7 @@ export function SubscriptionSection({ profile }: { profile: ProfileUser }) {
         {detail && (
           <ul className="text-sm text-muted-foreground space-y-1">
             <li>AI chat: {detail.features.chatPerDay} messages / day</li>
-            <li>Answer archive: {detail.features.historyDays} days</li>
+            <li>Chat history kept: {detail.features.historyDays} days</li>
             {detail.features.priority && <li>Priority support included</li>}
           </ul>
         )}
@@ -111,8 +111,8 @@ export function SubscriptionSection({ profile }: { profile: ProfileUser }) {
           <div className="rounded-md border border-dashed p-4 space-y-3">
             <p className="text-sm text-muted-foreground">
               <Sparkles className="mb-1 mr-1 inline h-4 w-4 text-primary" />
-              Upgrade to Pro for 100 AI chats per day, the full 365-day
-              archive, and priority support.
+              Upgrade to Pro for 100 AI chats per day, a full year of chat
+              history, and priority support.
             </p>
             <Button asChild size="sm">
               <Link href="/pricing">View plans</Link>

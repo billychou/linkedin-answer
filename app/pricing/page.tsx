@@ -6,7 +6,7 @@ export const metadata: Metadata = constructMetadata({
   page: "Pricing",
   title: "Pricing — LinkedIn Answer Today",
   description:
-    "Free daily answers for everyone. Upgrade to Pro for unlimited AI chat, full answer archives, and priority support.",
+    "Free daily answers and full archives for everyone. Upgrade to Pro for 100 AI assistant messages per day, 365-day chat history, and priority support.",
   path: `/pricing`,
   canonicalUrl: `/pricing`,
 });

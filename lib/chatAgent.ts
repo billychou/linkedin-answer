@@ -1,15 +1,29 @@
 import { ChatMessage } from "@/types/chat";
 
 /**
- * 智能体 API 地址。
- * 在 .env / .env.local 中配置 NEXT_PUBLIC_AGENT_API_URL 后即切换为真实请求；
- * 未配置时使用本地 mock 流式回复（demo 开箱即用）。
+ * 智能体 API 地址（OpenAI 兼容）。
+ * 默认指向本站服务端补全端点 /api/chat/completions：
+ * 鉴权、套餐配额扣减、会话持久化全部在服务端强制（functions/api/chat/completions.ts）。
+ * 设置 NEXT_PUBLIC_AGENT_API_URL 可改指外部接口；设为 "mock" 强制本地模拟。
  * 注意：本项目是静态导出（output: "export"），NEXT_PUBLIC_* 环境变量在
  * 构建时内联，切换模式需要重新构建。
  */
-export const AGENT_API_URL = process.env.NEXT_PUBLIC_AGENT_API_URL ?? "";
+const CONFIGURED_URL =
+  process.env.NEXT_PUBLIC_AGENT_API_URL ?? "/api/chat/completions";
 
-export const isAgentLive = AGENT_API_URL.length > 0;
+export const isAgentLive = CONFIGURED_URL !== "mock";
+export const AGENT_API_URL = isAgentLive ? CONFIGURED_URL : "";
+
+/** 服务端返回的业务错误（配额超限 429、模型未配置 503 等）。 */
+export class AgentApiError extends Error {
+  constructor(
+    message: string,
+    public readonly status: number
+  ) {
+    super(message);
+    this.name = "AgentApiError";
+  }
+}
 
 /** 发送给智能体的请求体（OpenAI 兼容格式） */
 interface AgentChatPayload {
@@ -103,7 +117,16 @@ async function* liveStream(
   });
 
   if (!res.ok) {
-    throw new Error(`Agent request failed (${res.status} ${res.statusText})`);
+    let message = `Agent request failed (${res.status})`;
+    try {
+      const data = (await res.json()) as { error?: unknown };
+      if (typeof data?.error === "string" && data.error) {
+        message = data.error;
+      }
+    } catch {
+      // 非 JSON 错误体：保留默认消息
+    }
+    throw new AgentApiError(message, res.status);
   }
 
   const contentType = res.headers.get("content-type") ?? "";

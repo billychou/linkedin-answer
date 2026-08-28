@@ -1,0 +1,32 @@
+# 每日定时抓取当日 Mini Sudoku 答案并自动提交到 main（复用 update-answer-reusable.yml）。
+#
+# GitHub Actions 的 cron 使用 UTC 时间：
+#   0 9 UTC = 北京时间 17:00；13:00 UTC 为兜底重跑（源站发布较晚时）。
+# 定时触发只在默认分支 (main) 上生效；合入本文件后才会开始按计划运行。
+# Mini Sudoku 需要 DASHSCOPE_API_KEY（AI 生成 clueHint；未配置时脚本自动降级为模板）。
+
+name: Daily Mini Sudoku Data Update
+
+on:
+  schedule:
+    - cron: "0 9 * * *"
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: update-mini-sudoku
+  cancel-in-progress: false
+
+jobs:
+  update:
+    uses: ./.github/workflows/update-answer-reusable.yml
+    with:
+      game: mini-sudoku
+      script: data/update/update_mini_sudoku.py
+      data_file: data/answers/mini-sudoku.ts
+      needs_dashscope: true
+    secrets: inherit
