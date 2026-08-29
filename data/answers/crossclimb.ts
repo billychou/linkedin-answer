@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#851",
+    date: "2026-08-29",
+    answer: "MILE \u2192 MILK \u2192 MINK \u2192 RINK \u2192 RANK \u2192 RACK \u2192 RACE",
+    clues: ["Nutrient-rich drink produced by mammals", "Relative of the weasel", "Ice skating venue", "Assign items an order based on their relative quality", "Where Scrabble tiles may sit before they're played"],
+    clueHint: `<p>Word ladder from <strong>MILE</strong> to <strong>RACE</strong>:<br>
+MILE → MILK → MINK → RINK → RANK → RACK → RACE</p>`,
+  },
+  {
     sequence: "#850",
     date: "2026-08-28",
     answer: "JACK \u2192 BACK \u2192 BACH \u2192 BATH \u2192 PATH \u2192 PATS \u2192 POTS",
