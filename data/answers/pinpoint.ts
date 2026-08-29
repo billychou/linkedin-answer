@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#851",
+    date: "2026-08-29",
+    answer: "All associated with poles",
+    clues: ["Tents", "Skiers", "Barber shops", "Olympic vaulters", "Flags (as attached here: 🏁)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Tents:</strong> Tents relates to the answer "All associated with poles".<br>
+<strong>Skiers:</strong> Skiers relates to the answer "All associated with poles".<br>
+<strong>Barber shops:</strong> Barber shops relates to the answer "All associated with poles".<br>
+<strong>Olympic vaulters:</strong> Olympic vaulters relates to the answer "All associated with poles".<br>
+<strong>Flags (as attached here: 🏁):</strong> Flags (as attached here: 🏁) relates to the answer "All associated with poles".</p>`,
+  },
+  {
     sequence: "#850",
     date: "2026-08-28",
     answer: "Words that come after “free”",
