@@ -2,33 +2,34 @@ import AnswerDisplay from "@/components/games/AnswerDisplay";
 import StructuredData from "@/components/games/StructuredData";
 import GameNavigation from "@/components/games/GameNavigation";
 import { getAnswerByDate, getAllAnswers } from "@/lib/answers";
-import { getGame } from "@/lib/games";
+import { getGame, getGameSlugs } from "@/lib/games";
 import { constructMetadata } from "@/lib/metadata";
 import { Calendar } from "lucide-react";
 import { notFound } from "next/navigation";
 
 type Props = {
-  params: Promise<{ date: string }>;
+  params: Promise<{ gameSlug: string; date: string }>;
 };
 
 export async function generateStaticParams() {
-  const answers = getAllAnswers("zip");
-  return answers.map((answer) => ({ date: answer.date }));
+  return getGameSlugs().flatMap((slug) =>
+    getAllAnswers(slug).map((answer) => ({ gameSlug: slug, date: answer.date }))
+  );
 }
 
 export async function generateMetadata({
   params,
 }: Props): Promise<ReturnType<typeof constructMetadata>> {
-  const { date } = await params;
-  const game = getGame("zip");
-  const answer = getAnswerByDate("zip", date);
+  const { gameSlug, date } = await params;
+  const game = getGame(gameSlug);
+  const answer = getAnswerByDate(gameSlug as any, date);
 
   if (!game || !answer) {
     return constructMetadata({
       page: "Game",
       title: "Answer Not Found",
       description: "The requested answer could not be found.",
-      path: `/games/zip/${date}`,
+      path: `/games/${gameSlug}/${date}`,
     });
   }
 
@@ -44,15 +45,15 @@ export async function generateMetadata({
     page: "Game",
     title: `${game.name} - ${formatDate(date)}`,
     description: `Answer for ${game.name} on ${formatDate(date)}`,
-    path: `/games/zip/${date}`,
-    canonicalUrl: `/games/zip/${date}`,
+    path: `/games/${gameSlug}/${date}`,
+    canonicalUrl: `/games/${gameSlug}/${date}`,
   });
 }
 
-export default async function ZipDatePage({ params }: Props) {
-  const { date } = await params;
-  const game = getGame("zip");
-  const answer = getAnswerByDate("zip", date);
+export default async function GameDatePage({ params }: Props) {
+  const { gameSlug, date } = await params;
+  const game = getGame(gameSlug);
+  const answer = getAnswerByDate(gameSlug as any, date);
 
   if (!game || !answer) {
     notFound();
