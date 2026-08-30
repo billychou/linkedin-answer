@@ -1,0 +1,33 @@
+# LinkedIn Answer Today
+
+> Daily answers, hints, and explanations for every LinkedIn game: Pinpoint, Crossclimb, Zip, Queens, Tango, Patches, and Mini Sudoku. Answers are updated every day as soon as new puzzles go live on linkedin.com/games.
+
+## Today's Answers
+
+- [All LinkedIn Game Answers Today](https://linkedinanswer.today/today): Answers for all seven LinkedIn games for today's date, updated daily.
+
+## Game Answers & Archives
+
+- [LinkedIn Pinpoint answers](https://linkedinanswer.today/games/pinpoint): Today's Pinpoint answer plus full archive of past answers and clue explanations.
+- [LinkedIn Crossclimb answers](https://linkedinanswer.today/games/crossclimb): Today's Crossclimb word-ladder answer plus archives.
+- [LinkedIn Zip answers](https://linkedinanswer.today/games/zip): Today's Zip path puzzle answer plus archives.
+- [LinkedIn Queens answers](https://linkedinanswer.today/games/queens): Today's Queens grid answer plus archives.
+- [LinkedIn Tango answers](https://linkedinanswer.today/games/tango): Today's Tango answer chain plus archives.
+- [LinkedIn Patches answers](https://linkedinanswer.today/games/patches): Today's Patches quilt answer plus archives.
+- [LinkedIn Mini Sudoku answers](https://linkedinanswer.today/games/mini-sudoku): Today's Mini Sudoku solution grid plus archives.
+
+## How to Play & Strategy Guides
+
+- [How to play LinkedIn Pinpoint](https://linkedinanswer.today/games/pinpoint/how-to-play)
+- [How to play LinkedIn Crossclimb](https://linkedinanswer.today/games/crossclimb/how-to-play)
+- [How to play LinkedIn Zip](https://linkedinanswer.today/games/zip/how-to-play)
+- [How to play LinkedIn Queens](https://linkedinanswer.today/games/queens/how-to-play)
+- [How to play LinkedIn Tango](https://linkedinanswer.today/games/tango/how-to-play)
+- [How to play LinkedIn Patches](https://linkedinanswer.today/games/patches/how-to-play)
+- [How to play LinkedIn Mini Sudoku](https://linkedinanswer.today/games/mini-sudoku/how-to-play)
+- [Strategy guides on the blog](https://linkedinanswer.today/blog)
+
+## Data Feeds
+
+- [RSS feed](https://linkedinanswer.today/feed.xml): Daily answers and new blog posts.
+- [JSON feed](https://json.linkedinanswer.today): Machine-readable answer data.

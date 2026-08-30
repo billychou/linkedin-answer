@@ -159,5 +159,6 @@ npx tsc --noEmit  # 前端类型检查
 ## 相关文档
 
 - [`docs/user-system-design.md`](docs/user-system-design.md) — 用户/租户系统设计
+- [`docs/seo-operations.md`](docs/seo-operations.md) — SEO 运营手册（收录、外链、内容运营）
 - [`CLOUDFLARE_DEPLOYMENT.md`](CLOUDFLARE_DEPLOYMENT.md) — Cloudflare Pages 部署完整方案
 - [`AUTO_UPDATE.md`](AUTO_UPDATE.md) — 游戏答案自动更新
