@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#852",
+    date: "2026-08-30",
+    answer: "ROVER \u2192 RIVER \u2192 DIVER \u2192 DOVER \u2192 COVER \u2192 COVET \u2192 COMET",
+    clues: ["Mississippi or Nile, for example", "Scuba ___", "City in England with white cliffs", "Perform a new version of a song originally by another artist", "Have a strong desire for something that belongs to someone else"],
+    clueHint: `<p>Word ladder from <strong>ROVER</strong> to <strong>COMET</strong>:<br>
+ROVER → RIVER → DIVER → DOVER → COVER → COVET → COMET</p>`,
+  },
+  {
     sequence: "#851",
     date: "2026-08-29",
     answer: "MILE \u2192 MILK \u2192 MINK \u2192 RINK \u2192 RANK \u2192 RACK \u2192 RACE",
