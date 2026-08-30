@@ -5,6 +5,7 @@ import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 const footerLinks = [
+  { name: "Today's Answers", href: "/today" },
   { name: "Games", href: "/games" },
   { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },

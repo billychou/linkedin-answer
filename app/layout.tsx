@@ -42,13 +42,35 @@ const fontDisplay = localFont({
  * 生成页面元数据，用于 SEO 优化
  */
 export async function generateMetadata(): Promise<Metadata> {
-  return constructMetadata({
+  const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+  const bingVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
+
+  const metadata = await constructMetadata({
     page: "Home",
     title: "LinkedIn Answer Today",
     description: "Find today's answers for Pinpoint, Crossclimb, ZIP, Queens, Tango, and more. Updated daily with solutions and explanations.",
     path: `/`,
     canonicalUrl: `/`,
   });
+
+  return {
+    ...metadata,
+    alternates: {
+      ...metadata.alternates,
+      types: {
+        "application/rss+xml": [
+          {
+            url: `${siteConfig.url}/feed.xml`,
+            title: `${siteConfig.name} — Daily LinkedIn Game Answers`,
+          },
+        ],
+      },
+    },
+    verification: {
+      ...(googleVerification ? { google: googleVerification } : {}),
+      ...(bingVerification ? { other: { "msvalidate.01": bingVerification } } : {}),
+    },
+  };
 }
 
 export const viewport: Viewport = {
