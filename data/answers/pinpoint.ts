@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#852",
+    date: "2026-08-30",
+    answer: "Words that follow “drop” in common sayings",
+    clues: ["Everything", "Anchor", "A hint", "A line", "The ball"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Everything:</strong> Everything relates to the answer "Words that follow “drop” in common sayings".<br>
+<strong>Anchor:</strong> Anchor relates to the answer "Words that follow “drop” in common sayings".<br>
+<strong>A hint:</strong> A hint relates to the answer "Words that follow “drop” in common sayings".<br>
+<strong>A line:</strong> A line relates to the answer "Words that follow “drop” in common sayings".<br>
+<strong>The ball:</strong> The ball relates to the answer "Words that follow “drop” in common sayings".</p>`,
+  },
+  {
     sequence: "#851",
     date: "2026-08-29",
     answer: "All associated with poles",
