@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#853",
+    date: "2026-08-31",
+    answer: "TIME \u2192 TIRE \u2192 HIRE \u2192 HIVE \u2192 FIVE \u2192 FINE \u2192 LINE",
+    clues: ["Grow weary from activity", "Employ someone to join a work team", "Home for bees", "Number of stars in many top ratings", "Satisfactory, or amount paid as a penalty"],
+    clueHint: `<p>Word ladder from <strong>TIME</strong> to <strong>LINE</strong>:<br>
+TIME → TIRE → HIRE → HIVE → FIVE → FINE → LINE</p>`,
+  },
+  {
     sequence: "#852",
     date: "2026-08-30",
     answer: "ROVER \u2192 RIVER \u2192 DIVER \u2192 DOVER \u2192 COVER \u2192 COVET \u2192 COMET",
