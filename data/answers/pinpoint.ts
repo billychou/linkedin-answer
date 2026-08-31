@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#853",
+    date: "2026-08-31",
+    answer: "Games published by Hasbro",
+    clues: ["Risk", "Taboo", "Boggle", "Cluedo (Clue in N. America)", "Jenga"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Risk:</strong> Risk relates to the answer "Games published by Hasbro".<br>
+<strong>Taboo:</strong> Taboo relates to the answer "Games published by Hasbro".<br>
+<strong>Boggle:</strong> Boggle relates to the answer "Games published by Hasbro".<br>
+<strong>Cluedo (Clue in N. America):</strong> Cluedo (Clue in N. America) relates to the answer "Games published by Hasbro".<br>
+<strong>Jenga:</strong> Jenga relates to the answer "Games published by Hasbro".</p>`,
+  },
+  {
     sequence: "#852",
     date: "2026-08-30",
     answer: "Words that follow “drop” in common sayings",
