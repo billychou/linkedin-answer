@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#854",
+    date: "2026-09-01",
+    answer: "Things associated with Italy (🇮🇹)",
+    clues: ["Espresso", "Renaissance art", "Vespa scooters", "Fashion houses (Gucci, Prada, …)", "Pizza and pasta"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Espresso:</strong> Espresso relates to the answer "Things associated with Italy (🇮🇹)".<br>
+<strong>Renaissance art:</strong> Renaissance art relates to the answer "Things associated with Italy (🇮🇹)".<br>
+<strong>Vespa scooters:</strong> Vespa scooters relates to the answer "Things associated with Italy (🇮🇹)".<br>
+<strong>Fashion houses (Gucci, Prada, …):</strong> Fashion houses (Gucci, Prada, …) relates to the answer "Things associated with Italy (🇮🇹)".<br>
+<strong>Pizza and pasta:</strong> Pizza and pasta relates to the answer "Things associated with Italy (🇮🇹)".</p>`,
+  },
+  {
     sequence: "#853",
     date: "2026-08-31",
     answer: "Games published by Hasbro",
