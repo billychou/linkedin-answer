@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#854",
+    date: "2026-09-01",
+    answer: "GOOD \u2192 WOOD \u2192 WOOS \u2192 WOWS \u2192 SOWS \u2192 SEWS \u2192 NEWS",
+    clues: ["Lumber", "Tries to win someoneâs affection", "Really impresses with a performance", "Female pigs", "Uses a needle and thread"],
+    clueHint: `<p>Word ladder from <strong>GOOD</strong> to <strong>NEWS</strong>:<br>
+GOOD → WOOD → WOOS → WOWS → SOWS → SEWS → NEWS</p>`,
+  },
+  {
     sequence: "#853",
     date: "2026-08-31",
     answer: "TIME \u2192 TIRE \u2192 HIRE \u2192 HIVE \u2192 FIVE \u2192 FINE \u2192 LINE",
