@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#855",
+    date: "2026-09-02",
+    answer: "PLAY \u2192 SLAY \u2192 SLAM \u2192 SEAM \u2192 REAM \u2192 ROAM \u2192 ROOM",
+    clues: ["â___ the dragonâ (conquer a difficult challenge)", "Shut loudly, as a door", "Line where two pieces of fabric are joined", "Large quantity of paper", "Wander somewhat aimlessly"],
+    clueHint: `<p>Word ladder from <strong>PLAY</strong> to <strong>ROOM</strong>:<br>
+PLAY → SLAY → SLAM → SEAM → REAM → ROAM → ROOM</p>`,
+  },
+  {
     sequence: "#854",
     date: "2026-09-01",
     answer: "GOOD \u2192 WOOD \u2192 WOOS \u2192 WOWS \u2192 SOWS \u2192 SEWS \u2192 NEWS",
