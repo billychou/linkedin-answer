@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#855",
+    date: "2026-09-02",
+    answer: "Things that are folded",
+    clues: ["Towels", "Napkins", "Large road maps", "Paper cranes", "Bad poker hands"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Towels:</strong> Towels relates to the answer "Things that are folded".<br>
+<strong>Napkins:</strong> Napkins relates to the answer "Things that are folded".<br>
+<strong>Large road maps:</strong> Large road maps relates to the answer "Things that are folded".<br>
+<strong>Paper cranes:</strong> Paper cranes relates to the answer "Things that are folded".<br>
+<strong>Bad poker hands:</strong> Bad poker hands relates to the answer "Things that are folded".</p>`,
+  },
+  {
     sequence: "#854",
     date: "2026-09-01",
     answer: "Things associated with Italy (🇮🇹)",
