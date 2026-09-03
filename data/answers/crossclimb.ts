@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#856",
+    date: "2026-09-03",
+    answer: "TOWN \u2192 TOON \u2192 TOOL \u2192 TOLL \u2192 TILL \u2192 HILL \u2192 HALL",
+    clues: ["Colloquial term for an animated TV show", "Screwdriver, chisel, or hammer", "You may pay it to go over a bridge", "Drawer that stores money in a cash register", "Raised bit of land that's smaller than a mountain"],
+    clueHint: `<p>Word ladder from <strong>TOWN</strong> to <strong>HALL</strong>:<br>
+TOWN → TOON → TOOL → TOLL → TILL → HILL → HALL</p>`,
+  },
+  {
     sequence: "#855",
     date: "2026-09-02",
     answer: "PLAY \u2192 SLAY \u2192 SLAM \u2192 SEAM \u2192 REAM \u2192 ROAM \u2192 ROOM",
