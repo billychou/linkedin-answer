@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#856",
+    date: "2026-09-03",
+    answer: "Words that come before “way”",
+    clues: ["Make", "Wrong", "Right of", "Milky", "Look the other"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Make:</strong> Make relates to the answer "Words that come before “way”".<br>
+<strong>Wrong:</strong> Wrong relates to the answer "Words that come before “way”".<br>
+<strong>Right of:</strong> Right of relates to the answer "Words that come before “way”".<br>
+<strong>Milky:</strong> Milky relates to the answer "Words that come before “way”".<br>
+<strong>Look the other:</strong> Look the other relates to the answer "Words that come before “way”".</p>`,
+  },
+  {
     sequence: "#855",
     date: "2026-09-02",
     answer: "Things that are folded",
