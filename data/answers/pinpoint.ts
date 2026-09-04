@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#857",
+    date: "2026-09-04",
+    answer: "Things associated with tracks",
+    clues: ["Trains", "Music albums", "Adjustable ceiling lights", "Olympic stadiums for running", "Mud after animals walk in it"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Trains:</strong> Trains relates to the answer "Things associated with tracks".<br>
+<strong>Music albums:</strong> Music albums relates to the answer "Things associated with tracks".<br>
+<strong>Adjustable ceiling lights:</strong> Adjustable ceiling lights relates to the answer "Things associated with tracks".<br>
+<strong>Olympic stadiums for running:</strong> Olympic stadiums for running relates to the answer "Things associated with tracks".<br>
+<strong>Mud after animals walk in it:</strong> Mud after animals walk in it relates to the answer "Things associated with tracks".</p>`,
+  },
+  {
     sequence: "#856",
     date: "2026-09-03",
     answer: "Words that come before “way”",
