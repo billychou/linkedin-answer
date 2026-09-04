@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#857",
+    date: "2026-09-04",
+    answer: "DROP \u2192 CROP \u2192 COOP \u2192 LOOP \u2192 LOOT \u2192 SOOT \u2192 SHOT",
+    clues: ["Plant grown for human consumption", "Where chickens live", "Section of a roller coaster that may be particularly exciting or scary to ride around", "Treasure found in a dungeon", "Black powder in a chimney"],
+    clueHint: `<p>Word ladder from <strong>DROP</strong> to <strong>SHOT</strong>:<br>
+DROP → CROP → COOP → LOOP → LOOT → SOOT → SHOT</p>`,
+  },
+  {
     sequence: "#856",
     date: "2026-09-03",
     answer: "TOWN \u2192 TOON \u2192 TOOL \u2192 TOLL \u2192 TILL \u2192 HILL \u2192 HALL",
