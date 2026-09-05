@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#858",
+    date: "2026-09-05",
+    answer: "LUKE \u2192 LUTE \u2192 LATE \u2192 LATS \u2192 LETS \u2192 LEIS \u2192 LEIA",
+    clues: ["Renaissance string instrument (adding an F to the start forms the name of a wind instrument)", "Not on time", "Muscles in the lower back, for short", "Allows, or rents out a property", "Flowery garlands used in hula dancing"],
+    clueHint: `<p>Word ladder from <strong>LUKE</strong> to <strong>LEIA</strong>:<br>
+LUKE → LUTE → LATE → LATS → LETS → LEIS → LEIA</p>`,
+  },
+  {
     sequence: "#857",
     date: "2026-09-04",
     answer: "DROP \u2192 CROP \u2192 COOP \u2192 LOOP \u2192 LOOT \u2192 SOOT \u2192 SHOT",
