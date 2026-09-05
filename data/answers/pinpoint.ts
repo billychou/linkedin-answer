@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#858",
+    date: "2026-09-05",
+    answer: "Words that come before “car”",
+    clues: ["Race", "Cable", "Muscle", "Rental", "Plug-in hybrid"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Race:</strong> Race relates to the answer "Words that come before “car”".<br>
+<strong>Cable:</strong> Cable relates to the answer "Words that come before “car”".<br>
+<strong>Muscle:</strong> Muscle relates to the answer "Words that come before “car”".<br>
+<strong>Rental:</strong> Rental relates to the answer "Words that come before “car”".<br>
+<strong>Plug-in hybrid:</strong> Plug-in hybrid relates to the answer "Words that come before “car”".</p>`,
+  },
+  {
     sequence: "#857",
     date: "2026-09-04",
     answer: "Things associated with tracks",
