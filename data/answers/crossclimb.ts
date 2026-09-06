@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#859",
+    date: "2026-09-06",
+    answer: "POKER \u2192 POKES \u2192 POLES \u2192 PALES \u2192 PARES \u2192 FARES \u2192 FACES",
+    clues: ["Gives a hello on Facebook (using an icon like this: ð)", "People from Warsaw", "âThat ___ in comparisonâ", "Cuts the peel off a potato with a special knife", "Costs paid to ride buses"],
+    clueHint: `<p>Word ladder from <strong>POKER</strong> to <strong>FACES</strong>:<br>
+POKER → POKES → POLES → PALES → PARES → FARES → FACES</p>`,
+  },
+  {
     sequence: "#858",
     date: "2026-09-05",
     answer: "LUKE \u2192 LUTE \u2192 LATE \u2192 LATS \u2192 LETS \u2192 LEIS \u2192 LEIA",
