@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#859",
+    date: "2026-09-06",
+    answer: "Things that are composted",
+    clues: ["Cardboard", "Leaves", "Banana peels", "Eggshells and egg cartons", "Grass clippings and twigs"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Cardboard:</strong> Cardboard relates to the answer "Things that are composted".<br>
+<strong>Leaves:</strong> Leaves relates to the answer "Things that are composted".<br>
+<strong>Banana peels:</strong> Banana peels relates to the answer "Things that are composted".<br>
+<strong>Eggshells and egg cartons:</strong> Eggshells and egg cartons relates to the answer "Things that are composted".<br>
+<strong>Grass clippings and twigs:</strong> Grass clippings and twigs relates to the answer "Things that are composted".</p>`,
+  },
+  {
     sequence: "#858",
     date: "2026-09-05",
     answer: "Words that come before “car”",
