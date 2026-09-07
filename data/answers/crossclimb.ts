@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#860",
+    date: "2026-09-07",
+    answer: "HIDE \u2192 SIDE \u2192 SITE \u2192 SITS \u2192 SETS \u2192 SEES \u2192 SEEK",
+    clues: ["One of eight in an octagon", "Page to visit on the internet", "Uses a chair", "Drops below the horizon, like the sun at the end of the day", "Lays eyes upon"],
+    clueHint: `<p>Word ladder from <strong>HIDE</strong> to <strong>SEEK</strong>:<br>
+HIDE → SIDE → SITE → SITS → SETS → SEES → SEEK</p>`,
+  },
+  {
     sequence: "#859",
     date: "2026-09-06",
     answer: "POKER \u2192 POKES \u2192 POLES \u2192 PALES \u2192 PARES \u2192 FARES \u2192 FACES",
