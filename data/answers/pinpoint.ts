@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#860",
+    date: "2026-09-07",
+    answer: "Things associated with hotels",
+    clues: ["Keycards", "Electric kettles / coffee makers", "Toiletries", "Continental breakfast", "Room service"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Keycards:</strong> Keycards relates to the answer "Things associated with hotels".<br>
+<strong>Electric kettles / coffee makers:</strong> Electric kettles / coffee makers relates to the answer "Things associated with hotels".<br>
+<strong>Toiletries:</strong> Toiletries relates to the answer "Things associated with hotels".<br>
+<strong>Continental breakfast:</strong> Continental breakfast relates to the answer "Things associated with hotels".<br>
+<strong>Room service:</strong> Room service relates to the answer "Things associated with hotels".</p>`,
+  },
+  {
     sequence: "#859",
     date: "2026-09-06",
     answer: "Things that are composted",
