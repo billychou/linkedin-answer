@@ -175,14 +175,6 @@ export default function Game2048() {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="mb-4 p-4 rounded-lg bg-muted/50 text-sm text-muted-foreground w-full max-w-sm">
-        <p className="font-medium text-foreground mb-1">How to Play</p>
-        <ul className="space-y-0.5 list-disc list-inside">
-          <li>Swipe or use arrow keys to slide tiles</li>
-          <li>Matching numbers merge together (2+2=4, 4+4=8...)</li>
-          <li>Reach the 2048 tile to win!</li>
-        </ul>
-      </div>
       <div className="flex items-center gap-6 mb-4 text-sm">
         <span><span className="text-muted-foreground">Score: </span><span className="font-semibold">{score}</span></span>
       </div>

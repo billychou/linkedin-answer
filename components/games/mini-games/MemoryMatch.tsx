@@ -102,14 +102,6 @@ export default function MemoryMatch() {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="mb-4 p-4 rounded-lg bg-muted/50 text-sm text-muted-foreground w-full max-w-sm">
-        <p className="font-medium text-foreground mb-1">How to Play</p>
-        <ul className="space-y-0.5 list-disc list-inside">
-          <li>Tap a card to flip it over</li>
-          <li>Flip two cards at a time to find matching pairs</li>
-          <li>Match all 6 pairs to win — fewer moves is better!</li>
-        </ul>
-      </div>
       <div className="flex items-center gap-6 mb-4 text-sm">
         <span><span className="text-muted-foreground">Pairs: </span><span className="font-semibold">{matchedPairs}/6</span></span>
         <span><span className="text-muted-foreground">Moves: </span><span className="font-semibold">{moves}</span></span>

@@ -1,49 +1,19 @@
 import Link from "next/link";
 import { MiniGame } from "@/data/miniGames";
-import { Layers, Grid3x3, Palette, Hash, Gamepad2 } from "lucide-react";
-import type { ComponentType, SVGProps } from "react";
+import {
+  miniGameColorMap,
+  miniGameFallbackColor,
+  miniGameFallbackIcon,
+  miniGameIconMap,
+} from "@/components/games/miniGameTheme";
 
 interface MiniGameCardProps {
   game: MiniGame;
 }
 
-const colorMap: Record<string, { bg: string; text: string; border: string; hover: string }> = {
-  purple: {
-    bg: "from-purple-500/10 to-purple-600/5",
-    text: "text-purple-500",
-    border: "border-purple-500/20",
-    hover: "hover:border-purple-500/40",
-  },
-  orange: {
-    bg: "from-orange-500/10 to-orange-600/5",
-    text: "text-orange-500",
-    border: "border-orange-500/20",
-    hover: "hover:border-orange-500/40",
-  },
-  teal: {
-    bg: "from-teal-500/10 to-teal-600/5",
-    text: "text-teal-500",
-    border: "border-teal-500/20",
-    hover: "hover:border-teal-500/40",
-  },
-  rose: {
-    bg: "from-rose-500/10 to-rose-600/5",
-    text: "text-rose-500",
-    border: "border-rose-500/20",
-    hover: "hover:border-rose-500/40",
-  },
-};
-
-const iconMap: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
-  Layers,
-  Grid3x3,
-  Palette,
-  Hash,
-};
-
 export default function MiniGameCard({ game }: MiniGameCardProps) {
-  const colors = colorMap[game.color] || colorMap.purple;
-  const IconComponent = iconMap[game.icon] || Gamepad2;
+  const colors = miniGameColorMap[game.color] ?? miniGameFallbackColor;
+  const IconComponent = miniGameIconMap[game.icon] ?? miniGameFallbackIcon;
 
   return (
     <Link

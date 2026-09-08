@@ -132,14 +132,6 @@ export default function SimonSays() {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="mb-4 p-4 rounded-lg bg-muted/50 text-sm text-muted-foreground w-full max-w-sm">
-        <p className="font-medium text-foreground mb-1">How to Play</p>
-        <ul className="space-y-0.5 list-disc list-inside">
-          <li>Watch the color sequence carefully</li>
-          <li>Tap the colored buttons to repeat it in order</li>
-          <li>Each round adds one more color — how far can you go?</li>
-        </ul>
-      </div>
       {level > 0 && (
         <div className="mb-4 text-sm">
           <span className="text-muted-foreground">Level: </span>

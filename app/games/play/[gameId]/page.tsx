@@ -1,11 +1,13 @@
 import { getMiniGame, getAllMiniGames } from "@/lib/miniGames";
 import { MiniGameId } from "@/data/miniGames";
 import GamePlayShell from "@/components/games/GamePlayShell";
+import GameGuidePanel from "@/components/games/GameGuidePanel";
+import MoreMiniGames from "@/components/games/MoreMiniGames";
 import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 import { constructMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/config/site";
-import { Gamepad2, HelpCircle, Lightbulb } from "lucide-react";
+import { MonitorSmartphone, Sparkles, User } from "lucide-react";
 import Link from "next/link";
 
 const gameComponents: Record<MiniGameId, React.ComponentType<Record<string, never>>> = {
@@ -14,6 +16,12 @@ const gameComponents: Record<MiniGameId, React.ComponentType<Record<string, neve
   "simon-says": dynamic(() => import("@/components/games/mini-games/SimonSays")),
   "tic-tac-toe": dynamic(() => import("@/components/games/mini-games/TicTacToe")),
 };
+
+const gameBadges = [
+  { icon: Sparkles, label: "Free to play" },
+  { icon: User, label: "Single player" },
+  { icon: MonitorSmartphone, label: "Desktop & mobile" },
+];
 
 export function generateStaticParams() {
   return getAllMiniGames().map((game) => ({ gameId: game.id }));
@@ -65,72 +73,59 @@ export default async function GamePlayPage({ params }: { params: Promise<{ gameI
   const GameComponent = gameComponents[gameId];
   if (!GameComponent) notFound();
 
+  const otherGames = getAllMiniGames().filter((other) => other.id !== gameId);
+
   return (
     <>
       <GameStructuredData game={game} />
-      <div className="max-w-3xl mx-auto px-4 py-8 space-y-8">
+      <div className="mx-auto w-full max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
-        <nav className="text-sm text-muted-foreground">
-          <Link href="/games" className="hover:text-foreground transition-colors">Games</Link>
-          <span className="mx-2">/</span>
-          <span className="text-foreground font-medium">{game.name}</span>
+        <nav aria-label="Breadcrumb" className="mb-4 text-sm text-muted-foreground">
+          <Link href="/games" className="transition-colors hover:text-foreground">
+            Games
+          </Link>
+          <span className="mx-2" aria-hidden="true">
+            /
+          </span>
+          <span className="font-medium text-foreground">{game.name}</span>
         </nav>
 
-        {/* Hero Section */}
-        <div className="text-center space-y-3">
-          <h1 className="text-3xl sm:text-4xl font-bold">{game.name}</h1>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto">{game.description}</p>
-        </div>
+        {/* Header */}
+        <header className="mb-6 space-y-3 sm:mb-8">
+          <h1 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            {game.name}
+          </h1>
+          <p className="max-w-2xl text-base text-muted-foreground sm:text-lg">{game.description}</p>
+          <ul className="flex flex-wrap items-center gap-2 pt-1">
+            {gameBadges.map(({ icon: Icon, label }) => (
+              <li
+                key={label}
+                className="inline-flex items-center gap-1.5 rounded-full border border-border bg-muted/40 px-3 py-1 text-xs font-medium text-muted-foreground"
+              >
+                <Icon className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
+                {label}
+              </li>
+            ))}
+          </ul>
+        </header>
 
-        {/* CTA - Start Game Button */}
-        <div className="flex justify-center">
-          <a
-            href="#game-area"
-            className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/25 active:scale-95"
-          >
-            <Gamepad2 className="h-5 w-5" />
-            Play Now
-          </a>
-        </div>
-
-        {/* How to Play Section */}
-        <section id="how-to-play" className="space-y-4">
-          <div className="flex items-center gap-2">
-            <HelpCircle className="h-5 w-5 text-primary" />
-            <h2 className="text-xl font-semibold">How to Play</h2>
-          </div>
-          <div className="rounded-xl border bg-card p-6 space-y-3">
-            <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-              {game.howToPlay.map((step, i) => (
-                <li key={i}>{step}</li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        {/* Tips Section */}
-        {game.tips && game.tips.length > 0 && (
-          <section className="space-y-4">
-            <div className="flex items-center gap-2">
-              <Lightbulb className="h-5 w-5 text-warning" />
-              <h2 className="text-xl font-semibold">Pro Tips</h2>
+        {/* Game board (left) + game guide (right); stacked on mobile */}
+        <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-8">
+          <div className="contents lg:block lg:min-w-0 lg:space-y-5 xl:space-y-6">
+            <section id="game-area" className="order-1 min-w-0 scroll-mt-24 lg:order-none">
+              <GamePlayShell>
+                <GameComponent />
+              </GamePlayShell>
+            </section>
+            <div className="order-3 min-w-0 lg:order-none">
+              <MoreMiniGames games={otherGames} />
             </div>
-            <div className="rounded-xl border bg-card p-6 space-y-2">
-              <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                {game.tips.map((tip, i) => (
-                  <li key={i}>{tip}</li>
-                ))}
-              </ul>
-            </div>
-          </section>
-        )}
+          </div>
 
-        {/* Game Area */}
-        <section id="game-area" className="scroll-mt-8">
-          <GamePlayShell>
-            <GameComponent />
-          </GamePlayShell>
-        </section>
+          <div className="order-2 min-w-0 lg:order-none">
+            <GameGuidePanel game={game} />
+          </div>
+        </div>
       </div>
     </>
   );
