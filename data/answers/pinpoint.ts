@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#861",
+    date: "2026-09-08",
+    answer: "Parts of the Earth",
+    clues: ["Crust", "Mantle", "Core (mostly iron and nickel)", "Tectonic plates", "Magnetic poles (North+South)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Crust:</strong> Crust relates to the answer "Parts of the Earth".<br>
+<strong>Mantle:</strong> Mantle relates to the answer "Parts of the Earth".<br>
+<strong>Core (mostly iron and nickel):</strong> Core (mostly iron and nickel) relates to the answer "Parts of the Earth".<br>
+<strong>Tectonic plates:</strong> Tectonic plates relates to the answer "Parts of the Earth".<br>
+<strong>Magnetic poles (North+South):</strong> Magnetic poles (North+South) relates to the answer "Parts of the Earth".</p>`,
+  },
+  {
     sequence: "#860",
     date: "2026-09-07",
     answer: "Things associated with hotels",
