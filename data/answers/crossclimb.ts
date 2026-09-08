@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#861",
+    date: "2026-09-08",
+    answer: "RULE \u2192 ROLE \u2192 HOLE \u2192 HOLD \u2192 HOOD \u2192 HOOK \u2192 BOOK",
+    clues: ["Part to play in a project or organization", "One of eighteen on a typical golf course", "âPlease ___â (donât hang up the phone)", "Feature of a raincoat that covers the head", "Captain ___ (Peter Pan character, whose name is also something attached to his arm)"],
+    clueHint: `<p>Word ladder from <strong>RULE</strong> to <strong>BOOK</strong>:<br>
+RULE → ROLE → HOLE → HOLD → HOOD → HOOK → BOOK</p>`,
+  },
+  {
     sequence: "#860",
     date: "2026-09-07",
     answer: "HIDE \u2192 SIDE \u2192 SITE \u2192 SITS \u2192 SETS \u2192 SEES \u2192 SEEK",
