@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#862",
+    date: "2026-09-09",
+    answer: "MEAT \u2192 NEAT \u2192 NEAR \u2192 PEAR \u2192 PEER \u2192 PIER \u2192 PIES",
+    clues: ["Clean and organized", "Close by", "Fruit shaped like a teardrop", "Colleague who is an equal to you in age, job, and/or social status", "Raised walkway that extends from the shore over water"],
+    clueHint: `<p>Word ladder from <strong>MEAT</strong> to <strong>PIES</strong>:<br>
+MEAT → NEAT → NEAR → PEAR → PEER → PIER → PIES</p>`,
+  },
+  {
     sequence: "#861",
     date: "2026-09-08",
     answer: "RULE \u2192 ROLE \u2192 HOLE \u2192 HOLD \u2192 HOOD \u2192 HOOK \u2192 BOOK",
