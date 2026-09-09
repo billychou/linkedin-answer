@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#862",
+    date: "2026-09-09",
+    answer: "Words that come before “age”",
+    clues: ["Iron", "Golden", "Middle", "Voting", "Coming of"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Iron:</strong> Iron relates to the answer "Words that come before “age”".<br>
+<strong>Golden:</strong> Golden relates to the answer "Words that come before “age”".<br>
+<strong>Middle:</strong> Middle relates to the answer "Words that come before “age”".<br>
+<strong>Voting:</strong> Voting relates to the answer "Words that come before “age”".<br>
+<strong>Coming of:</strong> Coming of relates to the answer "Words that come before “age”".</p>`,
+  },
+  {
     sequence: "#861",
     date: "2026-09-08",
     answer: "Parts of the Earth",
