@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#863",
+    date: "2026-09-10",
+    answer: "ROSE \u2192 ROPE \u2192 RIPE \u2192 WIPE \u2192 WISE \u2192 VISE \u2192 VASE",
+    clues: ["What you use to tie up a boat at a pier", "Ready to eat, like fruit", "Clean with a rag, as a pane of glass", "âA word to the ___â (helpful hint)", "Gripping tool with two jaws"],
+    clueHint: `<p>Word ladder from <strong>ROSE</strong> to <strong>VASE</strong>:<br>
+ROSE → ROPE → RIPE → WIPE → WISE → VISE → VASE</p>`,
+  },
+  {
     sequence: "#862",
     date: "2026-09-09",
     answer: "MEAT \u2192 NEAT \u2192 NEAR \u2192 PEAR \u2192 PEER \u2192 PIER \u2192 PIES",
