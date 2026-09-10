@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#863",
+    date: "2026-09-10",
+    answer: "Words that come after “perfect”",
+    clues: ["Ten", "Timing", "Stranger", "Storm", "Example (no way to show better)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Ten:</strong> Ten relates to the answer "Words that come after “perfect”".<br>
+<strong>Timing:</strong> Timing relates to the answer "Words that come after “perfect”".<br>
+<strong>Stranger:</strong> Stranger relates to the answer "Words that come after “perfect”".<br>
+<strong>Storm:</strong> Storm relates to the answer "Words that come after “perfect”".<br>
+<strong>Example (no way to show better):</strong> Example (no way to show better) relates to the answer "Words that come after “perfect”".</p>`,
+  },
+  {
     sequence: "#862",
     date: "2026-09-09",
     answer: "Words that come before “age”",
