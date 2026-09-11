@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#864",
+    date: "2026-09-11",
+    answer: "Nicknames for different muscles",
+    clues: ["Traps", "Quads", "Lats", "Pecs", "Abs (short for abdominals)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Traps:</strong> Traps relates to the answer "Nicknames for different muscles".<br>
+<strong>Quads:</strong> Quads relates to the answer "Nicknames for different muscles".<br>
+<strong>Lats:</strong> Lats relates to the answer "Nicknames for different muscles".<br>
+<strong>Pecs:</strong> Pecs relates to the answer "Nicknames for different muscles".<br>
+<strong>Abs (short for abdominals):</strong> Abs (short for abdominals) relates to the answer "Nicknames for different muscles".</p>`,
+  },
+  {
     sequence: "#863",
     date: "2026-09-10",
     answer: "Words that come after “perfect”",
