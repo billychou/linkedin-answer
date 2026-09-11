@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#864",
+    date: "2026-09-11",
+    answer: "LEGO \u2192 LOGO \u2192 LOGS \u2192 JOGS \u2192 JOTS \u2192 JETS \u2192 SETS",
+    clues: ["Graphic design used to represent a company", "Cut sections of tree trunks that may be used as firewood", "Runs at a relaxed pace", "Puts down on paper quickly", "Vehicles like 747âs and 767âs"],
+    clueHint: `<p>Word ladder from <strong>LEGO</strong> to <strong>SETS</strong>:<br>
+LEGO → LOGO → LOGS → JOGS → JOTS → JETS → SETS</p>`,
+  },
+  {
     sequence: "#863",
     date: "2026-09-10",
     answer: "ROSE \u2192 ROPE \u2192 RIPE \u2192 WIPE \u2192 WISE \u2192 VISE \u2192 VASE",
