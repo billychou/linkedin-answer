@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#865",
+    date: "2026-09-12",
+    answer: "Words that come before “drop”",
+    clues: ["Rain", "Tear", "Name", "Mic", "Drag"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Rain:</strong> Rain relates to the answer "Words that come before “drop”".<br>
+<strong>Tear:</strong> Tear relates to the answer "Words that come before “drop”".<br>
+<strong>Name:</strong> Name relates to the answer "Words that come before “drop”".<br>
+<strong>Mic:</strong> Mic relates to the answer "Words that come before “drop”".<br>
+<strong>Drag:</strong> Drag relates to the answer "Words that come before “drop”".</p>`,
+  },
+  {
     sequence: "#864",
     date: "2026-09-11",
     answer: "Nicknames for different muscles",
