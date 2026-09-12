@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#865",
+    date: "2026-09-12",
+    answer: "GIFT \u2192 RIFT \u2192 RAFT \u2192 RANT \u2192 WANT \u2192 WANE \u2192 WARE",
+    clues: ["Fissure, as in nature or a tense relationship", "Boat that's simply logs lashed together", "___ and rave", "Desire", "Wax and ___"],
+    clueHint: `<p>Word ladder from <strong>GIFT</strong> to <strong>WARE</strong>:<br>
+GIFT → RIFT → RAFT → RANT → WANT → WANE → WARE</p>`,
+  },
+  {
     sequence: "#864",
     date: "2026-09-11",
     answer: "LEGO \u2192 LOGO \u2192 LOGS \u2192 JOGS \u2192 JOTS \u2192 JETS \u2192 SETS",
