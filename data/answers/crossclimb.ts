@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#866",
+    date: "2026-09-13",
+    answer: "HOUSE \u2192 ROUSE \u2192 ROUGE \u2192 ROUGH \u2192 TOUGH \u2192 TOUCH \u2192 COUCH",
+    clues: ["Awaken, or stir to action", "Cosmetics purchase for the cheeks", "___ and tumble (turbulent)", "Hard to chew, like low-quality meat", "Affect one's heartstrings"],
+    clueHint: `<p>Word ladder from <strong>HOUSE</strong> to <strong>COUCH</strong>:<br>
+HOUSE → ROUSE → ROUGE → ROUGH → TOUGH → TOUCH → COUCH</p>`,
+  },
+  {
     sequence: "#865",
     date: "2026-09-12",
     answer: "GIFT \u2192 RIFT \u2192 RAFT \u2192 RANT \u2192 WANT \u2192 WANE \u2192 WARE",
