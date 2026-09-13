@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#866",
+    date: "2026-09-13",
+    answer: "Different definitions of “plant”",
+    clues: ["Factory", "Inside agent", "Introduce subtly, as an idea", "Tree or shrub", "Put seeds in the ground"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Factory:</strong> Factory relates to the answer "Different definitions of “plant”".<br>
+<strong>Inside agent:</strong> Inside agent relates to the answer "Different definitions of “plant”".<br>
+<strong>Introduce subtly, as an idea:</strong> Introduce subtly, as an idea relates to the answer "Different definitions of “plant”".<br>
+<strong>Tree or shrub:</strong> Tree or shrub relates to the answer "Different definitions of “plant”".<br>
+<strong>Put seeds in the ground:</strong> Put seeds in the ground relates to the answer "Different definitions of “plant”".</p>`,
+  },
+  {
     sequence: "#865",
     date: "2026-09-12",
     answer: "Words that come before “drop”",
