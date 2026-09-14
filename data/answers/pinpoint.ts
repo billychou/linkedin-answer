@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#867",
+    date: "2026-09-14",
+    answer: "Fictional characters that are yellow",
+    clues: ["Tweety Bird", "Pac-Man", "SpongeBob SquarePants", "Bart Simpson", "The Minions (rhymes with Bello!)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Tweety Bird:</strong> Tweety Bird relates to the answer "Fictional characters that are yellow".<br>
+<strong>Pac-Man:</strong> Pac-Man relates to the answer "Fictional characters that are yellow".<br>
+<strong>SpongeBob SquarePants:</strong> SpongeBob SquarePants relates to the answer "Fictional characters that are yellow".<br>
+<strong>Bart Simpson:</strong> Bart Simpson relates to the answer "Fictional characters that are yellow".<br>
+<strong>The Minions (rhymes with Bello!):</strong> The Minions (rhymes with Bello!) relates to the answer "Fictional characters that are yellow".</p>`,
+  },
+  {
     sequence: "#866",
     date: "2026-09-13",
     answer: "Different definitions of “plant”",
