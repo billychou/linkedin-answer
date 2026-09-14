@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#867",
+    date: "2026-09-14",
+    answer: "SORT \u2192 SORE \u2192 MORE \u2192 MIRE \u2192 MINE \u2192 MIND \u2192 KIND",
+    clues: ["Aching a bit, as after a run", "Opposite of less", "Swampy land", "Dig in the earth for precious metals", "âMake up your ___â (come to a decision)"],
+    clueHint: `<p>Word ladder from <strong>SORT</strong> to <strong>KIND</strong>:<br>
+SORT → SORE → MORE → MIRE → MINE → MIND → KIND</p>`,
+  },
+  {
     sequence: "#866",
     date: "2026-09-13",
     answer: "HOUSE \u2192 ROUSE \u2192 ROUGE \u2192 ROUGH \u2192 TOUGH \u2192 TOUCH \u2192 COUCH",
