@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#868",
+    date: "2026-09-15",
+    answer: "BACK \u2192 BARK \u2192 LARK \u2192 LACK \u2192 LICK \u2192 PICK \u2192 PACK",
+    clues: ["Outside covering of a tree", "Songbird whose name completes the phrase âon a ___â, meaning to do something impulsively or just for fun", "Shortage or absence of something", "Short taste, as of a lollipop", "Choose between a few options"],
+    clueHint: `<p>Word ladder from <strong>BACK</strong> to <strong>PACK</strong>:<br>
+BACK → BARK → LARK → LACK → LICK → PICK → PACK</p>`,
+  },
+  {
     sequence: "#867",
     date: "2026-09-14",
     answer: "SORT \u2192 SORE \u2192 MORE \u2192 MIRE \u2192 MINE \u2192 MIND \u2192 KIND",
