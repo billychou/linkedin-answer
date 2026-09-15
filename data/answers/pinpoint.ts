@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#868",
+    date: "2026-09-15",
+    answer: "Words that come before “coffee”",
+    clues: ["Robusta", "Arabica", "Cold brew", "Instant", "Decaf"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Robusta:</strong> Robusta relates to the answer "Words that come before “coffee”".<br>
+<strong>Arabica:</strong> Arabica relates to the answer "Words that come before “coffee”".<br>
+<strong>Cold brew:</strong> Cold brew relates to the answer "Words that come before “coffee”".<br>
+<strong>Instant:</strong> Instant relates to the answer "Words that come before “coffee”".<br>
+<strong>Decaf:</strong> Decaf relates to the answer "Words that come before “coffee”".</p>`,
+  },
+  {
     sequence: "#867",
     date: "2026-09-14",
     answer: "Fictional characters that are yellow",
