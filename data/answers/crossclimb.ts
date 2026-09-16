@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#869",
+    date: "2026-09-16",
+    answer: "ZOOM \u2192 ZOOS \u2192 COOS \u2192 COOL \u2192 COAL \u2192 COAT \u2192 CHAT",
+    clues: ["Places where you can safely see lions", "Makes a sound like a dove", "Hip or trendy", "Burnable form of carbon", "Garment to protect from chilly weather"],
+    clueHint: `<p>Word ladder from <strong>ZOOM</strong> to <strong>CHAT</strong>:<br>
+ZOOM → ZOOS → COOS → COOL → COAL → COAT → CHAT</p>`,
+  },
+  {
     sequence: "#868",
     date: "2026-09-15",
     answer: "BACK \u2192 BARK \u2192 LARK \u2192 LACK \u2192 LICK \u2192 PICK \u2192 PACK",
