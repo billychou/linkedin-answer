@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#869",
+    date: "2026-09-16",
+    answer: "Things that are refilled",
+    clues: ["Prescriptions", "Mechanical pencils", "Fuel tanks", "Empty water bottles", "Printers (with toner + paper)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Prescriptions:</strong> Prescriptions relates to the answer "Things that are refilled".<br>
+<strong>Mechanical pencils:</strong> Mechanical pencils relates to the answer "Things that are refilled".<br>
+<strong>Fuel tanks:</strong> Fuel tanks relates to the answer "Things that are refilled".<br>
+<strong>Empty water bottles:</strong> Empty water bottles relates to the answer "Things that are refilled".<br>
+<strong>Printers (with toner + paper):</strong> Printers (with toner + paper) relates to the answer "Things that are refilled".</p>`,
+  },
+  {
     sequence: "#868",
     date: "2026-09-15",
     answer: "Words that come before “coffee”",
