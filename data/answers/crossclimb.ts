@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#870",
+    date: "2026-09-17",
+    answer: "HARD \u2192 HERD \u2192 HEAD \u2192 HEAT \u2192 FEAT \u2192 FEST \u2192 FAST",
+    clues: ["Group of cattle", "âHit the nail on the ___â", "Make warm", "Impressive achievement requiring a fair amount of skill", "Gathering or celebration (often used as a suffix, as after Oktober)"],
+    clueHint: `<p>Word ladder from <strong>HARD</strong> to <strong>FAST</strong>:<br>
+HARD → HERD → HEAD → HEAT → FEAT → FEST → FAST</p>`,
+  },
+  {
     sequence: "#869",
     date: "2026-09-16",
     answer: "ZOOM \u2192 ZOOS \u2192 COOS \u2192 COOL \u2192 COAL \u2192 COAT \u2192 CHAT",
