@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#870",
+    date: "2026-09-17",
+    answer: "Words that come after “go” in common sayings",
+    clues: ["Nuts", "Bananas", "Cold turkey", "Viral", "The extra mile"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Nuts:</strong> Nuts relates to the answer "Words that come after “go” in common sayings".<br>
+<strong>Bananas:</strong> Bananas relates to the answer "Words that come after “go” in common sayings".<br>
+<strong>Cold turkey:</strong> Cold turkey relates to the answer "Words that come after “go” in common sayings".<br>
+<strong>Viral:</strong> Viral relates to the answer "Words that come after “go” in common sayings".<br>
+<strong>The extra mile:</strong> The extra mile relates to the answer "Words that come after “go” in common sayings".</p>`,
+  },
+  {
     sequence: "#869",
     date: "2026-09-16",
     answer: "Things that are refilled",
