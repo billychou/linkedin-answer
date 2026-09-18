@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#871",
+    date: "2026-09-18",
+    answer: "Geographic place names when preceded by “Great”",
+    clues: ["Sandy Desert", "Salt Lake", "Rift Valley", "Barrier Reef", "Britain: England+Scotland+Wales"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Sandy Desert:</strong> Sandy Desert relates to the answer "Geographic place names when preceded by “Great”".<br>
+<strong>Salt Lake:</strong> Salt Lake relates to the answer "Geographic place names when preceded by “Great”".<br>
+<strong>Rift Valley:</strong> Rift Valley relates to the answer "Geographic place names when preceded by “Great”".<br>
+<strong>Barrier Reef:</strong> Barrier Reef relates to the answer "Geographic place names when preceded by “Great”".<br>
+<strong>Britain: England+Scotland+Wales:</strong> Britain: England+Scotland+Wales relates to the answer "Geographic place names when preceded by “Great”".</p>`,
+  },
+  {
     sequence: "#870",
     date: "2026-09-17",
     answer: "Words that come after “go” in common sayings",
