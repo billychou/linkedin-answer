@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#871",
+    date: "2026-09-18",
+    answer: "WEST \u2192 BEST \u2192 BENT \u2192 RENT \u2192 REND \u2192 RIND \u2192 WIND",
+    clues: ["The tops, quality-wise", "Out of shape or crooked", "Monthly apartment payment", "Tear apart", "Outer part of a lemon"],
+    clueHint: `<p>Word ladder from <strong>WEST</strong> to <strong>WIND</strong>:<br>
+WEST → BEST → BENT → RENT → REND → RIND → WIND</p>`,
+  },
+  {
     sequence: "#870",
     date: "2026-09-17",
     answer: "HARD \u2192 HERD \u2192 HEAD \u2192 HEAT \u2192 FEAT \u2192 FEST \u2192 FAST",
