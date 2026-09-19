@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#872",
+    date: "2026-09-19",
+    answer: "Words that come before “source”",
+    clues: ["Power", "Open", "Reliable", "Anonymous", "Go straight to the"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Power:</strong> Power relates to the answer "Words that come before “source”".<br>
+<strong>Open:</strong> Open relates to the answer "Words that come before “source”".<br>
+<strong>Reliable:</strong> Reliable relates to the answer "Words that come before “source”".<br>
+<strong>Anonymous:</strong> Anonymous relates to the answer "Words that come before “source”".<br>
+<strong>Go straight to the:</strong> Go straight to the relates to the answer "Words that come before “source”".</p>`,
+  },
+  {
     sequence: "#871",
     date: "2026-09-18",
     answer: "Geographic place names when preceded by “Great”",
