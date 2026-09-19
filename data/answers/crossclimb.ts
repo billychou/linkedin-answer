@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#872",
+    date: "2026-09-19",
+    answer: "LIFE \u2192 LIFT \u2192 LIST \u2192 LUST \u2192 BUST \u2192 BUSY \u2192 BUOY",
+    clues: ["Another word for what's called an elevator in North America", "You might make one for a shopping trip", "One of the seven deadly sins", "Sculpture of the upper part of the body", "Having lots of things going on"],
+    clueHint: `<p>Word ladder from <strong>LIFE</strong> to <strong>BUOY</strong>:<br>
+LIFE → LIFT → LIST → LUST → BUST → BUSY → BUOY</p>`,
+  },
+  {
     sequence: "#871",
     date: "2026-09-18",
     answer: "WEST \u2192 BEST \u2192 BENT \u2192 RENT \u2192 REND \u2192 RIND \u2192 WIND",
