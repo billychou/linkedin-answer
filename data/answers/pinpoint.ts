@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#873",
+    date: "2026-09-20",
+    answer: "Things with holds",
+    clues: ["Cargo ships", "Wrestling matches", "Climbing walls", "Bank accounts (after big deposits)", "Phone calls (“please wait!”)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Cargo ships:</strong> Cargo ships relates to the answer "Things with holds".<br>
+<strong>Wrestling matches:</strong> Wrestling matches relates to the answer "Things with holds".<br>
+<strong>Climbing walls:</strong> Climbing walls relates to the answer "Things with holds".<br>
+<strong>Bank accounts (after big deposits):</strong> Bank accounts (after big deposits) relates to the answer "Things with holds".<br>
+<strong>Phone calls (“please wait!”):</strong> Phone calls (“please wait!”) relates to the answer "Things with holds".</p>`,
+  },
+  {
     sequence: "#872",
     date: "2026-09-19",
     answer: "Words that come before “source”",
