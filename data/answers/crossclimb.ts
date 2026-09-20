@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#873",
+    date: "2026-09-20",
+    answer: "FOSTER \u2192 POSTER \u2192 PESTER \u2192 FESTER \u2192 FASTER \u2192 FATTER \u2192 FATHER",
+    clues: ["Large notice or picture hung on a wall", "Irritate or bother", "Become more irritating, like a problem you are ignoring", "At a higher speed", "Stouter"],
+    clueHint: `<p>Word ladder from <strong>FOSTER</strong> to <strong>FATHER</strong>:<br>
+FOSTER → POSTER → PESTER → FESTER → FASTER → FATTER → FATHER</p>`,
+  },
+  {
     sequence: "#872",
     date: "2026-09-19",
     answer: "LIFE \u2192 LIFT \u2192 LIST \u2192 LUST \u2192 BUST \u2192 BUSY \u2192 BUOY",
