@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#874",
+    date: "2026-09-21",
+    answer: "ROPE \u2192 ROLE \u2192 ROLL \u2192 TOLL \u2192 TOIL \u2192 TAIL \u2192 SAIL",
+    clues: ["___-playing game", "Do a somersault", "Cost to drive on some roadways", "Work very hard", "Wagging appendage"],
+    clueHint: `<p>Word ladder from <strong>ROPE</strong> to <strong>SAIL</strong>:<br>
+ROPE → ROLE → ROLL → TOLL → TOIL → TAIL → SAIL</p>`,
+  },
+  {
     sequence: "#873",
     date: "2026-09-20",
     answer: "FOSTER \u2192 POSTER \u2192 PESTER \u2192 FESTER \u2192 FASTER \u2192 FATTER \u2192 FATHER",
