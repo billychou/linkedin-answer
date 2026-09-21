@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#874",
+    date: "2026-09-21",
+    answer: "Common national demonyms (i.e., names for people from a specific country)",
+    clues: ["Pole", "Kiwi", "Dane", "Thai", "Chilean"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Pole:</strong> Pole relates to the answer "Common national demonyms (i.e., names for people from a specific country)".<br>
+<strong>Kiwi:</strong> Kiwi relates to the answer "Common national demonyms (i.e., names for people from a specific country)".<br>
+<strong>Dane:</strong> Dane relates to the answer "Common national demonyms (i.e., names for people from a specific country)".<br>
+<strong>Thai:</strong> Thai relates to the answer "Common national demonyms (i.e., names for people from a specific country)".<br>
+<strong>Chilean:</strong> Chilean relates to the answer "Common national demonyms (i.e., names for people from a specific country)".</p>`,
+  },
+  {
     sequence: "#873",
     date: "2026-09-20",
     answer: "Things with holds",
