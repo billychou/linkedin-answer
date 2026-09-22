@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#875",
+    date: "2026-09-22",
+    answer: "Famous philosophers",
+    clues: ["Bacon", "Locke", "Confucius", "Plato and Socrates", "Descartes: “I think, therefore I am”"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Bacon:</strong> Bacon relates to the answer "Famous philosophers".<br>
+<strong>Locke:</strong> Locke relates to the answer "Famous philosophers".<br>
+<strong>Confucius:</strong> Confucius relates to the answer "Famous philosophers".<br>
+<strong>Plato and Socrates:</strong> Plato and Socrates relates to the answer "Famous philosophers".<br>
+<strong>Descartes: “I think, therefore I am”:</strong> Descartes: “I think, therefore I am” relates to the answer "Famous philosophers".</p>`,
+  },
+  {
     sequence: "#874",
     date: "2026-09-21",
     answer: "Common national demonyms (i.e., names for people from a specific country)",
