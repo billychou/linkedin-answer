@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#875",
+    date: "2026-09-22",
+    answer: "TALL \u2192 TALE \u2192 PALE \u2192 PAGE \u2192 WAGE \u2192 WADE \u2192 WIDE",
+    clues: ["Fairy ___ (bedtime story)", "Drained of color", "Either side of a sheet in a book", "Living ___ (fair salary)", "Walk in knee-deep water"],
+    clueHint: `<p>Word ladder from <strong>TALL</strong> to <strong>WIDE</strong>:<br>
+TALL → TALE → PALE → PAGE → WAGE → WADE → WIDE</p>`,
+  },
+  {
     sequence: "#874",
     date: "2026-09-21",
     answer: "ROPE \u2192 ROLE \u2192 ROLL \u2192 TOLL \u2192 TOIL \u2192 TAIL \u2192 SAIL",
