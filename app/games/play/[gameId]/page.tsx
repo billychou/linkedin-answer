@@ -15,6 +15,7 @@ const gameComponents: Record<MiniGameId, React.ComponentType<Record<string, neve
   "2048": dynamic(() => import("@/components/games/mini-games/Game2048")),
   "simon-says": dynamic(() => import("@/components/games/mini-games/SimonSays")),
   "tic-tac-toe": dynamic(() => import("@/components/games/mini-games/TicTacToe")),
+  "guess-the-number": dynamic(() => import("@/components/games/mini-games/GuessTheNumber")),
 };
 
 const gameBadges = [

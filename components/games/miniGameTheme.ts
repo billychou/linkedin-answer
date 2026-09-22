@@ -1,4 +1,4 @@
-import { Layers, Grid3x3, Palette, Hash, Gamepad2 } from "lucide-react";
+import { Layers, Grid3x3, Palette, Hash, Target, Gamepad2 } from "lucide-react";
 import type { ComponentType, SVGProps } from "react";
 
 export type MiniGameColors = {
@@ -33,6 +33,12 @@ export const miniGameColorMap: Record<string, MiniGameColors> = {
     border: "border-rose-500/20",
     hover: "hover:border-rose-500/40",
   },
+  blue: {
+    bg: "from-blue-500/10 to-blue-600/5",
+    text: "text-blue-500",
+    border: "border-blue-500/20",
+    hover: "hover:border-blue-500/40",
+  },
 };
 
 export const miniGameIconMap: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
@@ -40,6 +46,7 @@ export const miniGameIconMap: Record<string, ComponentType<SVGProps<SVGSVGElemen
   Grid3x3,
   Palette,
   Hash,
+  Target,
 };
 
 export const miniGameFallbackColor: MiniGameColors = miniGameColorMap.purple;

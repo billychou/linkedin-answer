@@ -1,4 +1,9 @@
-export type MiniGameId = "memory-match" | "2048" | "simon-says" | "tic-tac-toe";
+export type MiniGameId =
+  | "memory-match"
+  | "2048"
+  | "simon-says"
+  | "tic-tac-toe"
+  | "guess-the-number";
 
 export type MiniGame = {
   id: MiniGameId;
@@ -93,6 +98,28 @@ export const miniGames: MiniGame[] = [
       "Start in the center or a corner for the best chance to win.",
       "Watch for forks — situations where the opponent can create two winning lines at once.",
       "Block your opponent's two-in-a-row before building your own.",
+    ],
+  },
+  {
+    id: "guess-the-number",
+    name: "Guess the Number",
+    description:
+      "Hunt down a secret number before your tries run out. Each guess tells you higher or lower, plus a heat clue for how close you are.",
+    icon: "Target",
+    color: "blue",
+    howToPlay: [
+      "Pick a difficulty: Easy (1–50, 8 tries), Medium (1–100, 10 tries) or Hard (1–500, 12 tries). Switching difficulty starts a fresh round.",
+      "The game picks a secret number somewhere in that range. Type your guess into the box and press 'Guess' (or hit Enter).",
+      "Every guess comes back as 'too low' or 'too high', plus a heat reading — from Freezing to Boiling — and a closeness bar showing how near you are.",
+      "Under the input the game narrows the range the secret can still be in, tells you how many numbers are left, and points out the midpoint.",
+      "Guesses must be whole numbers inside the range, and you can't repeat a number you have already tried.",
+      "Land the secret number before your tries run out to win. Run out and the answer is revealed.",
+      "Your best guess count for each difficulty and your total wins are saved in your browser; 'Reset stats' clears them.",
+    ],
+    tips: [
+      "Always guess the midpoint of the remaining range — that is a binary search, and it halves the possibilities every single time.",
+      "The 'Optimal' figure at the bottom is the fewest guesses a perfect binary search needs here; treat it as the score to beat.",
+      "Treat the heat clue as a sanity check only. The narrowed range and its midpoint are what actually guarantee the win.",
     ],
   },
 ];
