@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#876",
+    date: "2026-09-23",
+    answer: "Things shaped like triangles",
+    clues: ["Delta", "Doritos", "“Give way” or “Yield” sign", "Rack (for 8-Ball or Snooker)", "Pennant (like this one: 🚩)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Delta:</strong> Delta relates to the answer "Things shaped like triangles".<br>
+<strong>Doritos:</strong> Doritos relates to the answer "Things shaped like triangles".<br>
+<strong>“Give way” or “Yield” sign:</strong> “Give way” or “Yield” sign relates to the answer "Things shaped like triangles".<br>
+<strong>Rack (for 8-Ball or Snooker):</strong> Rack (for 8-Ball or Snooker) relates to the answer "Things shaped like triangles".<br>
+<strong>Pennant (like this one: 🚩):</strong> Pennant (like this one: 🚩) relates to the answer "Things shaped like triangles".</p>`,
+  },
+  {
     sequence: "#875",
     date: "2026-09-22",
     answer: "Famous philosophers",
