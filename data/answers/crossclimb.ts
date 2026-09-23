@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#876",
+    date: "2026-09-23",
+    answer: "FREE \u2192 FRED \u2192 FEED \u2192 FEND \u2192 BEND \u2192 BAND \u2192 HAND",
+    clues: ["Cartoon Flintstone who said \"Yabba-dabba-doo!\"", "Serve a meal to", "___ for yourself (get what you need without help)", "Flex, like an elbow or knee", "Musical group"],
+    clueHint: `<p>Word ladder from <strong>FREE</strong> to <strong>HAND</strong>:<br>
+FREE → FRED → FEED → FEND → BEND → BAND → HAND</p>`,
+  },
+  {
     sequence: "#875",
     date: "2026-09-22",
     answer: "TALL \u2192 TALE \u2192 PALE \u2192 PAGE \u2192 WAGE \u2192 WADE \u2192 WIDE",
