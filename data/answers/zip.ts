@@ -2,6 +2,12 @@ import { GameAnswer } from "@/types/game";
 
 export const zipAnswers: GameAnswer[] = [
   {
+    sequence: "#555",
+    date: "2026-09-23",
+    answer: "Path from 1 through 4",
+    clueHint: `<p>Draw one continuous path that passes through every numbered dot in order and fills every cell without crossing itself. Today's solution: <strong>Path from 1 through 4</strong>.</p>`,
+  },
+  {
     sequence: "#554",
     date: "2026-09-22",
     answer: "Path from 1 through 8",
