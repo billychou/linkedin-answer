@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#877",
+    date: "2026-09-24",
+    answer: "Things associated with steam",
+    clues: ["Iron", "Iron horse (old-style train)", "Sauna", "Pressure cooker", "Tea kettle (when whistling)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Iron:</strong> Iron relates to the answer "Things associated with steam".<br>
+<strong>Iron horse (old-style train):</strong> Iron horse (old-style train) relates to the answer "Things associated with steam".<br>
+<strong>Sauna:</strong> Sauna relates to the answer "Things associated with steam".<br>
+<strong>Pressure cooker:</strong> Pressure cooker relates to the answer "Things associated with steam".<br>
+<strong>Tea kettle (when whistling):</strong> Tea kettle (when whistling) relates to the answer "Things associated with steam".</p>`,
+  },
+  {
     sequence: "#876",
     date: "2026-09-23",
     answer: "Things shaped like triangles",
