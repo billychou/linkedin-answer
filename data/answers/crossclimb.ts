@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#877",
+    date: "2026-09-24",
+    answer: "BONA \u2192 BONE \u2192 BANE \u2192 MANE \u2192 MADE \u2192 FADE \u2192 FIDE",
+    clues: ["Part of a skeleton", "___ of one's existence (nemesis)", "Hair on a horse's neck", "Created", "Gradually become invisible"],
+    clueHint: `<p>Word ladder from <strong>BONA</strong> to <strong>FIDE</strong>:<br>
+BONA → BONE → BANE → MANE → MADE → FADE → FIDE</p>`,
+  },
+  {
     sequence: "#876",
     date: "2026-09-23",
     answer: "FREE \u2192 FRED \u2192 FEED \u2192 FEND \u2192 BEND \u2192 BAND \u2192 HAND",
