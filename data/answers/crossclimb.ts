@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#878",
+    date: "2026-09-25",
+    answer: "SOFA \u2192 SODA \u2192 CODA \u2192 CODE \u2192 BODE \u2192 BODS \u2192 BEDS",
+    clues: ["Carbonated water", "Element at the end of a song", "Do a programmer's job", "Be an omen", "Physiques, colloquially"],
+    clueHint: `<p>Word ladder from <strong>SOFA</strong> to <strong>BEDS</strong>:<br>
+SOFA → SODA → CODA → CODE → BODE → BODS → BEDS</p>`,
+  },
+  {
     sequence: "#877",
     date: "2026-09-24",
     answer: "BONA \u2192 BONE \u2192 BANE \u2192 MANE \u2192 MADE \u2192 FADE \u2192 FIDE",
