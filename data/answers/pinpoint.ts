@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#878",
+    date: "2026-09-25",
+    answer: "Words that come after “mixed”",
+    clues: ["Media", "Bag", "Blessing", "Metaphor", "Messages (contradictory ideas)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Media:</strong> Media relates to the answer "Words that come after “mixed”".<br>
+<strong>Bag:</strong> Bag relates to the answer "Words that come after “mixed”".<br>
+<strong>Blessing:</strong> Blessing relates to the answer "Words that come after “mixed”".<br>
+<strong>Metaphor:</strong> Metaphor relates to the answer "Words that come after “mixed”".<br>
+<strong>Messages (contradictory ideas):</strong> Messages (contradictory ideas) relates to the answer "Words that come after “mixed”".</p>`,
+  },
+  {
     sequence: "#877",
     date: "2026-09-24",
     answer: "Things associated with steam",
