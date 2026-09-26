@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#879",
+    date: "2026-09-26",
+    answer: "CLEAN \u2192 CLEAT \u2192 CHEAT \u2192 CHEAP \u2192 CHEEP \u2192 SHEEP \u2192 SWEEP",
+    clues: ["Spike in a World Cup player's footwear", "Peek at a classmate's test, say", "Crude and unimaginative, as a trick", "Little sound from a nest", "Animals often herded by dogs"],
+    clueHint: `<p>Word ladder from <strong>CLEAN</strong> to <strong>SWEEP</strong>:<br>
+CLEAN → CLEAT → CHEAT → CHEAP → CHEEP → SHEEP → SWEEP</p>`,
+  },
+  {
     sequence: "#878",
     date: "2026-09-25",
     answer: "SOFA \u2192 SODA \u2192 CODA \u2192 CODE \u2192 BODE \u2192 BODS \u2192 BEDS",
