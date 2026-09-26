@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#879",
+    date: "2026-09-26",
+    answer: "Different definitions of “point”",
+    clues: ["Tip", "Dot", "Exact location", "Main idea", "Scoring unit in a game"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Tip:</strong> Tip relates to the answer "Different definitions of “point”".<br>
+<strong>Dot:</strong> Dot relates to the answer "Different definitions of “point”".<br>
+<strong>Exact location:</strong> Exact location relates to the answer "Different definitions of “point”".<br>
+<strong>Main idea:</strong> Main idea relates to the answer "Different definitions of “point”".<br>
+<strong>Scoring unit in a game:</strong> Scoring unit in a game relates to the answer "Different definitions of “point”".</p>`,
+  },
+  {
     sequence: "#878",
     date: "2026-09-25",
     answer: "Words that come after “mixed”",
