@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#880",
+    date: "2026-09-27",
+    answer: "Words that come before “share”",
+    clues: ["Fair", "Market", "Mind", "Earnings per", "The lion’s (the largest part)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Fair:</strong> Fair relates to the answer "Words that come before “share”".<br>
+<strong>Market:</strong> Market relates to the answer "Words that come before “share”".<br>
+<strong>Mind:</strong> Mind relates to the answer "Words that come before “share”".<br>
+<strong>Earnings per:</strong> Earnings per relates to the answer "Words that come before “share”".<br>
+<strong>The lion’s (the largest part):</strong> The lion’s (the largest part) relates to the answer "Words that come before “share”".</p>`,
+  },
+  {
     sequence: "#879",
     date: "2026-09-26",
     answer: "Different definitions of “point”",
