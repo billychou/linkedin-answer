@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#880",
+    date: "2026-09-27",
+    answer: "SHIPS \u2192 CHIPS \u2192 CLIPS \u2192 FLIPS \u2192 FLIES \u2192 FLEES \u2192 FLEET",
+    clues: ["Small squares containing circuits", "Short segments from longer videos", "Turns over, as a playing card", "Plays with, as a kite", "Runs away from danger"],
+    clueHint: `<p>Word ladder from <strong>SHIPS</strong> to <strong>FLEET</strong>:<br>
+SHIPS → CHIPS → CLIPS → FLIPS → FLIES → FLEES → FLEET</p>`,
+  },
+  {
     sequence: "#879",
     date: "2026-09-26",
     answer: "CLEAN \u2192 CLEAT \u2192 CHEAT \u2192 CHEAP \u2192 CHEEP \u2192 SHEEP \u2192 SWEEP",
