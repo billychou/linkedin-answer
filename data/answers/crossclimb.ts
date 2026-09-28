@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#881",
+    date: "2026-09-28",
+    answer: "HEAD \u2192 BEAD \u2192 BEAR \u2192 BEER \u2192 BEES \u2192 TEES \u2192 TOES",
+    clues: ["Necklace part, or drop of sweat", "Word following \"brown,\" \"black,\" or \"polar\"", "Stout, porter, or pale ale", "Creatures who live in hives", "Casual shirts named for the 20th letter of the alphabet"],
+    clueHint: `<p>Word ladder from <strong>HEAD</strong> to <strong>TOES</strong>:<br>
+HEAD → BEAD → BEAR → BEER → BEES → TEES → TOES</p>`,
+  },
+  {
     sequence: "#880",
     date: "2026-09-27",
     answer: "SHIPS \u2192 CHIPS \u2192 CLIPS \u2192 FLIPS \u2192 FLIES \u2192 FLEES \u2192 FLEET",
