@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#881",
+    date: "2026-09-28",
+    answer: "Restaurant chains",
+    clues: ["Subway", "Domino’s", "Jollibee", "KFC", "McDonald’s"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Subway:</strong> Subway relates to the answer "Restaurant chains".<br>
+<strong>Domino’s:</strong> Domino’s relates to the answer "Restaurant chains".<br>
+<strong>Jollibee:</strong> Jollibee relates to the answer "Restaurant chains".<br>
+<strong>KFC:</strong> KFC relates to the answer "Restaurant chains".<br>
+<strong>McDonald’s:</strong> McDonald’s relates to the answer "Restaurant chains".</p>`,
+  },
+  {
     sequence: "#880",
     date: "2026-09-27",
     answer: "Words that come before “share”",
