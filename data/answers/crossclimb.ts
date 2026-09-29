@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#882",
+    date: "2026-09-29",
+    answer: "FLIP \u2192 SLIP \u2192 SLIT \u2192 SLOT \u2192 SLOW \u2192 FLOW \u2192 FLOP",
+    clues: ["Lose one's footing", "Extremely narrow opening", "Narrow opening", "Lacking speed", "Movement of water or air"],
+    clueHint: `<p>Word ladder from <strong>FLIP</strong> to <strong>FLOP</strong>:<br>
+FLIP → SLIP → SLIT → SLOT → SLOW → FLOW → FLOP</p>`,
+  },
+  {
     sequence: "#881",
     date: "2026-09-28",
     answer: "HEAD \u2192 BEAD \u2192 BEAR \u2192 BEER \u2192 BEES \u2192 TEES \u2192 TOES",
