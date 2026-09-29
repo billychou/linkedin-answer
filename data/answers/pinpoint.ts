@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#882",
+    date: "2026-09-29",
+    answer: "Software menus",
+    clues: ["Help", "View", "Window", "File", "Edit (where you can copy and paste)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Help:</strong> Help relates to the answer "Software menus".<br>
+<strong>View:</strong> View relates to the answer "Software menus".<br>
+<strong>Window:</strong> Window relates to the answer "Software menus".<br>
+<strong>File:</strong> File relates to the answer "Software menus".<br>
+<strong>Edit (where you can copy and paste):</strong> Edit (where you can copy and paste) relates to the answer "Software menus".</p>`,
+  },
+  {
     sequence: "#881",
     date: "2026-09-28",
     answer: "Restaurant chains",
