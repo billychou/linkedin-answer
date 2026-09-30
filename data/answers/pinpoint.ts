@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#883",
+    date: "2026-09-30",
+    answer: "Types of rings",
+    clues: ["Nose", "Napkin", "Mood", "Boxing", "Wedding (worn after “I dos”)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Nose:</strong> Nose relates to the answer "Types of rings".<br>
+<strong>Napkin:</strong> Napkin relates to the answer "Types of rings".<br>
+<strong>Mood:</strong> Mood relates to the answer "Types of rings".<br>
+<strong>Boxing:</strong> Boxing relates to the answer "Types of rings".<br>
+<strong>Wedding (worn after “I dos”):</strong> Wedding (worn after “I dos”) relates to the answer "Types of rings".</p>`,
+  },
+  {
     sequence: "#882",
     date: "2026-09-29",
     answer: "Software menus",
