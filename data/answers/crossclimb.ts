@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#883",
+    date: "2026-09-30",
+    answer: "FREE \u2192 FRET \u2192 FEET \u2192 FELT \u2192 FELL \u2192 FILL \u2192 WILL",
+    clues: ["Constantly worry, or part of a guitar's neck", "Body parts with arches and soles", "Soft surface on a billiards table", "Went to the ground, most likely accidentally", "Pour liquid into, as a glass"],
+    clueHint: `<p>Word ladder from <strong>FREE</strong> to <strong>WILL</strong>:<br>
+FREE → FRET → FEET → FELT → FELL → FILL → WILL</p>`,
+  },
+  {
     sequence: "#882",
     date: "2026-09-29",
     answer: "FLIP \u2192 SLIP \u2192 SLIT \u2192 SLOT \u2192 SLOW \u2192 FLOW \u2192 FLOP",
