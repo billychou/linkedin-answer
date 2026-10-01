@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#884",
+    date: "2026-10-01",
+    answer: "Parts of the ear",
+    clues: ["Ossicles", "Cochlea", "Semicircular canals", "Tympanic membrane", "Auditory nerve"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Ossicles:</strong> Ossicles relates to the answer "Parts of the ear".<br>
+<strong>Cochlea:</strong> Cochlea relates to the answer "Parts of the ear".<br>
+<strong>Semicircular canals:</strong> Semicircular canals relates to the answer "Parts of the ear".<br>
+<strong>Tympanic membrane:</strong> Tympanic membrane relates to the answer "Parts of the ear".<br>
+<strong>Auditory nerve:</strong> Auditory nerve relates to the answer "Parts of the ear".</p>`,
+  },
+  {
     sequence: "#883",
     date: "2026-09-30",
     answer: "Types of rings",
