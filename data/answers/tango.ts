@@ -2,6 +2,12 @@ import { GameAnswer } from "@/types/game";
 
 export const tangoAnswers: GameAnswer[] = [
   {
+    sequence: "#724",
+    date: "2026-10-01",
+    answer: ["🌙☀️☀️🌙🌙☀️", "🌙🌙☀️☀️🌙☀️", "☀️🌙🌙☀️☀️🌙", "🌙☀️☀️🌙🌙☀️", "☀️☀️🌙🌙☀️🌙", "☀️🌙🌙☀️☀️🌙"],
+    clueHint: `<p>Fill the 6×6 grid so every row and every column contains exactly three ☀️ and three 🌙, with no four identical symbols in a row. The completed top row is: 🌙☀️☀️🌙🌙☀️.</p>`,
+  },
+  {
     sequence: "#723",
     date: "2026-09-30",
     answer: ["☀️🌙☀️☀️🌙🌙", "🌙🌙☀️☀️🌙☀️", "☀️☀️🌙🌙☀️🌙", "☀️🌙☀️☀️🌙🌙", "🌙☀️🌙🌙☀️☀️", "🌙☀️🌙🌙☀️☀️"],
