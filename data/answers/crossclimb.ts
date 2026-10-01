@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#884",
+    date: "2026-10-01",
+    answer: "WELL \u2192 BELL \u2192 BALL \u2192 BALD \u2192 BAND \u2192 SAND \u2192 SAID",
+    clues: ["Loud ringer at many churches", "Fancy party, or a sphere", "Lacking hair", "Word following \"rubber\" or \"rock\"", "Substance found on a beach or in an hourglass"],
+    clueHint: `<p>Word ladder from <strong>WELL</strong> to <strong>SAID</strong>:<br>
+WELL → BELL → BALL → BALD → BAND → SAND → SAID</p>`,
+  },
+  {
     sequence: "#883",
     date: "2026-09-30",
     answer: "FREE \u2192 FRET \u2192 FEET \u2192 FELT \u2192 FELL \u2192 FILL \u2192 WILL",
