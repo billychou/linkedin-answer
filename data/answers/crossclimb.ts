@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#885",
+    date: "2026-10-02",
+    answer: "COAL \u2192 COOL \u2192 FOOL \u2192 FOOD \u2192 FOND \u2192 FIND \u2192 WIND",
+    clues: ["Trendy or acceptable", "Play the ___ (act like a court jester)", "Necessary source of nutrients", "Having a warm, positive opinion (of)", "Locate, as something lost"],
+    clueHint: `<p>Word ladder from <strong>COAL</strong> to <strong>WIND</strong>:<br>
+COAL → COOL → FOOL → FOOD → FOND → FIND → WIND</p>`,
+  },
+  {
     sequence: "#884",
     date: "2026-10-01",
     answer: "WELL \u2192 BELL \u2192 BALL \u2192 BALD \u2192 BAND \u2192 SAND \u2192 SAID",
