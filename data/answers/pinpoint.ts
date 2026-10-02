@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#885",
+    date: "2026-10-02",
+    answer: "Things associated with Scotland (🏴)",
+    clues: ["Golf", "Whiskey", "Bagpipes", "Haggis", "The Loch Ness Monster"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Golf:</strong> Golf relates to the answer "Things associated with Scotland (🏴)".<br>
+<strong>Whiskey:</strong> Whiskey relates to the answer "Things associated with Scotland (🏴)".<br>
+<strong>Bagpipes:</strong> Bagpipes relates to the answer "Things associated with Scotland (🏴)".<br>
+<strong>Haggis:</strong> Haggis relates to the answer "Things associated with Scotland (🏴)".<br>
+<strong>The Loch Ness Monster:</strong> The Loch Ness Monster relates to the answer "Things associated with Scotland (🏴)".</p>`,
+  },
+  {
     sequence: "#884",
     date: "2026-10-01",
     answer: "Parts of the ear",
