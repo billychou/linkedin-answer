@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#886",
+    date: "2026-10-03",
+    answer: "PORK \u2192 PORE \u2192 POPE \u2192 ROPE \u2192 RIPE \u2192 RIPS \u2192 RIBS",
+    clues: ["Small skin opening", "Leo XIV, for one", "Cord that may be climbed for exercise", "Ready to be picked, as fruit", "Damages, as a page in a book"],
+    clueHint: `<p>Word ladder from <strong>PORK</strong> to <strong>RIBS</strong>:<br>
+PORK → PORE → POPE → ROPE → RIPE → RIPS → RIBS</p>`,
+  },
+  {
     sequence: "#885",
     date: "2026-10-02",
     answer: "COAL \u2192 COOL \u2192 FOOL \u2192 FOOD \u2192 FOND \u2192 FIND \u2192 WIND",
