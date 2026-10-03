@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#886",
+    date: "2026-10-03",
+    answer: "Words that come after “common”",
+    clues: ["Ground", "Thread", "Sense", "Denominator", "Knowledge (most people know it!)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Ground:</strong> Ground relates to the answer "Words that come after “common”".<br>
+<strong>Thread:</strong> Thread relates to the answer "Words that come after “common”".<br>
+<strong>Sense:</strong> Sense relates to the answer "Words that come after “common”".<br>
+<strong>Denominator:</strong> Denominator relates to the answer "Words that come after “common”".<br>
+<strong>Knowledge (most people know it!):</strong> Knowledge (most people know it!) relates to the answer "Words that come after “common”".</p>`,
+  },
+  {
     sequence: "#885",
     date: "2026-10-02",
     answer: "Things associated with Scotland (🏴)",
