@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#887",
+    date: "2026-10-04",
+    answer: "KILO \u2192 KILT \u2192 TILT \u2192 TILE \u2192 TIME \u2192 LIME \u2192 LIMA",
+    clues: ["Pleated garment associated with Scotland", "Lean over a little", "Piece of material often used to cover a floor or wall", "\"___ flies when you're having fun\"", "Green citrus fruit"],
+    clueHint: `<p>Word ladder from <strong>KILO</strong> to <strong>LIMA</strong>:<br>
+KILO → KILT → TILT → TILE → TIME → LIME → LIMA</p>`,
+  },
+  {
     sequence: "#886",
     date: "2026-10-03",
     answer: "PORK \u2192 PORE \u2192 POPE \u2192 ROPE \u2192 RIPE \u2192 RIPS \u2192 RIBS",
