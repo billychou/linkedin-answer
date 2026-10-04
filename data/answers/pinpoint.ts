@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#887",
+    date: "2026-10-04",
+    answer: "Actors who have played James Bond",
+    clues: ["George Lazenby", "Pierce Brosnan", "Roger Moore", "Daniel Craig", "Sean Connery (first in \"Dr. No\")"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>George Lazenby:</strong> George Lazenby relates to the answer "Actors who have played James Bond".<br>
+<strong>Pierce Brosnan:</strong> Pierce Brosnan relates to the answer "Actors who have played James Bond".<br>
+<strong>Roger Moore:</strong> Roger Moore relates to the answer "Actors who have played James Bond".<br>
+<strong>Daniel Craig:</strong> Daniel Craig relates to the answer "Actors who have played James Bond".<br>
+<strong>Sean Connery (first in "Dr. No"):</strong> Sean Connery (first in "Dr. No") relates to the answer "Actors who have played James Bond".</p>`,
+  },
+  {
     sequence: "#886",
     date: "2026-10-03",
     answer: "Words that come after “common”",
