@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#888",
+    date: "2026-10-05",
+    answer: "TEAM \u2192 REAM \u2192 ROAM \u2192 FOAM \u2192 FORM \u2192 WORM \u2192 WORK",
+    clues: ["Package of 500 sheets of paper", "Travel without a plan", "Type of cushioning or rubber", "Something you might fill out with your name and address", "âThe early bird catches the ___â"],
+    clueHint: `<p>Word ladder from <strong>TEAM</strong> to <strong>WORK</strong>:<br>
+TEAM → REAM → ROAM → FOAM → FORM → WORM → WORK</p>`,
+  },
+  {
     sequence: "#887",
     date: "2026-10-04",
     answer: "KILO \u2192 KILT \u2192 TILT \u2192 TILE \u2192 TIME \u2192 LIME \u2192 LIMA",
