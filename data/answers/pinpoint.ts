@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#888",
+    date: "2026-10-05",
+    answer: "Wind instruments",
+    clues: ["Recorder", "Whistle", "Piccolo", "Flute", "Clarinet"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Recorder:</strong> Recorder relates to the answer "Wind instruments".<br>
+<strong>Whistle:</strong> Whistle relates to the answer "Wind instruments".<br>
+<strong>Piccolo:</strong> Piccolo relates to the answer "Wind instruments".<br>
+<strong>Flute:</strong> Flute relates to the answer "Wind instruments".<br>
+<strong>Clarinet:</strong> Clarinet relates to the answer "Wind instruments".</p>`,
+  },
+  {
     sequence: "#887",
     date: "2026-10-04",
     answer: "Actors who have played James Bond",
