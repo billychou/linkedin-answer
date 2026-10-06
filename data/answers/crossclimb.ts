@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#889",
+    date: "2026-10-06",
+    answer: "WINE \u2192 WANE \u2192 WAVE \u2192 CAVE \u2192 CARE \u2192 CORE \u2192 CORK",
+    clues: ["Become less visible, like the moon", "Arm gesture meaning \"hello\" or \"goodbye\"", "Where to find stalactites", "Feel sympathy", "Uneaten part of an apple"],
+    clueHint: `<p>Word ladder from <strong>WINE</strong> to <strong>CORK</strong>:<br>
+WINE → WANE → WAVE → CAVE → CARE → CORE → CORK</p>`,
+  },
+  {
     sequence: "#888",
     date: "2026-10-05",
     answer: "TEAM \u2192 REAM \u2192 ROAM \u2192 FOAM \u2192 FORM \u2192 WORM \u2192 WORK",
