@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#889",
+    date: "2026-10-06",
+    answer: "Settlements of different size",
+    clues: ["Hamlet", "Conurbation", "Village", "Town", "City"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Hamlet:</strong> Hamlet relates to the answer "Settlements of different size".<br>
+<strong>Conurbation:</strong> Conurbation relates to the answer "Settlements of different size".<br>
+<strong>Village:</strong> Village relates to the answer "Settlements of different size".<br>
+<strong>Town:</strong> Town relates to the answer "Settlements of different size".<br>
+<strong>City:</strong> City relates to the answer "Settlements of different size".</p>`,
+  },
+  {
     sequence: "#888",
     date: "2026-10-05",
     answer: "Wind instruments",
