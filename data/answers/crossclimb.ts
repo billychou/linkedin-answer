@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#890",
+    date: "2026-10-07",
+    answer: "MARK \u2192 BARK \u2192 BARN \u2192 BORN \u2192 MORN \u2192 MOWN \u2192 DOWN",
+    clues: ["Sound that might come after you say \"Who's a good dog? Is it you?\"", "Where a calf may be raised on a farm", "Brought into the world", "Early part of the day, poetically", "Like a well-trimmed yard"],
+    clueHint: `<p>Word ladder from <strong>MARK</strong> to <strong>DOWN</strong>:<br>
+MARK → BARK → BARN → BORN → MORN → MOWN → DOWN</p>`,
+  },
+  {
     sequence: "#889",
     date: "2026-10-06",
     answer: "WINE \u2192 WANE \u2192 WAVE \u2192 CAVE \u2192 CARE \u2192 CORE \u2192 CORK",
