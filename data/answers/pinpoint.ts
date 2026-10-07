@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#890",
+    date: "2026-10-07",
+    answer: "Blood types",
+    clues: ["A+", "B-", "AB+", "O+ (the most common)", "O- (universal red cell donor)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>A+:</strong> A+ relates to the answer "Blood types".<br>
+<strong>B-:</strong> B- relates to the answer "Blood types".<br>
+<strong>AB+:</strong> AB+ relates to the answer "Blood types".<br>
+<strong>O+ (the most common):</strong> O+ (the most common) relates to the answer "Blood types".<br>
+<strong>O- (universal red cell donor):</strong> O- (universal red cell donor) relates to the answer "Blood types".</p>`,
+  },
+  {
     sequence: "#889",
     date: "2026-10-06",
     answer: "Settlements of different size",
