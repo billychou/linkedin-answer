@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#891",
+    date: "2026-10-08",
+    answer: "MAMA \u2192 MAYA \u2192 MAYS \u2192 PAYS \u2192 PARS \u2192 PARA \u2192 PAPA",
+    clues: ["Mesoamerican civilization known for its calendar and pyramids, as at ChichÃ©n ItzÃ¡", "Months after Aprils", "Puts the money up, as for a meal", "Expected scores on a golf course", "Prefix before \"phrase,\" \"medic,\" or \"chute\""],
+    clueHint: `<p>Word ladder from <strong>MAMA</strong> to <strong>PAPA</strong>:<br>
+MAMA → MAYA → MAYS → PAYS → PARS → PARA → PAPA</p>`,
+  },
+  {
     sequence: "#890",
     date: "2026-10-07",
     answer: "MARK \u2192 BARK \u2192 BARN \u2192 BORN \u2192 MORN \u2192 MOWN \u2192 DOWN",
