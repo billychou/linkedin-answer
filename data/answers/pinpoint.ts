@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#891",
+    date: "2026-10-08",
+    answer: "Words that come before “breaker”",
+    clues: ["Code", "Circuit", "Ice", "Deal", "Tie (used to avoid a draw)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Code:</strong> Code relates to the answer "Words that come before “breaker”".<br>
+<strong>Circuit:</strong> Circuit relates to the answer "Words that come before “breaker”".<br>
+<strong>Ice:</strong> Ice relates to the answer "Words that come before “breaker”".<br>
+<strong>Deal:</strong> Deal relates to the answer "Words that come before “breaker”".<br>
+<strong>Tie (used to avoid a draw):</strong> Tie (used to avoid a draw) relates to the answer "Words that come before “breaker”".</p>`,
+  },
+  {
     sequence: "#890",
     date: "2026-10-07",
     answer: "Blood types",
