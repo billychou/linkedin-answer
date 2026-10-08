@@ -2,6 +2,12 @@ import { GameAnswer } from "@/types/game";
 
 export const queensAnswers: GameAnswer[] = [
   {
+    sequence: "#891",
+    date: "2026-10-08",
+    answer: "R1C8, R2C2, R3C5, R4C3, R5C6, R6C4, R7C7, R8C1",
+    clueHint: `<p>Place one queen in every row, column and colored region so no two queens touch, even diagonally. Today's positions: <strong>R1C8, R2C2, R3C5, R4C3, R5C6, R6C4, R7C7, R8C1</strong>.</p>`,
+  },
+  {
     sequence: "#890",
     date: "2026-10-07",
     answer: "R1C3, R2C1, R3C8, R4C2, R5C9, R6C6, R7C4, R8C7, R9C5",
