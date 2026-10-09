@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#892",
+    date: "2026-10-09",
+    answer: "Types of whales",
+    clues: ["Blue", "Right", "Bowhead", "Humpback", "Orca (aka “Killer”)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Blue:</strong> Blue relates to the answer "Types of whales".<br>
+<strong>Right:</strong> Right relates to the answer "Types of whales".<br>
+<strong>Bowhead:</strong> Bowhead relates to the answer "Types of whales".<br>
+<strong>Humpback:</strong> Humpback relates to the answer "Types of whales".<br>
+<strong>Orca (aka “Killer”):</strong> Orca (aka “Killer”) relates to the answer "Types of whales".</p>`,
+  },
+  {
     sequence: "#891",
     date: "2026-10-08",
     answer: "Words that come before “breaker”",
