@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#892",
+    date: "2026-10-09",
+    answer: "HALF \u2192 HALE \u2192 HARE \u2192 DARE \u2192 DATE \u2192 DOTE \u2192 NOTE",
+    clues: ["___ and hearty (in good physical condition)", "Long-eared animal related to the rabbit", "Challenge to do something risky", "10/10/26, for example", "Lavish affection (on)"],
+    clueHint: `<p>Word ladder from <strong>HALF</strong> to <strong>NOTE</strong>:<br>
+HALF → HALE → HARE → DARE → DATE → DOTE → NOTE</p>`,
+  },
+  {
     sequence: "#891",
     date: "2026-10-08",
     answer: "MAMA \u2192 MAYA \u2192 MAYS \u2192 PAYS \u2192 PARS \u2192 PARA \u2192 PAPA",
