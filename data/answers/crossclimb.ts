@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#893",
+    date: "2026-10-10",
+    answer: "LOIS \u2192 LOBS \u2192 LABS \u2192 CABS \u2192 CANS \u2192 CANE \u2192 LANE",
+    clues: ["High shots, in tennis", "Places for science experiments", "Some hired rides, for short", "Cylindrical containers", "Walking aid"],
+    clueHint: `<p>Word ladder from <strong>LOIS</strong> to <strong>LANE</strong>:<br>
+LOIS → LOBS → LABS → CABS → CANS → CANE → LANE</p>`,
+  },
+  {
     sequence: "#892",
     date: "2026-10-09",
     answer: "HALF \u2192 HALE \u2192 HARE \u2192 DARE \u2192 DATE \u2192 DOTE \u2192 NOTE",
