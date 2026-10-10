@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#893",
+    date: "2026-10-10",
+    answer: "Words that come before “ten”",
+    clues: ["Hang", "Perfect", "Top", "Count to", "Nine times out of"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Hang:</strong> Hang relates to the answer "Words that come before “ten”".<br>
+<strong>Perfect:</strong> Perfect relates to the answer "Words that come before “ten”".<br>
+<strong>Top:</strong> Top relates to the answer "Words that come before “ten”".<br>
+<strong>Count to:</strong> Count to relates to the answer "Words that come before “ten”".<br>
+<strong>Nine times out of:</strong> Nine times out of relates to the answer "Words that come before “ten”".</p>`,
+  },
+  {
     sequence: "#892",
     date: "2026-10-09",
     answer: "Types of whales",
