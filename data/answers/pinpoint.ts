@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#894",
+    date: "2026-10-11",
+    answer: "Things that are stacked",
+    clues: ["Books", "Plates", "Firewood", "Chairs after a banquet", "Poker chips (in tall columns)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Books:</strong> Books relates to the answer "Things that are stacked".<br>
+<strong>Plates:</strong> Plates relates to the answer "Things that are stacked".<br>
+<strong>Firewood:</strong> Firewood relates to the answer "Things that are stacked".<br>
+<strong>Chairs after a banquet:</strong> Chairs after a banquet relates to the answer "Things that are stacked".<br>
+<strong>Poker chips (in tall columns):</strong> Poker chips (in tall columns) relates to the answer "Things that are stacked".</p>`,
+  },
+  {
     sequence: "#893",
     date: "2026-10-10",
     answer: "Words that come before “ten”",
