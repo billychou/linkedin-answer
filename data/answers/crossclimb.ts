@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#894",
+    date: "2026-10-11",
+    answer: "RANK \u2192 TANK \u2192 TALK \u2192 TALL \u2192 FALL \u2192 FILL \u2192 FILE",
+    clues: ["Where to keep pet fish", "Pep ___ (motivational speech)", "Like prominent buildings", "Plunge", "Pack until nothing else will fit"],
+    clueHint: `<p>Word ladder from <strong>RANK</strong> to <strong>FILE</strong>:<br>
+RANK → TANK → TALK → TALL → FALL → FILL → FILE</p>`,
+  },
+  {
     sequence: "#893",
     date: "2026-10-10",
     answer: "LOIS \u2192 LOBS \u2192 LABS \u2192 CABS \u2192 CANS \u2192 CANE \u2192 LANE",
