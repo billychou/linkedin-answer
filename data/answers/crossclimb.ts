@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#895",
+    date: "2026-10-12",
+    answer: "SPIN \u2192 SHIN \u2192 CHIN \u2192 COIN \u2192 CORN \u2192 TORN \u2192 TURN",
+    clues: ["Part of the lower leg that might ache for a runner", "Central part of a jawline", "Metallic piece of currency", "Vegetable that may be served on or off the cob", "Ripped in half"],
+    clueHint: `<p>Word ladder from <strong>SPIN</strong> to <strong>TURN</strong>:<br>
+SPIN → SHIN → CHIN → COIN → CORN → TORN → TURN</p>`,
+  },
+  {
     sequence: "#894",
     date: "2026-10-11",
     answer: "RANK \u2192 TANK \u2192 TALK \u2192 TALL \u2192 FALL \u2192 FILL \u2192 FILE",
