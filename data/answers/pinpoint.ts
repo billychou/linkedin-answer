@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#895",
+    date: "2026-10-12",
+    answer: "Military ranks",
+    clues: ["General", "Private", "Major", "Colonel", "Lieutenant"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>General:</strong> General relates to the answer "Military ranks".<br>
+<strong>Private:</strong> Private relates to the answer "Military ranks".<br>
+<strong>Major:</strong> Major relates to the answer "Military ranks".<br>
+<strong>Colonel:</strong> Colonel relates to the answer "Military ranks".<br>
+<strong>Lieutenant:</strong> Lieutenant relates to the answer "Military ranks".</p>`,
+  },
+  {
     sequence: "#894",
     date: "2026-10-11",
     answer: "Things that are stacked",
