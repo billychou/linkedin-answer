@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#896",
+    date: "2026-10-13",
+    answer: "Shades of purple or violet",
+    clues: ["Amethyst", "Mauve", "Lilac", "Plum", "Lavender (looks like 🪻)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Amethyst:</strong> Amethyst relates to the answer "Shades of purple or violet".<br>
+<strong>Mauve:</strong> Mauve relates to the answer "Shades of purple or violet".<br>
+<strong>Lilac:</strong> Lilac relates to the answer "Shades of purple or violet".<br>
+<strong>Plum:</strong> Plum relates to the answer "Shades of purple or violet".<br>
+<strong>Lavender (looks like 🪻):</strong> Lavender (looks like 🪻) relates to the answer "Shades of purple or violet".</p>`,
+  },
+  {
     sequence: "#895",
     date: "2026-10-12",
     answer: "Military ranks",
