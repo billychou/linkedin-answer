@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#896",
+    date: "2026-10-13",
+    answer: "SEND \u2192 MEND \u2192 MIND \u2192 MINT \u2192 MIST \u2192 MOST \u2192 POST",
+    clues: ["Repair, as a hole in a garment", "Keep in ___ (take into account)", "Herb name that often follows âpepperâ or âspearâ", "Fine spray of water", "Opposite of least"],
+    clueHint: `<p>Word ladder from <strong>SEND</strong> to <strong>POST</strong>:<br>
+SEND → MEND → MIND → MINT → MIST → MOST → POST</p>`,
+  },
+  {
     sequence: "#895",
     date: "2026-10-12",
     answer: "SPIN \u2192 SHIN \u2192 CHIN \u2192 COIN \u2192 CORN \u2192 TORN \u2192 TURN",
