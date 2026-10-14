@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#897",
+    date: "2026-10-14",
+    answer: "NINE \u2192 NICE \u2192 MICE \u2192 MACE \u2192 MALE \u2192 MOLE \u2192 HOLE",
+    clues: ["Pleasant, or the name of a city in France", "Computer peripherals used for clicking", "Medieval club, often with spiky bits", "Like a bull or ram, but not a cow or ewe", "Critter that digs tunnels"],
+    clueHint: `<p>Word ladder from <strong>NINE</strong> to <strong>HOLE</strong>:<br>
+NINE → NICE → MICE → MACE → MALE → MOLE → HOLE</p>`,
+  },
+  {
     sequence: "#896",
     date: "2026-10-13",
     answer: "SEND \u2192 MEND \u2192 MIND \u2192 MINT \u2192 MIST \u2192 MOST \u2192 POST",
