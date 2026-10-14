@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#897",
+    date: "2026-10-14",
+    answer: "Things you can “walk”",
+    clues: ["The dog", "The streets", "The line", "The plank", "A tightrope (take no false steps!)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>The dog:</strong> The dog relates to the answer "Things you can “walk”".<br>
+<strong>The streets:</strong> The streets relates to the answer "Things you can “walk”".<br>
+<strong>The line:</strong> The line relates to the answer "Things you can “walk”".<br>
+<strong>The plank:</strong> The plank relates to the answer "Things you can “walk”".<br>
+<strong>A tightrope (take no false steps!):</strong> A tightrope (take no false steps!) relates to the answer "Things you can “walk”".</p>`,
+  },
+  {
     sequence: "#896",
     date: "2026-10-13",
     answer: "Shades of purple or violet",
