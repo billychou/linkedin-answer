@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#898",
+    date: "2026-10-15",
+    answer: "FOLK \u2192 FOLD \u2192 FOOD \u2192 HOOD \u2192 HOOK \u2192 ROOK \u2192 ROCK",
+    clues: ["Drop out of a poker hand", "What many farms generate", "Robin ___ (legendary outlaw)", "It's at the end of a fishing line", "Game piece that moves up and down and side to side, but not diagonally"],
+    clueHint: `<p>Word ladder from <strong>FOLK</strong> to <strong>ROCK</strong>:<br>
+FOLK → FOLD → FOOD → HOOD → HOOK → ROOK → ROCK</p>`,
+  },
+  {
     sequence: "#897",
     date: "2026-10-14",
     answer: "NINE \u2192 NICE \u2192 MICE \u2192 MACE \u2192 MALE \u2192 MOLE \u2192 HOLE",
