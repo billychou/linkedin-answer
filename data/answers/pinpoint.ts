@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#898",
+    date: "2026-10-15",
+    answer: "Types of fish",
+    clues: ["Drum", "Bass", "Sole", "Perch", "Flounder"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Drum:</strong> Drum relates to the answer "Types of fish".<br>
+<strong>Bass:</strong> Bass relates to the answer "Types of fish".<br>
+<strong>Sole:</strong> Sole relates to the answer "Types of fish".<br>
+<strong>Perch:</strong> Perch relates to the answer "Types of fish".<br>
+<strong>Flounder:</strong> Flounder relates to the answer "Types of fish".</p>`,
+  },
+  {
     sequence: "#897",
     date: "2026-10-14",
     answer: "Things you can “walk”",
