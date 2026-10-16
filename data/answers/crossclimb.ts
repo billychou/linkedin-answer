@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#899",
+    date: "2026-10-16",
+    answer: "SLED \u2192 SEED \u2192 FEED \u2192 FEES \u2192 FOES \u2192 FOGS \u2192 DOGS",
+    clues: ["A tree may grow from it", "Give a supply of nutrients", "Charges for professional services", "Opposing forces", "Weather patterns that may be described as \"pea soup\""],
+    clueHint: `<p>Word ladder from <strong>SLED</strong> to <strong>DOGS</strong>:<br>
+SLED → SEED → FEED → FEES → FOES → FOGS → DOGS</p>`,
+  },
+  {
     sequence: "#898",
     date: "2026-10-15",
     answer: "FOLK \u2192 FOLD \u2192 FOOD \u2192 HOOD \u2192 HOOK \u2192 ROOK \u2192 ROCK",
