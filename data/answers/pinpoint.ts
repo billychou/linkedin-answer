@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#899",
+    date: "2026-10-16",
+    answer: "Words that come after “rip”",
+    clues: ["Off", "Cord", "Tide", "To pieces", "-Roaring success"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Off:</strong> Off relates to the answer "Words that come after “rip”".<br>
+<strong>Cord:</strong> Cord relates to the answer "Words that come after “rip”".<br>
+<strong>Tide:</strong> Tide relates to the answer "Words that come after “rip”".<br>
+<strong>To pieces:</strong> To pieces relates to the answer "Words that come after “rip”".<br>
+<strong>-Roaring success:</strong> -Roaring success relates to the answer "Words that come after “rip”".</p>`,
+  },
+  {
     sequence: "#898",
     date: "2026-10-15",
     answer: "Types of fish",
