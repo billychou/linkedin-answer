@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#900",
+    date: "2026-10-17",
+    answer: "SONG \u2192 GONG \u2192 GONE \u2192 CONE \u2192 CONK \u2192 COOK \u2192 BOOK",
+    clues: ["Percussion instrument resembling a very large cymbal", "Missing", "Alternative to a cup in an ice cream parlor", "___ out (break down or fall asleep)", "Their job might require an apron"],
+    clueHint: `<p>Word ladder from <strong>SONG</strong> to <strong>BOOK</strong>:<br>
+SONG → GONG → GONE → CONE → CONK → COOK → BOOK</p>`,
+  },
+  {
     sequence: "#899",
     date: "2026-10-16",
     answer: "SLED \u2192 SEED \u2192 FEED \u2192 FEES \u2192 FOES \u2192 FOGS \u2192 DOGS",
