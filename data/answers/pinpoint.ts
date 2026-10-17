@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#900",
+    date: "2026-10-17",
+    answer: "Things with paddles",
+    clues: ["Defibrillator", "Steamboat", "Canoe", "Atari 2600 (to play some Pong?)", "Table tennis (to hit the ball!)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Defibrillator:</strong> Defibrillator relates to the answer "Things with paddles".<br>
+<strong>Steamboat:</strong> Steamboat relates to the answer "Things with paddles".<br>
+<strong>Canoe:</strong> Canoe relates to the answer "Things with paddles".<br>
+<strong>Atari 2600 (to play some Pong?):</strong> Atari 2600 (to play some Pong?) relates to the answer "Things with paddles".<br>
+<strong>Table tennis (to hit the ball!):</strong> Table tennis (to hit the ball!) relates to the answer "Things with paddles".</p>`,
+  },
+  {
     sequence: "#899",
     date: "2026-10-16",
     answer: "Words that come after “rip”",
