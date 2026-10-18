@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#901",
+    date: "2026-10-18",
+    answer: "CRIES \u2192 CRIBS \u2192 CRABS \u2192 CRAMS \u2192 TRAMS \u2192 TEAMS \u2192 TEARS",
+    clues: ["Baby beds", "Ten-legged creatures", "Studies hard right before a test", "Streetcars", "Microsoft's video messaging app, or groups of coworkers it might bring together"],
+    clueHint: `<p>Word ladder from <strong>CRIES</strong> to <strong>TEARS</strong>:<br>
+CRIES → CRIBS → CRABS → CRAMS → TRAMS → TEAMS → TEARS</p>`,
+  },
+  {
     sequence: "#900",
     date: "2026-10-17",
     answer: "SONG \u2192 GONG \u2192 GONE \u2192 CONE \u2192 CONK \u2192 COOK \u2192 BOOK",
