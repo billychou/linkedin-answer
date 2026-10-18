@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#901",
+    date: "2026-10-18",
+    answer: "Different definitions of “post”",
+    clues: ["Mail", "Assignment", "Hang up", "Fence pole", "After/subsequent (as a prefix)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Mail:</strong> Mail relates to the answer "Different definitions of “post”".<br>
+<strong>Assignment:</strong> Assignment relates to the answer "Different definitions of “post”".<br>
+<strong>Hang up:</strong> Hang up relates to the answer "Different definitions of “post”".<br>
+<strong>Fence pole:</strong> Fence pole relates to the answer "Different definitions of “post”".<br>
+<strong>After/subsequent (as a prefix):</strong> After/subsequent (as a prefix) relates to the answer "Different definitions of “post”".</p>`,
+  },
+  {
     sequence: "#900",
     date: "2026-10-17",
     answer: "Things with paddles",
