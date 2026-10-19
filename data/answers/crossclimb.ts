@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#902",
+    date: "2026-10-19",
+    answer: "DICE \u2192 DIRE \u2192 DARE \u2192 PARE \u2192 PURE \u2192 CURE \u2192 CUBE",
+    clues: ["Desperate, as a situation or a need", "Be boldly courageous", "Peel the skin off of, as fruit", "___ and simple (no more, no less)", "Completely get rid of, as an illness"],
+    clueHint: `<p>Word ladder from <strong>DICE</strong> to <strong>CUBE</strong>:<br>
+DICE → DIRE → DARE → PARE → PURE → CURE → CUBE</p>`,
+  },
+  {
     sequence: "#901",
     date: "2026-10-18",
     answer: "CRIES \u2192 CRIBS \u2192 CRABS \u2192 CRAMS \u2192 TRAMS \u2192 TEAMS \u2192 TEARS",
