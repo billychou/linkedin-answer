@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#902",
+    date: "2026-10-19",
+    answer: "Professions seen at the circus",
+    clues: ["Acrobat", "Clown", "Ringmaster", "Sword swallower", "Lion tamer"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Acrobat:</strong> Acrobat relates to the answer "Professions seen at the circus".<br>
+<strong>Clown:</strong> Clown relates to the answer "Professions seen at the circus".<br>
+<strong>Ringmaster:</strong> Ringmaster relates to the answer "Professions seen at the circus".<br>
+<strong>Sword swallower:</strong> Sword swallower relates to the answer "Professions seen at the circus".<br>
+<strong>Lion tamer:</strong> Lion tamer relates to the answer "Professions seen at the circus".</p>`,
+  },
+  {
     sequence: "#901",
     date: "2026-10-18",
     answer: "Different definitions of “post”",
