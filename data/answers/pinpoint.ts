@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#903",
+    date: "2026-10-20",
+    answer: "Types of grain",
+    clues: ["Spelt", "Sorghum", "Millet", "Rye", "Rice"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Spelt:</strong> Spelt relates to the answer "Types of grain".<br>
+<strong>Sorghum:</strong> Sorghum relates to the answer "Types of grain".<br>
+<strong>Millet:</strong> Millet relates to the answer "Types of grain".<br>
+<strong>Rye:</strong> Rye relates to the answer "Types of grain".<br>
+<strong>Rice:</strong> Rice relates to the answer "Types of grain".</p>`,
+  },
+  {
     sequence: "#902",
     date: "2026-10-19",
     answer: "Professions seen at the circus",
