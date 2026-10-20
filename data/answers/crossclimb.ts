@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#903",
+    date: "2026-10-20",
+    answer: "HACK \u2192 HARK \u2192 HARD \u2192 HERD \u2192 HEAD \u2192 LEAD \u2192 LEAK",
+    clues: ["\"___! The Herald Angels Sing\"", "Difficult", "Collective noun for bison or elephants", "Where a hat usually sits", "Be in the front of, as a race"],
+    clueHint: `<p>Word ladder from <strong>HACK</strong> to <strong>LEAK</strong>:<br>
+HACK → HARK → HARD → HERD → HEAD → LEAD → LEAK</p>`,
+  },
+  {
     sequence: "#902",
     date: "2026-10-19",
     answer: "DICE \u2192 DIRE \u2192 DARE \u2192 PARE \u2192 PURE \u2192 CURE \u2192 CUBE",
