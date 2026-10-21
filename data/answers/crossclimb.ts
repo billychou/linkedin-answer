@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#904",
+    date: "2026-10-21",
+    answer: "FAIR \u2192 FAIL \u2192 FALL \u2192 BALL \u2192 BALE \u2192 GALE \u2192 GAME",
+    clues: ["Opposite of \"succeed\"", "Tumble to the ground", "What gets hit in golf or tennis", "Bundle of hay or straw", "Strong wind"],
+    clueHint: `<p>Word ladder from <strong>FAIR</strong> to <strong>GAME</strong>:<br>
+FAIR → FAIL → FALL → BALL → BALE → GALE → GAME</p>`,
+  },
+  {
     sequence: "#903",
     date: "2026-10-20",
     answer: "HACK \u2192 HARK \u2192 HARD \u2192 HERD \u2192 HEAD \u2192 LEAD \u2192 LEAK",
