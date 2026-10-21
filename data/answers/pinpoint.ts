@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#904",
+    date: "2026-10-21",
+    answer: "Things seen at a court",
+    clues: ["Gallery", "Bar", "Bench", "Witness box", "Judge’s chambers"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Gallery:</strong> Gallery relates to the answer "Things seen at a court".<br>
+<strong>Bar:</strong> Bar relates to the answer "Things seen at a court".<br>
+<strong>Bench:</strong> Bench relates to the answer "Things seen at a court".<br>
+<strong>Witness box:</strong> Witness box relates to the answer "Things seen at a court".<br>
+<strong>Judge’s chambers:</strong> Judge’s chambers relates to the answer "Things seen at a court".</p>`,
+  },
+  {
     sequence: "#903",
     date: "2026-10-20",
     answer: "Types of grain",
