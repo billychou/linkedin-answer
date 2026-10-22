@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#905",
+    date: "2026-10-22",
+    answer: "Types of “face”",
+    clues: ["Game", "Poker", "Baby", "Clock", "Smiley (😊)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Game:</strong> Game relates to the answer "Types of “face”".<br>
+<strong>Poker:</strong> Poker relates to the answer "Types of “face”".<br>
+<strong>Baby:</strong> Baby relates to the answer "Types of “face”".<br>
+<strong>Clock:</strong> Clock relates to the answer "Types of “face”".<br>
+<strong>Smiley (😊):</strong> Smiley (😊) relates to the answer "Types of “face”".</p>`,
+  },
+  {
     sequence: "#904",
     date: "2026-10-21",
     answer: "Things seen at a court",
