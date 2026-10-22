@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#905",
+    date: "2026-10-22",
+    answer: "MEAL \u2192 PEAL \u2192 PEAK \u2192 PERK \u2192 PORK \u2192 WORK \u2192 WORM",
+    clues: ["Ring, like a bell", "Top of a mountain", "Part of an incentive package", "Pig meat", "What you might do from home or in an office"],
+    clueHint: `<p>Word ladder from <strong>MEAL</strong> to <strong>WORM</strong>:<br>
+MEAL → PEAL → PEAK → PERK → PORK → WORK → WORM</p>`,
+  },
+  {
     sequence: "#904",
     date: "2026-10-21",
     answer: "FAIR \u2192 FAIL \u2192 FALL \u2192 BALL \u2192 BALE \u2192 GALE \u2192 GAME",
