@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#906",
+    date: "2026-10-23",
+    answer: "Rivers in Asia",
+    clues: ["Yellow", "Ob", "Indus", "Tigris", "Yangtze (continent’s longest)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Yellow:</strong> Yellow relates to the answer "Rivers in Asia".<br>
+<strong>Ob:</strong> Ob relates to the answer "Rivers in Asia".<br>
+<strong>Indus:</strong> Indus relates to the answer "Rivers in Asia".<br>
+<strong>Tigris:</strong> Tigris relates to the answer "Rivers in Asia".<br>
+<strong>Yangtze (continent’s longest):</strong> Yangtze (continent’s longest) relates to the answer "Rivers in Asia".</p>`,
+  },
+  {
     sequence: "#905",
     date: "2026-10-22",
     answer: "Types of “face”",
