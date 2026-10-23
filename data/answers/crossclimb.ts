@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#906",
+    date: "2026-10-23",
+    answer: "LOVE \u2192 DOVE \u2192 DOSE \u2192 POSE \u2192 POST \u2192 PEST \u2192 FEST",
+    clues: ["Peaceful bird on a United Nations postage stamp", "Amount of medicine", "Something a fashion model \"strikes\"", "Put online, like a LinkedIn update", "Irritating child or insect"],
+    clueHint: `<p>Word ladder from <strong>LOVE</strong> to <strong>FEST</strong>:<br>
+LOVE → DOVE → DOSE → POSE → POST → PEST → FEST</p>`,
+  },
+  {
     sequence: "#905",
     date: "2026-10-22",
     answer: "MEAL \u2192 PEAL \u2192 PEAK \u2192 PERK \u2192 PORK \u2192 WORK \u2192 WORM",
