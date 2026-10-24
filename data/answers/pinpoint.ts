@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#907",
+    date: "2026-10-24",
+    answer: "Words that come after “close”",
+    clues: ["Friends", "Quarters", "Attention", "To home", "Call / shave (near miss)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Friends:</strong> Friends relates to the answer "Words that come after “close”".<br>
+<strong>Quarters:</strong> Quarters relates to the answer "Words that come after “close”".<br>
+<strong>Attention:</strong> Attention relates to the answer "Words that come after “close”".<br>
+<strong>To home:</strong> To home relates to the answer "Words that come after “close”".<br>
+<strong>Call / shave (near miss):</strong> Call / shave (near miss) relates to the answer "Words that come after “close”".</p>`,
+  },
+  {
     sequence: "#906",
     date: "2026-10-23",
     answer: "Rivers in Asia",
