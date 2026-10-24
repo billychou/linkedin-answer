@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#907",
+    date: "2026-10-24",
+    answer: "MENU \u2192 MEND \u2192 BEND \u2192 BOND \u2192 BOLD \u2192 FOLD \u2192 FOOD",
+    clues: ["On the ___ (recovering from an injury)", "Make curved or angled, as a straight object", "Join together permanently", "Word-processing option that makes the letters thicker", "Verb often seen in origami instructions"],
+    clueHint: `<p>Word ladder from <strong>MENU</strong> to <strong>FOOD</strong>:<br>
+MENU → MEND → BEND → BOND → BOLD → FOLD → FOOD</p>`,
+  },
+  {
     sequence: "#906",
     date: "2026-10-23",
     answer: "LOVE \u2192 DOVE \u2192 DOSE \u2192 POSE \u2192 POST \u2192 PEST \u2192 FEST",
