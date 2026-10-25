@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#908",
+    date: "2026-10-25",
+    answer: "DATE \u2192 RATE \u2192 RAKE \u2192 SAKE \u2192 SALE \u2192 PALE \u2192 PALM",
+    clues: ["Give a score from 1 to 10, say", "Tool in a Zen garden", "Alcoholic drink made from rice", "Transaction at a shop", "Lacking color"],
+    clueHint: `<p>Word ladder from <strong>DATE</strong> to <strong>PALM</strong>:<br>
+DATE → RATE → RAKE → SAKE → SALE → PALE → PALM</p>`,
+  },
+  {
     sequence: "#907",
     date: "2026-10-24",
     answer: "MENU \u2192 MEND \u2192 BEND \u2192 BOND \u2192 BOLD \u2192 FOLD \u2192 FOOD",
