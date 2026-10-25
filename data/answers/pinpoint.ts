@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#908",
+    date: "2026-10-25",
+    answer: "Things with roots",
+    clues: ["Teeth", "Words", "Polynomial functions", "Family history", "Trees (below the ground)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Teeth:</strong> Teeth relates to the answer "Things with roots".<br>
+<strong>Words:</strong> Words relates to the answer "Things with roots".<br>
+<strong>Polynomial functions:</strong> Polynomial functions relates to the answer "Things with roots".<br>
+<strong>Family history:</strong> Family history relates to the answer "Things with roots".<br>
+<strong>Trees (below the ground):</strong> Trees (below the ground) relates to the answer "Things with roots".</p>`,
+  },
+  {
     sequence: "#907",
     date: "2026-10-24",
     answer: "Words that come after “close”",
