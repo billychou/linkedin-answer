@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#909",
+    date: "2026-10-26",
+    answer: "Metal alloys",
+    clues: ["Pewter", "Solder", "Brass", "Bronze", "Stainless steel (Fe + Cr + Ni)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Pewter:</strong> Pewter relates to the answer "Metal alloys".<br>
+<strong>Solder:</strong> Solder relates to the answer "Metal alloys".<br>
+<strong>Brass:</strong> Brass relates to the answer "Metal alloys".<br>
+<strong>Bronze:</strong> Bronze relates to the answer "Metal alloys".<br>
+<strong>Stainless steel (Fe + Cr + Ni):</strong> Stainless steel (Fe + Cr + Ni) relates to the answer "Metal alloys".</p>`,
+  },
+  {
     sequence: "#908",
     date: "2026-10-25",
     answer: "Things with roots",
