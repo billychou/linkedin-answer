@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#909",
+    date: "2026-10-26",
+    answer: "DEAL \u2192 REAL \u2192 READ \u2192 LEAD \u2192 LEND \u2192 LAND \u2192 HAND",
+    clues: ["Actually existing", "Enjoy literature", "Heavy metallic element that can block X-rays", "___ an ear (listen)", "Terrestrial animals live on it"],
+    clueHint: `<p>Word ladder from <strong>DEAL</strong> to <strong>HAND</strong>:<br>
+DEAL → REAL → READ → LEAD → LEND → LAND → HAND</p>`,
+  },
+  {
     sequence: "#908",
     date: "2026-10-25",
     answer: "DATE \u2192 RATE \u2192 RAKE \u2192 SAKE \u2192 SALE \u2192 PALE \u2192 PALM",
