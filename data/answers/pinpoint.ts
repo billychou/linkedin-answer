@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#910",
+    date: "2026-10-27",
+    answer: "Types of wine",
+    clues: ["Port", "Shiraz", "Merlot", "Chardonnay", "Pinot noir (from dark grapes)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Port:</strong> Port relates to the answer "Types of wine".<br>
+<strong>Shiraz:</strong> Shiraz relates to the answer "Types of wine".<br>
+<strong>Merlot:</strong> Merlot relates to the answer "Types of wine".<br>
+<strong>Chardonnay:</strong> Chardonnay relates to the answer "Types of wine".<br>
+<strong>Pinot noir (from dark grapes):</strong> Pinot noir (from dark grapes) relates to the answer "Types of wine".</p>`,
+  },
+  {
     sequence: "#909",
     date: "2026-10-26",
     answer: "Metal alloys",
