@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#910",
+    date: "2026-10-27",
+    answer: "HAIR \u2192 HAIL \u2192 SAIL \u2192 SAID \u2192 SAND \u2192 BAND \u2192 BALD",
+    clues: ["Solid precipitation", "Travel using wind power", "Spoke aloud", "Beach surface", "Word that can follow \"rubber\" or \"marching\""],
+    clueHint: `<p>Word ladder from <strong>HAIR</strong> to <strong>BALD</strong>:<br>
+HAIR → HAIL → SAIL → SAID → SAND → BAND → BALD</p>`,
+  },
+  {
     sequence: "#909",
     date: "2026-10-26",
     answer: "DEAL \u2192 REAL \u2192 READ \u2192 LEAD \u2192 LEND \u2192 LAND \u2192 HAND",
