@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#911",
+    date: "2026-10-28",
+    answer: "SHOT \u2192 SLOT \u2192 BLOT \u2192 BOOT \u2192 BOAT \u2192 GOAT \u2192 GOAL",
+    clues: ["Time ___ (when to book a meeting)", "Blemish that ink often causes", "Item of footwear worn in soccer/football", "Something that floats and rhymes with \"float\"", "Farm animal that bleats"],
+    clueHint: `<p>Word ladder from <strong>SHOT</strong> to <strong>GOAL</strong>:<br>
+SHOT → SLOT → BLOT → BOOT → BOAT → GOAT → GOAL</p>`,
+  },
+  {
     sequence: "#910",
     date: "2026-10-27",
     answer: "HAIR \u2192 HAIL \u2192 SAIL \u2192 SAID \u2192 SAND \u2192 BAND \u2192 BALD",
