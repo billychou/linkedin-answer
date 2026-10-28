@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#911",
+    date: "2026-10-28",
+    answer: "Parts of a fireplace",
+    clues: ["Grate", "Damper", "Mantel", "Hearth", "Chimney (to vent the smoke)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Grate:</strong> Grate relates to the answer "Parts of a fireplace".<br>
+<strong>Damper:</strong> Damper relates to the answer "Parts of a fireplace".<br>
+<strong>Mantel:</strong> Mantel relates to the answer "Parts of a fireplace".<br>
+<strong>Hearth:</strong> Hearth relates to the answer "Parts of a fireplace".<br>
+<strong>Chimney (to vent the smoke):</strong> Chimney (to vent the smoke) relates to the answer "Parts of a fireplace".</p>`,
+  },
+  {
     sequence: "#910",
     date: "2026-10-27",
     answer: "Types of wine",
