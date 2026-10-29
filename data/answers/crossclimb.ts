@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#912",
+    date: "2026-10-29",
+    answer: "SAVE \u2192 CAVE \u2192 COVE \u2192 CORE \u2192 CORD \u2192 LORD \u2192 LOAD",
+    clues: ["Often explorable underground space", "Small coastal area with a narrow entrance", "Center of an apple", "Flexible accessory used for charging electronics", "Someone who rules over a domain"],
+    clueHint: `<p>Word ladder from <strong>SAVE</strong> to <strong>LOAD</strong>:<br>
+SAVE → CAVE → COVE → CORE → CORD → LORD → LOAD</p>`,
+  },
+  {
     sequence: "#911",
     date: "2026-10-28",
     answer: "SHOT \u2192 SLOT \u2192 BLOT \u2192 BOOT \u2192 BOAT \u2192 GOAT \u2192 GOAL",
