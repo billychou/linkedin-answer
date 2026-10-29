@@ -37,7 +37,7 @@ export async function generateMetadata({
 
   return constructMetadata({
     page: "Game",
-    title: `${game.name} - Today's Answer`,
+    title: `${game.name} Answer Today`,
     description: game.description,
     path: `/games/${gameSlug}`,
     canonicalUrl: `/games/${gameSlug}`,

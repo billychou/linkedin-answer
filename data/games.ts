@@ -5,7 +5,7 @@ export const games: Game[] = [
     slug: "pinpoint",
     name: "LinkedIn Pinpoint",
     description:
-      "Pinpoint is a word association game where you try to guess the common category or theme linking a set of words. You're given five clues to figure out this common category.",
+      "Pinpoint is a word association game where you guess the common category linking five clues. Get free LinkedIn Pinpoint answers and hints every day.",
     playUrl: "https://www.linkedin.com/games/pinpoint/",
     color: "blue",
   },
@@ -13,7 +13,7 @@ export const games: Game[] = [
     slug: "patches",
     name: "LinkedIn Patches",
     description:
-      "Patches is a picture puzzle where you drag scattered patches onto a grid board to rebuild a hidden image. Every patch belongs somewhere on the board, and pieces fit together by matching edges and colors.",
+      "Patches is a picture puzzle where you drag scattered patches onto a grid to rebuild a hidden image by matching edges and colors. Daily answers inside.",
     playUrl: "https://www.linkedin.com/games/patches/",
     color: "green",
   },
@@ -21,7 +21,7 @@ export const games: Game[] = [
     slug: "zip",
     name: "LinkedIn Zip",
     description:
-      "Zip is a path-drawing puzzle where you connect numbered cells in sequential order with a single continuous path. The path must fill every cell on the grid without crossing itself.",
+      "Zip is a path-drawing puzzle where you connect numbered cells in order with one continuous path that fills every cell without crossing itself.",
     playUrl: "https://www.linkedin.com/games/zip/",
     color: "violet",
   },
@@ -29,7 +29,7 @@ export const games: Game[] = [
     slug: "tango",
     name: "LinkedIn Tango",
     description:
-      "Tango is a logic puzzle where you fill a 6x6 grid with suns (☀️) and moons (🌙). Each row and column must have an equal number of suns and moons, and no more than two identical symbols can be adjacent.",
+      "Tango is a logic puzzle where you fill a 6x6 grid with suns and moons so each row and column has equal counts and no three identical symbols touch.",
     playUrl: "https://www.linkedin.com/games/tango/",
     color: "amber",
   },
@@ -37,7 +37,7 @@ export const games: Game[] = [
     slug: "queens",
     name: "LinkedIn Queens",
     description:
-      "Queens is a visual logic game where you place exactly one Crown (👑) in every row, column, and colored region. Crowns cannot touch each other, even diagonally.",
+      "Queens is a visual logic game where you place exactly one crown in every row, column, and colored region. Crowns cannot touch each other, even diagonally.",
     playUrl: "https://www.linkedin.com/games/queens/",
     color: "pink",
   },
@@ -45,7 +45,7 @@ export const games: Game[] = [
     slug: "mini-sudoku",
     name: "LinkedIn Mini Sudoku",
     description:
-      "Mini Sudoku is a compact 6x6 number puzzle. Fill the grid with digits 1-6 so that every row, column, and 2x3 box contains each digit exactly once - a quick daily logic warm-up.",
+      "Mini Sudoku is a compact 6x6 number puzzle. Fill the grid with digits 1-6 so every row, column, and 2x3 box contains each digit exactly once.",
     playUrl: "https://www.linkedin.com/games/mini-sudoku/",
     color: "cyan",
   },
@@ -53,7 +53,7 @@ export const games: Game[] = [
     slug: "crossclimb",
     name: "LinkedIn Crossclimb",
     description:
-      "Crossclimb is a word ladder puzzle where you transform one word into another by changing a single letter at each step. Each intermediate word must be a valid English word, with clues guiding you along the way.",
+      "Crossclimb is a word ladder puzzle where you change one letter at a time to transform words into new words, guided by clues at every step.",
     playUrl: "https://www.linkedin.com/games/crossclimb/",
     color: "orange",
   },

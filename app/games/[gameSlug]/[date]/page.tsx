@@ -42,10 +42,37 @@ export async function generateMetadata({
     });
   };
 
+  // 短日期用于 <title>，避免标题超过 60 字符
+  const formatTitleDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+  };
+
+  // 描述中加入答案预览，控制总长度在 70-160 字符
+  const answerText = Array.isArray(answer.answer)
+    ? answer.answer.join(", ")
+    : answer.answer;
+  // 纯 emoji 网格（如 Tango）没有可读文本，改用通用描述
+  const previewBase = /[A-Za-z0-9]/.test(answerText)
+    ? answerText
+    : "the complete solution grid";
+  const suffix =
+    "Free daily solution with hints and full explanations.";
+  const prefix = `${game.name} answer for ${formatDate(date)}: `;
+  const maxPreviewLength = 156 - prefix.length - suffix.length;
+  const answerPreview =
+    previewBase.length > maxPreviewLength
+      ? `${previewBase.slice(0, maxPreviewLength).replace(/\s+\S*$/, "")}…`
+      : previewBase;
+  const description = `${prefix}${answerPreview}. ${suffix}`;
+
   return constructMetadata({
     page: "Game",
-    title: `${game.name} - ${formatDate(date)}`,
-    description: `Answer for ${game.name} on ${formatDate(date)}`,
+    title: `${game.name} - ${formatTitleDate(date)}`,
+    description,
     path: `/games/${gameSlug}/${date}`,
     canonicalUrl: `/games/${gameSlug}/${date}`,
   });

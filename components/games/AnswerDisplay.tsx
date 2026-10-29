@@ -61,9 +61,9 @@ export default function AnswerDisplay({ answer, gameName }: AnswerDisplayProps) 
       {/* Solution walkthrough for games without clues (Queens, Tango, Zip, ...) */}
       {answer.clueHint && !(answer.clues && answer.clues.length > 0) && (
         <div className="rounded-xl border-2 border-border bg-card p-4 sm:p-6">
-          <h4 className="text-sm sm:text-base font-medium text-muted-foreground mb-3">
+          <h3 className="text-sm sm:text-base font-medium text-muted-foreground mb-3">
             How to solve it:
-          </h4>
+          </h3>
           <div
             className="text-sm sm:text-base text-muted-foreground leading-relaxed prose prose-sm dark:prose-invert max-w-none [&_strong]:font-semibold [&_strong]:text-foreground"
             dangerouslySetInnerHTML={{ __html: answer.clueHint }}
@@ -74,9 +74,9 @@ export default function AnswerDisplay({ answer, gameName }: AnswerDisplayProps) 
       {/* Hints Display (if available) */}
       {answer.hints && answer.hints.length > 0 && (
         <div className="rounded-xl border-2 border-border bg-card p-4 sm:p-6">
-          <h4 className="text-sm sm:text-base font-medium text-muted-foreground mb-3">
+          <h3 className="text-sm sm:text-base font-medium text-muted-foreground mb-3">
             Hints:
-          </h4>
+          </h3>
           <ul className="list-disc list-inside space-y-2 text-sm sm:text-base text-muted-foreground">
             {answer.hints.map((hint, index) => (
               <li key={index}>{hint}</li>
