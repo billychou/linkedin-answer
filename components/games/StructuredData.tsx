@@ -8,6 +8,7 @@ interface StructuredDataProps {
   type?: "Game" | "FAQPage";
   breadcrumbs?: { label: string; url: string }[];
   collectionItems?: { label: string; url: string; date?: string }[];
+  faqs?: { question: string; answer: string }[];
 }
 
 export default function StructuredData({
@@ -16,6 +17,7 @@ export default function StructuredData({
   type = "Game",
   breadcrumbs,
   collectionItems,
+  faqs,
 }: StructuredDataProps) {
   const gameUrl = `${siteConfig.url}/games/${game.slug}`;
   const playUrl = game.playUrl || gameUrl;
@@ -41,30 +43,39 @@ export default function StructuredData({
   const faqStructuredData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: `What is ${game.name}?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: game.description,
-        },
-      },
-      ...(answer
-        ? [
-            {
-              "@type": "Question",
-              name: `What is today's answer for ${game.name}?`,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: Array.isArray(answer.answer)
-                  ? answer.answer.join(", ")
-                  : answer.answer,
-              },
+    mainEntity: faqs && faqs.length > 0
+      ? faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        }))
+      : [
+          {
+            "@type": "Question",
+            name: `What is ${game.name}?`,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: game.description,
             },
-          ]
-        : []),
-    ],
+          },
+          ...(answer
+            ? [
+                {
+                  "@type": "Question",
+                  name: `What is today's answer for ${game.name}?`,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: Array.isArray(answer.answer)
+                      ? answer.answer.join(", ")
+                      : answer.answer,
+                  },
+                },
+              ]
+            : []),
+        ],
   };
 
   const breadcrumbData = breadcrumbs

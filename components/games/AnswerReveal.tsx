@@ -36,7 +36,7 @@ export default function AnswerReveal({ answer, gameName, sequence, formattedDate
           <div className="text-[11px] font-semibold uppercase tracking-wider text-primary">
             Today&apos;s answer
           </div>
-          <h3 className="mt-1 font-display text-xl font-bold text-foreground sm:text-2xl">
+          <h2 className="mt-1 font-display text-xl font-bold text-foreground sm:text-2xl">
             {gameName}
             {sequence ? ` ${sequence}` : ""}
             {formattedDate && (
@@ -44,7 +44,7 @@ export default function AnswerReveal({ answer, gameName, sequence, formattedDate
                 ({formattedDate})
               </span>
             )}
-          </h3>
+          </h2>
         </div>
         <button
           onClick={handleCopy}

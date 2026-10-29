@@ -8,7 +8,7 @@ export const dynamic = "force-static";
 export async function generateMetadata(): Promise<Metadata> {
   return constructMetadata({
     page: "Blog",
-    title: "Blog - LinkedIn Games Guides & Strategies",
+    title: "LinkedIn Games Blog & Guides",
     description:
       "Guides, strategies and daily insights for LinkedIn Games — Pinpoint, Queens, Tango, Zip, Crossclimb, Patches and Mini Sudoku.",
     path: "/blog",

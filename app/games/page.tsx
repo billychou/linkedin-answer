@@ -6,8 +6,8 @@ import { constructMetadata } from "@/lib/metadata";
 
 export const metadata = constructMetadata({
   page: "Games",
-  title: "LinkedIn Games - Daily Answers & Solutions",
-  description: "Browse daily answers for all LinkedIn games — Pinpoint, Crossclimb, Zip, Tango, Queens, and Patches. Play mini games and check today's solutions.",
+  title: "LinkedIn Games - Daily Answers",
+  description: "Browse daily answers for all LinkedIn games — Pinpoint, Crossclimb, Zip, Tango, Queens, and Patches. Play free mini games and check today's solutions.",
 });
 
 export default function GamesPage() {

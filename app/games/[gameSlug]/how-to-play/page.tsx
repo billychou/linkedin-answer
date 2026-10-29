@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { getGame, getGameSlugs } from "@/lib/games";
 import StructuredData from "@/components/games/StructuredData";
 import { constructMetadata } from "@/lib/metadata";
+import { howToPlayContent } from "@/data/howToPlay";
 
 type Props = {
   params: Promise<{ gameSlug: string }>;
@@ -46,6 +47,11 @@ export default async function HowToPlayPage({ params }: Props) {
     notFound();
   }
 
+  const sections = howToPlayContent[game.slug as keyof typeof howToPlayContent] ?? [];
+  const faqs = sections
+    .flatMap((section) => section.faq ?? [])
+    .filter((faq) => faq && faq.question && faq.answer);
+
   const breadcrumbs = [
     { label: "Home", url: "/" },
     { label: "Games", url: "/games" },
@@ -59,11 +65,16 @@ export default async function HowToPlayPage({ params }: Props) {
         game={game}
         breadcrumbs={breadcrumbs}
         type="FAQPage"
+        faqs={faqs}
       />
       <div className="mb-6 sm:mb-8">
         <h1 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
           {game.name} - How to Play
         </h1>
+        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+          Everything you need to know about {game.name}: the rules, how to play
+          step by step, tips and strategies, and answers to common questions.
+        </p>
       </div>
 
       <div className="rounded-xl border-2 border-border bg-card p-4 sm:p-6">
@@ -84,6 +95,58 @@ export default async function HowToPlayPage({ params }: Props) {
           </div>
         )}
       </div>
+
+      {sections.map((section) => (
+        <section
+          key={section.heading}
+          className="mt-8 rounded-xl border-2 border-border bg-card p-4 sm:p-6"
+        >
+          <h2 className="font-display text-xl font-bold text-foreground sm:text-2xl">
+            {section.heading}
+          </h2>
+          {section.paragraphs?.map((paragraph) => (
+            <p
+              key={paragraph.slice(0, 40)}
+              className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed"
+            >
+              {paragraph}
+            </p>
+          ))}
+          {section.list && (
+            section.ordered ? (
+              <ol className="mt-3 list-decimal list-inside space-y-2 text-sm sm:text-base text-muted-foreground">
+                {section.list.map((item) => (
+                  <li key={item} className="pl-1">
+                    {item}
+                  </li>
+                ))}
+              </ol>
+            ) : (
+              <ul className="mt-3 list-disc list-inside space-y-2 text-sm sm:text-base text-muted-foreground">
+                {section.list.map((item) => (
+                  <li key={item} className="pl-1">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )
+          )}
+          {section.faq && (
+            <div className="mt-5 space-y-5">
+              {section.faq.map((faq) => (
+                <div key={faq.question}>
+                  <h3 className="font-semibold text-foreground">
+                    {faq.question}
+                  </h3>
+                  <p className="mt-1 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+      ))}
     </div>
   );
 }

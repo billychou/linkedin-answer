@@ -8,13 +8,10 @@ import Link from "next/link";
 export async function generateMetadata(): Promise<
   ReturnType<typeof constructMetadata>
 > {
-  const today = new Date().toISOString().split("T")[0];
-  const formatted = formatLongDate(today);
-
   return constructMetadata({
     page: "Today",
-    title: `All LinkedIn Game Answers Today (${formatted})`,
-    description: `All LinkedIn game answers for today, ${formatted}: Pinpoint, Crossclimb, Zip, Queens, Tango, Patches, and Mini Sudoku — updated daily with solutions and explanations.`,
+    title: "LinkedIn Game Answers Today",
+    description: `All LinkedIn game answers for today — Pinpoint, Crossclimb, Zip, Queens, Tango, Patches, and Mini Sudoku. Updated daily with solutions and explanations.`,
     path: "/today",
     canonicalUrl: "/today",
   });

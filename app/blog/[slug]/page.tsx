@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return constructMetadata({
     page: "Blog",
-    title: post.title,
+    title: post.metadata?.seoTitle || post.title,
     description: post.description,
     keywords: post.tags ? post.tags.split(",").map((t) => t.trim()) : undefined,
     path: `/blog${post.slug}`,
