@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#912",
+    date: "2026-10-29",
+    answer: "Words that come before “stream”",
+    clues: ["Jet", "Gulf", "Blood", "Live (on Twitch)", "Swimming up-"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Jet:</strong> Jet relates to the answer "Words that come before “stream”".<br>
+<strong>Gulf:</strong> Gulf relates to the answer "Words that come before “stream”".<br>
+<strong>Blood:</strong> Blood relates to the answer "Words that come before “stream”".<br>
+<strong>Live (on Twitch):</strong> Live (on Twitch) relates to the answer "Words that come before “stream”".<br>
+<strong>Swimming up-:</strong> Swimming up- relates to the answer "Words that come before “stream”".</p>`,
+  },
+  {
     sequence: "#911",
     date: "2026-10-28",
     answer: "Parts of a fireplace",
