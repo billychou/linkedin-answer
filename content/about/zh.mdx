@@ -1,99 +1,46 @@
 ---
-title: 关于
-description: 关于 Next.js Starter 多语言启动模板
-lastUpdated: 2025-02-19
+title: 关于我们
+description: LinkedIn Answer Today 是一个免费网站，每天更新 LinkedIn 益智游戏（Pinpoint、Queens、Tango、Zip、Crossclimb、Patches、Mini Sudoku）的答案、提示与攻略。
+lastUpdated: "2026-10-30"
 ---
 
-> 更新日期：2025-02-19
+> 更新日期：2026-10-30
 
-# 关于 Next.js Starter
+# 关于 LinkedIn Answer Today
 
-Next.js Starter 是一个功能完备的 Next.js 16 多语言启动模板，旨在帮助开发者快速构建面向全球的网站。它内置了多语言支持、现代 UI 设计、深色/浅色主题切换、响应式布局、MDX 博客系统、SEO 优化以及多种统计分析工具。
+LinkedIn Answer Today 是一个免费网站，每天分享 LinkedIn 益智游戏（Pinpoint、Queens、Tango、Zip、Crossclimb、Patches、Mini Sudoku）的答案。这些游戏每天都发布一个新谜题，我们会在当天同步更新答案，并附上线索、提示和解题思路，帮助你亲手解开谜题。
 
-## ✨ 主要特性
+## 这里能做什么
 
-- 🌐 **多语言支持**：内置中文、英文、日语的国际化支持，轻松实现多语言网站。
-- 🎨 **现代 UI 设计**：基于 Tailwind CSS 的现代 UI 设计，简洁美观。
-- 🌙 **深色/浅色主题切换**：支持用户自由切换深色和浅色主题。
-- 📱 **响应式布局**：适配各种设备，确保在移动端和桌面端都有良好的用户体验。
-- 📝 **MDX 博客系统**：支持使用 MDX 编写博客文章，灵活且强大。
-- 🔍 **SEO 优化**：内置完整的 SEO 优化方案，包括自动生成 sitemap.xml 和 robots.txt。
-- 📊 **统计分析**：集成 Google Analytics、Baidu Analytics、Google Adsense 和 Vercel Analytics，方便进行数据追踪。
-- 🌿 **环保性能**：在 [Website Carbon](https://www.websitecarbon.com/website/nextjsstarter-io/) 上获得 A+ 评级，成为最节能的网站之一。
+- **今日答案** — 一页汇总当天所有 LinkedIn 游戏的答案，随谜题上线实时更新。
+- **各游戏答题页** — 每个游戏每天的答案，以及对应的线索、提示和解析。
+- **历史归档** — 按日期浏览所有往期答案，随时补上错过的谜题。
+- **玩法指南** — 每个游戏的清晰规则、分步教程、技巧与常见问题。
+- **策略博客** — 深入讲解游戏机制、战术与解题技巧。
+- **免费小游戏** — 在浏览器里直接玩记忆配对、2048、西蒙说和井字棋。
+- **AI 聊天助手** — 遇到任何游戏或答案问题，都可以直接提问。
+- **连胜与排行榜** — 登录后记录你的连胜纪录，看看自己的排名。
 
-## 🚀 快速开始
+## 我们覆盖的游戏
 
-1. 克隆项目：
-    ```bash
-    git clone https://github.com/weijunext/nextjs-starter.git
-    ```
+| 游戏 | 类型 | 链接 |
+| --- | --- | --- |
+| Pinpoint | 词汇联想 | [Pinpoint 答案](/games/pinpoint) |
+| Queens | 逻辑放置 | [Queens 答案](/games/queens) |
+| Tango | 逻辑网格 | [Tango 答案](/games/tango) |
+| Zip | 路径连线 | [Zip 答案](/games/zip) |
+| Crossclimb | 单词阶梯 | [Crossclimb 答案](/games/crossclimb) |
+| Patches | 拼图 | [Patches 答案](/games/patches) |
+| Mini Sudoku | 数字谜题 | [Mini Sudoku 答案](/games/mini-sudoku) |
 
-2. 安装依赖：
-    ```bash
-    npm install
-    ```
+## 为什么做这个网站
 
-3. 复制环境变量文件：
-    ```bash
-    cp .env.example .env
-    ```
+每日谜题是一个很好的小习惯，但很容易卡在某条线索上，或者某一天忘记做。我们创建 LinkedIn Answer Today，就是想让这些游戏对每个人都更友好：卡住时几秒找到答案，开玩前先了解规则，再也不会错过每天的谜题。网站免费使用、靠广告支持，每天自动更新最新答案。
 
-4. 启动开发服务器：
-    ```bash
-    npm run dev
-    ```
+## 商标说明
 
-访问 [http://localhost:3000](http://localhost:3000) 查看你的应用。
+LinkedIn Answer Today 是独立制作的爱好者网站，与 LinkedIn 公司没有任何隶属、背书或赞助关系。"LinkedIn" 及各游戏名称均为其各自所有者的商标，此处仅用于标识我们所覆盖的谜题。
 
-## ⚙️ 配置
+## 联系我们
 
-1. **基础配置**：
-    - 修改 `config/site.ts` 配置网站信息。
-    - 更新 `public/` 下的图标和 logo。
-    - 配置 `app/sitemap.ts` 和 `app/robots.ts`。
-
-2. **多语言配置**：
-    - 在 `i18n/messages/` 下添加或修改语言文件。
-    - 在 `i18n/routing.ts` 中配置支持的语言。
-    - 在 `middleware.ts` 中配置多语言路由。
-
-## 📝 内容管理
-
-### 博客文章
-在 `blog/[locale]` 目录下创建 MDX 文件，支持以下格式：
-```markdown
----
-title: 文章标题
-description: 文章描述
-image: /image.png
-slug: /url-path
-tags: tag1,tag2
-date: 2025-02-20
-visible: published
-pin: true
----
-
-文章内容...
-```
-
-### 静态页面
-在 `content/[page]/[locale].mdx` 下管理静态页面内容。
-
-## 📄 许可证
-
-Next.js Starter 采用 MIT 许可证，您可以自由使用、修改和分发。
-
-## 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request！您的贡献将帮助我们不断改进这个项目。
-
-## 关于作者
-
-专注于 Next.js 全栈开发，欢迎探讨开发、咨询与培训等合作机会，联系微信：bigye_chengpu
-
-- [Github](https://github.com/weijunext)
-- [Twitter/X](https://twitter.com/weijunext)
-- [博客 - J实验室](https://weijunext.com)
-- [Medium](https://medium.com/@weijunext)
-- [掘金](https://juejin.cn/user/26044008768029)
-- [知乎](https://www.zhihu.com/people/mo-mo-mo-89-12-11)
+有反馈、纠错或功能建议？欢迎通过页面底部的联系方式告诉我们。

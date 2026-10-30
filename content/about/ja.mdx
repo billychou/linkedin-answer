@@ -1,99 +1,46 @@
 ---
-title: サイトについて
-description: Next.js Starter - 多言語対応 Next.js 16 スターターについて
-lastUpdated: 2025-02-19
+title: このサイトについて
+description: LinkedIn Answer Today は、LinkedIn のパズルゲーム（Pinpoint、Queens、Tango、Zip、Crossclimb、Patches、Mini Sudoku）の毎日の答え、ヒント、攻略を無料で公開しているサイトです。
+lastUpdated: "2026-10-30"
 ---
 
-> 更新日: 2025-02-19
+> 更新日: 2026-10-30
 
-# Next.js Starter について
+# LinkedIn Answer Today について
 
-Next.js Starter は、グローバル対応のウェブサイトを素早く構築するための、機能豊富な Next.js 16 多言語スターターテンプレートです。多言語対応、モダンな UI デザイン、ダーク/ライトテーマ切り替え、レスポンシブデザイン、MDX ブログシステム、SEO 最適化、アナリティクス統合など、多くの機能を備えています。
+LinkedIn Answer Today は、LinkedIn のパズルゲーム（Pinpoint、Queens、Tango、Zip、Crossclimb、Patches、Mini Sudoku）の毎日の答えを無料で公開しているサイトです。各ゲームは毎日新しいパズルを 1 問配信しており、当サイトではパズルが公開された当日に答えを更新し、ヒントや解き方の解説もあわせて掲載しています。
 
-## ✨ 主な機能
+## できること
 
-- 🌐 **多言語対応**: 英語、中国語、日本語をサポートし、多言語サイトを簡単に構築できます。
-- 🎨 **モダンな UI デザイン**: Tailwind CSS を利用したクリーンでモダンな UI デザイン。
-- 🌙 **ダーク/ライトテーマ切り替え**: ユーザーが簡単にダークモードとライトモードを切り替えられる機能。
-- 📱 **レスポンシブデザイン**: モバイルとデスクトップの両方で最適なユーザー体験を提供します。
-- 📝 **MDX ブログシステム**: MDX を使用してブログ記事を執筆し、柔軟性とパワーを兼ね備えています。
-- 🔍 **SEO 最適化**: sitemap.xml の自動生成、robots.txt の設定、最適化されたメタデータなど、包括的な SEO 機能を搭載。
-- 📊 **アナリティクス統合**: Google Analytics、Baidu Analytics、Google Adsense、Vercel Analytics を統合し、簡単にデータを追跡できます。
-- 🌿 **エコフレンドリーなパフォーマンス**: [Website Carbon](https://www.websitecarbon.com/website/nextjsstarter-io/) で A+ 評価を獲得し、最もエネルギー効率の良いウェブサイトの一つです。
+- **今日の答え** — 当日の全ゲームの答えを 1 ページにまとめて表示。パズルの公開にあわせて更新されます。
+- **ゲーム別の答えページ** — 各ゲームの毎日の答えと、ヒント・解説。
+- **アーカイブ** — 過去の答えを日付ごとに閲覧でき、見逃したパズルにも追いつけます。
+- **遊び方ガイド** — 各ゲームのルール、手順、コツ、よくある質問を解説。
+- **攻略ブログ** — ゲームの仕組みや解き方のテクニックを深掘りした記事。
+- **無料ミニゲーム** — メモリーマッチ、2048、サイモンセッズ、○×ゲームをブラウザですぐにプレイ。
+- **AI チャットアシスタント** — ゲームや答えについて質問するとすぐに回答。
+- **連勝記録とランキング** — サインインして連勝を記録し、順位をチェック。
 
-## 🚀 クイックスタート
+## 対象のゲーム
 
-1. リポジトリのクローン：
-    ```bash
-    git clone https://github.com/weijunext/nextjs-starter.git
-    ```
+| ゲーム | タイプ | リンク |
+| --- | --- | --- |
+| Pinpoint | 言葉の連想 | [Pinpoint の答え](/games/pinpoint) |
+| Queens | 論理配置 | [Queens の答え](/games/queens) |
+| Tango | 論理グリッド | [Tango の答え](/games/tango) |
+| Zip | 経路つなぎ | [Zip の答え](/games/zip) |
+| Crossclimb | ワードラダー | [Crossclimb の答え](/games/crossclimb) |
+| Patches | 絵合わせパズル | [Patches の答え](/games/patches) |
+| Mini Sudoku | 数字パズル | [Mini Sudoku の答え](/games/mini-sudoku) |
 
-2. 依存関係のインストール：
-    ```bash
-    npm install
-    ```
+## このサイトを作った理由
 
-3. 環境変数の設定：
-    ```bash
-    cp .env.example .env
-    ```
+毎日のパズルはよい習慣ですが、ひとつのヒントで行き詰まったり、1 日やり忘れてしまったりすることもよくあります。LinkedIn Answer Today は、答えをすぐ確認でき、プレイ前にルールを学べ、毎日のパズルを見逃さないようにするために作られた無料サイトです。広告で運営されており、新しい答えは毎日自動で追加されます。
 
-4. 開発サーバーの起動：
-    ```bash
-    npm run dev
-    ```
+## 商標について
 
-[http://localhost:3000](http://localhost:3000) にアクセスしてアプリケーションを確認できます。
+LinkedIn Answer Today は独立したファンメイドのサイトであり、LinkedIn Corporation とは提携・推奨・出資の関係は一切ありません。「LinkedIn」およびゲーム名は各所有者の商標であり、当サイトでは対象パズルを識別する目的でのみ使用しています。
 
-## ⚙️ 設定方法
+## お問い合わせ
 
-1. **基本設定**:
-    - `config/site.ts` を編集してウェブサイト情報を設定します。
-    - `public/` ディレクトリ内のアイコンとロゴを更新します。
-    - `app/sitemap.ts` と `app/robots.ts` を設定します。
-
-2. **多言語設定**:
-    - `i18n/messages/` 内の言語ファイルを追加または編集します。
-    - `i18n/routing.ts` でサポートする言語を設定します。
-    - `middleware.ts` で多言語ルーティングを設定します。
-
-## 📝 コンテンツ管理
-
-### ブログ投稿
-`blog/[locale]` ディレクトリに以下のフォーマットで MDX ファイルを作成します：
-````
-
----
-title: 投稿タイトル
-description: 投稿の説明
-image: /image.png
-slug: /url-path
-tags: tag1,tag2
-date: 2025-02-20
-visible: published
-pin: true
----
-
-投稿内容...
-````
-
-### 静的ページ
-`content/[page]/[locale].mdx` で静的ページのコンテンツを管理します。
-
-## 📄 ライセンス
-
-Next.js Starter は MIT ライセンスで提供されており、自由に使用、変更、配布することができます。
-
-## 🤝 コントリビューション
-
-Issue や Pull Request を歓迎します！皆さんの貢献がこのプロジェクトをより良いものにします。
-
-## 作者について
-
-Next.js のフルスタックスペシャリストとして、プロジェクト開発、パフォーマンス最適化、SEO 改善のエキスパートサービスを提供しています。
-
-コンサルティングやトレーニングの機会については、weijunext@gmail.com までご連絡ください。
-
-- [Github](https://github.com/weijunext)
-- [Bento](https://bento.me/weijunext)
-- [Twitter/X](https://twitter.com/judewei_dev)
+フィードバックや誤りの指摘、機能のリクエストがあれば、ページ下部の連絡先リンクからお気軽にどうぞ。
