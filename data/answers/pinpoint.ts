@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#913",
+    date: "2026-10-30",
+    answer: "Parts of a theatre.",
+    clues: ["Wings", "House", "Pit", "Green room", "Stage (where the action is)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Wings:</strong> Wings relates to the answer "Parts of a theatre.".<br>
+<strong>House:</strong> House relates to the answer "Parts of a theatre.".<br>
+<strong>Pit:</strong> Pit relates to the answer "Parts of a theatre.".<br>
+<strong>Green room:</strong> Green room relates to the answer "Parts of a theatre.".<br>
+<strong>Stage (where the action is):</strong> Stage (where the action is) relates to the answer "Parts of a theatre.".</p>`,
+  },
+  {
     sequence: "#912",
     date: "2026-10-29",
     answer: "Words that come before “stream”",
