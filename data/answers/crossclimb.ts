@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#914",
+    date: "2026-10-31",
+    answer: "POKE \u2192 POLE \u2192 PILE \u2192 FILE \u2192 FILL \u2192 BILL \u2192 BALL",
+    clues: ["What a gondolier uses for propulsion", "Heap", "You might use it on your nails", "___-in-the-blank", "What someone must pay before leaving the restaurant"],
+    clueHint: `<p>Word ladder from <strong>POKE</strong> to <strong>BALL</strong>:<br>
+POKE → POLE → PILE → FILE → FILL → BILL → BALL</p>`,
+  },
+  {
     sequence: "#913",
     date: "2026-10-30",
     answer: "TAPE \u2192 TALE \u2192 PALE \u2192 PACE \u2192 PACK \u2192 PECK \u2192 DECK",
