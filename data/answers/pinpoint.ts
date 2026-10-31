@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#914",
+    date: "2026-10-31",
+    answer: "The connection is things with spines : sharp, pointed structures that protect or support, whether on a plant, an animal, or a book.",
+    clues: ["Books", "Cacti", "Sea urchins", "Vertebrates (by definition)", "Porcupines (they're sharp!)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Books:</strong> Books relates to the answer "The connection is things with spines : sharp, pointed structures that protect or support, whether on a plant, an animal, or a book.".<br>
+<strong>Cacti:</strong> Cacti relates to the answer "The connection is things with spines : sharp, pointed structures that protect or support, whether on a plant, an animal, or a book.".<br>
+<strong>Sea urchins:</strong> Sea urchins relates to the answer "The connection is things with spines : sharp, pointed structures that protect or support, whether on a plant, an animal, or a book.".<br>
+<strong>Vertebrates (by definition):</strong> Vertebrates (by definition) relates to the answer "The connection is things with spines : sharp, pointed structures that protect or support, whether on a plant, an animal, or a book.".<br>
+<strong>Porcupines (they're sharp!):</strong> Porcupines (they're sharp!) relates to the answer "The connection is things with spines : sharp, pointed structures that protect or support, whether on a plant, an animal, or a book.".</p>`,
+  },
+  {
     sequence: "#913",
     date: "2026-10-30",
     answer: "Parts of a theatre.",
