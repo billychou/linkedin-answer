@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#915",
+    date: "2026-11-01",
+    answer: "FALL \u2192 CALL \u2192 CULL \u2192 BULL \u2192 BULK \u2192 BUCK \u2192 BACK",
+    clues: ["___ and response", "Remove, as the least useful part", "Male elephant", "Majority portion", "Attempt to throw a rider off"],
+    clueHint: `<p>Word ladder from <strong>FALL</strong> to <strong>BACK</strong>:<br>
+FALL → CALL → CULL → BULL → BULK → BUCK → BACK</p>`,
+  },
+  {
     sequence: "#914",
     date: "2026-10-31",
     answer: "POKE \u2192 POLE \u2192 PILE \u2192 FILE \u2192 FILL \u2192 BILL \u2192 BALL",
