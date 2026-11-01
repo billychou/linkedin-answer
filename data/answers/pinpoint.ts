@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#915",
+    date: "2026-11-01",
+    answer: "Category: Pinpoint 915 — Words that come before \"copy\"",
+    clues: ["Hard", "Digital", "Advance", "Backup", "Carbon (the second c of cc)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Hard:</strong> Hard relates to the answer "Category: Pinpoint 915 — Words that come before "copy"".<br>
+<strong>Digital:</strong> Digital relates to the answer "Category: Pinpoint 915 — Words that come before "copy"".<br>
+<strong>Advance:</strong> Advance relates to the answer "Category: Pinpoint 915 — Words that come before "copy"".<br>
+<strong>Backup:</strong> Backup relates to the answer "Category: Pinpoint 915 — Words that come before "copy"".<br>
+<strong>Carbon (the second c of cc):</strong> Carbon (the second c of cc) relates to the answer "Category: Pinpoint 915 — Words that come before "copy"".</p>`,
+  },
+  {
     sequence: "#914",
     date: "2026-10-31",
     answer: "The connection is things with spines : sharp, pointed structures that protect or support, whether on a plant, an animal, or a book.",
