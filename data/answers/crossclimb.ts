@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#916",
+    date: "2026-11-02",
+    answer: "LEAD \u2192 LEAK \u2192 BEAK \u2192 BEAR \u2192 BOAR \u2192 SOAR \u2192 STAR",
+    clues: ["A broken pipe or faucet may have one", "What a bird eats with", "Animal whose name also means \"to tolerate\"", "Type of wild pig", "Fly high and majestically"],
+    clueHint: `<p>Word ladder from <strong>LEAD</strong> to <strong>STAR</strong>:<br>
+LEAD → LEAK → BEAK → BEAR → BOAR → SOAR → STAR</p>`,
+  },
+  {
     sequence: "#915",
     date: "2026-11-01",
     answer: "FALL \u2192 CALL \u2192 CULL \u2192 BULL \u2192 BULK \u2192 BUCK \u2192 BACK",
