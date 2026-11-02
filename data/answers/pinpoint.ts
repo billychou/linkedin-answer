@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#916",
+    date: "2026-11-02",
+    answer: "Signature",
+    clues: ["Body", "Greeting", "Address", "Signature", "P.S. (after the main text)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Body:</strong> Body relates to the answer "Signature".<br>
+<strong>Greeting:</strong> Greeting relates to the answer "Signature".<br>
+<strong>Address:</strong> Address relates to the answer "Signature".<br>
+<strong>Signature:</strong> Signature relates to the answer "Signature".<br>
+<strong>P.S. (after the main text):</strong> P.S. (after the main text) relates to the answer "Signature".</p>`,
+  },
+  {
     sequence: "#915",
     date: "2026-11-01",
     answer: "Category: Pinpoint 915 — Words that come before \"copy\"",
