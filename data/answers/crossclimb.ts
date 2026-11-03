@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#917",
+    date: "2026-11-03",
+    answer: "PINE \u2192 FINE \u2192 FIRE \u2192 FORE \u2192 TORE \u2192 TONE \u2192 CONE",
+    clues: ["High-quality, like some dining", "Source of warmth in cold weather", "Warning a golfer yells", "Accidentally did damage to, as a page of a book", "___ of voice (indicator of emotion)"],
+    clueHint: `<p>Word ladder from <strong>PINE</strong> to <strong>CONE</strong>:<br>
+PINE → FINE → FIRE → FORE → TORE → TONE → CONE</p>`,
+  },
+  {
     sequence: "#916",
     date: "2026-11-02",
     answer: "LEAD \u2192 LEAK \u2192 BEAK \u2192 BEAR \u2192 BOAR \u2192 SOAR \u2192 STAR",
