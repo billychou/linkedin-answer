@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#917",
+    date: "2026-11-03",
+    answer: "Types of biome",
+    clues: ["Taiga", "Tundra", "Savanna", "Desert", "Rainforest"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Taiga:</strong> Taiga relates to the answer "Types of biome".<br>
+<strong>Tundra:</strong> Tundra relates to the answer "Types of biome".<br>
+<strong>Savanna:</strong> Savanna relates to the answer "Types of biome".<br>
+<strong>Desert:</strong> Desert relates to the answer "Types of biome".<br>
+<strong>Rainforest:</strong> Rainforest relates to the answer "Types of biome".</p>`,
+  },
+  {
     sequence: "#916",
     date: "2026-11-02",
     answer: "Signature",
