@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#918",
+    date: "2026-11-04",
+    answer: "FUEL \u2192 FULL \u2192 FALL \u2192 BALL \u2192 BALK \u2192 BANK \u2192 TANK",
+    clues: ["Half-___ (like an optimist's water glass)", "Opposite of \"rise,\" as a noun or a verb", "Formal dance, like the one Cinderella attended", "Show reluctance about an idea", "Place to deposit or withdraw money"],
+    clueHint: `<p>Word ladder from <strong>FUEL</strong> to <strong>TANK</strong>:<br>
+FUEL → FULL → FALL → BALL → BALK → BANK → TANK</p>`,
+  },
+  {
     sequence: "#917",
     date: "2026-11-03",
     answer: "PINE \u2192 FINE \u2192 FIRE \u2192 FORE \u2192 TORE \u2192 TONE \u2192 CONE",
