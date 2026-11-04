@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#918",
+    date: "2026-11-04",
+    answer: "Fictional sea captains",
+    clues: ["Haddock", "Sparrow", "Hook", "Nemo", "Ahab (from Moby-Dick)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Haddock:</strong> Haddock relates to the answer "Fictional sea captains".<br>
+<strong>Sparrow:</strong> Sparrow relates to the answer "Fictional sea captains".<br>
+<strong>Hook:</strong> Hook relates to the answer "Fictional sea captains".<br>
+<strong>Nemo:</strong> Nemo relates to the answer "Fictional sea captains".<br>
+<strong>Ahab (from Moby-Dick):</strong> Ahab (from Moby-Dick) relates to the answer "Fictional sea captains".</p>`,
+  },
+  {
     sequence: "#917",
     date: "2026-11-03",
     answer: "Types of biome",
