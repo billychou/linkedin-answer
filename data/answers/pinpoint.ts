@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#919",
+    date: "2026-11-05",
+    answer: "\"stone\"",
+    clues: ["Cold", "Age", "Mason", "Henge", "’s throw away"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Cold:</strong> Cold relates to the answer ""stone"".<br>
+<strong>Age:</strong> Age relates to the answer ""stone"".<br>
+<strong>Mason:</strong> Mason relates to the answer ""stone"".<br>
+<strong>Henge:</strong> Henge relates to the answer ""stone"".<br>
+<strong>’s throw away:</strong> ’s throw away relates to the answer ""stone"".</p>`,
+  },
+  {
     sequence: "#918",
     date: "2026-11-04",
     answer: "Fictional sea captains",
