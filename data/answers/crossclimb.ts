@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#919",
+    date: "2026-11-05",
+    answer: "WIND \u2192 HIND \u2192 HAND \u2192 SAND \u2192 SANE \u2192 SALE \u2192 GALE",
+    clues: ["At the back, as two legs of many animals", "Human body part with knuckles", "Grains plentiful in the Sahara", "Capable of thinking rationally", "Occasion when prices are lowered"],
+    clueHint: `<p>Word ladder from <strong>WIND</strong> to <strong>GALE</strong>:<br>
+WIND → HIND → HAND → SAND → SANE → SALE → GALE</p>`,
+  },
+  {
     sequence: "#918",
     date: "2026-11-04",
     answer: "FUEL \u2192 FULL \u2192 FALL \u2192 BALL \u2192 BALK \u2192 BANK \u2192 TANK",
