@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#920",
+    date: "2026-11-06",
+    answer: "Things that have two sides",
+    clues: ["Argument", "Street", "Vinyl record", "Sheet of paper", "Coin (heads and tails)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Argument:</strong> Argument relates to the answer "Things that have two sides".<br>
+<strong>Street:</strong> Street relates to the answer "Things that have two sides".<br>
+<strong>Vinyl record:</strong> Vinyl record relates to the answer "Things that have two sides".<br>
+<strong>Sheet of paper:</strong> Sheet of paper relates to the answer "Things that have two sides".<br>
+<strong>Coin (heads and tails):</strong> Coin (heads and tails) relates to the answer "Things that have two sides".</p>`,
+  },
+  {
     sequence: "#919",
     date: "2026-11-05",
     answer: "\"stone\"",
