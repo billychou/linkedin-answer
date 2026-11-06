@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#920",
+    date: "2026-11-06",
+    answer: "CHOP \u2192 SHOP \u2192 SHOT \u2192 SOOT \u2192 HOOT \u2192 HOOD \u2192 WOOD",
+    clues: ["Place to make a purchase", "Opportunity", "Black stuff in a chimney", "Sound an owl makes", "It's attached to some jackets"],
+    clueHint: `<p>Word ladder from <strong>CHOP</strong> to <strong>WOOD</strong>:<br>
+CHOP → SHOP → SHOT → SOOT → HOOT → HOOD → WOOD</p>`,
+  },
+  {
     sequence: "#919",
     date: "2026-11-05",
     answer: "WIND \u2192 HIND \u2192 HAND \u2192 SAND \u2192 SANE \u2192 SALE \u2192 GALE",
