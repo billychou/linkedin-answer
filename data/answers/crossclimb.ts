@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#921",
+    date: "2026-11-07",
+    answer: "GOOD \u2192 GOLD \u2192 SOLD \u2192 SOLE \u2192 SOME \u2192 HOME \u2192 HOPE",
+    clues: ["Metal for a first-place medal", "Gave away in exchange for money", "Bottom of a person's foot", "Vaguely defined amount between none and all", "Where many people go after work"],
+    clueHint: `<p>Word ladder from <strong>GOOD</strong> to <strong>HOPE</strong>:<br>
+GOOD → GOLD → SOLD → SOLE → SOME → HOME → HOPE</p>`,
+  },
+  {
     sequence: "#920",
     date: "2026-11-06",
     answer: "CHOP \u2192 SHOP \u2192 SHOT \u2192 SOOT \u2192 HOOT \u2192 HOOD \u2192 WOOD",
