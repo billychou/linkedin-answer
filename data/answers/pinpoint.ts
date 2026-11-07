@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#921",
+    date: "2026-11-07",
+    answer: "different definitions of the word coach .",
+    clues: ["Guide", "Carriage", "Handbag brand", "Airplane section", "Sports team leader"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Guide:</strong> Guide relates to the answer "different definitions of the word coach .".<br>
+<strong>Carriage:</strong> Carriage relates to the answer "different definitions of the word coach .".<br>
+<strong>Handbag brand:</strong> Handbag brand relates to the answer "different definitions of the word coach .".<br>
+<strong>Airplane section:</strong> Airplane section relates to the answer "different definitions of the word coach .".<br>
+<strong>Sports team leader:</strong> Sports team leader relates to the answer "different definitions of the word coach .".</p>`,
+  },
+  {
     sequence: "#920",
     date: "2026-11-06",
     answer: "Things that have two sides",
