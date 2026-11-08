@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#922",
+    date: "2026-11-08",
+    answer: "LEFT \u2192 DEFT \u2192 DAFT \u2192 WAFT \u2192 WART \u2192 PART \u2192 PORT",
+    clues: ["Nimble and skilled", "___ Punk (French electronic music duo)", "Float gently through the air, as an aroma might", "Skin blemish, or a small flaw", "Distinct section of something"],
+    clueHint: `<p>Word ladder from <strong>LEFT</strong> to <strong>PORT</strong>:<br>
+LEFT → DEFT → DAFT → WAFT → WART → PART → PORT</p>`,
+  },
+  {
     sequence: "#921",
     date: "2026-11-07",
     answer: "GOOD \u2192 GOLD \u2192 SOLD \u2192 SOLE \u2192 SOME \u2192 HOME \u2192 HOPE",
