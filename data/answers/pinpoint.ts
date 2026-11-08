@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#922",
+    date: "2026-11-08",
+    answer: "Words that come after “ground”",
+    clues: ["Rules", "Control", "Water", "Floor", "-breaking (new and innovative)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Rules:</strong> Rules relates to the answer "Words that come after “ground”".<br>
+<strong>Control:</strong> Control relates to the answer "Words that come after “ground”".<br>
+<strong>Water:</strong> Water relates to the answer "Words that come after “ground”".<br>
+<strong>Floor:</strong> Floor relates to the answer "Words that come after “ground”".<br>
+<strong>-breaking (new and innovative):</strong> -breaking (new and innovative) relates to the answer "Words that come after “ground”".</p>`,
+  },
+  {
     sequence: "#921",
     date: "2026-11-07",
     answer: "different definitions of the word coach .",
