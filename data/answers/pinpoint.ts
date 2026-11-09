@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#923",
+    date: "2026-11-09",
+    answer: "Parts of a weather forecast",
+    clues: ["Temperature", "Humidity", "Atmospheric pressure", "Wind speed and direction", "Chance of precipitation"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Temperature:</strong> Temperature relates to the answer "Parts of a weather forecast".<br>
+<strong>Humidity:</strong> Humidity relates to the answer "Parts of a weather forecast".<br>
+<strong>Atmospheric pressure:</strong> Atmospheric pressure relates to the answer "Parts of a weather forecast".<br>
+<strong>Wind speed and direction:</strong> Wind speed and direction relates to the answer "Parts of a weather forecast".<br>
+<strong>Chance of precipitation:</strong> Chance of precipitation relates to the answer "Parts of a weather forecast".</p>`,
+  },
+  {
     sequence: "#922",
     date: "2026-11-08",
     answer: "Words that come after “ground”",
