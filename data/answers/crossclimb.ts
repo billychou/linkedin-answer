@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#923",
+    date: "2026-11-09",
+    answer: "DOGS \u2192 DOTS \u2192 DOTE \u2192 DATE \u2192 MATE \u2192 MATS \u2192 CATS",
+    clues: ["Polka ___ (fabric pattern)", "Excessively bestow affection (on)", "Romantically involved couple's outing", "Either half of a romantically involved couple", "Soft platforms in a yoga studio"],
+    clueHint: `<p>Word ladder from <strong>DOGS</strong> to <strong>CATS</strong>:<br>
+DOGS → DOTS → DOTE → DATE → MATE → MATS → CATS</p>`,
+  },
+  {
     sequence: "#922",
     date: "2026-11-08",
     answer: "LEFT \u2192 DEFT \u2192 DAFT \u2192 WAFT \u2192 WART \u2192 PART \u2192 PORT",
