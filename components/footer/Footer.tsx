@@ -8,6 +8,7 @@ const footerLinks = [
   { name: "Today's Answers", href: "/today" },
   { name: "Games", href: "/games" },
   { name: "Blog", href: "/blog" },
+  { name: "Fortnite Gold Outfit", href: "/fortnite/weekly-gold-outfit" },
   { name: "About", href: "/about" },
   { name: "Privacy Policy", href: "/privacy-policy" },
   { name: "Terms of Service", href: "/terms-of-service" },

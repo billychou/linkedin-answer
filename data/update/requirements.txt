@@ -2,3 +2,4 @@ requests
 beautifulsoup4
 icecream
 json5
+tzdata
