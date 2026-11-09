@@ -1,0 +1,35 @@
+# 每周日抓取 Fortnite Treasure Hunters 周更金色服装并自动提交到 main（复用 update-answer-reusable.yml）。
+#
+# 金色皮肤每周日 6AM PT / 9AM ET ≈ 14:00 UTC 轮换（IGN 周窗口 "2:00pm UTC"）。
+# GitHub Actions 的 cron 使用 UTC 时间；实测 IGN 在重置后 ~2.5 小时内更新页面：
+#   周日 18:05 UTC 主跑（重置后 4 小时）；周日 23:05 UTC 与周一 12:05 UTC 为兜底重跑。
+# 幂等：同周重跑因 sequence 去重 0 写入，不产生 commit 与 IndexNow ping。
+# 定时触发只在默认分支 (main) 上生效；合入本文件后才会开始按计划运行。
+# AI 解析兜底需要 DASHSCOPE_API_KEY（未配置时脚本自动降级为纯结构化解析）。
+
+name: Weekly Fortnite Gold Outfit Update
+
+on:
+  schedule:
+    - cron: "5 18 * * 0"
+    - cron: "5 23 * * 0"
+    - cron: "5 12 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: update-fortnite-gold
+  cancel-in-progress: false
+
+jobs:
+  update:
+    uses: ./.github/workflows/update-answer-reusable.yml
+    with:
+      game: fortnite
+      script: data/update/update_fortnite_gold.py
+      data_file: data/fortnite/weeklyGoldOutfit.ts
+      needs_dashscope: true
+    secrets: inherit

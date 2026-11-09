@@ -19,16 +19,8 @@ const HeaderLinks = () => {
       href: "/games/pinpoint"
     },
     {
-      name: "Chat",
-      href: "/chat"
-    },
-    {
       name: "Blog",
       href: "/blog"
-    },
-    {
-      name: "Pricing",
-      href: "/pricing"
     }
   ];
 

@@ -17,6 +17,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: '', changeFrequency: 'daily' as ChangeFrequency, priority: 1.0 },
     { path: '/today', changeFrequency: 'daily' as ChangeFrequency, priority: 1.0 },
     { path: '/blog', changeFrequency: 'daily' as ChangeFrequency, priority: 0.8 },
+    { path: '/fortnite/weekly-gold-outfit', changeFrequency: 'weekly' as ChangeFrequency, priority: 0.8 },
     { path: '/about', changeFrequency: 'monthly' as ChangeFrequency, priority: 0.5 },
     { path: '/privacy-policy', changeFrequency: 'monthly' as ChangeFrequency, priority: 0.3 },
     { path: '/terms-of-service', changeFrequency: 'monthly' as ChangeFrequency, priority: 0.3 },

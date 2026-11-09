@@ -27,6 +27,10 @@
 - [How to play LinkedIn Mini Sudoku](https://linkedinanswer.today/games/mini-sudoku/how-to-play)
 - [Strategy guides on the blog](https://linkedinanswer.today/blog)
 
+## Fortnite Weekly Guides
+
+- [Fortnite weekly gold outfit](https://linkedinanswer.today/fortnite/weekly-gold-outfit): This week's free Solid Gold skin from the Treasure Hunters chest rotation — odds, how to get it, schedule, and past weeks archive. Updated every Sunday.
+
 ## Data Feeds
 
 - [RSS feed](https://linkedinanswer.today/feed.xml): Daily answers and new blog posts.

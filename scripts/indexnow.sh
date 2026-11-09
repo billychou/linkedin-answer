@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # Ping IndexNow (Bing / Yandex / Seznam / Naver / Yep) after new answers publish.
 # Usage: scripts/indexnow.sh <game-slug> [<date>]   (date defaults to today, UTC)
+# Special case: game-slug "fortnite" pings /fortnite/weekly-gold-outfit only
+# (weekly-updated standalone page, not a /games/<slug> route).
 #
 # IndexNow validates ownership via a public key file served at /<key>.txt
 # (see public/1c91269052e09cd422942be6d7de112e.txt). Keep this KEY in sync.
@@ -12,12 +14,21 @@ KEY="1c91269052e09cd422942be6d7de112e"
 GAME="${1:?usage: indexnow.sh <game-slug> [date]}"
 DATE="${2:-$(date -u +%Y-%m-%d)}"
 
-URLS=(
-  "https://${HOST}/today"
-  "https://${HOST}/games/${GAME}"
-  "https://${HOST}/games/${GAME}/${DATE}"
-  "https://${HOST}/games/${GAME}/archives"
-)
+case "$GAME" in
+  fortnite)
+    URLS=(
+      "https://${HOST}/fortnite/weekly-gold-outfit"
+    )
+    ;;
+  *)
+    URLS=(
+      "https://${HOST}/today"
+      "https://${HOST}/games/${GAME}"
+      "https://${HOST}/games/${GAME}/${DATE}"
+      "https://${HOST}/games/${GAME}/archives"
+    )
+    ;;
+esac
 
 PAYLOAD=$(printf '%s\n' "${URLS[@]}" | jq -R . | jq -s \
   --arg host "$HOST" --arg key "$KEY" \
