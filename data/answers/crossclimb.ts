@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#924",
+    date: "2026-11-10",
+    answer: "GOLF \u2192 WOLF \u2192 WOOF \u2192 WOOS \u2192 BOOS \u2192 BOGS \u2192 BAGS",
+    clues: ["The Big Bad ___ (fairy tale antagonist)", "Sound of a dog's bark", "Tries to win over romantically", "Expresses displeasure, as a spectator might", "Swampy areas"],
+    clueHint: `<p>Word ladder from <strong>GOLF</strong> to <strong>BAGS</strong>:<br>
+GOLF → WOLF → WOOF → WOOS → BOOS → BOGS → BAGS</p>`,
+  },
+  {
     sequence: "#923",
     date: "2026-11-09",
     answer: "DOGS \u2192 DOTS \u2192 DOTE \u2192 DATE \u2192 MATE \u2192 MATS \u2192 CATS",
