@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#924",
+    date: "2026-11-10",
+    answer: "Things that are white",
+    clues: ["Snow", "Chalk", "Milk", "Doves", "Polar bears"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Snow:</strong> Snow relates to the answer "Things that are white".<br>
+<strong>Chalk:</strong> Chalk relates to the answer "Things that are white".<br>
+<strong>Milk:</strong> Milk relates to the answer "Things that are white".<br>
+<strong>Doves:</strong> Doves relates to the answer "Things that are white".<br>
+<strong>Polar bears:</strong> Polar bears relates to the answer "Things that are white".</p>`,
+  },
+  {
     sequence: "#923",
     date: "2026-11-09",
     answer: "Parts of a weather forecast",
