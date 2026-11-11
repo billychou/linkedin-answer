@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#925",
+    date: "2026-11-11",
+    answer: "BACK \u2192 LACK \u2192 LICK \u2192 LINK \u2192 MINK \u2192 MINE \u2192 NINE",
+    clues: ["Inadequate amount", "Enjoy, as a lollipop", "Word following \"missing\" or \"cuff\"", "Animal related to the weasel", "Not yours"],
+    clueHint: `<p>Word ladder from <strong>BACK</strong> to <strong>NINE</strong>:<br>
+BACK → LACK → LICK → LINK → MINK → MINE → NINE</p>`,
+  },
+  {
     sequence: "#924",
     date: "2026-11-10",
     answer: "GOLF \u2192 WOLF \u2192 WOOF \u2192 WOOS \u2192 BOOS \u2192 BOGS \u2192 BAGS",
