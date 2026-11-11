@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#925",
+    date: "2026-11-11",
+    answer: "Things represented by the letter \"N\"",
+    clues: ["{1, 2, 3, ...}", "Knight (in chess)", "Newton (SI unit of force)", "North", "No (if Yes = Y)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>{1, 2, 3, ...}:</strong> {1, 2, 3, ...} relates to the answer "Things represented by the letter "N"".<br>
+<strong>Knight (in chess):</strong> Knight (in chess) relates to the answer "Things represented by the letter "N"".<br>
+<strong>Newton (SI unit of force):</strong> Newton (SI unit of force) relates to the answer "Things represented by the letter "N"".<br>
+<strong>North:</strong> North relates to the answer "Things represented by the letter "N"".<br>
+<strong>No (if Yes = Y):</strong> No (if Yes = Y) relates to the answer "Things represented by the letter "N"".</p>`,
+  },
+  {
     sequence: "#924",
     date: "2026-11-10",
     answer: "Things that are white",
