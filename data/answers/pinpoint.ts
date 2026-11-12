@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#926",
+    date: "2026-11-12",
+    answer: "Red, Stars, The light, The big picture, Eye to eye (agree fully)",
+    clues: ["Red", "Stars", "The light", "The big picture", "Eye to eye (agree fully)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Red:</strong> Red relates to the answer "Red, Stars, The light, The big picture, Eye to eye (agree fully)".<br>
+<strong>Stars:</strong> Stars relates to the answer "Red, Stars, The light, The big picture, Eye to eye (agree fully)".<br>
+<strong>The light:</strong> The light relates to the answer "Red, Stars, The light, The big picture, Eye to eye (agree fully)".<br>
+<strong>The big picture:</strong> The big picture relates to the answer "Red, Stars, The light, The big picture, Eye to eye (agree fully)".<br>
+<strong>Eye to eye (agree fully):</strong> Eye to eye (agree fully) relates to the answer "Red, Stars, The light, The big picture, Eye to eye (agree fully)".</p>`,
+  },
+  {
     sequence: "#925",
     date: "2026-11-11",
     answer: "Things represented by the letter \"N\"",
