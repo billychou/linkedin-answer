@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#926",
+    date: "2026-11-12",
+    answer: "PLAY \u2192 CLAY \u2192 CLAP \u2192 CLOP \u2192 COOP \u2192 COOK \u2192 BOOK",
+    clues: ["Moldable material in an art class", "Noisily put your hands together", "Sound from a trotting horse's hoof", "Place for chickens on a farm", "Prepare a hot meal"],
+    clueHint: `<p>Word ladder from <strong>PLAY</strong> to <strong>BOOK</strong>:<br>
+PLAY → CLAY → CLAP → CLOP → COOP → COOK → BOOK</p>`,
+  },
+  {
     sequence: "#925",
     date: "2026-11-11",
     answer: "BACK \u2192 LACK \u2192 LICK \u2192 LINK \u2192 MINK \u2192 MINE \u2192 NINE",
