@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#927",
+    date: "2026-11-13",
+    answer: "DUCK \u2192 PUCK \u2192 PUNK \u2192 PUNS \u2192 PENS \u2192 PEND \u2192 POND",
+    clues: ["Rubber disc used in ice hockey", "___ rock (brash music subgenre)", "Wordplay jokes often met with groans", "Writing implements that may dry out if left uncapped", "Be unresolved"],
+    clueHint: `<p>Word ladder from <strong>DUCK</strong> to <strong>POND</strong>:<br>
+DUCK → PUCK → PUNK → PUNS → PENS → PEND → POND</p>`,
+  },
+  {
     sequence: "#926",
     date: "2026-11-12",
     answer: "PLAY \u2192 CLAY \u2192 CLAP \u2192 CLOP \u2192 COOP \u2192 COOK \u2192 BOOK",
