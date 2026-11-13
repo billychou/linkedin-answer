@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#927",
+    date: "2026-11-13",
+    answer: "names of island groups or archipelagoes, the ones that take the word \"Islands\" after them",
+    clues: ["Cook", "Canary", "Marshall", "Falkland", "Galápagos"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Cook:</strong> Cook relates to the answer "names of island groups or archipelagoes, the ones that take the word "Islands" after them".<br>
+<strong>Canary:</strong> Canary relates to the answer "names of island groups or archipelagoes, the ones that take the word "Islands" after them".<br>
+<strong>Marshall:</strong> Marshall relates to the answer "names of island groups or archipelagoes, the ones that take the word "Islands" after them".<br>
+<strong>Falkland:</strong> Falkland relates to the answer "names of island groups or archipelagoes, the ones that take the word "Islands" after them".<br>
+<strong>Galápagos:</strong> Galápagos relates to the answer "names of island groups or archipelagoes, the ones that take the word "Islands" after them".</p>`,
+  },
+  {
     sequence: "#926",
     date: "2026-11-12",
     answer: "Red, Stars, The light, The big picture, Eye to eye (agree fully)",
