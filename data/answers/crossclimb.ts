@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#928",
+    date: "2026-11-14",
+    answer: "SUIT \u2192 SLIT \u2192 FLIT \u2192 FAIT \u2192 FAST \u2192 CAST \u2192 CASE",
+    clues: ["Long, very thin opening", "Move swiftly, like a bee or butterfly", "___ accompli (something already done)", "Like a Formula 1 car, when racing", "Performers in a play, collectively"],
+    clueHint: `<p>Word ladder from <strong>SUIT</strong> to <strong>CASE</strong>:<br>
+SUIT → SLIT → FLIT → FAIT → FAST → CAST → CASE</p>`,
+  },
+  {
     sequence: "#927",
     date: "2026-11-13",
     answer: "DUCK \u2192 PUCK \u2192 PUNK \u2192 PUNS \u2192 PENS \u2192 PEND \u2192 POND",
