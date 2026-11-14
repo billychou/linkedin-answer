@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#928",
+    date: "2026-11-14",
+    answer: "Words that can follow \"short\"",
+    clues: ["Story", "Cut", "List", "Circuit", "And sweet (to the point)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Story:</strong> Story relates to the answer "Words that can follow "short"".<br>
+<strong>Cut:</strong> Cut relates to the answer "Words that can follow "short"".<br>
+<strong>List:</strong> List relates to the answer "Words that can follow "short"".<br>
+<strong>Circuit:</strong> Circuit relates to the answer "Words that can follow "short"".<br>
+<strong>And sweet (to the point):</strong> And sweet (to the point) relates to the answer "Words that can follow "short"".</p>`,
+  },
+  {
     sequence: "#927",
     date: "2026-11-13",
     answer: "names of island groups or archipelagoes, the ones that take the word \"Islands\" after them",
