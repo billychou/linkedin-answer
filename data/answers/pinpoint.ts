@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#929",
+    date: "2026-11-15",
+    answer: "things with locks",
+    clues: ["Doors", "Canals", "Hair", "Wrestling (e.g., arm or head)", "Safes (open with the right #s)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Doors:</strong> Doors relates to the answer "things with locks".<br>
+<strong>Canals:</strong> Canals relates to the answer "things with locks".<br>
+<strong>Hair:</strong> Hair relates to the answer "things with locks".<br>
+<strong>Wrestling (e.g., arm or head):</strong> Wrestling (e.g., arm or head) relates to the answer "things with locks".<br>
+<strong>Safes (open with the right #s):</strong> Safes (open with the right #s) relates to the answer "things with locks".</p>`,
+  },
+  {
     sequence: "#928",
     date: "2026-11-14",
     answer: "Words that can follow \"short\"",
