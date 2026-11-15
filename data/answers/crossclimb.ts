@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#929",
+    date: "2026-11-15",
+    answer: "FLATS \u2192 SLATS \u2192 STATS \u2192 STATE \u2192 STARE \u2192 SHARE \u2192 SHARP",
+    clues: ["Parts of Venetian blinds", "Data used in analysis of athletes, for short", "Express clearly, as a case in court", "Look without blinking", "Don't keep all to yourself"],
+    clueHint: `<p>Word ladder from <strong>FLATS</strong> to <strong>SHARP</strong>:<br>
+FLATS → SLATS → STATS → STATE → STARE → SHARE → SHARP</p>`,
+  },
+  {
     sequence: "#928",
     date: "2026-11-14",
     answer: "SUIT \u2192 SLIT \u2192 FLIT \u2192 FAIT \u2192 FAST \u2192 CAST \u2192 CASE",
