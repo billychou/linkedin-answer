@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#930",
+    date: "2026-11-16",
+    answer: "HELP \u2192 HELD \u2192 MELD \u2192 MILD \u2192 MIND \u2192 MINE \u2192 LINE",
+    clues: ["Gripped in the hands", "Fuse into one", "Pleasant and not extreme, as weather", "\"My ___ is made up\" (\"I've decided\")", "Place for extracting valuable material from the earth"],
+    clueHint: `<p>Word ladder from <strong>HELP</strong> to <strong>LINE</strong>:<br>
+HELP → HELD → MELD → MILD → MIND → MINE → LINE</p>`,
+  },
+  {
     sequence: "#929",
     date: "2026-11-15",
     answer: "FLATS \u2192 SLATS \u2192 STATS \u2192 STATE \u2192 STARE \u2192 SHARE \u2192 SHARP",
