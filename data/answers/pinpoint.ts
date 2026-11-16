@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#930",
+    date: "2026-11-16",
+    answer: "types of makeup",
+    clues: ["Foundation", "Concealer", "Blush", "Eyeliner", "Mascara"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Foundation:</strong> Foundation relates to the answer "types of makeup".<br>
+<strong>Concealer:</strong> Concealer relates to the answer "types of makeup".<br>
+<strong>Blush:</strong> Blush relates to the answer "types of makeup".<br>
+<strong>Eyeliner:</strong> Eyeliner relates to the answer "types of makeup".<br>
+<strong>Mascara:</strong> Mascara relates to the answer "types of makeup".</p>`,
+  },
+  {
     sequence: "#929",
     date: "2026-11-15",
     answer: "things with locks",
