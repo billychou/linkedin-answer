@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#931",
+    date: "2026-11-17",
+    answer: "KITE \u2192 RITE \u2192 RILE \u2192 TILE \u2192 TILL \u2192 TALL \u2192 TAIL",
+    clues: ["___ of passage (important life event)", "Make angry or agitated", "Square piece in many board games", "Cash drawer in a store", "Having great height"],
+    clueHint: `<p>Word ladder from <strong>KITE</strong> to <strong>TAIL</strong>:<br>
+KITE → RITE → RILE → TILE → TILL → TALL → TAIL</p>`,
+  },
+  {
     sequence: "#930",
     date: "2026-11-16",
     answer: "HELP \u2192 HELD \u2192 MELD \u2192 MILD \u2192 MIND \u2192 MINE \u2192 LINE",
