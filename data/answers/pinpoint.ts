@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#931",
+    date: "2026-11-17",
+    answer: "Names of bones",
+    clues: ["Mandible", "Patella", "Coccyx", "Sternum", "Humerus (\"the funny ___\")"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Mandible:</strong> Mandible relates to the answer "Names of bones".<br>
+<strong>Patella:</strong> Patella relates to the answer "Names of bones".<br>
+<strong>Coccyx:</strong> Coccyx relates to the answer "Names of bones".<br>
+<strong>Sternum:</strong> Sternum relates to the answer "Names of bones".<br>
+<strong>Humerus ("the funny ___"):</strong> Humerus ("the funny ___") relates to the answer "Names of bones".</p>`,
+  },
+  {
     sequence: "#930",
     date: "2026-11-16",
     answer: "types of makeup",
