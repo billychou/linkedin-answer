@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#932",
+    date: "2026-11-18",
+    answer: "Names of card games.",
+    clues: ["500", "21", "Uno", "Crazy Eights", "52 Pickup (using a scattered deck)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>500:</strong> 500 relates to the answer "Names of card games.".<br>
+<strong>21:</strong> 21 relates to the answer "Names of card games.".<br>
+<strong>Uno:</strong> Uno relates to the answer "Names of card games.".<br>
+<strong>Crazy Eights:</strong> Crazy Eights relates to the answer "Names of card games.".<br>
+<strong>52 Pickup (using a scattered deck):</strong> 52 Pickup (using a scattered deck) relates to the answer "Names of card games.".</p>`,
+  },
+  {
     sequence: "#931",
     date: "2026-11-17",
     answer: "Names of bones",
