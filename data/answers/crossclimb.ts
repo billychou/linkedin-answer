@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#932",
+    date: "2026-11-18",
+    answer: "SINK \u2192 SILK \u2192 SULK \u2192 SUCK \u2192 SOCK \u2192 SOAK \u2192 SOAP",
+    clues: ["Smooth material often used to make neckties", "Pout and be resentful", "What young children might do on their thumbs", "Item between a shoe and a foot", "Spend a long time in a bath"],
+    clueHint: `<p>Word ladder from <strong>SINK</strong> to <strong>SOAP</strong>:<br>
+SINK → SILK → SULK → SUCK → SOCK → SOAK → SOAP</p>`,
+  },
+  {
     sequence: "#931",
     date: "2026-11-17",
     answer: "KITE \u2192 RITE \u2192 RILE \u2192 TILE \u2192 TILL \u2192 TALL \u2192 TAIL",
