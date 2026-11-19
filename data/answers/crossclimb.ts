@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#933",
+    date: "2026-11-19",
+    answer: "SELF \u2192 SELL \u2192 CELL \u2192 CULL \u2192 CURL \u2192 CURE \u2192 CARE",
+    clues: ["Opposite of \"buy\"", "One box in a spreadsheet", "Gather, as from a larger set", "Lock of hair that isn't straight", "Medicine to eliminate a disease"],
+    clueHint: `<p>Word ladder from <strong>SELF</strong> to <strong>CARE</strong>:<br>
+SELF → SELL → CELL → CULL → CURL → CURE → CARE</p>`,
+  },
+  {
     sequence: "#932",
     date: "2026-11-18",
     answer: "SINK \u2192 SILK \u2192 SULK \u2192 SUCK \u2192 SOCK \u2192 SOAK \u2192 SOAP",
