@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#933",
+    date: "2026-11-19",
+    answer: "Words that come after \"open\"",
+    clues: ["House", "Mind", "Secret", "Mic", "Sesame (it's a magical phrase)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>House:</strong> House relates to the answer "Words that come after "open"".<br>
+<strong>Mind:</strong> Mind relates to the answer "Words that come after "open"".<br>
+<strong>Secret:</strong> Secret relates to the answer "Words that come after "open"".<br>
+<strong>Mic:</strong> Mic relates to the answer "Words that come after "open"".<br>
+<strong>Sesame (it's a magical phrase):</strong> Sesame (it's a magical phrase) relates to the answer "Words that come after "open"".</p>`,
+  },
+  {
     sequence: "#932",
     date: "2026-11-18",
     answer: "Names of card games.",
