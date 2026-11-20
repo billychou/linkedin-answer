@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#934",
+    date: "2026-11-20",
+    answer: "GOOD \u2192 MOOD \u2192 MOON \u2192 BOON \u2192 BORN \u2192 TORN \u2192 TURN",
+    clues: ["How someone is feeling at the moment", "It's full usually once a month, but occasionally twice", "Hugely beneficial thing", "Introduced to the world", "Troubled by a dilemma"],
+    clueHint: `<p>Word ladder from <strong>GOOD</strong> to <strong>TURN</strong>:<br>
+GOOD → MOOD → MOON → BOON → BORN → TORN → TURN</p>`,
+  },
+  {
     sequence: "#933",
     date: "2026-11-19",
     answer: "SELF \u2192 SELL \u2192 CELL \u2192 CULL \u2192 CURL \u2192 CURE \u2192 CARE",
