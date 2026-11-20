@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#934",
+    date: "2026-11-20",
+    answer: "Every clue is the abbreviated name of a trigonometry function, and that shared shorthand is the thread that ties all five together.",
+    clues: ["Tan", "Cot", "Sin", "Sec", "Cos (short for cosine)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Tan:</strong> Tan relates to the answer "Every clue is the abbreviated name of a trigonometry function, and that shared shorthand is the thread that ties all five together.".<br>
+<strong>Cot:</strong> Cot relates to the answer "Every clue is the abbreviated name of a trigonometry function, and that shared shorthand is the thread that ties all five together.".<br>
+<strong>Sin:</strong> Sin relates to the answer "Every clue is the abbreviated name of a trigonometry function, and that shared shorthand is the thread that ties all five together.".<br>
+<strong>Sec:</strong> Sec relates to the answer "Every clue is the abbreviated name of a trigonometry function, and that shared shorthand is the thread that ties all five together.".<br>
+<strong>Cos (short for cosine):</strong> Cos (short for cosine) relates to the answer "Every clue is the abbreviated name of a trigonometry function, and that shared shorthand is the thread that ties all five together.".</p>`,
+  },
+  {
     sequence: "#933",
     date: "2026-11-19",
     answer: "Words that come after \"open\"",
