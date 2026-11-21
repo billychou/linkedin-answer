@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#935",
+    date: "2026-11-21",
+    answer: "SCOT \u2192 SLOT \u2192 SLOW \u2192 FLOW \u2192 FLOE \u2192 FLEE \u2192 FREE",
+    clues: ["Small opening for a coin", "Not quick", "Move freely, like water", "Sheet of ice on the water's surface", "Run far away from"],
+    clueHint: `<p>Word ladder from <strong>SCOT</strong> to <strong>FREE</strong>:<br>
+SCOT → SLOT → SLOW → FLOW → FLOE → FLEE → FREE</p>`,
+  },
+  {
     sequence: "#934",
     date: "2026-11-20",
     answer: "GOOD \u2192 MOOD \u2192 MOON \u2192 BOON \u2192 BORN \u2192 TORN \u2192 TURN",
