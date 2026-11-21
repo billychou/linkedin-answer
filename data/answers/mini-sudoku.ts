@@ -2,6 +2,13 @@ import { GameAnswer } from "@/types/game";
 
 export const miniSudokuAnswers: GameAnswer[] = [
   {
+    sequence: "#467",
+    date: "2026-11-21",
+    answer: "Mini Sudoku #467 - Solution grid",
+    clueHint: `<p>Fill the 6×6 grid so every row, column and 2×3 box contains the digits 1–6 exactly once. The completed top row is: 4, 2, 5, 6, 3, 1.</p>`,
+    grid: [[4, 2, 5, 6, 3, 1], [3, 6, 1, 5, 2, 4], [2, 1, 6, 3, 4, 5], [5, 3, 4, 2, 1, 6], [1, 5, 3, 4, 6, 2], [6, 4, 2, 1, 5, 3]],
+  },
+  {
     sequence: "#466",
     date: "2026-11-20",
     answer: "Mini Sudoku #466 - Solution grid",
