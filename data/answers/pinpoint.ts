@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#935",
+    date: "2026-11-21",
+    answer: "Words that come before \"moon\"",
+    clues: ["Full", "Blue", "Harvest", "Crescent", "Dark side of the"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Full:</strong> Full relates to the answer "Words that come before "moon"".<br>
+<strong>Blue:</strong> Blue relates to the answer "Words that come before "moon"".<br>
+<strong>Harvest:</strong> Harvest relates to the answer "Words that come before "moon"".<br>
+<strong>Crescent:</strong> Crescent relates to the answer "Words that come before "moon"".<br>
+<strong>Dark side of the:</strong> Dark side of the relates to the answer "Words that come before "moon"".</p>`,
+  },
+  {
     sequence: "#934",
     date: "2026-11-20",
     answer: "Every clue is the abbreviated name of a trigonometry function, and that shared shorthand is the thread that ties all five together.",
