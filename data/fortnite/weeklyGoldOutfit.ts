@@ -25,6 +25,29 @@ export type WeeklyGoldOutfit = {
 
 export const weeklyGoldOutfits: WeeklyGoldOutfit[] = [
   {
+    sequence: "#4",
+    date: "2026-11-22",
+    weekLabel: "Week 4",
+    season: "Treasure Hunters",
+    outfitName: "Solid Gold Kasane Teto",
+    endDate: "2026-11-29",
+    odds: "About 1 in 1,562,500 chests",
+    howToGet: [
+      "Queue into any Fortnite Battle Royale match during the week.",
+      "Land and open Treasure Chests — the weekly Solid Gold outfit is a random chest drop.",
+      "It is completely free: no purchase, no Battle Pass tier, and no quest chain required.",
+      "The drop rate is extremely low, so keep opening chests across matches until it drops.",
+      "Claim it before Sunday's reset (6AM PT / 9AM ET), when the rotation swaps in the next Solid Gold outfit.",
+    ],
+    extraRewards: [
+      { name: "Gold Lamborghini Urus SE", type: "Vehicle Skin" },
+      { name: "Rogue Wave and Tidewalker", type: "Back Bling" },
+      { name: "\"Wellerman Sea Shanty\"", type: "Jam Track" },
+      { name: "Oscar's Wraps", type: "Loading Screen" },
+    ],
+    source: "https://www.ign.com/wikis/fortnite/All_Free_Treasure_Chest_Rewards_List_-_Odds_and_Schedule",
+  },
+  {
     sequence: "#3",
     date: "2026-11-15",
     weekLabel: "Week 3",
