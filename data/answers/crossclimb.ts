@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#936",
+    date: "2026-11-22",
+    answer: "POWER \u2192 POSER \u2192 LOSER \u2192 LOVER \u2192 DOVER \u2192 DOVES \u2192 MOVES",
+    clues: ["Difficult question, or an insincere person", "Someone who is defeated", "Romantic partner", "British town known for its white cliffs", "White birds that represent peace"],
+    clueHint: `<p>Word ladder from <strong>POWER</strong> to <strong>MOVES</strong>:<br>
+POWER → POSER → LOSER → LOVER → DOVER → DOVES → MOVES</p>`,
+  },
+  {
     sequence: "#935",
     date: "2026-11-21",
     answer: "SCOT \u2192 SLOT \u2192 SLOW \u2192 FLOW \u2192 FLOE \u2192 FLEE \u2192 FREE",
