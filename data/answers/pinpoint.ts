@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#936",
+    date: "2026-11-22",
+    answer: "different definitions of \"match\"",
+    clues: ["Contest", "Peer", "Fire starter", "Double (as funds to charity)", "Visual pairing (as of socks)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Contest:</strong> Contest relates to the answer "different definitions of "match"".<br>
+<strong>Peer:</strong> Peer relates to the answer "different definitions of "match"".<br>
+<strong>Fire starter:</strong> Fire starter relates to the answer "different definitions of "match"".<br>
+<strong>Double (as funds to charity):</strong> Double (as funds to charity) relates to the answer "different definitions of "match"".<br>
+<strong>Visual pairing (as of socks):</strong> Visual pairing (as of socks) relates to the answer "different definitions of "match"".</p>`,
+  },
+  {
     sequence: "#935",
     date: "2026-11-21",
     answer: "Words that come before \"moon\"",
