@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#937",
+    date: "2026-11-23",
+    answer: "Types of birds",
+    clues: ["Rail", "Swift", "Quail", "Owl", "Eagle"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Rail:</strong> Rail relates to the answer "Types of birds".<br>
+<strong>Swift:</strong> Swift relates to the answer "Types of birds".<br>
+<strong>Quail:</strong> Quail relates to the answer "Types of birds".<br>
+<strong>Owl:</strong> Owl relates to the answer "Types of birds".<br>
+<strong>Eagle:</strong> Eagle relates to the answer "Types of birds".</p>`,
+  },
+  {
     sequence: "#936",
     date: "2026-11-22",
     answer: "different definitions of \"match\"",
