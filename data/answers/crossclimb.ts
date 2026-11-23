@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#937",
+    date: "2026-11-23",
+    answer: "HAND \u2192 LAND \u2192 LANE \u2192 LAKE \u2192 SAKE \u2192 SAVE \u2192 WAVE",
+    clues: ["Touch down, as a plane", "Division of a wide roadway", "Body of water such as Erie, Victoria, or Ladoga", "\"Oh, for goodness' ___!\"", "Success for a goalkeeper"],
+    clueHint: `<p>Word ladder from <strong>HAND</strong> to <strong>WAVE</strong>:<br>
+HAND → LAND → LANE → LAKE → SAKE → SAVE → WAVE</p>`,
+  },
+  {
     sequence: "#936",
     date: "2026-11-22",
     answer: "POWER \u2192 POSER \u2192 LOSER \u2192 LOVER \u2192 DOVER \u2192 DOVES \u2192 MOVES",
