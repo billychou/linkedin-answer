@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#938",
+    date: "2026-11-24",
+    answer: "HOME \u2192 HOPE \u2192 POPE \u2192 PIPE \u2192 PILE \u2192 PALE \u2192 PAGE",
+    clues: ["Feeling that things could work out well", "The current one is Leo XIV", "Long object that water flows through", "Disorderly stack", "Without much color"],
+    clueHint: `<p>Word ladder from <strong>HOME</strong> to <strong>PAGE</strong>:<br>
+HOME → HOPE → POPE → PIPE → PILE → PALE → PAGE</p>`,
+  },
+  {
     sequence: "#937",
     date: "2026-11-23",
     answer: "HAND \u2192 LAND \u2192 LANE \u2192 LAKE \u2192 SAKE \u2192 SAVE \u2192 WAVE",
