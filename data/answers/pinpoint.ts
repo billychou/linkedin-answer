@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#938",
+    date: "2026-11-24",
+    answer: "Title characters from Shakespeare's plays",
+    clues: ["Timon", "Cressida", "Cleopatra", "Othello", "Romeo and Juliet"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Timon:</strong> Timon relates to the answer "Title characters from Shakespeare's plays".<br>
+<strong>Cressida:</strong> Cressida relates to the answer "Title characters from Shakespeare's plays".<br>
+<strong>Cleopatra:</strong> Cleopatra relates to the answer "Title characters from Shakespeare's plays".<br>
+<strong>Othello:</strong> Othello relates to the answer "Title characters from Shakespeare's plays".<br>
+<strong>Romeo and Juliet:</strong> Romeo and Juliet relates to the answer "Title characters from Shakespeare's plays".</p>`,
+  },
+  {
     sequence: "#937",
     date: "2026-11-23",
     answer: "Types of birds",
