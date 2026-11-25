@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#939",
+    date: "2026-11-25",
+    answer: "Words that come before \"link\"",
+    clues: ["Chain", "Cuff", "Missing", "Weakest", "Click the (online call to action)"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Chain:</strong> Chain relates to the answer "Words that come before "link"".<br>
+<strong>Cuff:</strong> Cuff relates to the answer "Words that come before "link"".<br>
+<strong>Missing:</strong> Missing relates to the answer "Words that come before "link"".<br>
+<strong>Weakest:</strong> Weakest relates to the answer "Words that come before "link"".<br>
+<strong>Click the (online call to action):</strong> Click the (online call to action) relates to the answer "Words that come before "link"".</p>`,
+  },
+  {
     sequence: "#938",
     date: "2026-11-24",
     answer: "Title characters from Shakespeare's plays",
