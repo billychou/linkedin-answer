@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#939",
+    date: "2026-11-25",
+    answer: "TALE \u2192 TALK \u2192 BALK \u2192 BALD \u2192 BARD \u2192 YARD \u2192 YARN",
+    clues: ["Have a conversation", "Stop or hesitate when doing something", "Without hair on the head", "Renaissance Faire entertainer", "Imperial measurement that's just short of a meter"],
+    clueHint: `<p>Word ladder from <strong>TALE</strong> to <strong>YARN</strong>:<br>
+TALE → TALK → BALK → BALD → BARD → YARD → YARN</p>`,
+  },
+  {
     sequence: "#938",
     date: "2026-11-24",
     answer: "HOME \u2192 HOPE \u2192 POPE \u2192 PIPE \u2192 PILE \u2192 PALE \u2192 PAGE",
