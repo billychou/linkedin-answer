@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#940",
+    date: "2026-11-26",
+    answer: "Things that are stuffed",
+    clues: ["Pillows Soft cushions filled with feathers, foam, or fiber.", "Teddy bears Plush toys packed with soft filling.", "Holiday turkey A turkey filled with seasoned bread or herb stuffing before roasting.", "You, after eating too much Feeling completely full after a big meal.", "Ravioli (w/ meat or cheese) Pasta pockets filled with meat, cheese, or vegetables."],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Pillows Soft cushions filled with feathers, foam, or fiber.:</strong> Pillows Soft cushions filled with feathers, foam, or fiber. relates to the answer "Things that are stuffed".<br>
+<strong>Teddy bears Plush toys packed with soft filling.:</strong> Teddy bears Plush toys packed with soft filling. relates to the answer "Things that are stuffed".<br>
+<strong>Holiday turkey A turkey filled with seasoned bread or herb stuffing before roasting.:</strong> Holiday turkey A turkey filled with seasoned bread or herb stuffing before roasting. relates to the answer "Things that are stuffed".<br>
+<strong>You, after eating too much Feeling completely full after a big meal.:</strong> You, after eating too much Feeling completely full after a big meal. relates to the answer "Things that are stuffed".<br>
+<strong>Ravioli (w/ meat or cheese) Pasta pockets filled with meat, cheese, or vegetables.:</strong> Ravioli (w/ meat or cheese) Pasta pockets filled with meat, cheese, or vegetables. relates to the answer "Things that are stuffed".</p>`,
+  },
+  {
     sequence: "#939",
     date: "2026-11-25",
     answer: "Words that come before \"link\"",
