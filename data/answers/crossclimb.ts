@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#940",
+    date: "2026-11-26",
+    answer: "ROAD \u2192 READ \u2192 REAM \u2192 TEAM \u2192 TRAM \u2192 TRAP \u2192 TRIP",
+    clues: ["What many people do to relax before going to sleep", "Bundle of printer paper", "\"There's no I in ___\"", "Streetcar (or, spelled backwards, a store)", "Pitfall"],
+    clueHint: `<p>Word ladder from <strong>ROAD</strong> to <strong>TRIP</strong>:<br>
+ROAD → READ → REAM → TEAM → TRAM → TRAP → TRIP</p>`,
+  },
+  {
     sequence: "#939",
     date: "2026-11-25",
     answer: "TALE \u2192 TALK \u2192 BALK \u2192 BALD \u2192 BARD \u2192 YARD \u2192 YARN",
