@@ -2,6 +2,18 @@ import { GameAnswer } from "@/types/game";
 
 export const pinpointAnswers: GameAnswer[] = [
   {
+    sequence: "#941",
+    date: "2026-11-27",
+    answer: "Category: Pinpoint 941 — Different ways to score points in sports.",
+    clues: ["Try A rugby score where the ball is grounded behind the goal line", "Goal A score made by kicking or driving the ball into a target area or net", "Ace A serve the opponent cannot touch, winning the point outright in tennis", "Home run A hit that lets the batter circle all the bases and score in baseball", "Free throw (worth 1 if made) An uncontested shot from the foul line in basketball, worth one point if it goes in"],
+    clueHint: `<p>Here is how each clue relates to that word:<br>
+<strong>Try A rugby score where the ball is grounded behind the goal line:</strong> Try A rugby score where the ball is grounded behind the goal line relates to the answer "Category: Pinpoint 941 — Different ways to score points in sports.".<br>
+<strong>Goal A score made by kicking or driving the ball into a target area or net:</strong> Goal A score made by kicking or driving the ball into a target area or net relates to the answer "Category: Pinpoint 941 — Different ways to score points in sports.".<br>
+<strong>Ace A serve the opponent cannot touch, winning the point outright in tennis:</strong> Ace A serve the opponent cannot touch, winning the point outright in tennis relates to the answer "Category: Pinpoint 941 — Different ways to score points in sports.".<br>
+<strong>Home run A hit that lets the batter circle all the bases and score in baseball:</strong> Home run A hit that lets the batter circle all the bases and score in baseball relates to the answer "Category: Pinpoint 941 — Different ways to score points in sports.".<br>
+<strong>Free throw (worth 1 if made) An uncontested shot from the foul line in basketball, worth one point if it goes in:</strong> Free throw (worth 1 if made) An uncontested shot from the foul line in basketball, worth one point if it goes in relates to the answer "Category: Pinpoint 941 — Different ways to score points in sports.".</p>`,
+  },
+  {
     sequence: "#940",
     date: "2026-11-26",
     answer: "Things that are stuffed",
