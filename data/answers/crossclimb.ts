@@ -2,6 +2,14 @@ import { GameAnswer } from "@/types/game";
 
 export const crossclimbAnswers: GameAnswer[] = [
   {
+    sequence: "#941",
+    date: "2026-11-27",
+    answer: "NERD \u2192 NEED \u2192 FEED \u2192 FEEL \u2192 PEEL \u2192 PEEK \u2192 GEEK",
+    clues: ["Requirement", "Provide with sustenance", "Experience, as an emotion", "Outer part of some fruit", "Quick look (not to be confused with a mountain)"],
+    clueHint: `<p>Word ladder from <strong>NERD</strong> to <strong>GEEK</strong>:<br>
+NERD → NEED → FEED → FEEL → PEEL → PEEK → GEEK</p>`,
+  },
+  {
     sequence: "#940",
     date: "2026-11-26",
     answer: "ROAD \u2192 READ \u2192 REAM \u2192 TEAM \u2192 TRAM \u2192 TRAP \u2192 TRIP",
